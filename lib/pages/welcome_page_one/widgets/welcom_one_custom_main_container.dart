@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_mangement/pages/welcome_page_two/welcome_page_two.dart';
 import 'package:test_mangement/utilites/assets.dart';
 import 'package:test_mangement/utilites/extentionhelper.dart';
 import 'package:test_mangement/utilites/widgets/customtext.dart';
@@ -27,7 +28,6 @@ class WelcomOneCustomMainContainer extends StatelessWidget {
             children: [
               const SizedBox(
                 height: 14,
-
               ),
               CustomTextarabic(
                 text: S.of(context).Login,
@@ -39,7 +39,6 @@ class WelcomOneCustomMainContainer extends StatelessWidget {
                 fontSize: 18,
                 fontWeight: FontWeight.w500,
               ),
-          
               Padding(
                 padding: const EdgeInsets.only(right: 30.0, top: 30),
                 child: Column(
@@ -47,15 +46,16 @@ class WelcomOneCustomMainContainer extends StatelessWidget {
                     Row(
                       children: [
                         CustomSubContainer(
-                          onTap : (){
-                            context.push(LoginView());
+                          onTap: () {
+                            context.push(WelcometwoView());
                           },
                           containerText: S.of(context).Student, //ضيف الاسم الصح
                           color: AppColor.primary,
                           image: AssetsData.student,
                         ),
                         CustomSubContainer(
-                          containerText: S.of(context).Guardian, //ضيف الاسم الصح
+                          containerText:
+                              S.of(context).Guardian, //ضيف الاسم الصح
                           color: AppColor.lightGreenColor,
                           image: AssetsData.parent,
                         ),
