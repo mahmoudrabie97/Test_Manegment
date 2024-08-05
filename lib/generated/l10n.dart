@@ -309,6 +309,118 @@ class S {
       args: [],
     );
   }
+
+  /// `اتفاقية`
+  String get agreement {
+    return Intl.message(
+      'اتفاقية',
+      name: 'agreement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the 'Terms of Service' key
+
+  /// `آخر تحديث بتاريخ 12/5/2022`
+  String get lastupdatse {
+    return Intl.message(
+      'آخر تحديث بتاريخ 12/5/2022',
+      name: 'lastupdatse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `البند 1`
+  String get ietm1 {
+    return Intl.message(
+      'البند 1',
+      name: 'ietm1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف`
+  String get text1 {
+    return Intl.message(
+      'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف',
+      name: 'text1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `البند 2`
+  String get ietm2 {
+    return Intl.message(
+      'البند 2',
+      name: 'ietm2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف`
+  String get text2 {
+    return Intl.message(
+      'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف',
+      name: 'text2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `قبول ومتابعة`
+  String get agreeandfollow {
+    return Intl.message(
+      'قبول ومتابعة',
+      name: 'agreeandfollow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `قم بالتسجيل`
+  String get doregister {
+    return Intl.message(
+      'قم بالتسجيل',
+      name: 'doregister',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `انشاء حساب جديد`
+  String get createnewaccount {
+    return Intl.message(
+      'انشاء حساب جديد',
+      name: 'createnewaccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عن طريق الهاتف`
+  String get byphone {
+    return Intl.message(
+      'عن طريق الهاتف',
+      name: 'byphone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عن طريق البريد الإلكتروني`
+  String get byemail {
+    return Intl.message(
+      'عن طريق البريد الإلكتروني',
+      name: 'byemail',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

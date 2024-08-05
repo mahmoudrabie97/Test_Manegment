@@ -42,19 +42,35 @@ class MessageLookup extends MessageLookupByLibrary {
         "Student": MessageLookupByLibrary.simpleMessage(" الطالب "),
         "Teached": MessageLookupByLibrary.simpleMessage("معلم"),
         "Welcomback": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك "),
+        "agreeandfollow": MessageLookupByLibrary.simpleMessage("قبول ومتابعة"),
+        "agreement": MessageLookupByLibrary.simpleMessage("اتفاقية"),
+        "byemail":
+            MessageLookupByLibrary.simpleMessage("عن طريق البريد الإلكتروني"),
+        "byphone": MessageLookupByLibrary.simpleMessage("عن طريق الهاتف"),
         "chooserole": MessageLookupByLibrary.simpleMessage("اختر دورك"),
+        "createnewaccount":
+            MessageLookupByLibrary.simpleMessage("انشاء حساب جديد"),
         "donothaveaccountareedylogin": MessageLookupByLibrary.simpleMessage(
             "هل لديك حساب بالفعل؟ تسجيل الدخول"),
+        "doregister": MessageLookupByLibrary.simpleMessage("قم بالتسجيل"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
         "ensurepassword":
             MessageLookupByLibrary.simpleMessage("تاكيد كلمة المرور"),
         "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+        "ietm1": MessageLookupByLibrary.simpleMessage("البند 1"),
+        "ietm2": MessageLookupByLibrary.simpleMessage("البند 2"),
+        "lastupdatse":
+            MessageLookupByLibrary.simpleMessage("آخر تحديث بتاريخ 12/5/2022"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "register": MessageLookupByLibrary.simpleMessage("التسجيل"),
         "servicesagree":
             MessageLookupByLibrary.simpleMessage("أوافق على الشروط والأحكام"),
         "sex": MessageLookupByLibrary.simpleMessage("الجنس"),
         "subscription": MessageLookupByLibrary.simpleMessage("اشتراك"),
+        "text1": MessageLookupByLibrary.simpleMessage(
+            "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف"),
+        "text2": MessageLookupByLibrary.simpleMessage(
+            "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحبا")
       };
 }
