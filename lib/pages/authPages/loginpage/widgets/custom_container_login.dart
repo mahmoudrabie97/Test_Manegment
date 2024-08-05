@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:test_mangement/generated/l10n.dart';
 import 'package:test_mangement/pages/authPages/loginpage/widgets/animated_text_widget.dart';
+import 'package:test_mangement/pages/authPages/sign_up/sign_up_screen.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/custommethods.dart';
+import 'package:test_mangement/utilites/extentionhelper.dart';
 import 'package:test_mangement/utilites/widgets/custombutton.dart';
 import 'package:test_mangement/utilites/widgets/customtext.dart';
 import 'package:test_mangement/utilites/widgets/customtextformfield.dart';
@@ -165,7 +167,7 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          // context.push(const SignUpView());
+                          context.push( SignUpScreen());
                         },
                         child: CustomTextarabic(
                           text: S.of(context).register,

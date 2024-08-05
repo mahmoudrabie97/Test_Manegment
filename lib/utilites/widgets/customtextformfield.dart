@@ -38,41 +38,44 @@ class CustomTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      style: const TextStyle(
-          //backgroundColor: Color(0xffFFFFFF),
-          ),
-      decoration: InputDecoration(
-          filled: true,
-          fillColor: fillColor,
-          hintText: hintText,
-          hintStyle: Styles.style14
-              .copyWith(fontFamily: isarAbic() ? "Cairo" : 'Roboto'),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(15.0),
-            borderSide: const BorderSide(color: Colors.grey),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.0),
-            borderSide: const BorderSide(color: Colors.grey),
-          ),
-          errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.0),
-            borderSide: const BorderSide(color: Colors.white),
-          ),
-          focusColor: focusColor,
-          prefixIcon: perfixicon != null ? Icon(perfixicon) : null,
-          prefixStyle: TextStyle(color: prefixColor),
-          suffixIcon: IconButton(
-              color: Colors.black,
-              onPressed: suffixpressed,
-              icon: suffixicon != null ? Icon(suffixicon) : Icon(suffixicon))),
-      onFieldSubmitted: onsubmitted,
-      validator: validator!,
-      controller: controller,
-      keyboardType: keyboardType,
-      obscureText: obscureText,
-      focusNode: focusnode,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: TextFormField(
+        style: const TextStyle(
+            //backgroundColor: Color(0xffFFFFFF),
+            ),
+        decoration: InputDecoration(
+            filled: true,
+            fillColor: fillColor,
+            hintText: hintText,
+            hintStyle: Styles.style14
+                .copyWith(fontFamily: isarAbic() ? "Cairo" : 'Roboto'),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(15.0),
+              borderSide: const BorderSide(color: Colors.grey),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10.0),
+              borderSide: const BorderSide(color: Colors.grey),
+            ),
+            errorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10.0),
+              borderSide: const BorderSide(color: Colors.white),
+            ),
+            focusColor: focusColor,
+            prefixIcon: perfixicon != null ? Icon(perfixicon) : null,
+            prefixStyle: TextStyle(color: prefixColor),
+            suffixIcon: IconButton(
+                color: Colors.black,
+                onPressed: suffixpressed,
+                icon: suffixicon != null ? Icon(suffixicon) : Icon(suffixicon))),
+        onFieldSubmitted: onsubmitted,
+        validator: validator!,
+        controller: controller,
+        keyboardType: keyboardType,
+        obscureText: obscureText,
+        focusNode: focusnode,
+      ),
     );
   }
 }
