@@ -60,7 +60,15 @@ class S {
     );
   }
 
-  // skipped getter for the 'ولي الأمر' key
+  /// `ولي الامر`
+  String get Guardian {
+    return Intl.message(
+      'ولي الامر',
+      name: 'Guardian',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// ` الطالب `
   String get Student {

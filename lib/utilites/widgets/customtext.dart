@@ -23,7 +23,6 @@ class CustomTextarabic extends StatelessWidget {
         color: color,
         fontSize: fontSize,
         fontWeight: fontWeight,
-        overflow: TextOverflow.ellipsis,
       ),
     );
   }

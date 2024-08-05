@@ -1,7 +1,7 @@
 {
       "welcome":"مرحبا",
-        "ولي الأمر":"Guardian",
-        "Student":" الطالب ",
+      "Guardian":"ولي الامر",
+      "Student":" الطالب ",
         "School":" المدرسة ",
         "Teached":"معلم",
         "Loginorsignup":"تسجيل الدخول او الاشتراك",
