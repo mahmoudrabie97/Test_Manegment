@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:test_mangement/generated/l10n.dart';
-import 'package:test_mangement/pages/welcome_pages/welcome_one.dart';
+import 'package:test_mangement/pages/welcome_page_one/welcome_one.dart';
+import 'package:test_mangement/pages/welcome_page_two/welcome_page_two.dart';
+import 'package:test_mangement/utilites/appcolors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,9 +26,11 @@ class MyApp extends StatelessWidget {
         supportedLocales: S.delegate.supportedLocales,
         title: 'Test ManageMent',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
+            canvasColor: AppColor.primary,
+            scaffoldBackgroundColor: AppColor.primary,
+            bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+              backgroundColor: AppColor.primary,
+            )),
         home: const WelcomePage1());
   }
 }
