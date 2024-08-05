@@ -1,3 +1,27 @@
 {
-    "welcome":"Welcome"
+      "welcome":"مرحبا",
+        ,"ولي الأمر":"Guardian"
+        "Student":" الطالب ",
+        "School":" المدرسة ",
+        "Teached":"معلم",
+        "Loginorsignup":"تسجيل الدخول او الاشتراك",
+        "Loginorcreate":"قم بتسجيل الدخول أو إنشاء حساب لإجراء الاختبار والمشاركة في التحدي والمزيد.",
+        "Login":"تسجيل الدخول",
+        "Create an account":"انشاء حساب",
+        "Welcomback":"مرحبًا بعودتك ",
+        "Logintoaccount":"قم بتسجيل الدخول إلى حسابك ",
+        "Rememberme":"تذكرنى",
+        "Identity":"الهوية",
+        "Password":"كلمة المرور",
+        "Forgetpassword":"هل نسيت كلمة السر؟",
+        "Donothaveacountregister":"ليس لديك حساب؟ قم بالتسجيل",
+        "subscription":"اشتراك",
+        "fullname":"الاسم الكامل",
+        "email":"البريد الالكترونى",
+        "phone":"رقم الهاتف",
+        "sex":"الجنس",
+        "ensurepassword":"تاكيد كلمة المرور",
+        "servicesagree":"أوافق على الشروط والأحكام",
+        "donothaveaccountareedylogin":"هل لديك حساب بالفعل؟ تسجيل الدخول",
+        "register":"التسجيل"
 }
