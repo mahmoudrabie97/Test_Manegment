@@ -14,6 +14,7 @@ class AppColor {
   static const color = Colors.grey;
   static const red=Color(0xffDB3434);
   static const pinkLight = Color(0xffFFA4F2);
+  static const braon = Color(0xffBC4A26);
 
 
 
