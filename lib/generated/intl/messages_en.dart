@@ -64,6 +64,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("آخر تحديث بتاريخ 12/5/2022"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "register": MessageLookupByLibrary.simpleMessage("التسجيل"),
+        "send": MessageLookupByLibrary.simpleMessage("إرسال"),
+        "sendverivicationcodetoyou": MessageLookupByLibrary.simpleMessage(
+            "لقد أرسلنا رمز التحقق إلى هاتفك"),
         "servicesagree":
             MessageLookupByLibrary.simpleMessage("أوافق على الشروط والأحكام"),
         "sex": MessageLookupByLibrary.simpleMessage("الجنس"),
@@ -72,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف"),
         "text2": MessageLookupByLibrary.simpleMessage(
             "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف"),
+        "verificationcode": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحبا")
       };
 }

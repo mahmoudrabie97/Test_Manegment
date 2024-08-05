@@ -36,6 +36,9 @@
   "doregister":"قم بالتسجيل",
   "createnewaccount":"انشاء حساب جديد",
   "byphone":"عن طريق الهاتف",
-  "byemail":"عن طريق البريد الإلكتروني"
+  "byemail":"عن طريق البريد الإلكتروني",
+  "verificationcode":"رمز التحقق",
+  "sendverivicationcodetoyou":"لقد أرسلنا رمز التحقق إلى هاتفك",
+  "send":"إرسال"
 }
 

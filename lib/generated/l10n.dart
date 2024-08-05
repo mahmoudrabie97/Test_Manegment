@@ -429,6 +429,36 @@ class S {
       args: [],
     );
   }
+
+  /// `رمز التحقق`
+  String get verificationcode {
+    return Intl.message(
+      'رمز التحقق',
+      name: 'verificationcode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لقد أرسلنا رمز التحقق إلى هاتفك`
+  String get sendverivicationcodetoyou {
+    return Intl.message(
+      'لقد أرسلنا رمز التحقق إلى هاتفك',
+      name: 'sendverivicationcodetoyou',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `إرسال`
+  String get send {
+    return Intl.message(
+      'إرسال',
+      name: 'send',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

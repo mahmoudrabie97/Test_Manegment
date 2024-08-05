@@ -64,6 +64,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("آخر تحديث بتاريخ 12/5/2022"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "register": MessageLookupByLibrary.simpleMessage("التسجيل"),
+        "send": MessageLookupByLibrary.simpleMessage("إرسال"),
+        "sendverivicationcodetoyou": MessageLookupByLibrary.simpleMessage(
+            "لقد أرسلنا رمز التحقق إلى هاتفك"),
         "servicesagree":
             MessageLookupByLibrary.simpleMessage("أوافق على الشروط والأحكام"),
         "sex": MessageLookupByLibrary.simpleMessage("الجنس"),
