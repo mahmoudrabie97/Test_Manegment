@@ -113,6 +113,10 @@ class CustomContainerLogin extends StatelessWidget {
                       borderRadius: 12,
                     ),
                   ),
+
+                  SizedBox(
+                    height: 14,
+                  ),
                   GestureDetector(
                     onTap: () {},
                     child: CustomTextarabic(
@@ -121,6 +125,9 @@ class CustomContainerLogin extends StatelessWidget {
                       color: AppColor.primary,
                       fontWeight: FontWeight.w700,
                     ),
+                  ),
+                  SizedBox(
+                    height: 6,
                   ),
                   Row(
                     //crossAxisAlignment: CrossAxisAlignment.center,

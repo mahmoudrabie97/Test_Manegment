@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_mangement/utilites/custommethods.dart';
 import 'package:test_mangement/utilites/styles.dart';
 
 class CustomTextFormField extends StatelessWidget {
@@ -45,7 +46,8 @@ class CustomTextFormField extends StatelessWidget {
           filled: true,
           fillColor: fillColor,
           hintText: hintText,
-          hintStyle: Styles.style14,
+          hintStyle: Styles.style14
+              .copyWith(fontFamily: isarAbic() ? "Cairo" : 'Roboto'),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15.0),
             borderSide: const BorderSide(color: Colors.grey),
