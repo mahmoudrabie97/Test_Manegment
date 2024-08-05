@@ -299,6 +299,16 @@ class S {
       args: [],
     );
   }
+
+  /// `اختر دورك`
+  String get chooserole {
+    return Intl.message(
+      'اختر دورك',
+      name: 'chooserole',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

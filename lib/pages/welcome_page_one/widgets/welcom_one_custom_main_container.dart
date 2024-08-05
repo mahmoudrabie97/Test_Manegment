@@ -14,44 +14,55 @@ class WelcomOneCustomMainContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12.0),
       child: Container(
-        child: Column(
+        width: double.infinity,
+        height: MediaQuery.of(context).size.height * .7,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(25),
+          color: AppColor.whiteColor,
+        ),
+        child: ListView(
           children: [
-            SizedBox(height: 14,),
+            const SizedBox(
+              height: 14,
+            ),
             CustomTextarabic(
               text: S.of(context).Login,
               fontSize: 22,
               fontWeight: FontWeight.w700,
             ),
+            CustomTextarabic(
+              text: S.of(context).chooserole,
+              fontSize: 22,
+              fontWeight: FontWeight.w700,
+            ),
             //نص اخر دورك
             Padding(
-              padding: const EdgeInsets.only(right: 30.0,top: 100),
+              padding: const EdgeInsets.only(right: 30.0, top: 80),
               child: Column(
-
                 children: [
                   Row(
                     children: [
                       CustomSubContainer(
-                        containerText: S.of(context).Student,//ضيف الاسم الصح
+                        containerText: S.of(context).Student, //ضيف الاسم الصح
                         color: AppColor.primary,
                         image: AssetsData.student,
                       ),
                       CustomSubContainer(
-                        containerText: S.of(context).welcome,//ضيف الاسم الصح
+                        containerText: S.of(context).Guardian, //ضيف الاسم الصح
                         color: AppColor.lightGreenColor,
                         image: AssetsData.parent,
                       ),
-
                     ],
                   ),
                   Row(
                     children: [
                       CustomSubContainer(
-                        containerText: S.of(context).Teached,//ضيف الاسم الصح
+                        containerText: S.of(context).Teached, //ضيف الاسم الصح
                         color: AppColor.pinkLight,
                         image: AssetsData.father,
                       ),
                       CustomSubContainer(
-                        containerText: S.of(context).School,//ضيف الاسم الصح
+                        containerText: S.of(context).School, //ضيف الاسم الصح
                         color: AppColor.braon,
                         image: AssetsData.young,
                       ),
@@ -61,12 +72,6 @@ class WelcomOneCustomMainContainer extends StatelessWidget {
               ),
             ),
           ],
-        ),
-        width: double.infinity,
-        height: MediaQuery.of(context).size.height * .75,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25),
-          color: AppColor.whiteColor,
         ),
       ),
     );

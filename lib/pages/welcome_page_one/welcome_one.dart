@@ -10,18 +10,16 @@ class WelcomePage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-      title: CustomTextarabic(text: S.of(context).welcome),
-    ));
-      body:  SafeArea(
+      appBar: AppBar(
+        title: CustomTextarabic(text: S.of(context).welcome),
+      ),
+      body: SafeArea(
         child: Column(
-
           children: [
-
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 60.0),
-            child: Image.asset(AssetsData.graduation),
-          ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 60.0),
+              child: Image.asset(AssetsData.graduation),
+            ),
             WelcomOneCustomMainContainer(),
           ],
         ),

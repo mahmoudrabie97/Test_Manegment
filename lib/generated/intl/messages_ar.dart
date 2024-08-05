@@ -42,6 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Student": MessageLookupByLibrary.simpleMessage(" الطالب "),
         "Teached": MessageLookupByLibrary.simpleMessage("معلم"),
         "Welcomback": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك "),
+        "chooserole": MessageLookupByLibrary.simpleMessage("اختر دورك"),
         "donothaveaccountareedylogin": MessageLookupByLibrary.simpleMessage(
             "هل لديك حساب بالفعل؟ تسجيل الدخول"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),

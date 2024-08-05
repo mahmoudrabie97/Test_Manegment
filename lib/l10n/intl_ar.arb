@@ -23,7 +23,9 @@
     "ensurepassword":"تاكيد كلمة المرور",
     "servicesagree":"أوافق على الشروط والأحكام",
     "donothaveaccountareedylogin":"هل لديك حساب بالفعل؟ تسجيل الدخول",
-    "register":"التسجيل"
+    "register":"التسجيل",
+    "chooserole":"اختر دورك"
+
 
 
 }
