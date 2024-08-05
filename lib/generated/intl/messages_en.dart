@@ -41,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "School": MessageLookupByLibrary.simpleMessage(" المدرسة "),
         "Student": MessageLookupByLibrary.simpleMessage(" الطالب "),
         "Teached": MessageLookupByLibrary.simpleMessage("معلم"),
+        "TermsofService": MessageLookupByLibrary.simpleMessage("شروط الخدمة"),
         "Welcomback": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك "),
         "agreeandfollow": MessageLookupByLibrary.simpleMessage("قبول ومتابعة"),
         "agreement": MessageLookupByLibrary.simpleMessage("اتفاقية"),

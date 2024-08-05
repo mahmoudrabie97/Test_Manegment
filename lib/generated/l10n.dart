@@ -320,7 +320,15 @@ class S {
     );
   }
 
-  // skipped getter for the 'Terms of Service' key
+  /// `شروط الخدمة`
+  String get TermsofService {
+    return Intl.message(
+      'شروط الخدمة',
+      name: 'TermsofService',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `آخر تحديث بتاريخ 12/5/2022`
   String get lastupdatse {
