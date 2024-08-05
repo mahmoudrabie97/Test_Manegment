@@ -10,9 +10,8 @@ class WelcomePage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: CustomTextarabic(text: S.of(context).welcome),
-      ),
+
+
       body: SafeArea(
         child: Column(
           children: [
