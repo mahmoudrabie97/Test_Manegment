@@ -7,13 +7,24 @@ import 'package:test_mangement/utilites/widgets/custombutton.dart';
 import 'package:test_mangement/utilites/widgets/customtext.dart';
 import 'package:test_mangement/utilites/widgets/customtextformfield.dart';
 
-class CustomContainerLogin extends StatelessWidget {
-  CustomContainerLogin({super.key});
+class CustomContainerLogin extends StatefulWidget {
+  const CustomContainerLogin({super.key});
+
+  @override
+  State<CustomContainerLogin> createState() => _CustomContainerLoginState();
+}
+
+class _CustomContainerLoginState extends State<CustomContainerLogin> {
   final TextEditingController _emailController = TextEditingController();
+
   final TextEditingController _passwordController = TextEditingController();
+
   final formkey = GlobalKey<FormState>();
+
   final FocusNode field1 = FocusNode();
+
   final FocusNode field2 = FocusNode();
+  bool? checkval = false;
 
   @override
   Widget build(BuildContext context) {
@@ -25,13 +36,13 @@ class CustomContainerLogin extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.only(right: 20.0, left: 20),
         child: ListView(
           children: [
             const AnimatedTextWidget(),
             CustomTextarabic(text: S.of(context).Logintoaccount),
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             Form(
               key: formkey,
@@ -60,7 +71,7 @@ class CustomContainerLogin extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 14,
+                    height: 6,
                   ),
                   SizedBox(
                     height: 70,
@@ -113,9 +124,24 @@ class CustomContainerLogin extends StatelessWidget {
                       borderRadius: 12,
                     ),
                   ),
+                  CheckboxListTile(
+                    activeColor: AppColor.primary,
+                    title: CustomTextarabic(
+                      text: S.of(context).Rememberme,
+                      color: Colors.grey,
+                    ),
+                    value: checkval,
+                    onChanged: (newValue) {
+                      setState(() {
+                        checkval = newValue;
+                      });
+                    },
+                    controlAffinity: ListTileControlAffinity
+                        .leading, //  <-- leading Checkbox
+                  ),
 
-                  SizedBox(
-                    height: 14,
+                  const SizedBox(
+                    height: 8,
                   ),
                   GestureDetector(
                     onTap: () {},

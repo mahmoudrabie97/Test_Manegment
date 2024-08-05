@@ -42,7 +42,7 @@ class CustomContainerwelcome2 extends StatelessWidget {
             CustomButton(
               buttonText: S.of(context).Login,
               onPressed: () {
-                context.push(const LoginView());
+                context.push(LoginView());
               },
               txtColor: AppColor.whiteColor,
               buttonColor: AppColor.primary,
