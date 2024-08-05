@@ -122,7 +122,15 @@ class S {
     );
   }
 
-  // skipped getter for the 'Create an account' key
+  /// `انشاء حساب`
+  String get Createanaccount {
+    return Intl.message(
+      'انشاء حساب',
+      name: 'Createanaccount',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `مرحبًا بعودتك `
   String get Welcomback {
