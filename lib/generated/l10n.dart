@@ -50,11 +50,235 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Welcome`
+  /// `مرحبا`
   String get welcome {
     return Intl.message(
-      'Welcome',
+      'مرحبا',
       name: 'welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the 'ولي الأمر' key
+
+  /// ` الطالب `
+  String get Student {
+    return Intl.message(
+      ' الطالب ',
+      name: 'Student',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` المدرسة `
+  String get School {
+    return Intl.message(
+      ' المدرسة ',
+      name: 'School',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `معلم`
+  String get Teached {
+    return Intl.message(
+      'معلم',
+      name: 'Teached',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تسجيل الدخول او الاشتراك`
+  String get Loginorsignup {
+    return Intl.message(
+      'تسجيل الدخول او الاشتراك',
+      name: 'Loginorsignup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `قم بتسجيل الدخول أو إنشاء حساب لإجراء الاختبار والمشاركة في التحدي والمزيد.`
+  String get Loginorcreate {
+    return Intl.message(
+      'قم بتسجيل الدخول أو إنشاء حساب لإجراء الاختبار والمشاركة في التحدي والمزيد.',
+      name: 'Loginorcreate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تسجيل الدخول`
+  String get Login {
+    return Intl.message(
+      'تسجيل الدخول',
+      name: 'Login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the 'Create an account' key
+
+  /// `مرحبًا بعودتك `
+  String get Welcomback {
+    return Intl.message(
+      'مرحبًا بعودتك ',
+      name: 'Welcomback',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `قم بتسجيل الدخول إلى حسابك `
+  String get Logintoaccount {
+    return Intl.message(
+      'قم بتسجيل الدخول إلى حسابك ',
+      name: 'Logintoaccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تذكرنى`
+  String get Rememberme {
+    return Intl.message(
+      'تذكرنى',
+      name: 'Rememberme',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الهوية`
+  String get Identity {
+    return Intl.message(
+      'الهوية',
+      name: 'Identity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `كلمة المرور`
+  String get Password {
+    return Intl.message(
+      'كلمة المرور',
+      name: 'Password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `هل نسيت كلمة السر؟`
+  String get Forgetpassword {
+    return Intl.message(
+      'هل نسيت كلمة السر؟',
+      name: 'Forgetpassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ليس لديك حساب؟ قم بالتسجيل`
+  String get Donothaveacountregister {
+    return Intl.message(
+      'ليس لديك حساب؟ قم بالتسجيل',
+      name: 'Donothaveacountregister',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اشتراك`
+  String get subscription {
+    return Intl.message(
+      'اشتراك',
+      name: 'subscription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الاسم الكامل`
+  String get fullname {
+    return Intl.message(
+      'الاسم الكامل',
+      name: 'fullname',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `البريد الالكترونى`
+  String get email {
+    return Intl.message(
+      'البريد الالكترونى',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رقم الهاتف`
+  String get phone {
+    return Intl.message(
+      'رقم الهاتف',
+      name: 'phone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الجنس`
+  String get sex {
+    return Intl.message(
+      'الجنس',
+      name: 'sex',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تاكيد كلمة المرور`
+  String get ensurepassword {
+    return Intl.message(
+      'تاكيد كلمة المرور',
+      name: 'ensurepassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أوافق على الشروط والأحكام`
+  String get servicesagree {
+    return Intl.message(
+      'أوافق على الشروط والأحكام',
+      name: 'servicesagree',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `هل لديك حساب بالفعل؟ تسجيل الدخول`
+  String get donothaveaccountareedylogin {
+    return Intl.message(
+      'هل لديك حساب بالفعل؟ تسجيل الدخول',
+      name: 'donothaveaccountareedylogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `التسجيل`
+  String get register {
+    return Intl.message(
+      'التسجيل',
+      name: 'register',
       desc: '',
       args: [],
     );

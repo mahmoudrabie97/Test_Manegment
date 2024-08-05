@@ -22,6 +22,36 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "welcome": MessageLookupByLibrary.simpleMessage("Welcome")
+        "Donothaveacountregister":
+            MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟ قم بالتسجيل"),
+        "Forgetpassword":
+            MessageLookupByLibrary.simpleMessage("هل نسيت كلمة السر؟"),
+        "Identity": MessageLookupByLibrary.simpleMessage("الهوية"),
+        "Login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "Loginorcreate": MessageLookupByLibrary.simpleMessage(
+            "قم بتسجيل الدخول أو إنشاء حساب لإجراء الاختبار والمشاركة في التحدي والمزيد."),
+        "Loginorsignup":
+            MessageLookupByLibrary.simpleMessage("تسجيل الدخول او الاشتراك"),
+        "Logintoaccount":
+            MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول إلى حسابك "),
+        "Password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "Rememberme": MessageLookupByLibrary.simpleMessage("تذكرنى"),
+        "School": MessageLookupByLibrary.simpleMessage(" المدرسة "),
+        "Student": MessageLookupByLibrary.simpleMessage(" الطالب "),
+        "Teached": MessageLookupByLibrary.simpleMessage("معلم"),
+        "Welcomback": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك "),
+        "donothaveaccountareedylogin": MessageLookupByLibrary.simpleMessage(
+            "هل لديك حساب بالفعل؟ تسجيل الدخول"),
+        "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
+        "ensurepassword":
+            MessageLookupByLibrary.simpleMessage("تاكيد كلمة المرور"),
+        "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+        "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "register": MessageLookupByLibrary.simpleMessage("التسجيل"),
+        "servicesagree":
+            MessageLookupByLibrary.simpleMessage("أوافق على الشروط والأحكام"),
+        "sex": MessageLookupByLibrary.simpleMessage("الجنس"),
+        "subscription": MessageLookupByLibrary.simpleMessage("اشتراك"),
+        "welcome": MessageLookupByLibrary.simpleMessage("مرحبا")
       };
 }
