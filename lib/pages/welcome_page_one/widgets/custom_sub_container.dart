@@ -28,6 +28,7 @@ class CustomSubContainer extends StatelessWidget {
             children: [
               SizedBox(height: 12,),
               Image.asset( image ),
+              SizedBox(height: 6,),
               CustomTextarabic(
                 text: containerText,
                 fontSize: 16,
