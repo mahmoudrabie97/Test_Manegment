@@ -10,7 +10,8 @@ class CustomSubContainer extends StatelessWidget {
       {super.key,
       required this.containerText,
       required this.image,
-      required this.color, this.onTap});
+      required this.color,
+      this.onTap});
 
   final String containerText;
   final String image;
@@ -20,14 +21,22 @@ class CustomSubContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 8.0,bottom: 8),
+      padding: const EdgeInsets.only(left: 8.0, bottom: 8),
       child: GestureDetector(
-        onTap:onTap ,
+        onTap: onTap,
         child: Container(
+          width: MediaQuery.of(context).size.width * .4,
+          height: MediaQuery.of(context).size.height * .2,
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(10),
+          ),
           child: Column(
             children: [
-              SizedBox(height: 12,),
-              Image.asset( image ),
+              SizedBox(
+                height: 12,
+              ),
+              Image.asset(image),
               CustomTextarabic(
                 text: containerText,
                 fontSize: 16,
@@ -35,12 +44,6 @@ class CustomSubContainer extends StatelessWidget {
                 color: AppColor.whiteColor,
               ),
             ],
-          ),
-          width: MediaQuery.of(context).size.width * .4,
-          height: MediaQuery.of(context).size.height * .2,
-          decoration: BoxDecoration(
-            color: color,
-            borderRadius: BorderRadius.circular(10),
           ),
         ),
       ),
