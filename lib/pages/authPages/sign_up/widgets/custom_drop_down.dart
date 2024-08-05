@@ -42,7 +42,7 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
         child: Row(
           children: [
             Icon(Icons.female_rounded,),
-            SizedBox(width:15,),
+            SizedBox(width:MediaQuery.of(context).size.width*.05,),
 
             DropdownButton<String>(
               value: dropdownValue,
