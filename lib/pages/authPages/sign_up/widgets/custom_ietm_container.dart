@@ -1,7 +1,7 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:test_mangement/pages/authPages/sign_up/widgets/under_line_text.dart';
+import 'package:test_mangement/pages/chhosing_regiter_metod_page/choosing_register_method_page.dart';
+import 'package:test_mangement/utilites/extentionhelper.dart';
 
 import '../../../../generated/l10n.dart';
 import '../../../../utilites/appcolors.dart';
@@ -22,7 +22,11 @@ class CustomIetmContainer extends StatelessWidget {
     required TextEditingController phoneController,
     required TextEditingController passwordController,
     required TextEditingController ensurePasswordController,
-  }) : _fullNameController = fullNameController, _emailController = emailController, _phoneController = phoneController, _passwordController = passwordController, _ensurePasswordController = ensurePasswordController;
+  })  : _fullNameController = fullNameController,
+        _emailController = emailController,
+        _phoneController = phoneController,
+        _passwordController = passwordController,
+        _ensurePasswordController = ensurePasswordController;
 
   final GlobalKey<FormState> formkey;
   final TextEditingController _fullNameController;
@@ -152,14 +156,20 @@ class CustomIetmContainer extends StatelessWidget {
                 },
               ),
               UnderLineText(),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               CustomButton(
                 buttonText: S.of(context).register,
-                onPressed: () {},
+                onPressed: () {
+                  context.push(ChoosingRegisterMethodPage());
+                },
                 txtColor: AppColor.whiteColor,
                 buttonColor: AppColor.primary,
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               CustomTextarabic(
                 text: S.of(context).donothaveaccountareedylogin,
                 color: AppColor.darkGrey,
