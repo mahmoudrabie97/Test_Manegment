@@ -32,4 +32,6 @@ class AssetsData {
   static const imageLeft = 'assets/images/image_left.png';
   static const parent = 'assets/images/parent.png';
   static const teacher = 'assets/images/teacher.png';
+  static const queen = "assets/images/mdi_chess-queen.png";
+  static const callender = "assets/images/calendar 1.png";
 }

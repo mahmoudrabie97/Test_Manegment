@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test_mangement/generated/l10n.dart';
 import 'package:test_mangement/pages/authPages/loginpage/widgets/animated_text_widget.dart';
 import 'package:test_mangement/pages/authPages/sign_up/sign_up_screen.dart';
+import 'package:test_mangement/root_page.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/custommethods.dart';
 import 'package:test_mangement/utilites/extentionhelper.dart';
@@ -64,10 +65,11 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
                       },
                       validator: (value) {
                         if (value!.isEmpty) {
-                          return 'please enter your email';
-                        } else if (!isEmailValid(value)) {
-                          return 'Invalid email format';
+                          return 'please enter your identity';
                         }
+                        // else if (!isEmailValid(value)) {
+                        //   return 'Invalid email format';
+                        // }
                         return null;
                       },
                     ),
@@ -114,10 +116,11 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
                       buttonText: S.of(context).Login,
                       onPressed: () {
                         if (formkey.currentState!.validate()) {
-                          Map userdata = {
-                            "email": _emailController.text,
-                            "password": _passwordController.text,
-                          };
+                          // Map userdata = {
+                          //   "email": _emailController.text,
+                          //   "password": _passwordController.text,
+                          // };
+                          context.push(RootHomePage());
                         }
 
                         // if (formkey.currentState!.validate()) {}
@@ -167,7 +170,7 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          context.push( SignUpScreen());
+                          context.push(SignUpScreen());
                         },
                         child: CustomTextarabic(
                           text: S.of(context).register,

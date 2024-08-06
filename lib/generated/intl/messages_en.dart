@@ -25,10 +25,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "Askhimverbally": MessageLookupByLibrary.simpleMessage("اساله لفظيه"),
         "Createanaccount": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "Currencybalance": MessageLookupByLibrary.simpleMessage("رصيد العملات"),
+        "Current": MessageLookupByLibrary.simpleMessage("الحالي"),
         "Donothaveacountregister":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟ قم بالتسجيل"),
         "Explorecategories":
             MessageLookupByLibrary.simpleMessage("استكشاف الفئات"),
+        "Finished": MessageLookupByLibrary.simpleMessage("انتهت"),
         "Forgetpassword":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة السر؟"),
         "Guardian": MessageLookupByLibrary.simpleMessage("ولي الامر"),
@@ -58,6 +60,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "byemail":
             MessageLookupByLibrary.simpleMessage("عن طريق البريد الإلكتروني"),
         "byphone": MessageLookupByLibrary.simpleMessage("عن طريق الهاتف"),
+        "categories": MessageLookupByLibrary.simpleMessage("الفئات"),
         "chooserole": MessageLookupByLibrary.simpleMessage("اختر دورك"),
         "createnewaccount":
             MessageLookupByLibrary.simpleMessage("انشاء حساب جديد"),
@@ -67,15 +70,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
         "ensurepassword":
             MessageLookupByLibrary.simpleMessage("تاكيد كلمة المرور"),
+        "event1": MessageLookupByLibrary.simpleMessage("حدث 1"),
+        "events": MessageLookupByLibrary.simpleMessage("الاحداث"),
         "exploremore": MessageLookupByLibrary.simpleMessage("استكشف المزيد"),
         "four": MessageLookupByLibrary.simpleMessage("الرابع  "),
         "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+        "home": MessageLookupByLibrary.simpleMessage("الرئيسيه"),
         "ietm1": MessageLookupByLibrary.simpleMessage("البند 1"),
         "ietm2": MessageLookupByLibrary.simpleMessage("البند 2"),
         "lastupdatse":
             MessageLookupByLibrary.simpleMessage("آخر تحديث بتاريخ 12/5/2022"),
         "level": MessageLookupByLibrary.simpleMessage("المستوي"),
+        "next": MessageLookupByLibrary.simpleMessage("القادمه"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "player5": MessageLookupByLibrary.simpleMessage("5 لاعبين"),
+        "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+        "ques34": MessageLookupByLibrary.simpleMessage("34 سؤال"),
+        "questions": MessageLookupByLibrary.simpleMessage("الاساله"),
         "randomquiz": MessageLookupByLibrary.simpleMessage("اختبار عشوائي"),
         "register": MessageLookupByLibrary.simpleMessage("التسجيل"),
         "send": MessageLookupByLibrary.simpleMessage("إرسال"),

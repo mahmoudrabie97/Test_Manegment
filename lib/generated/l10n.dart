@@ -579,6 +579,116 @@ class S {
       args: [],
     );
   }
+
+  /// `حدث 1`
+  String get event1 {
+    return Intl.message(
+      'حدث 1',
+      name: 'event1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `34 سؤال`
+  String get ques34 {
+    return Intl.message(
+      '34 سؤال',
+      name: 'ques34',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `5 لاعبين`
+  String get player5 {
+    return Intl.message(
+      '5 لاعبين',
+      name: 'player5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الرئيسيه`
+  String get home {
+    return Intl.message(
+      'الرئيسيه',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الاساله`
+  String get questions {
+    return Intl.message(
+      'الاساله',
+      name: 'questions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الفئات`
+  String get categories {
+    return Intl.message(
+      'الفئات',
+      name: 'categories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الملف الشخصي`
+  String get profile {
+    return Intl.message(
+      'الملف الشخصي',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `انتهت`
+  String get Finished {
+    return Intl.message(
+      'انتهت',
+      name: 'Finished',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `القادمه`
+  String get next {
+    return Intl.message(
+      'القادمه',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الاحداث`
+  String get events {
+    return Intl.message(
+      'الاحداث',
+      name: 'events',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الحالي`
+  String get Current {
+    return Intl.message(
+      'الحالي',
+      name: 'Current',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
