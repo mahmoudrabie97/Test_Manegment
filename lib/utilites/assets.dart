@@ -22,7 +22,7 @@ class AssetsData {
   static const young = 'assets/images/young.png';
   static const choose = 'assets/images/choose 1.png';
   static const sport = 'assets/images/sports.png';
-  static const sport1 = 'assets/images/sports (1).png';
+  static const manyQuestions = 'assets/images/sports (1).png';
   static const deadline = 'assets/images/deadline 1.png';
   static const graduation = 'assets/images/graduation-hat.png';
   static const visa = 'assets/images/visa.png';
@@ -32,6 +32,4 @@ class AssetsData {
   static const imageLeft = 'assets/images/image_left.png';
   static const parent = 'assets/images/parent.png';
   static const teacher = 'assets/images/teacher.png';
-  static const queen = "assets/images/mdi_chess-queen.png";
-  static const callender = "assets/images/calendar 1.png";
 }
