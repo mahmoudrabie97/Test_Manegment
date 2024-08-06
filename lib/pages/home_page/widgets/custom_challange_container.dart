@@ -16,27 +16,32 @@ class CustomChallangeContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
       child: Container(
-        width: MediaQuery.of(context).size.width * .9,
+        width: MediaQuery.of(context).size.width * .92,
         height: MediaQuery.of(context).size.height * .2,
-        child:  Column(
+        child: Column(
           children: [
             CustomTextarabic(
               text: S.of(context).Participatefriendsorotherplayers,
               color: AppColor.whiteColor,
-              fontSize: 16,
+              fontSize: 14,
               fontWeight: FontWeight.w700,
             ),
             Row(
               children: [
                 Spacer(),
-                CustomSmallWhiteContainer(text: '60',),
-                CustomSmallWhiteContainer(text: '66',),
-                CustomSmallWhiteContainer(text: '1',),
+                CustomSmallWhiteContainer(
+                  text: '60',
+                ),
+                CustomSmallWhiteContainer(
+                  text: '66',
+                ),
+                CustomSmallWhiteContainer(
+                  text: '1',
+                ),
                 Spacer(),
               ],
             ),
             HomePageCustomTextButton(),
-
           ],
         ),
         decoration: BoxDecoration(

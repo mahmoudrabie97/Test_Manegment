@@ -25,13 +25,11 @@ class HomePage extends StatelessWidget {
                 color: AppColor.pinkLight,
                 customWidget: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
-          
                   children: [
                     Spacer(),
                     Image.asset(AssetsData.star),
                     SizedBox(
-          
-                      height: MediaQuery.of(context).size.height*.05,
+                      height: MediaQuery.of(context).size.height * .06,
                       child: CustomColumnText(
                         textOne: S.of(context).Pointsearned,
                         textTwo: '1234 نقطة',
@@ -40,7 +38,7 @@ class HomePage extends StatelessWidget {
                     Spacer(),
                     Image.asset(AssetsData.dollar),
                     SizedBox(
-                      height: MediaQuery.of(context).size.height*.05,
+                      height: MediaQuery.of(context).size.height * .06,
                       child: CustomColumnText(
                         textOne: S.of(context).Currencybalance,
                         textTwo: '1234',
@@ -49,21 +47,18 @@ class HomePage extends StatelessWidget {
                     Spacer(),
                     Image.asset(AssetsData.succes),
                     SizedBox(
-          
-                      height: MediaQuery.of(context).size.height*.05,
+                      height: MediaQuery.of(context).size.height * .06,
                       child: CustomColumnText(
                         textOne: S.of(context).level,
                         textTwo: S.of(context).four,
                       ),
                     ),
                     Spacer(),
-          
                   ],
                 ),
               ),
               CustomChallangeContainer(),
               CustomHomePageMainContainer(),
-          
             ],
           ),
         ),
@@ -71,4 +66,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
