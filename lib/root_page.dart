@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_mangement/generated/l10n.dart';
+import 'package:test_mangement/pages/home_page/home_page.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 
 class RootHomePage extends StatefulWidget {
@@ -12,11 +13,7 @@ class RootHomePage extends StatefulWidget {
 class _RootHomePageState extends State<RootHomePage> {
   int currentindex = 0;
   final List<Widget> pages = <Widget>[
-    const Scaffold(
-      body: Center(
-        child: Text('home'),
-      ),
-    ),
+    HomePage(),
     const Scaffold(
       body: Center(
         child: Text('home'),
