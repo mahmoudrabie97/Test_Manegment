@@ -15,6 +15,8 @@ class AppColor {
   static const red=Color(0xffDB3434);
   static const pinkLight = Color(0xffFFA4F2);
   static const braon = Color(0xffBC4A26);
+  static const purple=Color(0xffB5A7FF);
+  static const darkBlue= Color(0xff2A8ACB);
 
 
 
