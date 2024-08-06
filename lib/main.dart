@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:test_mangement/generated/l10n.dart';
-import 'package:test_mangement/pages/home_page/home_page.dart';
 import 'package:test_mangement/pages/welcome_page_one/welcome_one.dart';
 import 'package:test_mangement/pages/welcome_page_two/welcome_page_two.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
@@ -32,6 +31,6 @@ class MyApp extends StatelessWidget {
             bottomNavigationBarTheme: const BottomNavigationBarThemeData(
               backgroundColor: AppColor.primary,
             )),
-        home: const HomePage());
+        home: const WelcomePage1());
   }
 }
