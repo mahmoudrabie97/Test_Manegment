@@ -459,6 +459,126 @@ class S {
       args: [],
     );
   }
+
+  /// `مرحبًا بعودتك `
+  String get welcomeback {
+    return Intl.message(
+      'مرحبًا بعودتك ',
+      name: 'welcomeback',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `النقاط المكتسبه`
+  String get Pointsearned {
+    return Intl.message(
+      'النقاط المكتسبه',
+      name: 'Pointsearned',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رصيد العملات`
+  String get Currencybalance {
+    return Intl.message(
+      'رصيد العملات',
+      name: 'Currencybalance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `المستوي`
+  String get level {
+    return Intl.message(
+      'المستوي',
+      name: 'level',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الرابع  `
+  String get four {
+    return Intl.message(
+      'الرابع  ',
+      name: 'four',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `شارك في التحديات مع الأصدقاء أو اللاعبين الآخرين`
+  String get Participatefriendsorotherplayers {
+    return Intl.message(
+      'شارك في التحديات مع الأصدقاء أو اللاعبين الآخرين',
+      name: 'Participatefriendsorotherplayers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `استكشف المزيد`
+  String get exploremore {
+    return Intl.message(
+      'استكشف المزيد',
+      name: 'exploremore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `استكشاف الفئات`
+  String get Explorecategories {
+    return Intl.message(
+      'استكشاف الفئات',
+      name: 'Explorecategories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ابدأ`
+  String get start {
+    return Intl.message(
+      'ابدأ',
+      name: 'start',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختبار عشوائي`
+  String get randomquiz {
+    return Intl.message(
+      'اختبار عشوائي',
+      name: 'randomquiz',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اساله لفظيه`
+  String get Askhimverbally {
+    return Intl.message(
+      'اساله لفظيه',
+      name: 'Askhimverbally',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أسئلة كمية`
+  String get Quantitativequestions {
+    return Intl.message(
+      'أسئلة كمية',
+      name: 'Quantitativequestions',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

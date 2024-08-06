@@ -38,7 +38,19 @@
     "byphone":"عن طريق الهاتف",
     "byemail":"عن طريق البريد الإلكتروني",
     "sendverivicationcodetoyou":"لقد أرسلنا رمز التحقق إلى هاتفك",
-    "send":"إرسال"
+    "send":"إرسال",
+    "welcomeback":"مرحبًا بعودتك ",
+    "Pointsearned":"النقاط المكتسبه",
+    "Currencybalance":"رصيد العملات",
+    "level":"المستوي",
+    "four":"الرابع  ",
+    "Participatefriendsorotherplayers":"شارك في التحديات مع الأصدقاء أو اللاعبين الآخرين",
+    "exploremore":"استكشف المزيد",
+    "Explorecategories":"استكشاف الفئات",
+    "start":"ابدأ",
+    "randomquiz":"اختبار عشوائي",
+    "Askhimverbally":"اساله لفظيه",
+    "Quantitativequestions":"أسئلة كمية"
 
 
 

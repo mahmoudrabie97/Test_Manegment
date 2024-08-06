@@ -22,9 +22,13 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Askhimverbally": MessageLookupByLibrary.simpleMessage("اساله لفظيه"),
         "Createanaccount": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
+        "Currencybalance": MessageLookupByLibrary.simpleMessage("رصيد العملات"),
         "Donothaveacountregister":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟ قم بالتسجيل"),
+        "Explorecategories":
+            MessageLookupByLibrary.simpleMessage("استكشاف الفئات"),
         "Forgetpassword":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة السر؟"),
         "Guardian": MessageLookupByLibrary.simpleMessage("ولي الامر"),
@@ -36,7 +40,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول او الاشتراك"),
         "Logintoaccount":
             MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول إلى حسابك "),
+        "Participatefriendsorotherplayers":
+            MessageLookupByLibrary.simpleMessage(
+                "شارك في التحديات مع الأصدقاء أو اللاعبين الآخرين"),
         "Password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "Pointsearned": MessageLookupByLibrary.simpleMessage("النقاط المكتسبه"),
+        "Quantitativequestions":
+            MessageLookupByLibrary.simpleMessage("أسئلة كمية"),
         "Rememberme": MessageLookupByLibrary.simpleMessage("تذكرنى"),
         "School": MessageLookupByLibrary.simpleMessage(" المدرسة "),
         "Student": MessageLookupByLibrary.simpleMessage(" الطالب "),
@@ -57,12 +67,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
         "ensurepassword":
             MessageLookupByLibrary.simpleMessage("تاكيد كلمة المرور"),
+        "exploremore": MessageLookupByLibrary.simpleMessage("استكشف المزيد"),
+        "four": MessageLookupByLibrary.simpleMessage("الرابع  "),
         "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "ietm1": MessageLookupByLibrary.simpleMessage("البند 1"),
         "ietm2": MessageLookupByLibrary.simpleMessage("البند 2"),
         "lastupdatse":
             MessageLookupByLibrary.simpleMessage("آخر تحديث بتاريخ 12/5/2022"),
+        "level": MessageLookupByLibrary.simpleMessage("المستوي"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "randomquiz": MessageLookupByLibrary.simpleMessage("اختبار عشوائي"),
         "register": MessageLookupByLibrary.simpleMessage("التسجيل"),
         "send": MessageLookupByLibrary.simpleMessage("إرسال"),
         "sendverivicationcodetoyou": MessageLookupByLibrary.simpleMessage(
@@ -70,12 +84,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "servicesagree":
             MessageLookupByLibrary.simpleMessage("أوافق على الشروط والأحكام"),
         "sex": MessageLookupByLibrary.simpleMessage("الجنس"),
+        "start": MessageLookupByLibrary.simpleMessage("ابدأ"),
         "subscription": MessageLookupByLibrary.simpleMessage("اشتراك"),
         "text1": MessageLookupByLibrary.simpleMessage(
             "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف"),
         "text2": MessageLookupByLibrary.simpleMessage(
             "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف"),
         "verificationcode": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
-        "welcome": MessageLookupByLibrary.simpleMessage("مرحبا")
+        "welcome": MessageLookupByLibrary.simpleMessage("مرحبا"),
+        "welcomeback": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك ")
       };
 }
