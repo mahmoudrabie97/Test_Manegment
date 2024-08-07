@@ -22,6 +22,89 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "welcome": MessageLookupByLibrary.simpleMessage("Welcome")
+        "Askhimverbally": MessageLookupByLibrary.simpleMessage("اساله لفظيه"),
+        "Currencybalance": MessageLookupByLibrary.simpleMessage("رصيد العملات"),
+        "Current": MessageLookupByLibrary.simpleMessage("الحالي"),
+        "Donothaveacountregister":
+            MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟ قم بالتسجيل"),
+        "Explorecategories":
+            MessageLookupByLibrary.simpleMessage("استكشاف الفئات"),
+        "Finished": MessageLookupByLibrary.simpleMessage("انتهت"),
+        "Forgetpassword":
+            MessageLookupByLibrary.simpleMessage("هل نسيت كلمة السر؟"),
+        "Identity": MessageLookupByLibrary.simpleMessage("الهوية"),
+        "Login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "Loginorcreate": MessageLookupByLibrary.simpleMessage(
+            "قم بتسجيل الدخول أو إنشاء حساب لإجراء الاختبار والمشاركة في التحدي والمزيد."),
+        "Loginorsignup":
+            MessageLookupByLibrary.simpleMessage("تسجيل الدخول او الاشتراك"),
+        "Logintoaccount":
+            MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول إلى حسابك "),
+        "Participatefriendsorotherplayers":
+            MessageLookupByLibrary.simpleMessage(
+                "شارك في التحديات مع الأصدقاء أو اللاعبين الآخرين"),
+        "Password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "Pointsearned": MessageLookupByLibrary.simpleMessage("النقاط المكتسبه"),
+        "Quantitativequestions":
+            MessageLookupByLibrary.simpleMessage("أسئلة كمية"),
+        "Rememberme": MessageLookupByLibrary.simpleMessage("تذكرنى"),
+        "School": MessageLookupByLibrary.simpleMessage(" المدرسة "),
+        "Student": MessageLookupByLibrary.simpleMessage(" الطالب "),
+        "Teached": MessageLookupByLibrary.simpleMessage("معلم"),
+        "TermsofService": MessageLookupByLibrary.simpleMessage("شروط الخدمة"),
+        "Welcomback": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك "),
+        "agreeandfollow": MessageLookupByLibrary.simpleMessage("قبول ومتابعة"),
+        "agreement": MessageLookupByLibrary.simpleMessage("اتفاقية"),
+        "byemail":
+            MessageLookupByLibrary.simpleMessage("عن طريق البريد الإلكتروني"),
+        "byphone": MessageLookupByLibrary.simpleMessage("عن طريق الهاتف"),
+        "categories": MessageLookupByLibrary.simpleMessage("الفئات"),
+        "chooselevel": MessageLookupByLibrary.simpleMessage("اختر مستوى"),
+        "chooserole": MessageLookupByLibrary.simpleMessage("اختر دورك"),
+        "chooseskil": MessageLookupByLibrary.simpleMessage("اختر مهارة"),
+        "createnewaccount":
+            MessageLookupByLibrary.simpleMessage("انشاء حساب جديد"),
+        "donothaveaccountareedylogin": MessageLookupByLibrary.simpleMessage(
+            "هل لديك حساب بالفعل؟ تسجيل الدخول"),
+        "doregister": MessageLookupByLibrary.simpleMessage("قم بالتسجيل"),
+        "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
+        "ensurepassword":
+            MessageLookupByLibrary.simpleMessage("تاكيد كلمة المرور"),
+        "event1": MessageLookupByLibrary.simpleMessage("حدث 1"),
+        "events": MessageLookupByLibrary.simpleMessage("الاحداث"),
+        "exploremore": MessageLookupByLibrary.simpleMessage("استكشف المزيد"),
+        "four": MessageLookupByLibrary.simpleMessage("الرابع  "),
+        "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+        "home": MessageLookupByLibrary.simpleMessage("الرئيسيه"),
+        "ietm1": MessageLookupByLibrary.simpleMessage("البند 1"),
+        "ietm2": MessageLookupByLibrary.simpleMessage("البند 2"),
+        "lastupdatse":
+            MessageLookupByLibrary.simpleMessage("آخر تحديث بتاريخ 12/5/2022"),
+        "level": MessageLookupByLibrary.simpleMessage("المستوي"),
+        "next": MessageLookupByLibrary.simpleMessage("القادمه"),
+        "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "player5": MessageLookupByLibrary.simpleMessage("5 لاعبين"),
+        "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+        "ques34": MessageLookupByLibrary.simpleMessage("34 سؤال"),
+        "questions": MessageLookupByLibrary.simpleMessage("الاساله"),
+        "randomquiz": MessageLookupByLibrary.simpleMessage("اختبار عشوائي"),
+        "register": MessageLookupByLibrary.simpleMessage("التسجيل"),
+        "reward": MessageLookupByLibrary.simpleMessage("المكافأة "),
+        "send": MessageLookupByLibrary.simpleMessage("إرسال"),
+        "sendverivicationcodetoyou": MessageLookupByLibrary.simpleMessage(
+            "لقد أرسلنا رمز التحقق إلى هاتفك"),
+        "servicesagree":
+            MessageLookupByLibrary.simpleMessage("أوافق على الشروط والأحكام"),
+        "sex": MessageLookupByLibrary.simpleMessage("الجنس"),
+        "soloquize": MessageLookupByLibrary.simpleMessage("اختبار فردي"),
+        "start": MessageLookupByLibrary.simpleMessage("ابدأ"),
+        "subscription": MessageLookupByLibrary.simpleMessage("اشتراك"),
+        "text1": MessageLookupByLibrary.simpleMessage(
+            "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف"),
+        "text2": MessageLookupByLibrary.simpleMessage(
+            "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف"),
+        "time": MessageLookupByLibrary.simpleMessage("الوقت"),
+        "welcome": MessageLookupByLibrary.simpleMessage("مرحبا"),
+        "welcomeback": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك ")
       };
 }

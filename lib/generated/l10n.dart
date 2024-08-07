@@ -50,11 +50,665 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Welcome`
+  /// `مرحبا`
   String get welcome {
     return Intl.message(
-      'Welcome',
+      'مرحبا',
       name: 'welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the 'ولي الأمر' key
+
+  /// ` الطالب `
+  String get Student {
+    return Intl.message(
+      ' الطالب ',
+      name: 'Student',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` المدرسة `
+  String get School {
+    return Intl.message(
+      ' المدرسة ',
+      name: 'School',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `معلم`
+  String get Teached {
+    return Intl.message(
+      'معلم',
+      name: 'Teached',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تسجيل الدخول او الاشتراك`
+  String get Loginorsignup {
+    return Intl.message(
+      'تسجيل الدخول او الاشتراك',
+      name: 'Loginorsignup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `قم بتسجيل الدخول أو إنشاء حساب لإجراء الاختبار والمشاركة في التحدي والمزيد.`
+  String get Loginorcreate {
+    return Intl.message(
+      'قم بتسجيل الدخول أو إنشاء حساب لإجراء الاختبار والمشاركة في التحدي والمزيد.',
+      name: 'Loginorcreate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تسجيل الدخول`
+  String get Login {
+    return Intl.message(
+      'تسجيل الدخول',
+      name: 'Login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the 'Create an account' key
+
+  /// `مرحبًا بعودتك `
+  String get Welcomback {
+    return Intl.message(
+      'مرحبًا بعودتك ',
+      name: 'Welcomback',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `قم بتسجيل الدخول إلى حسابك `
+  String get Logintoaccount {
+    return Intl.message(
+      'قم بتسجيل الدخول إلى حسابك ',
+      name: 'Logintoaccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تذكرنى`
+  String get Rememberme {
+    return Intl.message(
+      'تذكرنى',
+      name: 'Rememberme',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الهوية`
+  String get Identity {
+    return Intl.message(
+      'الهوية',
+      name: 'Identity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `كلمة المرور`
+  String get Password {
+    return Intl.message(
+      'كلمة المرور',
+      name: 'Password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `هل نسيت كلمة السر؟`
+  String get Forgetpassword {
+    return Intl.message(
+      'هل نسيت كلمة السر؟',
+      name: 'Forgetpassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ليس لديك حساب؟ قم بالتسجيل`
+  String get Donothaveacountregister {
+    return Intl.message(
+      'ليس لديك حساب؟ قم بالتسجيل',
+      name: 'Donothaveacountregister',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اشتراك`
+  String get subscription {
+    return Intl.message(
+      'اشتراك',
+      name: 'subscription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الاسم الكامل`
+  String get fullname {
+    return Intl.message(
+      'الاسم الكامل',
+      name: 'fullname',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `البريد الالكترونى`
+  String get email {
+    return Intl.message(
+      'البريد الالكترونى',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رقم الهاتف`
+  String get phone {
+    return Intl.message(
+      'رقم الهاتف',
+      name: 'phone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الجنس`
+  String get sex {
+    return Intl.message(
+      'الجنس',
+      name: 'sex',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تاكيد كلمة المرور`
+  String get ensurepassword {
+    return Intl.message(
+      'تاكيد كلمة المرور',
+      name: 'ensurepassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أوافق على الشروط والأحكام`
+  String get servicesagree {
+    return Intl.message(
+      'أوافق على الشروط والأحكام',
+      name: 'servicesagree',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `هل لديك حساب بالفعل؟ تسجيل الدخول`
+  String get donothaveaccountareedylogin {
+    return Intl.message(
+      'هل لديك حساب بالفعل؟ تسجيل الدخول',
+      name: 'donothaveaccountareedylogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `التسجيل`
+  String get register {
+    return Intl.message(
+      'التسجيل',
+      name: 'register',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختر دورك`
+  String get chooserole {
+    return Intl.message(
+      'اختر دورك',
+      name: 'chooserole',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اتفاقية`
+  String get agreement {
+    return Intl.message(
+      'اتفاقية',
+      name: 'agreement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `شروط الخدمة`
+  String get TermsofService {
+    return Intl.message(
+      'شروط الخدمة',
+      name: 'TermsofService',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `آخر تحديث بتاريخ 12/5/2022`
+  String get lastupdatse {
+    return Intl.message(
+      'آخر تحديث بتاريخ 12/5/2022',
+      name: 'lastupdatse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `البند 1`
+  String get ietm1 {
+    return Intl.message(
+      'البند 1',
+      name: 'ietm1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف`
+  String get text1 {
+    return Intl.message(
+      'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف',
+      name: 'text1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `البند 2`
+  String get ietm2 {
+    return Intl.message(
+      'البند 2',
+      name: 'ietm2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف`
+  String get text2 {
+    return Intl.message(
+      'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف',
+      name: 'text2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `قبول ومتابعة`
+  String get agreeandfollow {
+    return Intl.message(
+      'قبول ومتابعة',
+      name: 'agreeandfollow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `قم بالتسجيل`
+  String get doregister {
+    return Intl.message(
+      'قم بالتسجيل',
+      name: 'doregister',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `انشاء حساب جديد`
+  String get createnewaccount {
+    return Intl.message(
+      'انشاء حساب جديد',
+      name: 'createnewaccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عن طريق الهاتف`
+  String get byphone {
+    return Intl.message(
+      'عن طريق الهاتف',
+      name: 'byphone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عن طريق البريد الإلكتروني`
+  String get byemail {
+    return Intl.message(
+      'عن طريق البريد الإلكتروني',
+      name: 'byemail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لقد أرسلنا رمز التحقق إلى هاتفك`
+  String get sendverivicationcodetoyou {
+    return Intl.message(
+      'لقد أرسلنا رمز التحقق إلى هاتفك',
+      name: 'sendverivicationcodetoyou',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `إرسال`
+  String get send {
+    return Intl.message(
+      'إرسال',
+      name: 'send',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مرحبًا بعودتك `
+  String get welcomeback {
+    return Intl.message(
+      'مرحبًا بعودتك ',
+      name: 'welcomeback',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `النقاط المكتسبه`
+  String get Pointsearned {
+    return Intl.message(
+      'النقاط المكتسبه',
+      name: 'Pointsearned',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رصيد العملات`
+  String get Currencybalance {
+    return Intl.message(
+      'رصيد العملات',
+      name: 'Currencybalance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `المستوي`
+  String get level {
+    return Intl.message(
+      'المستوي',
+      name: 'level',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الرابع  `
+  String get four {
+    return Intl.message(
+      'الرابع  ',
+      name: 'four',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `شارك في التحديات مع الأصدقاء أو اللاعبين الآخرين`
+  String get Participatefriendsorotherplayers {
+    return Intl.message(
+      'شارك في التحديات مع الأصدقاء أو اللاعبين الآخرين',
+      name: 'Participatefriendsorotherplayers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `استكشف المزيد`
+  String get exploremore {
+    return Intl.message(
+      'استكشف المزيد',
+      name: 'exploremore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `استكشاف الفئات`
+  String get Explorecategories {
+    return Intl.message(
+      'استكشاف الفئات',
+      name: 'Explorecategories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ابدأ`
+  String get start {
+    return Intl.message(
+      'ابدأ',
+      name: 'start',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختبار عشوائي`
+  String get randomquiz {
+    return Intl.message(
+      'اختبار عشوائي',
+      name: 'randomquiz',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اساله لفظيه`
+  String get Askhimverbally {
+    return Intl.message(
+      'اساله لفظيه',
+      name: 'Askhimverbally',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أسئلة كمية`
+  String get Quantitativequestions {
+    return Intl.message(
+      'أسئلة كمية',
+      name: 'Quantitativequestions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `حدث 1`
+  String get event1 {
+    return Intl.message(
+      'حدث 1',
+      name: 'event1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `34 سؤال`
+  String get ques34 {
+    return Intl.message(
+      '34 سؤال',
+      name: 'ques34',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `5 لاعبين`
+  String get player5 {
+    return Intl.message(
+      '5 لاعبين',
+      name: 'player5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الرئيسيه`
+  String get home {
+    return Intl.message(
+      'الرئيسيه',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الاساله`
+  String get questions {
+    return Intl.message(
+      'الاساله',
+      name: 'questions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الفئات`
+  String get categories {
+    return Intl.message(
+      'الفئات',
+      name: 'categories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الملف الشخصي`
+  String get profile {
+    return Intl.message(
+      'الملف الشخصي',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `انتهت`
+  String get Finished {
+    return Intl.message(
+      'انتهت',
+      name: 'Finished',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `القادمه`
+  String get next {
+    return Intl.message(
+      'القادمه',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الاحداث`
+  String get events {
+    return Intl.message(
+      'الاحداث',
+      name: 'events',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الحالي`
+  String get Current {
+    return Intl.message(
+      'الحالي',
+      name: 'Current',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختبار فردي`
+  String get soloquize {
+    return Intl.message(
+      'اختبار فردي',
+      name: 'soloquize',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `المكافأة `
+  String get reward {
+    return Intl.message(
+      'المكافأة ',
+      name: 'reward',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الوقت`
+  String get time {
+    return Intl.message(
+      'الوقت',
+      name: 'time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختر مهارة`
+  String get chooseskil {
+    return Intl.message(
+      'اختر مهارة',
+      name: 'chooseskil',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختر مستوى`
+  String get chooselevel {
+    return Intl.message(
+      'اختر مستوى',
+      name: 'chooselevel',
       desc: '',
       args: [],
     );
