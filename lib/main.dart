@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:test_mangement/generated/l10n.dart';
 import 'package:test_mangement/pages/events_page/events_page.dart';
+import 'package:test_mangement/pages/verable_questions_page/question_view.dart';
 import 'package:test_mangement/pages/welcome_page_one/welcome_one.dart';
 import 'package:test_mangement/pages/welcome_page_two/welcome_page_two.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
