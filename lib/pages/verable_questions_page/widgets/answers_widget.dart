@@ -14,8 +14,9 @@ class AnswerWidget extends StatelessWidget {
       height: 45,
       margin: EdgeInsets.all(10),
       child: CustomButton(
-          buttonColor: Colors.grey,
+          buttonColor: Colors.white,
           buttonText: answers,
+          txtColor: Colors.black,
           onPressed: () {
             selecthandler();
           }),

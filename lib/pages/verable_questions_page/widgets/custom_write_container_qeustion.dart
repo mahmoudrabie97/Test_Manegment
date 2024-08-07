@@ -1,24 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:test_mangement/pages/result_page/result_page.dart';
 import 'package:test_mangement/pages/verable_questions_page/widgets/answers_widget.dart';
 import 'package:test_mangement/pages/verable_questions_page/widgets/questions_widget.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
+import 'package:test_mangement/utilites/extentionhelper.dart';
 import 'package:test_mangement/utilites/widgets/custombutton.dart';
 
-class Quiz extends StatelessWidget {
-  const Quiz({
+class Quiz extends StatefulWidget {
+  Quiz({
     super.key,
     required this.queslist,
-    required this.questionindex,
+    this.questionindex,
     required this.questionupate,
   });
   final List<Map<String, Object>> queslist;
-  final int questionindex;
+  int? questionindex;
   final Function questionupate;
 
   @override
+  State<Quiz> createState() => _QuizState();
+}
+
+class _QuizState extends State<Quiz> {
+  @override
   Widget build(BuildContext context) {
-    int c = questionindex + 1;
-    int l = queslist.length;
+    int c = widget.questionindex! + 1;
+    int l = widget.queslist.length;
     return Column(
       children: [
         Container(
@@ -35,22 +43,67 @@ class Quiz extends StatelessWidget {
                 child: Text("Quiz : $c/$l."),
               ),
               QuestionsWidge(
-                  questiontext:
-                      queslist[questionindex]['questiontext'] as String,
-                  questionnumber: questionindex + 1),
-              AnswerWidget(
-                  selecthandler: () {
-                    print("hi");
-                  },
-                  answers: 's'),
-              CustomButton(
-                  buttonText: 'buttonText',
-                  onPressed: () {
-                    print('object');
-                  })
+                  questiontext: widget.queslist[widget.questionindex!]
+                          ['questiontext']
+                      .toString(),
+                  questionnumber: widget.questionindex! + 1),
             ],
           ),
         ),
+        ...(widget.queslist[widget.questionindex!]['answers']
+                as List<Map<String, Object>>)
+            .map(
+          (answer) {
+            return AnswerWidget(
+                selecthandler: () =>
+                    widget.questionupate(int.parse(answer['score'].toString())),
+                answers: answer['text'].toString());
+          },
+        ),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              InkWell(
+                onTap: () {
+                  if (widget.questionindex! < widget.queslist.length - 1) {
+                    setState(() {
+                      widget.questionindex = widget.questionindex! + 1;
+                    });
+                  }
+                },
+                child: const CircleAvatar(
+                  backgroundColor: Colors.blue,
+                  child: Icon(
+                    Icons.arrow_back_ios_new_outlined,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              CircleAvatar(
+                backgroundColor: Colors.white,
+                child: Text(c.toString()),
+              ),
+              InkWell(
+                onTap: () {
+                  if (widget.questionindex! > 0) {
+                    setState(() {
+                      widget.questionindex = widget.questionindex! - 1;
+                    });
+                  } else {}
+                },
+                child: CircleAvatar(
+                  backgroundColor: Colors.green,
+                  child: Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        )
       ],
     );
     // return Container(
