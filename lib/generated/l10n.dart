@@ -60,11 +60,13 @@ class S {
     );
   }
 
-  /// `ولي الامر`
-  String get Guardian {
+  // skipped getter for the 'ولي الأمر' key
+
+  /// `التسجيل`
+  String get register {
     return Intl.message(
-      'ولي الامر',
-      name: 'Guardian',
+      'التسجيل',
+      name: 'register',
       desc: '',
       args: [],
     );
@@ -130,15 +132,7 @@ class S {
     );
   }
 
-  /// `انشاء حساب`
-  String get Createanaccount {
-    return Intl.message(
-      'انشاء حساب',
-      name: 'Createanaccount',
-      desc: '',
-      args: [],
-    );
-  }
+  // skipped getter for the 'Create an account' key
 
   /// `مرحبًا بعودتك `
   String get Welcomback {
@@ -290,16 +284,6 @@ class S {
     );
   }
 
-  /// `التسجيل`
-  String get register {
-    return Intl.message(
-      'التسجيل',
-      name: 'register',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `اختر دورك`
   String get chooserole {
     return Intl.message(
@@ -425,16 +409,6 @@ class S {
     return Intl.message(
       'عن طريق البريد الإلكتروني',
       name: 'byemail',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `رمز التحقق`
-  String get verificationcode {
-    return Intl.message(
-      'رمز التحقق',
-      name: 'verificationcode',
       desc: '',
       args: [],
     );
@@ -685,6 +659,76 @@ class S {
     return Intl.message(
       'الحالي',
       name: 'Current',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختبار فردي`
+  String get soloquize {
+    return Intl.message(
+      'اختبار فردي',
+      name: 'soloquize',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `المكافأة `
+  String get reward {
+    return Intl.message(
+      'المكافأة ',
+      name: 'reward',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الوقت`
+  String get time {
+    return Intl.message(
+      'الوقت',
+      name: 'time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختر مهارة`
+  String get chooseskil {
+    return Intl.message(
+      'اختر مهارة',
+      name: 'chooseskil',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختر مستوى`
+  String get chooselevel {
+    return Intl.message(
+      'اختر مستوى',
+      name: 'chooselevel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ولي الامر`
+  String get gurdation {
+    return Intl.message(
+      'ولي الامر',
+      name: 'gurdation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `انشاء حساب`
+  String get createaccount {
+    return Intl.message(
+      'انشاء حساب',
+      name: 'createaccount',
       desc: '',
       args: [],
     );

@@ -55,7 +55,7 @@ class WelcomOneCustomMainContainer extends StatelessWidget {
                         ),
                         CustomSubContainer(
                           containerText:
-                              S.of(context).Guardian, //ضيف الاسم الصح
+                              S.of(context).gurdation, //ضيف الاسم الصح
                           color: AppColor.lightGreenColor,
                           image: AssetsData.parent,
                         ),

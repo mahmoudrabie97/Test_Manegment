@@ -52,7 +52,7 @@ class CustomContainerwelcome2 extends StatelessWidget {
               height: 28,
             ),
             CustomButton(
-              buttonText: S.of(context).Createanaccount,
+              buttonText: S.of(context).createaccount,
               onPressed: () {
                 // context.push(SignUpView());
               },

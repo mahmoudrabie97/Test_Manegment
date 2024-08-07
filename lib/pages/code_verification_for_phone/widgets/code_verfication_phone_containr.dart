@@ -33,7 +33,7 @@ class CodeVerificationPhoneRegisterContainer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CustomTextarabic(
-                text: S.of(context).verificationcode,
+                text: S.of(context).Current,
                 fontWeight: FontWeight.bold,
                 fontSize: 22,
               ),
