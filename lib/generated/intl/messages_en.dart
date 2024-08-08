@@ -53,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Teached": MessageLookupByLibrary.simpleMessage("معلم"),
         "TermsofService": MessageLookupByLibrary.simpleMessage("شروط الخدمة"),
         "Welcomback": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك "),
+        "Wrong": MessageLookupByLibrary.simpleMessage("خطأ"),
         "agreeandfollow": MessageLookupByLibrary.simpleMessage("قبول ومتابعة"),
         "agreement": MessageLookupByLibrary.simpleMessage("اتفاقية"),
         "byemail":
@@ -68,6 +69,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "createaccount": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "createnewaccount":
             MessageLookupByLibrary.simpleMessage("انشاء حساب جديد"),
+        "doneCorrect": MessageLookupByLibrary.simpleMessage("صحيح"),
         "donothaveaccountareedylogin": MessageLookupByLibrary.simpleMessage(
             "هل لديك حساب بالفعل؟ تسجيل الدخول"),
         "doregister": MessageLookupByLibrary.simpleMessage("قم بالتسجيل"),
@@ -78,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "events": MessageLookupByLibrary.simpleMessage("الاحداث"),
         "exploremore": MessageLookupByLibrary.simpleMessage("استكشف المزيد"),
         "first": MessageLookupByLibrary.simpleMessage("الأول"),
+        "firstStep": MessageLookupByLibrary.simpleMessage("المحاولة الاولى"),
         "four": MessageLookupByLibrary.simpleMessage("الرابع  "),
         "friends": MessageLookupByLibrary.simpleMessage("الأصدقاء"),
         "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
@@ -121,6 +124,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف"),
         "third": MessageLookupByLibrary.simpleMessage("الثالث"),
         "time": MessageLookupByLibrary.simpleMessage("الوقت"),
+        "total": MessageLookupByLibrary.simpleMessage("الاجمالي"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحبا"),
         "welcomeback": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك ")
       };

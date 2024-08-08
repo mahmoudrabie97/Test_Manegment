@@ -40,16 +40,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "Student": MessageLookupByLibrary.simpleMessage(" الطالب "),
         "Teached": MessageLookupByLibrary.simpleMessage("معلم"),
         "Welcomback": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك "),
+        "Wrong": MessageLookupByLibrary.simpleMessage("خطأ"),
         "city": MessageLookupByLibrary.simpleMessage("المدينة"),
         "congratuditions": MessageLookupByLibrary.simpleMessage("تهانينا !"),
         "correct": MessageLookupByLibrary.simpleMessage("صحيح (٪)"),
         "createaccount": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
+        "doneCorrect": MessageLookupByLibrary.simpleMessage("صحيح"),
         "donothaveaccountareedylogin": MessageLookupByLibrary.simpleMessage(
             "هل لديك حساب بالفعل؟ تسجيل الدخول"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
         "ensurepassword":
             MessageLookupByLibrary.simpleMessage("تاكيد كلمة المرور"),
         "first": MessageLookupByLibrary.simpleMessage("الأول"),
+        "firstStep": MessageLookupByLibrary.simpleMessage("المحاولة الاولى"),
         "friends": MessageLookupByLibrary.simpleMessage("الأصدقاء"),
         "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "gurdation": MessageLookupByLibrary.simpleMessage("ولي الامر"),
@@ -69,6 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "summary": MessageLookupByLibrary.simpleMessage("الملخص"),
         "tenPlayers": MessageLookupByLibrary.simpleMessage("10 لاعبين"),
         "third": MessageLookupByLibrary.simpleMessage("الثالث"),
+        "total": MessageLookupByLibrary.simpleMessage("الاجمالي"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحبا")
       };
 }

@@ -24,7 +24,7 @@ class SummaryCustomIetmRow extends StatelessWidget {
         children: [
           Image.asset(
             image,
-            width: 50,
+            width: 40,
             height: 50,
           ),
           Row(

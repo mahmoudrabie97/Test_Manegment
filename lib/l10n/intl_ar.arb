@@ -39,7 +39,11 @@
     "rank":"الرتبة",
     "tenPlayers":"10 لاعبين",
     "correct":"صحيح (٪)",
-    "hadWon":"فاز"
+    "hadWon":"فاز",
+    "firstStep":"المحاولة الاولى",
+    "total":"الاجمالي",
+    "doneCorrect":"صحيح",
+    "Wrong":"خطأ"
    
 
 
