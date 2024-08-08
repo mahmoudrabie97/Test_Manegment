@@ -284,6 +284,16 @@ class S {
     );
   }
 
+  /// `ملخص الاختبار`
+  String get quizeSummary {
+    return Intl.message(
+      'ملخص الاختبار',
+      name: 'quizeSummary',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `اختر دورك`
   String get chooserole {
     return Intl.message(
@@ -729,6 +739,136 @@ class S {
     return Intl.message(
       'انشاء حساب',
       name: 'createaccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تهانينا !`
+  String get congratuditions {
+    return Intl.message(
+      'تهانينا !',
+      name: 'congratuditions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لقد سجلت +89 نقطة`
+  String get registerPoints {
+    return Intl.message(
+      'لقد سجلت +89 نقطة',
+      name: 'registerPoints',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الأول`
+  String get first {
+    return Intl.message(
+      'الأول',
+      name: 'first',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الثانى`
+  String get second {
+    return Intl.message(
+      'الثانى',
+      name: 'second',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الثالث`
+  String get third {
+    return Intl.message(
+      'الثالث',
+      name: 'third',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الملخص`
+  String get summary {
+    return Intl.message(
+      'الملخص',
+      name: 'summary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الأصدقاء`
+  String get friends {
+    return Intl.message(
+      'الأصدقاء',
+      name: 'friends',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الترتيب`
+  String get sort {
+    return Intl.message(
+      'الترتيب',
+      name: 'sort',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `المدينة`
+  String get city {
+    return Intl.message(
+      'المدينة',
+      name: 'city',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الرتبة`
+  String get rank {
+    return Intl.message(
+      'الرتبة',
+      name: 'rank',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `10 لاعبين`
+  String get tenPlayers {
+    return Intl.message(
+      '10 لاعبين',
+      name: 'tenPlayers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `صحيح (٪)`
+  String get correct {
+    return Intl.message(
+      'صحيح (٪)',
+      name: 'correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `فاز`
+  String get hadWon {
+    return Intl.message(
+      'فاز',
+      name: 'hadWon',
       desc: '',
       args: [],
     );

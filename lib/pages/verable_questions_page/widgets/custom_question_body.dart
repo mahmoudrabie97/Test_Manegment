@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_mangement/pages/result_page/result_page.dart';
+import 'package:test_mangement/pages/summary/summary_page.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/widgets/custombutton.dart';
 
@@ -85,7 +86,7 @@ class _CustomQuestionBodyState extends State<CustomQuestionBody> {
                     questionindex: questionindex,
                     questionupate: questionsUpdate,
                   )
-                : Text('hi')),
+                : SummaryPage()),
 
         // CustomStackAnswer(
         //   textWord: 'Russia',
