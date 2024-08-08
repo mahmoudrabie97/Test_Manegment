@@ -26,7 +26,20 @@
     "register":"التسجيل",
     "gurdation":"ولي الامر",
     "createaccount":"انشاء حساب",
-    "quizeSummary": "ملخص الاختبار"
+    "quizeSummary": "ملخص الاختبار",
+    "congratuditions":"تهانينا !",
+    "registerPoints":"لقد سجلت +89 نقطة",
+    "first":"الأول",
+    "second":"الثانى",
+    "third":"الثالث",
+    "summary":"الملخص",
+    "friends":"الأصدقاء",
+    "sort":"الترتيب",
+    "city":"المدينة",
+    "rank":"الرتبة",
+    "tenPlayers":"10 لاعبين",
+    "correct":"صحيح (٪)",
+    "hadWon":"فاز"
    
 
 

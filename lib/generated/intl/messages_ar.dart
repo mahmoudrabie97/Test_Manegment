@@ -40,21 +40,35 @@ class MessageLookup extends MessageLookupByLibrary {
         "Student": MessageLookupByLibrary.simpleMessage(" الطالب "),
         "Teached": MessageLookupByLibrary.simpleMessage("معلم"),
         "Welcomback": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك "),
+        "city": MessageLookupByLibrary.simpleMessage("المدينة"),
+        "congratuditions": MessageLookupByLibrary.simpleMessage("تهانينا !"),
+        "correct": MessageLookupByLibrary.simpleMessage("صحيح (٪)"),
         "createaccount": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "donothaveaccountareedylogin": MessageLookupByLibrary.simpleMessage(
             "هل لديك حساب بالفعل؟ تسجيل الدخول"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
         "ensurepassword":
             MessageLookupByLibrary.simpleMessage("تاكيد كلمة المرور"),
+        "first": MessageLookupByLibrary.simpleMessage("الأول"),
+        "friends": MessageLookupByLibrary.simpleMessage("الأصدقاء"),
         "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "gurdation": MessageLookupByLibrary.simpleMessage("ولي الامر"),
+        "hadWon": MessageLookupByLibrary.simpleMessage("فاز"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "quizeSummary": MessageLookupByLibrary.simpleMessage("ملخص الاختبار"),
+        "rank": MessageLookupByLibrary.simpleMessage("الرتبة"),
         "register": MessageLookupByLibrary.simpleMessage("التسجيل"),
+        "registerPoints":
+            MessageLookupByLibrary.simpleMessage("لقد سجلت +89 نقطة"),
+        "second": MessageLookupByLibrary.simpleMessage("الثانى"),
         "servicesagree":
             MessageLookupByLibrary.simpleMessage("أوافق على الشروط والأحكام"),
         "sex": MessageLookupByLibrary.simpleMessage("الجنس"),
+        "sort": MessageLookupByLibrary.simpleMessage("الترتيب"),
         "subscription": MessageLookupByLibrary.simpleMessage("اشتراك"),
+        "summary": MessageLookupByLibrary.simpleMessage("الملخص"),
+        "tenPlayers": MessageLookupByLibrary.simpleMessage("10 لاعبين"),
+        "third": MessageLookupByLibrary.simpleMessage("الثالث"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحبا")
       };
 }
