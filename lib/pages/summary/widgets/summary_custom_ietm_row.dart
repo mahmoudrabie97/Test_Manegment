@@ -19,13 +19,13 @@ class SummaryCustomIetmRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 40.0, vertical: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 12),
       child: SingleChildScrollView(
         child: Column(
           children: [
             Image.asset(
               image,
-              width: 40,
+              width: 30,
               height: 30,
             ),
             Row(

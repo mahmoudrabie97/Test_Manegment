@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/assets.dart';
@@ -5,8 +7,8 @@ import 'package:test_mangement/utilites/widgets/customtext.dart';
 
 import '../../../generated/l10n.dart';
 
-class FriendsListIetm extends StatelessWidget {
-  const FriendsListIetm({
+class RankingListIetm extends StatelessWidget {
+  const RankingListIetm({
     super.key,
   });
 
@@ -45,7 +47,7 @@ class FriendsListIetm extends StatelessWidget {
           Expanded(
             child: ListView.builder(
               itemBuilder: (context, index) {
-                return FriendsIetmListViewRank();
+                return RankingIetmListViewRank();
               },
               itemCount: 10,
             ),
@@ -56,8 +58,8 @@ class FriendsListIetm extends StatelessWidget {
   }
 }
 
-class FriendsIetmListViewRank extends StatelessWidget {
-  const FriendsIetmListViewRank({super.key});
+class RankingIetmListViewRank extends StatelessWidget {
+  const RankingIetmListViewRank({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +74,7 @@ class FriendsIetmListViewRank extends StatelessWidget {
         SizedBox(width: 20,),
         Image.asset(AssetsData.person,width: 55,height: 55,),
         SizedBox(width: 30,),
-         Column(
+        Column(
           children: [
             CustomTextarabic(
               text:'ايناس عمر ',
@@ -88,7 +90,7 @@ class FriendsIetmListViewRank extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                   color: AppColor.greenColor,
                 ),
-           SizedBox(width: 4,),
+                SizedBox(width: 4,),
                 Image.asset(AssetsData.dollar,width: 13,height: 13,),
                 SizedBox(width: 4,),
                 CustomTextarabic(

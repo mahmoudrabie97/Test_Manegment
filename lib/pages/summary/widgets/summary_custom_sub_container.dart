@@ -15,7 +15,7 @@ class SummaryCustomSubContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * .95,
+      width: MediaQuery.of(context).size.width * .97,
       height: MediaQuery.of(context).size.height * .36,
       decoration: const BoxDecoration(
         color: AppColor.whiteColor,
