@@ -13,15 +13,17 @@ class SummaryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            SummaryCustomAppbar(),
-            SummaryCustomSubContainer(),
-            SizedBox(
-              height: 10,
-            ),
-            SummaryCustomMainContainer()
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SummaryCustomAppbar(),
+              SummaryCustomSubContainer(),
+              SizedBox(
+                height: 10,
+              ),
+              SummaryCustomMainContainer()
+            ],
+          ),
         ),
       ),
     );

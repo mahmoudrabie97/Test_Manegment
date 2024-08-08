@@ -86,7 +86,22 @@
   "firstStep":"المحاولة الاولى",
   "total":"الاجمالي",
   "doneCorrect":"صحيح",
-  "Wrong":"خطأ"
+  "Wrong":"خطأ",
+  "indificatinNumbers":"الرقم التعريفي : 456644",
+  "notificatios":"الإشعارات",
+  "recordsCoins":"عملات المكافأة",
+  "favourite":"المفضلة",
+  "badges":" شاراتي",
+  "invitionFriends":"دعوة الأصدقاء",
+  "subjects":"الموضوعات",
+  "coinsPlay":"متجر العملات",
+  "earnedRecoerds":"المكافآت المكتسبة",
+  "statics":"الإحصائيات",
+  "aroundApplication":"حول التطبيق",
+  "descriptionApplication":"وصف التطبيق",
+  "shareApplication":"مشاركة التطبيق",
+  "rate":"تقييمنا",
+  "logOut":"تسجيل الخروج"
 
 
 
