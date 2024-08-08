@@ -873,6 +873,46 @@ class S {
       args: [],
     );
   }
+
+  /// `المحاولة الاولى`
+  String get firstStep {
+    return Intl.message(
+      'المحاولة الاولى',
+      name: 'firstStep',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الاجمالي`
+  String get total {
+    return Intl.message(
+      'الاجمالي',
+      name: 'total',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `صحيح`
+  String get doneCorrect {
+    return Intl.message(
+      'صحيح',
+      name: 'doneCorrect',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `خطأ`
+  String get Wrong {
+    return Intl.message(
+      'خطأ',
+      name: 'Wrong',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
