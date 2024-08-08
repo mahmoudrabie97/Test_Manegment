@@ -24,7 +24,7 @@
   "ensurepassword":"تاكيد كلمة المرور",
   "servicesagree":"أوافق على الشروط والأحكام",
   "donothaveaccountareedylogin":"هل لديك حساب بالفعل؟ تسجيل الدخول",
-
+  "quizeSummary": "ملخص الاختبار",
   "chooserole":"اختر دورك",
   "agreement": "اتفاقية",
   "TermsofService": "شروط الخدمة",
@@ -69,7 +69,20 @@
   "chooseskil":"اختر مهارة",
   "chooselevel":"اختر مستوى",
   "gurdation":"ولي الامر",
-  "createaccount":"انشاء حساب"
+  "createaccount":"انشاء حساب",
+  "congratuditions":"تهانينا !",
+  "registerPoints":"لقد سجلت +89 نقطة",
+  "first":"الأول",
+  "second":"الثانى",
+  "third":"الثالث",
+  "summary":"الملخص",
+  "friends":"الأصدقاء",
+  "sort":"الترتيب",
+  "city":"المدينة",
+  "rank":"الرتبة",
+  "tenPlayers":"10 لاعبين",
+  "correct":"صحيح (٪)",
+  "hadWon":"فاز"
 
 
 
