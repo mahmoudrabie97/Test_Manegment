@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:test_mangement/pages/result_page/result_page.dart';
+import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/widgets/custombutton.dart';
 
 import 'custom_main_container_question.dart';
-import 'custom_write_container_qeustion.dart';
+import 'quiz_item.dart';
 
 class CustomQuestionBody extends StatefulWidget {
   const CustomQuestionBody({super.key});
@@ -74,20 +75,17 @@ class _CustomQuestionBodyState extends State<CustomQuestionBody> {
   ];
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
     return ListView(
       children: [
-        CustomMainContainerQuestion(height: height),
         //SizedBox(height: MediaQuery.of(context).size.height * .1,),
         SizedBox(
-          child: (questionindex < questionsList.length)
-              ? Quiz(
-                  queslist: questionsList,
-                  questionindex: questionindex,
-                  questionupate: questionsUpdate,
-                )
-              : ResultPage(score: totalscore, res: resultupdate),
-        ),
+            child: (questionindex < questionsList.length)
+                ? Quiz(
+                    queslist: questionsList,
+                    questionindex: questionindex,
+                    questionupate: questionsUpdate,
+                  )
+                : Text('hi')),
 
         // CustomStackAnswer(
         //   textWord: 'Russia',
