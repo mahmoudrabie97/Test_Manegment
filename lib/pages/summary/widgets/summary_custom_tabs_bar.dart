@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:test_mangement/pages/summary/widgets/friends_list_ietm.dart';
+import 'package:test_mangement/pages/summary/widgets/ranking_list_ietm.dart';
 import 'package:test_mangement/pages/summary/widgets/summary_list_ietm_tab.dart';
 
 import '../../../generated/l10n.dart';
+import 'city_list_ietm.dart';
 
 class SummaryCustomTabsBar extends StatefulWidget {
   const SummaryCustomTabsBar({Key? key}) : super(key: key);
@@ -18,7 +20,7 @@ class _CustomTabsOFtabBarState extends State<SummaryCustomTabsBar>
   @override
   void initState() {
     super.initState();
-    tabController = TabController(length: 3, vsync: this);
+    tabController = TabController(length: 4, vsync: this);
   }
 
   @override
@@ -47,9 +49,15 @@ class _CustomTabsOFtabBarState extends State<SummaryCustomTabsBar>
               Tab(
                 text: S.of(context).summary,
               ),
-              Tab(  text: S.of(context).friends,),
-              Tab(text:    S.of(context).sort,),
-              Tab(text:    S.of(context).city,),
+              Tab(
+                text: S.of(context).friends,
+              ),
+              Tab(
+                text: S.of(context).sort,
+              ),
+              Tab(
+                text: S.of(context).city,
+              ),
             ],
           ),
         ),
@@ -61,7 +69,8 @@ class _CustomTabsOFtabBarState extends State<SummaryCustomTabsBar>
             children: [
               SummaryListIetmTab(),
               FriendsListIetm(),
-              FriendsListIetm(),
+              RankingListIetm(),
+              CityListIetm(),
               // ListView.separated(
               //   itemBuilder: (_, index) {
               //     return SummaryCustomTabsBar();
