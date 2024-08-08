@@ -41,25 +41,42 @@ class MessageLookup extends MessageLookupByLibrary {
         "Teached": MessageLookupByLibrary.simpleMessage("معلم"),
         "Welcomback": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك "),
         "Wrong": MessageLookupByLibrary.simpleMessage("خطأ"),
+        "aroundApplication":
+            MessageLookupByLibrary.simpleMessage("حول التطبيق"),
+        "badges": MessageLookupByLibrary.simpleMessage(" شاراتي"),
         "city": MessageLookupByLibrary.simpleMessage("المدينة"),
+        "coinsPlay": MessageLookupByLibrary.simpleMessage("متجر العملات"),
         "congratuditions": MessageLookupByLibrary.simpleMessage("تهانينا !"),
         "correct": MessageLookupByLibrary.simpleMessage("صحيح (٪)"),
         "createaccount": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
+        "descriptionApplication":
+            MessageLookupByLibrary.simpleMessage("وصف التطبيق"),
         "doneCorrect": MessageLookupByLibrary.simpleMessage("صحيح"),
         "donothaveaccountareedylogin": MessageLookupByLibrary.simpleMessage(
             "هل لديك حساب بالفعل؟ تسجيل الدخول"),
+        "earnedRecoerds":
+            MessageLookupByLibrary.simpleMessage("المكافآت المكتسبة"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
         "ensurepassword":
             MessageLookupByLibrary.simpleMessage("تاكيد كلمة المرور"),
+        "favourite": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "first": MessageLookupByLibrary.simpleMessage("الأول"),
         "firstStep": MessageLookupByLibrary.simpleMessage("المحاولة الاولى"),
         "friends": MessageLookupByLibrary.simpleMessage("الأصدقاء"),
         "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "gurdation": MessageLookupByLibrary.simpleMessage("ولي الامر"),
         "hadWon": MessageLookupByLibrary.simpleMessage("فاز"),
+        "indificatinNumbers":
+            MessageLookupByLibrary.simpleMessage("الرقم التعريفي : 456644"),
+        "invitionFriends":
+            MessageLookupByLibrary.simpleMessage("دعوة الأصدقاء"),
+        "logOut": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+        "notificatios": MessageLookupByLibrary.simpleMessage("الإشعارات"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "quizeSummary": MessageLookupByLibrary.simpleMessage("ملخص الاختبار"),
         "rank": MessageLookupByLibrary.simpleMessage("الرتبة"),
+        "rate": MessageLookupByLibrary.simpleMessage("تقييمنا"),
+        "recordsCoins": MessageLookupByLibrary.simpleMessage("عملات المكافأة"),
         "register": MessageLookupByLibrary.simpleMessage("التسجيل"),
         "registerPoints":
             MessageLookupByLibrary.simpleMessage("لقد سجلت +89 نقطة"),
@@ -67,7 +84,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "servicesagree":
             MessageLookupByLibrary.simpleMessage("أوافق على الشروط والأحكام"),
         "sex": MessageLookupByLibrary.simpleMessage("الجنس"),
+        "shareApplication":
+            MessageLookupByLibrary.simpleMessage("مشاركة التطبيق"),
         "sort": MessageLookupByLibrary.simpleMessage("الترتيب"),
+        "statics": MessageLookupByLibrary.simpleMessage("الإحصائيات"),
+        "subjects": MessageLookupByLibrary.simpleMessage("الموضوعات"),
         "subscription": MessageLookupByLibrary.simpleMessage("اشتراك"),
         "summary": MessageLookupByLibrary.simpleMessage("الملخص"),
         "tenPlayers": MessageLookupByLibrary.simpleMessage("10 لاعبين"),

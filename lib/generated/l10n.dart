@@ -913,6 +913,156 @@ class S {
       args: [],
     );
   }
+
+  /// `الرقم التعريفي : 456644`
+  String get indificatinNumbers {
+    return Intl.message(
+      'الرقم التعريفي : 456644',
+      name: 'indificatinNumbers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الإشعارات`
+  String get notificatios {
+    return Intl.message(
+      'الإشعارات',
+      name: 'notificatios',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عملات المكافأة`
+  String get recordsCoins {
+    return Intl.message(
+      'عملات المكافأة',
+      name: 'recordsCoins',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `المفضلة`
+  String get favourite {
+    return Intl.message(
+      'المفضلة',
+      name: 'favourite',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` شاراتي`
+  String get badges {
+    return Intl.message(
+      ' شاراتي',
+      name: 'badges',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `دعوة الأصدقاء`
+  String get invitionFriends {
+    return Intl.message(
+      'دعوة الأصدقاء',
+      name: 'invitionFriends',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الموضوعات`
+  String get subjects {
+    return Intl.message(
+      'الموضوعات',
+      name: 'subjects',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `متجر العملات`
+  String get coinsPlay {
+    return Intl.message(
+      'متجر العملات',
+      name: 'coinsPlay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `المكافآت المكتسبة`
+  String get earnedRecoerds {
+    return Intl.message(
+      'المكافآت المكتسبة',
+      name: 'earnedRecoerds',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الإحصائيات`
+  String get statics {
+    return Intl.message(
+      'الإحصائيات',
+      name: 'statics',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `حول التطبيق`
+  String get aroundApplication {
+    return Intl.message(
+      'حول التطبيق',
+      name: 'aroundApplication',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `وصف التطبيق`
+  String get descriptionApplication {
+    return Intl.message(
+      'وصف التطبيق',
+      name: 'descriptionApplication',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مشاركة التطبيق`
+  String get shareApplication {
+    return Intl.message(
+      'مشاركة التطبيق',
+      name: 'shareApplication',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تقييمنا`
+  String get rate {
+    return Intl.message(
+      'تقييمنا',
+      name: 'rate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تسجيل الخروج`
+  String get logOut {
+    return Intl.message(
+      'تسجيل الخروج',
+      name: 'logOut',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
