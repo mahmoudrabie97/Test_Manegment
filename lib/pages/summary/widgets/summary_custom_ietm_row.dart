@@ -20,36 +20,38 @@ class SummaryCustomIetmRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 40.0, vertical: 12),
-      child: Column(
-        children: [
-          Image.asset(
-            image,
-            width: 40,
-            height: 50,
-          ),
-          Row(
-            children: [
-              Image.asset(
-                AssetsData.accept,
-              ),
-              SizedBox(width: 5,),
-              CustomTextarabic(
-                text: textAbove,
-                fontSize: 12,
-                fontWeight: FontWeight.w700,
-              ),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Image.asset(
+              image,
+              width: 40,
+              height: 30,
+            ),
+            Row(
+              children: [
+                Image.asset(
+                  AssetsData.accept,
+                ),
+                SizedBox(width: 3,),
+                CustomTextarabic(
+                  text: textAbove,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w700,
+                ),
 
-            ],
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          CustomTextarabic(
-            text: textDown,
-            fontSize: 10,
-            fontWeight: FontWeight.w700,
-          ),
-        ],
+              ],
+            ),
+            SizedBox(
+              height: 3,
+            ),
+            CustomTextarabic(
+              text: textDown,
+              fontSize: 10,
+              fontWeight: FontWeight.w700,
+            ),
+          ],
+        ),
       ),
     );
   }
