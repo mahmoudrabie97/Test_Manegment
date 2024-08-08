@@ -49,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "gurdation": MessageLookupByLibrary.simpleMessage("ولي الامر"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "quizeSummary": MessageLookupByLibrary.simpleMessage("ملخص الاختبار"),
         "register": MessageLookupByLibrary.simpleMessage("التسجيل"),
         "servicesagree":
             MessageLookupByLibrary.simpleMessage("أوافق على الشروط والأحكام"),

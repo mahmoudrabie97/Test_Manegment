@@ -89,6 +89,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "ques34": MessageLookupByLibrary.simpleMessage("34 سؤال"),
         "questions": MessageLookupByLibrary.simpleMessage("الاساله"),
+        "quizeSummary": MessageLookupByLibrary.simpleMessage("ملخص الاختبار"),
         "randomquiz": MessageLookupByLibrary.simpleMessage("اختبار عشوائي"),
         "register": MessageLookupByLibrary.simpleMessage("التسجيل"),
         "reward": MessageLookupByLibrary.simpleMessage("المكافأة "),

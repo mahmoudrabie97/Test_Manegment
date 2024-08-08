@@ -37,4 +37,5 @@ class AssetsData {
   static const sport1 = 'assets/images/sports (1).png';
   static const queen = "assets/images/mdi_chess-queen.png";
   static const callender = 'assets/images/calendar 1.png';
+  static const   trophy ='assets/images/trophy.png';
 }

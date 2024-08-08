@@ -284,6 +284,16 @@ class S {
     );
   }
 
+  /// `ملخص الاختبار`
+  String get quizeSummary {
+    return Intl.message(
+      'ملخص الاختبار',
+      name: 'quizeSummary',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `اختر دورك`
   String get chooserole {
     return Intl.message(
