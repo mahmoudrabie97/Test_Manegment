@@ -23,51 +23,53 @@ class SummaryCustomSubContainer extends StatelessWidget {
           Radius.circular(20),
         ),
       ),
-      child: Column(
-        children: [
-          Image.asset(
-            AssetsData.trophy,
-            alignment: Alignment.topCenter,
-          ),
-          CustomTextarabic(
-            text: S.of(context).congratuditions,
-            fontWeight: FontWeight.w700,
-            fontSize: 24,
-          ),
-          CustomTextarabic(
-            text: S.of(context).registerPoints,
-            fontWeight: FontWeight.w500,
-            fontSize: 24,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              SummaryCustomIetmRow(
-                image: AssetsData.person,
-                textAbove: S.of(context).third,
-                textDown: 'ايناس عمر',
-              ),
-              Container(
-                width: 1,
-                height: 60,
-                color: AppColor.greyColor,
-              ),
-              SummaryCustomIetmRow( image: AssetsData.boy,
-                textAbove: S.of(context).second,
-                textDown: 'ايناس عمر',),
-              Container(
-                width: 1,
-                height: 60,
-                color: AppColor.greyColor,
-              ),
-              SummaryCustomIetmRow( image: AssetsData.person,
-                textAbove: S.of(context).first,
-                textDown: 'ايناس عمر',),
-            ],
-          ),
-
-          //const CustomRowText(),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Image.asset(
+              AssetsData.trophy,
+              alignment: Alignment.topCenter,
+            ),
+            CustomTextarabic(
+              text: S.of(context).congratuditions,
+              fontWeight: FontWeight.w700,
+              fontSize: 24,
+            ),
+            CustomTextarabic(
+              text: S.of(context).registerPoints,
+              fontWeight: FontWeight.w500,
+              fontSize: 24,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                SummaryCustomIetmRow(
+                  image: AssetsData.person,
+                  textAbove: S.of(context).third,
+                  textDown: 'ايناس عمر',
+                ),
+                Container(
+                  width: 1,
+                  height: 60,
+                  color: AppColor.greyColor,
+                ),
+                SummaryCustomIetmRow( image: AssetsData.boy,
+                  textAbove: S.of(context).second,
+                  textDown: 'ايناس عمر',),
+                Container(
+                  width: 1,
+                  height: 60,
+                  color: AppColor.greyColor,
+                ),
+                SummaryCustomIetmRow( image: AssetsData.person,
+                  textAbove: S.of(context).first,
+                  textDown: 'ايناس عمر',),
+              ],
+            ),
+        
+            //const CustomRowText(),
+          ],
+        ),
       ),
     );
   }
