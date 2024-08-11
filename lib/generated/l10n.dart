@@ -1063,6 +1063,78 @@ class S {
       args: [],
     );
   }
+
+  /// `مهارات`
+  String get skills {
+    return Intl.message(
+      'مهارات',
+      name: 'skills',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `كمي`
+  String get quantitive {
+    return Intl.message(
+      'كمي',
+      name: 'quantitive',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لفظي`
+  String get verbal {
+    return Intl.message(
+      'لفظي',
+      name: 'verbal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مجموع الاسئلة الكمية `
+  String get totalQuestionsQuantitive {
+    return Intl.message(
+      'مجموع الاسئلة الكمية ',
+      name: 'totalQuestionsQuantitive',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the '20Quizes' key
+
+  /// `المجموع: 10 محاولات`
+  String get total10Tries {
+    return Intl.message(
+      'المجموع: 10 محاولات',
+      name: 'total10Tries',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مجموع الاسئلة اللفظية `
+  String get totalQuestionVerbal {
+    return Intl.message(
+      'مجموع الاسئلة اللفظية ',
+      name: 'totalQuestionVerbal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مجموع اختبارات المهارات`
+  String get totalTestsSkills {
+    return Intl.message(
+      'مجموع اختبارات المهارات',
+      name: 'totalTestsSkills',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
