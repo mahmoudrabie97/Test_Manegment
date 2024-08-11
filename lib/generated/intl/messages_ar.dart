@@ -100,6 +100,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("التسجيل"),
         "registerPoints":
             MessageLookupByLibrary.simpleMessage("لقد سجلت +89 نقطة"),
+        "riyals": MessageLookupByLibrary.simpleMessage("3 ريال"),
         "second": MessageLookupByLibrary.simpleMessage("الثانى"),
         "servicesagree":
             MessageLookupByLibrary.simpleMessage("أوافق على الشروط والأحكام"),
@@ -115,6 +116,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "summary": MessageLookupByLibrary.simpleMessage("الملخص"),
         "tenPlayers": MessageLookupByLibrary.simpleMessage("10 لاعبين"),
         "third": MessageLookupByLibrary.simpleMessage("الثالث"),
+        "threecoins": MessageLookupByLibrary.simpleMessage("30 قطعة نقدية"),
         "total": MessageLookupByLibrary.simpleMessage("الاجمالي"),
         "total10Tries":
             MessageLookupByLibrary.simpleMessage("المجموع: 10 محاولات"),

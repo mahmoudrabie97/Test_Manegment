@@ -52,4 +52,5 @@ class AssetsData {
   static const pers8 = 'assets/svg/pers8.png';
   static const pers9 = 'assets/svg/pers9.png';
   static const pers10 = 'assets/svg/pers10.png';
+  static const creditCard= 'assets/images/credit_card.png';
 }
