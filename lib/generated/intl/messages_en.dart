@@ -54,6 +54,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "TermsofService": MessageLookupByLibrary.simpleMessage("شروط الخدمة"),
         "Welcomback": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك "),
         "Wrong": MessageLookupByLibrary.simpleMessage("خطأ"),
+        "addition": MessageLookupByLibrary.simpleMessage("اضافة"),
+        "against": MessageLookupByLibrary.simpleMessage("1 ضد 1"),
         "agreeandfollow": MessageLookupByLibrary.simpleMessage("قبول ومتابعة"),
         "agreement": MessageLookupByLibrary.simpleMessage("اتفاقية"),
         "aroundApplication":
@@ -62,7 +64,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "byemail":
             MessageLookupByLibrary.simpleMessage("عن طريق البريد الإلكتروني"),
         "byphone": MessageLookupByLibrary.simpleMessage("عن طريق الهاتف"),
+        "cardNumber": MessageLookupByLibrary.simpleMessage("رقم البطاقة"),
         "categories": MessageLookupByLibrary.simpleMessage("الفئات"),
+        "choosePaymentMethod":
+            MessageLookupByLibrary.simpleMessage("اختر طريقة دفع"),
         "chooselevel": MessageLookupByLibrary.simpleMessage("اختر مستوى"),
         "chooserole": MessageLookupByLibrary.simpleMessage("اختر دورك"),
         "chooseskil": MessageLookupByLibrary.simpleMessage("اختر مهارة"),
@@ -73,6 +78,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "createaccount": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "createnewaccount":
             MessageLookupByLibrary.simpleMessage("انشاء حساب جديد"),
+        "creditCard": MessageLookupByLibrary.simpleMessage("بطاقة ائتمانية "),
         "descriptionApplication":
             MessageLookupByLibrary.simpleMessage("وصف التطبيق"),
         "doneCorrect": MessageLookupByLibrary.simpleMessage("صحيح"),
@@ -86,6 +92,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تاكيد كلمة المرور"),
         "event1": MessageLookupByLibrary.simpleMessage("حدث 1"),
         "events": MessageLookupByLibrary.simpleMessage("الاحداث"),
+        "expirationDate":
+            MessageLookupByLibrary.simpleMessage("تاريخ انتهاء الصلاحية"),
         "exploremore": MessageLookupByLibrary.simpleMessage("استكشف المزيد"),
         "favourite": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "first": MessageLookupByLibrary.simpleMessage("الأول"),
@@ -93,6 +101,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "four": MessageLookupByLibrary.simpleMessage("الرابع  "),
         "friends": MessageLookupByLibrary.simpleMessage("الأصدقاء"),
         "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+        "group": MessageLookupByLibrary.simpleMessage("مجموعة"),
         "gurdation": MessageLookupByLibrary.simpleMessage("ولي الامر"),
         "hadWon": MessageLookupByLibrary.simpleMessage("فاز"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسيه"),
@@ -100,17 +109,26 @@ class MessageLookup extends MessageLookupByLibrary {
         "ietm2": MessageLookupByLibrary.simpleMessage("البند 2"),
         "indificatinNumbers":
             MessageLookupByLibrary.simpleMessage("الرقم التعريفي : 456644"),
+        "individual": MessageLookupByLibrary.simpleMessage("فـردي"),
         "invitionFriends":
             MessageLookupByLibrary.simpleMessage("دعوة الأصدقاء"),
+        "lastTrement": MessageLookupByLibrary.simpleMessage("آخر معاملة"),
         "lastupdatse":
             MessageLookupByLibrary.simpleMessage("آخر تحديث بتاريخ 12/5/2022"),
         "level": MessageLookupByLibrary.simpleMessage("المستوي"),
         "logOut": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+        "myCard": MessageLookupByLibrary.simpleMessage("بطاقتي"),
+        "myWallet": MessageLookupByLibrary.simpleMessage("محفظتي"),
+        "nameHolderCard":
+            MessageLookupByLibrary.simpleMessage("اسم حامل البطاقة"),
         "next": MessageLookupByLibrary.simpleMessage("القادمه"),
         "notificatios": MessageLookupByLibrary.simpleMessage("الإشعارات"),
+        "payementMethod": MessageLookupByLibrary.simpleMessage("طرق الدفع"),
+        "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "player5": MessageLookupByLibrary.simpleMessage("5 لاعبين"),
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+        "pushNow": MessageLookupByLibrary.simpleMessage("ادفع الآن"),
         "quantitive": MessageLookupByLibrary.simpleMessage("كمي"),
         "ques34": MessageLookupByLibrary.simpleMessage("34 سؤال"),
         "questions": MessageLookupByLibrary.simpleMessage("الاساله"),
@@ -119,6 +137,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "rank": MessageLookupByLibrary.simpleMessage("الرتبة"),
         "rate": MessageLookupByLibrary.simpleMessage("تقييمنا"),
         "recordsCoins": MessageLookupByLibrary.simpleMessage("عملات المكافأة"),
+        "recovery": MessageLookupByLibrary.simpleMessage("استرداد "),
         "register": MessageLookupByLibrary.simpleMessage("التسجيل"),
         "registerPoints":
             MessageLookupByLibrary.simpleMessage("لقد سجلت +89 نقطة"),
@@ -132,6 +151,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sex": MessageLookupByLibrary.simpleMessage("الجنس"),
         "shareApplication":
             MessageLookupByLibrary.simpleMessage("مشاركة التطبيق"),
+        "showAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
         "skills": MessageLookupByLibrary.simpleMessage("مهارات"),
         "soloquize": MessageLookupByLibrary.simpleMessage("اختبار فردي"),
         "sort": MessageLookupByLibrary.simpleMessage("الترتيب"),
@@ -156,6 +176,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("مجموع الاسئلة الكمية "),
         "totalTestsSkills":
             MessageLookupByLibrary.simpleMessage("مجموع اختبارات المهارات"),
+        "train": MessageLookupByLibrary.simpleMessage("تدريب"),
+        "transformation": MessageLookupByLibrary.simpleMessage("تحويل"),
         "verbal": MessageLookupByLibrary.simpleMessage("لفظي"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحبا"),
         "welcomeback": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك ")
