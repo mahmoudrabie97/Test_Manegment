@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:test_mangement/generated/l10n.dart';
+import 'package:test_mangement/pages/personal_profile_page/edit_profile/edit_profile_view.dart';
 import 'package:test_mangement/pages/personal_profile_page/widgets/custom_column_personal_item.dart';
 import 'package:test_mangement/pages/personal_profile_page/widgets/custom_small_personal_container.dart';
 import 'package:test_mangement/utilites/assets.dart';
+import 'package:test_mangement/utilites/extentionhelper.dart';
 import 'package:test_mangement/utilites/widgets/customtext.dart';
 
 class CustomLargePersonalContainer extends StatelessWidget {
@@ -45,7 +47,11 @@ class CustomLargePersonalContainer extends StatelessWidget {
                 ],
               ),
               const Spacer(),
-              IconButton(onPressed: () {}, icon: const Icon(Icons.edit)),
+              IconButton(
+                  onPressed: () {
+                    context.push(EditProfileView());
+                  },
+                  icon: const Icon(Icons.edit)),
             ],
           ),
           Padding(
