@@ -17,9 +17,10 @@ class QuantitiveCustomRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 15),
+      padding: const EdgeInsets.only(bottom: 10.0, top: 10,right: 22),
       child: Container(
         height: MediaQuery.of(context).size.height * .11,
+        width: MediaQuery.of(context).size.width * .9,
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
@@ -33,7 +34,7 @@ class QuantitiveCustomRow extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 10),
           child: Row(
             children: [
               Image.asset(image),
