@@ -37,6 +37,24 @@ class AssetsData {
   static const sport1 = 'assets/images/sports (1).png';
   static const queen = "assets/images/mdi_chess-queen.png";
   static const callender = 'assets/images/calendar 1.png';
-  static const   trophy ='assets/images/trophy.png';
+  static const trophy = 'assets/images/trophy.png';
   static const boy = 'assets/images/boy.png';
+  static const pers1 = "assets/svg/pers1.png";
+  static const pers2 = "assets/svg/pers2.png";
+  static const pers3 = "assets/svg/pers3.png";
+  static const pers4 = "assets/svg/pers4.png";
+
+  static const pers5 = "assets/svg/pers5.png";
+
+  static const pers6 = "assets/svg/pers6.png";
+
+  static const pers7 = "assets/svg/pers7.png";
+
+  static const pers8 = "assets/svg/pers8.png";
+
+  static const pers9 = "assets/svg/pers9.png";
+
+  static const pers10 = "assets/svg/pers10.png";
+
+  static const pers11 = "assets/svg/pers11.png";
 }

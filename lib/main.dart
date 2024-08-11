@@ -34,6 +34,6 @@ class MyApp extends StatelessWidget {
             bottomNavigationBarTheme: const BottomNavigationBarThemeData(
               backgroundColor: AppColor.primary,
             )),
-        home: const SummaryPage());
+        home: const WelcomePage1());
   }
 }
