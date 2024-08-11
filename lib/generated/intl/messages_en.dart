@@ -142,6 +142,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "registerPoints":
             MessageLookupByLibrary.simpleMessage("لقد سجلت +89 نقطة"),
         "reward": MessageLookupByLibrary.simpleMessage("المكافأة "),
+        "riyals": MessageLookupByLibrary.simpleMessage("3 ريال"),
         "second": MessageLookupByLibrary.simpleMessage("الثانى"),
         "send": MessageLookupByLibrary.simpleMessage("إرسال"),
         "sendverivicationcodetoyou": MessageLookupByLibrary.simpleMessage(
@@ -166,6 +167,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "text2": MessageLookupByLibrary.simpleMessage(
             "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف"),
         "third": MessageLookupByLibrary.simpleMessage("الثالث"),
+        "threecoins": MessageLookupByLibrary.simpleMessage("30 قطعة نقدية"),
         "time": MessageLookupByLibrary.simpleMessage("الوقت"),
         "total": MessageLookupByLibrary.simpleMessage("الاجمالي"),
         "total10Tries":
