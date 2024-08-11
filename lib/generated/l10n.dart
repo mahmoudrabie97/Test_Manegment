@@ -1186,7 +1186,15 @@ class S {
     );
   }
 
-  // skipped getter for the '30coins' key
+  /// `30 قطعة نقدية`
+  String get threecoins {
+    return Intl.message(
+      '30 قطعة نقدية',
+      name: 'threecoins',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `استرداد `
   String get recovery {
@@ -1198,7 +1206,15 @@ class S {
     );
   }
 
-  // skipped getter for the '3riyals' key
+  /// `3 ريال`
+  String get riyals {
+    return Intl.message(
+      '3 ريال',
+      name: 'riyals',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `طرق الدفع`
   String get payementMethod {
