@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test_mangement/generated/l10n.dart';
 import 'package:test_mangement/pages/personal_profile_page/widgets/custom_small_white_container.dart';
 import 'package:test_mangement/pages/quantitive/quantitive.dart';
+import 'package:test_mangement/pages/wallet/wallet_page.dart';
 import 'package:test_mangement/utilites/assets.dart';
 import 'package:test_mangement/utilites/extentionhelper.dart';
 
@@ -54,9 +55,14 @@ class CustomColumnPersonalitems extends StatelessWidget {
                 width: 40,
               ),
               Expanded(
-                child: CustomWhiteSmallContainerPersonal(
-                  icondata: AssetsData.pers4,
-                  text: S.of(context).coinsPlay,
+                child: InkWell(
+                  onTap: () {
+                    context.push(WalletPage());
+                  },
+                  child: CustomWhiteSmallContainerPersonal(
+                    icondata: AssetsData.pers4,
+                    text: S.of(context).coinsPlay,
+                  ),
                 ),
               ),
             ],
@@ -68,9 +74,12 @@ class CustomColumnPersonalitems extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Expanded(
-                child: CustomWhiteSmallContainerPersonal(
-                  icondata: AssetsData.pers5,
-                  text: S.of(context).earnedRecoerds,
+                child: InkWell(
+                  onTap: () {},
+                  child: CustomWhiteSmallContainerPersonal(
+                    icondata: AssetsData.pers5,
+                    text: S.of(context).earnedRecoerds,
+                  ),
                 ),
               ),
               SizedBox(
