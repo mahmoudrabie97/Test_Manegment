@@ -73,6 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logOut": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "notificatios": MessageLookupByLibrary.simpleMessage("الإشعارات"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "quantitive": MessageLookupByLibrary.simpleMessage("كمي"),
         "quizeSummary": MessageLookupByLibrary.simpleMessage("ملخص الاختبار"),
         "rank": MessageLookupByLibrary.simpleMessage("الرتبة"),
         "rate": MessageLookupByLibrary.simpleMessage("تقييمنا"),
@@ -86,6 +87,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sex": MessageLookupByLibrary.simpleMessage("الجنس"),
         "shareApplication":
             MessageLookupByLibrary.simpleMessage("مشاركة التطبيق"),
+        "skills": MessageLookupByLibrary.simpleMessage("مهارات"),
         "sort": MessageLookupByLibrary.simpleMessage("الترتيب"),
         "statics": MessageLookupByLibrary.simpleMessage("الإحصائيات"),
         "subjects": MessageLookupByLibrary.simpleMessage("الموضوعات"),
@@ -94,6 +96,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "tenPlayers": MessageLookupByLibrary.simpleMessage("10 لاعبين"),
         "third": MessageLookupByLibrary.simpleMessage("الثالث"),
         "total": MessageLookupByLibrary.simpleMessage("الاجمالي"),
+        "total10Tries":
+            MessageLookupByLibrary.simpleMessage("المجموع: 10 محاولات"),
+        "totalQuestionVerbal":
+            MessageLookupByLibrary.simpleMessage("مجموع الاسئلة اللفظية "),
+        "totalQuestionsQuantitive":
+            MessageLookupByLibrary.simpleMessage("مجموع الاسئلة الكمية "),
+        "totalTestsSkills":
+            MessageLookupByLibrary.simpleMessage("مجموع اختبارات المهارات"),
+        "verbal": MessageLookupByLibrary.simpleMessage("لفظي"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحبا")
       };
 }

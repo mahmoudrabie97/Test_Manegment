@@ -101,7 +101,15 @@
   "descriptionApplication":"وصف التطبيق",
   "shareApplication":"مشاركة التطبيق",
   "rate":"تقييمنا",
-  "logOut":"تسجيل الخروج"
+  "logOut":"تسجيل الخروج",
+  "skills":"مهارات",
+  "quantitive":"كمي",
+  "verbal":"لفظي",
+  "totalQuestionsQuantitive":"مجموع الاسئلة الكمية ",
+  "20Quizes":"20 اختبار",
+  "total10Tries":"المجموع: 10 محاولات",
+  "totalQuestionVerbal":"مجموع الاسئلة اللفظية ",
+  "totalTestsSkills":"مجموع اختبارات المهارات"
 
 
 

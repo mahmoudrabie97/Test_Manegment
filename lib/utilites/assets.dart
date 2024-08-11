@@ -39,4 +39,6 @@ class AssetsData {
   static const callender = 'assets/images/calendar 1.png';
   static const   trophy ='assets/images/trophy.png';
   static const boy = 'assets/images/boy.png';
+   static const frameAccept = 'assets/images/frame_accept.png';
+   static const frameWrong = 'assets/images/frame_wrong.png';
 }
