@@ -76,53 +76,53 @@ class _CustomQuestionBodyState extends State<CustomQuestionBody> {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        //SizedBox(height: MediaQuery.of(context).size.height * .1,),
-        SizedBox(
-            child: (questionindex < questionsList.length)
-                ? Quiz(
-                    queslist: questionsList,
-                    questionindex: questionindex,
-                    questionupate: questionsUpdate,
-                  )
-                : SummaryPage()),
+    return questionindex < questionsList.length - 1
+        ? ListView(
+            children: [
+              //SizedBox(height: MediaQuery.of(context).size.height * .1,),
 
-        // CustomStackAnswer(
-        //   textWord: 'Russia',
-        //   textLetter: 'A',
-        // ),
-        // CustomStackAnswer(
-        //   textWord: 'America',
-        //   textLetter: 'B',
-        // ),
-        // CustomStackAnswer(
-        //   textWord: 'Australia',
-        //   textLetter: 'C',
-        // ),
-        // CustomStackAnswer(
-        //   textWord: 'Hong Kong',
-        //   textLetter: 'D',
-        // ),
-        // Padding(
-        //   padding: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
-        //   child: CustomButton(
-        //     buttonText: 'Next',
-        //     onPressed: () {
-        //       showModalBottomSheet<void>(
-        //         context: context,
-        //         builder: (BuildContext context) {
-        //           return const CustomShowBottomSheetIetm();
-        //         },
-        //       );
-        //     },
-        //     buttonColor: AppColor.primary,
-        //     borderRadius: 22,
-        //   ),
+              Quiz(
+                queslist: questionsList,
+                questionindex: questionindex,
+                questionupate: questionsUpdate,
+              )
 
-        // ),
-      ],
-    );
+              // CustomStackAnswer(
+              //   textWord: 'Russia',
+              //   textLetter: 'A',
+              // ),
+              // CustomStackAnswer(
+              //   textWord: 'America',
+              //   textLetter: 'B',
+              // ),
+              // CustomStackAnswer(
+              //   textWord: 'Australia',
+              //   textLetter: 'C',
+              // ),
+              // CustomStackAnswer(
+              //   textWord: 'Hong Kong',
+              //   textLetter: 'D',
+              // ),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
+              //   child: CustomButton(
+              //     buttonText: 'Next',
+              //     onPressed: () {
+              //       showModalBottomSheet<void>(
+              //         context: context,
+              //         builder: (BuildContext context) {
+              //           return const CustomShowBottomSheetIetm();
+              //         },
+              //       );
+              //     },
+              //     buttonColor: AppColor.primary,
+              //     borderRadius: 22,
+              //   ),
+
+              // ),
+            ],
+          )
+        : SummaryPage();
   }
 }
 // return ListView(

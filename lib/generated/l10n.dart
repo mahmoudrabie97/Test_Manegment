@@ -1135,6 +1135,200 @@ class S {
       args: [],
     );
   }
+
+  /// `محفظتي`
+  String get myWallet {
+    return Intl.message(
+      'محفظتي',
+      name: 'myWallet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الدفع`
+  String get payment {
+    return Intl.message(
+      'الدفع',
+      name: 'payment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تحويل`
+  String get transformation {
+    return Intl.message(
+      'تحويل',
+      name: 'transformation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عرض الكل`
+  String get showAll {
+    return Intl.message(
+      'عرض الكل',
+      name: 'showAll',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `آخر معاملة`
+  String get lastTrement {
+    return Intl.message(
+      'آخر معاملة',
+      name: 'lastTrement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the '30coins' key
+
+  /// `استرداد `
+  String get recovery {
+    return Intl.message(
+      'استرداد ',
+      name: 'recovery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  // skipped getter for the '3riyals' key
+
+  /// `طرق الدفع`
+  String get payementMethod {
+    return Intl.message(
+      'طرق الدفع',
+      name: 'payementMethod',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختر طريقة دفع`
+  String get choosePaymentMethod {
+    return Intl.message(
+      'اختر طريقة دفع',
+      name: 'choosePaymentMethod',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `بطاقة ائتمانية `
+  String get creditCard {
+    return Intl.message(
+      'بطاقة ائتمانية ',
+      name: 'creditCard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `بطاقتي`
+  String get myCard {
+    return Intl.message(
+      'بطاقتي',
+      name: 'myCard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رقم البطاقة`
+  String get cardNumber {
+    return Intl.message(
+      'رقم البطاقة',
+      name: 'cardNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اسم حامل البطاقة`
+  String get nameHolderCard {
+    return Intl.message(
+      'اسم حامل البطاقة',
+      name: 'nameHolderCard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تاريخ انتهاء الصلاحية`
+  String get expirationDate {
+    return Intl.message(
+      'تاريخ انتهاء الصلاحية',
+      name: 'expirationDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ادفع الآن`
+  String get pushNow {
+    return Intl.message(
+      'ادفع الآن',
+      name: 'pushNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اضافة`
+  String get addition {
+    return Intl.message(
+      'اضافة',
+      name: 'addition',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `فـردي`
+  String get individual {
+    return Intl.message(
+      'فـردي',
+      name: 'individual',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تدريب`
+  String get train {
+    return Intl.message(
+      'تدريب',
+      name: 'train',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1 ضد 1`
+  String get against {
+    return Intl.message(
+      '1 ضد 1',
+      name: 'against',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مجموعة`
+  String get group {
+    return Intl.message(
+      'مجموعة',
+      name: 'group',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

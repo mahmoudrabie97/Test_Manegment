@@ -190,6 +190,10 @@ class _QuizState extends State<Quiz> {
             children: [
               InkWell(
                 onTap: () {
+                  if (widget.questionindex! < widget.queslist.length) {
+                    print('hiiiiiii');
+                  }
+
                   if (widget.questionindex! < widget.queslist.length - 1) {
                     setState(() {
                       widget.questionindex = widget.questionindex! + 1;
@@ -259,7 +263,6 @@ class _QuizState extends State<Quiz> {
   @override
   void dispose() {
     _timer?.cancel();
-    super.dispose();
     super.dispose();
   }
 }
