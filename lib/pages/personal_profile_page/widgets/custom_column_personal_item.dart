@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:test_mangement/generated/l10n.dart';
 import 'package:test_mangement/pages/personal_profile_page/widgets/custom_small_white_container.dart';
+import 'package:test_mangement/pages/quantitive/quantitive.dart';
 import 'package:test_mangement/utilites/assets.dart';
+import 'package:test_mangement/utilites/extentionhelper.dart';
 
 class CustomColumnPersonalitems extends StatelessWidget {
   const CustomColumnPersonalitems({
@@ -75,9 +77,14 @@ class CustomColumnPersonalitems extends StatelessWidget {
                 width: 40,
               ),
               Expanded(
-                child: CustomWhiteSmallContainerPersonal(
-                  icondata: AssetsData.pers6,
-                  text: S.of(context).statics,
+                child: InkWell(
+                  onTap: () {
+                    context.push(QuantitivePage());
+                  },
+                  child: CustomWhiteSmallContainerPersonal(
+                    icondata: AssetsData.pers6,
+                    text: S.of(context).statics,
+                  ),
                 ),
               ),
             ],

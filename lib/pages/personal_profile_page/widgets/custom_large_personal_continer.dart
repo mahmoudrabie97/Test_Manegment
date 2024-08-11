@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:test_mangement/generated/l10n.dart';
 import 'package:test_mangement/pages/personal_profile_page/widgets/custom_column_personal_item.dart';
 import 'package:test_mangement/pages/personal_profile_page/widgets/custom_small_personal_container.dart';
-import 'package:test_mangement/pages/personal_profile_page/widgets/custom_small_white_container.dart';
 import 'package:test_mangement/utilites/assets.dart';
 import 'package:test_mangement/utilites/widgets/customtext.dart';
 
@@ -24,7 +23,7 @@ class CustomLargePersonalContainer extends StatelessWidget {
               CircleAvatar(
                 child: Image.asset(AssetsData.boy),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               Column(
@@ -45,8 +44,8 @@ class CustomLargePersonalContainer extends StatelessWidget {
                   )
                 ],
               ),
-              Spacer(),
-              IconButton(onPressed: () {}, icon: Icon(Icons.edit)),
+              const Spacer(),
+              IconButton(onPressed: () {}, icon: const Icon(Icons.edit)),
             ],
           ),
           Padding(
@@ -56,27 +55,27 @@ class CustomLargePersonalContainer extends StatelessWidget {
               children: [
                 Expanded(
                   child: CustomSmallPersonalContainer(
-                    containercolor: Color(0xff7C72E5),
+                    containercolor: const Color(0xff7C72E5),
                     icondata: Icons.notifications,
                     textcontainer: S.of(context).notificatios,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Expanded(
                   child: CustomSmallPersonalContainer(
-                    containercolor: Color(0xffBC4A27),
+                    containercolor: const Color(0xffBC4A27),
                     icondata: Icons.currency_bitcoin,
                     textcontainer: S.of(context).recordsCoins,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Expanded(
                   child: CustomSmallPersonalContainer(
-                    containercolor: Color(0xff3798DA),
+                    containercolor: const Color(0xff3798DA),
                     icondata: Icons.favorite_outlined,
                     textcontainer: S.of(context).favourite,
                     isfavourite: true,
@@ -86,8 +85,8 @@ class CustomLargePersonalContainer extends StatelessWidget {
             ),
           ),
           Container(
-            color: Color(0xffF5F5F5),
-            child: CustomColumnPersonalitems(),
+            color: const Color(0xffF5F5F5),
+            child: const CustomColumnPersonalitems(),
           )
         ],
       ),
