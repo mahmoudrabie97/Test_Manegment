@@ -43,8 +43,8 @@ class WalletCustomMainContainer extends StatelessWidget {
             WalletCustomRowTextButton(),
             Expanded(
               child: ListView.builder(
-                  physics: NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
+                  // physics: NeverScrollableScrollPhysics(),
+                  // shrinkWrap: true,
                   itemCount: 20,
                   itemBuilder: (context, index) {
                     return WalletListViewIetm();

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:test_mangement/cubit/authcubit/authcubit.dart';
+import 'package:test_mangement/cubit/authcubit/authstates.dart';
 import 'package:test_mangement/generated/l10n.dart';
 import 'package:test_mangement/pages/authPages/loginpage/widgets/animated_text_widget.dart';
 import 'package:test_mangement/pages/authPages/sign_up/sign_up_screen.dart';
@@ -31,162 +34,194 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width * .9,
-      height: MediaQuery.of(context).size.height * .60,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(15),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.only(right: 20.0, left: 20),
-        child: ListView(
-          children: [
-            const AnimatedTextWidget(),
-            CustomTextarabic(text: S.of(context).Logintoaccount),
-            const SizedBox(
-              height: 10,
-            ),
-            Form(
-              key: formkey,
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 90,
-                    child: CustomTextFormField(
-                      hintText: S.of(context).Identity,
-                      perfixicon: Icons.perm_identity_rounded,
-                      hinnntcolr: Colors.grey,
-                      controller: _emailController,
-                      keyboardType: TextInputType.emailAddress,
-                      focusnode: field1,
-                      onsubmitted: (value) {
-                        FocusScope.of(context).requestFocus(field2);
-                      },
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'please enter your identity';
-                        }
-                        // else if (!isEmailValid(value)) {
-                        //   return 'Invalid email format';
-                        // }
-                        return null;
-                      },
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 6,
-                  ),
-                  SizedBox(
-                    height: 90,
-                    child: CustomTextFormField(
-                      hintText: S.of(context).Password,
-                      perfixicon: Icons.badge,
-                      suffixicon: Icons.visibility,
-                      suffixpressed: () {},
-                      hinnntcolr: Colors.grey,
-                      // suffixicon: AuthCubit.get(context).sufficxicp,
-                      //   suffixpressed: () {
-                      // AuthCubit.get(context).changeSecurePassword();
-                      //  },
-                      controller: _passwordController,
-                      // obscureText: AuthCubit.get(context).isSecurep,
-                      keyboardType: TextInputType.visiblePassword,
-                      focusnode: field2,
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'please enter your password';
-                        }
-                        return null;
-                      },
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 17,
-                  ),
-                  // state is LoginLoadingState
-                  //     ? const Center(
-                  //         child: CircularProgressIndicator(),
-                  //       )
-                  //     :
-
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10, right: 10),
-                    child: CustomButton(
-                      buttonText: S.of(context).Login,
-                      onPressed: () {
-                        if (formkey.currentState!.validate()) {
-                          // Map userdata = {
-                          //   "email": _emailController.text,
-                          //   "password": _passwordController.text,
-                          // };
-                          context.push(RootHomePage());
-                        }
-
-                        // if (formkey.currentState!.validate()) {}
-                      },
-                      buttonColor: AppColor.primary,
-                      borderRadius: 12,
-                    ),
-                  ),
-                  CheckboxListTile(
-                    activeColor: AppColor.primary,
-                    title: CustomTextarabic(
-                      text: S.of(context).Rememberme,
-                      color: Colors.grey,
-                    ),
-                    value: checkval,
-                    onChanged: (newValue) {
-                      setState(() {
-                        checkval = newValue;
-                      });
-                    },
-                    controlAffinity: ListTileControlAffinity
-                        .leading, //  <-- leading Checkbox
-                  ),
-
-                  const SizedBox(
-                    height: 8,
-                  ),
-                  GestureDetector(
-                    onTap: () {},
-                    child: CustomTextarabic(
-                      text: S.of(context).Forgetpassword,
-                      fontSize: 18,
-                      color: AppColor.primary,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 6,
-                  ),
-                  Row(
-                    //crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
+    return BlocConsumer<AuthCubit, AuthStates>(
+      builder: (context, state) {
+        return Container(
+          width: MediaQuery
+              .of(context)
+              .size
+              .width * .9,
+          height: MediaQuery
+              .of(context)
+              .size
+              .height * .60,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(15),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.only(right: 20.0, left: 20),
+            child: ListView(
+              children: [
+                const AnimatedTextWidget(),
+                CustomTextarabic(text: S
+                    .of(context)
+                    .Logintoaccount),
+                const SizedBox(
+                  height: 10,
+                ),
+                Form(
+                  key: formkey,
+                  child: Column(
                     children: [
-                      CustomTextarabic(
-                        text: S.of(context).Donothaveacountregister,
-                        color: Colors.grey,
+                      SizedBox(
+                        height: 90,
+                        child: CustomTextFormField(
+                          hintText: S
+                              .of(context)
+                              .Identity,
+                          perfixicon: Icons.perm_identity_rounded,
+                          hinnntcolr: Colors.grey,
+                          controller: _emailController,
+                          keyboardType: TextInputType.emailAddress,
+                          focusnode: field1,
+                          onsubmitted: (value) {
+                            FocusScope.of(context).requestFocus(field2);
+                          },
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'please enter your identity';
+                            }
+                            // else if (!isEmailValid(value)) {
+                            //   return 'Invalid email format';
+                            // }
+                            return null;
+                          },
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 6,
+                      ),
+                      SizedBox(
+                        height: 90,
+                        child: CustomTextFormField(
+                          hintText: S
+                              .of(context)
+                              .Password,
+                          perfixicon: Icons.badge,
+                          suffixicon: Icons.visibility,
+                          suffixpressed: () {},
+                          hinnntcolr: Colors.grey,
+                          // suffixicon: AuthCubit.get(context).sufficxicp,
+                          //   suffixpressed: () {
+                          // AuthCubit.get(context).changeSecurePassword();
+                          //  },
+                          controller: _passwordController,
+                          // obscureText: AuthCubit.get(context).isSecurep,
+                          keyboardType: TextInputType.visiblePassword,
+                          focusnode: field2,
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'please enter your password';
+                            }
+                            return null;
+                          },
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 17,
+                      ),
+                      // state is LoginLoadingState
+                      //     ? const Center(
+                      //         child: CircularProgressIndicator(),
+                      //       )
+                      //     :
+
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10, right: 10),
+                        child: CustomButton(
+                          buttonText: S
+                              .of(context)
+                              .Login,
+                          onPressed: () {
+                            Map logindata = {
+                              "nationalId": _emailController.text,
+                              "password": _passwordController.text,
+                            };
+                            if (formkey.currentState!.validate()) {
+                              AuthCubit.get(context).loginUser(
+                                  userdata: logindata, context: context);
+                              // Map userdata = {
+                              //   "email": _emailController.text,
+                              //   "password": _passwordController.text,
+                              // };
+
+                            }
+
+                            // if (formkey.currentState!.validate()) {}
+                          },
+                          buttonColor: AppColor.primary,
+                          borderRadius: 12,
+                        ),
+                      ),
+                      CheckboxListTile(
+                        activeColor: AppColor.primary,
+                        title: CustomTextarabic(
+                          text: S
+                              .of(context)
+                              .Rememberme,
+                          color: Colors.grey,
+                        ),
+                        value: checkval,
+                        onChanged: (newValue) {
+                          setState(() {
+                            checkval = newValue;
+                          });
+                        },
+                        controlAffinity: ListTileControlAffinity
+                            .leading, //  <-- leading Checkbox
+                      ),
+
+                      const SizedBox(
+                        height: 8,
                       ),
                       GestureDetector(
-                        onTap: () {
-                          context.push(SignUpScreen());
-                        },
+                        onTap: () {},
                         child: CustomTextarabic(
-                          text: S.of(context).register,
-                          fontSize: 16,
+                          text: S
+                              .of(context)
+                              .Forgetpassword,
+                          fontSize: 18,
                           color: AppColor.primary,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
+                      SizedBox(
+                        height: 6,
+                      ),
+                      Row(
+                        //crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          CustomTextarabic(
+                            text: S
+                                .of(context)
+                                .Donothaveacountregister,
+                            color: Colors.grey,
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              context.push(SignUpScreen());
+                            },
+                            child: CustomTextarabic(
+                              text: S
+                                  .of(context)
+                                  .register,
+                              fontSize: 16,
+                              color: AppColor.primary,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
-                ],
-              ),
-            )
-          ],
-        ),
-      ),
+                )
+              ],
+            ),
+          ),
+        );
+      }, listener: (BuildContext context, AuthStates state) {},
     );
   }
 }

@@ -18,11 +18,14 @@ class MyCardPage extends StatelessWidget {
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 12),
-        child: Column(
-          children: [
-            MyCardCustomAppbar(),
-            MyCardCustomMainContainer(),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+
+            children: [
+              MyCardCustomAppbar(),
+              MyCardCustomMainContainer(),
+            ],
+          ),
         ),
       )),
     );

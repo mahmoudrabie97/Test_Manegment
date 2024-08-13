@@ -20,7 +20,9 @@ class WalletCustomAppbar extends StatelessWidget {
         ),
         Spacer(),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: Icon(
             Icons.arrow_forward_ios,
             color: AppColor.whiteColor,
