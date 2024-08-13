@@ -26,6 +26,7 @@ class WalletCustomMainContainer extends StatelessWidget {
           children: [
             Image.asset(AssetsData.creditCard),
             Row(
+
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 WalletCustomColumnIetm(
@@ -41,6 +42,8 @@ class WalletCustomMainContainer extends StatelessWidget {
             WalletCustomRowTextButton(),
             Expanded(
               child: ListView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
                   itemCount: 20,
                   itemBuilder: (context, index) {
                     return WalletListViewIetm();
