@@ -1,14 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_custom_drop_down_choose.dart';
-import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_custom_drop_down_skill.dart';
+
 import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container_question.dart';
 import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container_time.dart';
 
 import '../../../utilites/appcolors.dart';
 
-class CustomSoloQuizeMainContainer extends StatelessWidget {
-  const CustomSoloQuizeMainContainer({super.key});
+class CustomTrainningQuizeMainContainer extends StatelessWidget {
+  const CustomTrainningQuizeMainContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,26 +19,17 @@ class CustomSoloQuizeMainContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 18.0, vertical: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 12),
         child: SingleChildScrollView(
-          physics: ScrollPhysics(),
+          physics: const ScrollPhysics(),
           child: Column(
             children: [
-              Row(
-                children: [
-                  Flexible(child: SoloQuizeCustomDropdownButtonLevel()),
-                  SizedBox(
-                    width: 22,
-                  ),
-                  Flexible(child: SoloQuizeCustomDropdownButtonSkill()),
-                ],
-              ),
               ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: 12,
                 itemBuilder: (context, index) {
-                  return ListViewIetm();
+                  return const ListViewIetm();
                 },
               ),
             ],
@@ -57,7 +47,7 @@ class ListViewIetm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         SoloQuizeSubContainerTime(),
         SoloQuizeSubContainerQuestion(),

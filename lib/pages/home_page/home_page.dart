@@ -20,13 +20,13 @@ class HomePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              CustomRowInfo(),
+              const CustomRowInfo(),
               CustomHomePageSubContainer(
                 color: AppColor.pinkLight,
                 customWidget: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Spacer(),
+                    const Spacer(),
                     Image.asset(AssetsData.star),
                     SizedBox(
                       height: MediaQuery.of(context).size.height * .06,
@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
                         textTwo: '1234 نقطة',
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Image.asset(AssetsData.dollar),
                     SizedBox(
                       height: MediaQuery.of(context).size.height * .06,
@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
                         textTwo: '1234',
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Image.asset(AssetsData.succes),
                     SizedBox(
                       height: MediaQuery.of(context).size.height * .06,
@@ -53,12 +53,12 @@ class HomePage extends StatelessWidget {
                         textTwo: S.of(context).four,
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                   ],
                 ),
               ),
-              CustomChallangeContainer(),
-              CustomHomePageMainContainer(),
+              const CustomChallangeContainer(),
+              const CustomHomePageMainContainer(),
             ],
           ),
         ),

@@ -27,6 +27,11 @@ class SignUpMainContainer extends StatelessWidget {
   final FocusNode field1 = FocusNode();
   final FocusNode field2 = FocusNode();
 
+  final FocusNode field3 = FocusNode();
+  final FocusNode field4 = FocusNode();
+
+  final FocusNode field5 = FocusNode();
+  final FocusNode field6 = FocusNode();
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -38,10 +43,20 @@ class SignUpMainContainer extends StatelessWidget {
           color: AppColor.whiteColor,
           borderRadius: BorderRadius.circular(20),
         ),
-        child: CustomIetmContainer(formkey: formkey, fullNameController: _fullNameController, field1: field1, field2: field2, emailController: _emailController, phoneController: _phoneController, passwordController: _passwordController, ensurePasswordController: _ensurePasswordController),
+        child: CustomIetmContainer(
+          formkey: formkey,
+          fullNameController: _fullNameController,
+          field1: field1,
+          field2: field2,
+          emailController: _emailController,
+          phoneController: _phoneController,
+          passwordController: _passwordController,
+          ensurePasswordController: _ensurePasswordController,
+          field3: field3,
+          field4: field4,
+          field5: field5,
+        ),
       ),
     );
   }
 }
-
-
