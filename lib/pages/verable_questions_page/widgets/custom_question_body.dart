@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test_mangement/pages/result_page/result_page.dart';
 import 'package:test_mangement/pages/summary/summary_page.dart';
-import 'package:test_mangement/utilites/appcolors.dart';
-import 'package:test_mangement/utilites/widgets/custombutton.dart';
 
-import 'custom_main_container_question.dart';
 import 'quiz_item.dart';
 
 class CustomQuestionBody extends StatefulWidget {

@@ -22,6 +22,9 @@ class CustomIetmContainer extends StatelessWidget {
     required TextEditingController phoneController,
     required TextEditingController passwordController,
     required TextEditingController ensurePasswordController,
+    required this.field3,
+    required this.field4,
+    required this.field5,
   })  : _fullNameController = fullNameController,
         _emailController = emailController,
         _phoneController = phoneController,
@@ -32,6 +35,10 @@ class CustomIetmContainer extends StatelessWidget {
   final TextEditingController _fullNameController;
   final FocusNode field1;
   final FocusNode field2;
+  final FocusNode field3;
+  final FocusNode field4;
+  final FocusNode field5;
+
   final TextEditingController _emailController;
   final TextEditingController _phoneController;
   final TextEditingController _passwordController;
@@ -64,16 +71,14 @@ class CustomIetmContainer extends StatelessWidget {
                 perfixicon: Icons.perm_identity_rounded,
                 hinnntcolr: Colors.grey,
                 controller: _fullNameController,
-                keyboardType: TextInputType.emailAddress,
+                keyboardType: TextInputType.text,
                 focusnode: field1,
                 onsubmitted: (value) {
                   FocusScope.of(context).requestFocus(field2);
                 },
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return 'please enter your email';
-                  } else if (!isEmailValid(value)) {
-                    return 'Invalid email format';
+                    return 'please enter your full Name';
                   }
                   return null;
                 },
@@ -84,9 +89,9 @@ class CustomIetmContainer extends StatelessWidget {
                 hinnntcolr: Colors.grey,
                 controller: _emailController,
                 keyboardType: TextInputType.emailAddress,
-                focusnode: field1,
+                focusnode: field2,
                 onsubmitted: (value) {
-                  FocusScope.of(context).requestFocus(field2);
+                  FocusScope.of(context).requestFocus(field3);
                 },
                 validator: (value) {
                   if (value!.isEmpty) {
@@ -102,16 +107,14 @@ class CustomIetmContainer extends StatelessWidget {
                 perfixicon: Icons.phone,
                 hinnntcolr: Colors.grey,
                 controller: _phoneController,
-                keyboardType: TextInputType.emailAddress,
-                focusnode: field1,
+                keyboardType: TextInputType.phone,
+                focusnode: field3,
                 onsubmitted: (value) {
-                  FocusScope.of(context).requestFocus(field2);
+                  FocusScope.of(context).requestFocus(field4);
                 },
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return 'please enter your email';
-                  } else if (!isEmailValid(value)) {
-                    return 'Invalid email format';
+                    return 'please enter your PhoneNumber';
                   }
                   return null;
                 },
@@ -122,16 +125,14 @@ class CustomIetmContainer extends StatelessWidget {
                 perfixicon: Icons.lock_outline,
                 hinnntcolr: Colors.grey,
                 controller: _passwordController,
-                keyboardType: TextInputType.emailAddress,
-                focusnode: field1,
+                keyboardType: TextInputType.text,
+                focusnode: field4,
                 onsubmitted: (value) {
-                  FocusScope.of(context).requestFocus(field2);
+                  FocusScope.of(context).requestFocus(field5);
                 },
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return 'please enter your email';
-                  } else if (!isEmailValid(value)) {
-                    return 'Invalid email format';
+                    return 'please enter your password';
                   }
                   return null;
                 },
@@ -141,16 +142,14 @@ class CustomIetmContainer extends StatelessWidget {
                 perfixicon: Icons.lock_outline,
                 hinnntcolr: Colors.grey,
                 controller: _ensurePasswordController,
-                keyboardType: TextInputType.emailAddress,
-                focusnode: field1,
+                keyboardType: TextInputType.text,
+                focusnode: field5,
                 onsubmitted: (value) {
-                  FocusScope.of(context).requestFocus(field2);
+                  // FocusScope.of(context).requestFocus(field6);
                 },
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return 'please enter your email';
-                  } else if (!isEmailValid(value)) {
-                    return 'Invalid email format';
+                    return 'please re-enter Your password ';
                   }
                   return null;
                 },

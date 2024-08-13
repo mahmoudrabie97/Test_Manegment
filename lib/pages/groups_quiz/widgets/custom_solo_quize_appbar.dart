@@ -5,8 +5,8 @@ import 'package:test_mangement/utilites/widgets/customtext.dart';
 
 import '../../../generated/l10n.dart';
 
-class CustomsoloQuizeAppBar extends StatelessWidget {
-  const CustomsoloQuizeAppBar({super.key});
+class CustomGroupQuizeAppBar extends StatelessWidget {
+  const CustomGroupQuizeAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +18,6 @@ class CustomsoloQuizeAppBar extends StatelessWidget {
           Container(
             width: 80,
             height: 30,
-            decoration: BoxDecoration(
-                color: AppColor.lightGreenColor,
-                borderRadius: BorderRadius.circular(10)),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Row(
@@ -28,7 +25,7 @@ class CustomsoloQuizeAppBar extends StatelessWidget {
                 children: [
                   Image.asset(AssetsData.dollar),
                   Spacer(),
-                  const CustomTextarabic(
+                  CustomTextarabic(
                     text: '1234',
                     color: AppColor.whiteColor,
                     fontSize: 12,
@@ -37,6 +34,9 @@ class CustomsoloQuizeAppBar extends StatelessWidget {
                 ],
               ),
             ),
+            decoration: BoxDecoration(
+                color: AppColor.lightGreenColor,
+                borderRadius: BorderRadius.circular(10)),
           ),
           Spacer(),
           CustomTextarabic(

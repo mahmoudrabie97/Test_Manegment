@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:test_mangement/pages/result_page/result_page.dart';
+import 'package:test_mangement/pages/summary/summary_page.dart';
 import 'package:test_mangement/pages/verable_questions_page/widgets/answers_widget.dart';
 import 'package:test_mangement/pages/verable_questions_page/widgets/custom_main_container_question.dart';
 import 'package:test_mangement/pages/verable_questions_page/widgets/questions_widget.dart';
@@ -57,11 +58,7 @@ class _QuizState extends State<Quiz> {
         startTimer();
       });
     } else {
-      showBottomSheet(
-          context: context,
-          builder: (context) {
-            return Container();
-          });
+      context.push(SummaryPage());
     }
   }
 
@@ -191,7 +188,7 @@ class _QuizState extends State<Quiz> {
               InkWell(
                 onTap: () {
                   if (widget.questionindex! < widget.queslist.length) {
-                    print('hiiiiiii');
+                    navigateToNextQuestion();
                   }
 
                   if (widget.questionindex! < widget.queslist.length - 1) {

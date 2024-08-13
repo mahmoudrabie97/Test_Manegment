@@ -1,19 +1,14 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 
-
 const List<String> list = <String>['ذكر', 'انثى'];
-
-
 
 class CustomDropdownButton extends StatelessWidget {
   const CustomDropdownButton({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return DropdownButtonExample();
+    return const DropdownButtonExample();
   }
 }
 
@@ -26,37 +21,38 @@ class DropdownButtonExample extends StatefulWidget {
 
 class _DropdownButtonExampleState extends State<DropdownButtonExample> {
   String dropdownValue = list.first;
+  bool ismale = false;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: MediaQuery.of(context).size.height*.07,
+      height: MediaQuery.of(context).size.height * .07,
       decoration: BoxDecoration(
-        border: Border.all(width: .8,color: AppColor.darkGrey),
+        border: Border.all(width: .8, color: AppColor.darkGrey),
         borderRadius: BorderRadius.circular(10),
-
       ),
       child: Padding(
         padding: const EdgeInsets.only(right: 8.0),
         child: Row(
           children: [
-            Icon(Icons.female_rounded,),
-            SizedBox(width:MediaQuery.of(context).size.width*.05,),
-
+            Expanded(
+                child: Icon(
+              dropdownValue == list.firstOrNull
+                  ? Icons.male
+                  : Icons.female_rounded,
+            )),
             DropdownButton<String>(
               value: dropdownValue,
-              icon: Padding(
-                padding: const EdgeInsets.only(right: 250.0),
-                child: const Icon(Icons.keyboard_arrow_down),
+              icon: const Padding(
+                padding: EdgeInsets.only(right: 250.0),
+                child: Icon(Icons.keyboard_arrow_down),
               ),
-
               elevation: 16,
-              style:  TextStyle(color: Colors.grey),
+              style: const TextStyle(color: Colors.grey),
               underline: Container(
                 width: double.infinity,
                 height: 0,
-
               ),
               dropdownColor: Colors.white,
               onChanged: (String? value) {

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:test_mangement/generated/l10n.dart';
 import 'package:test_mangement/pages/events_page/events_page.dart';
+import 'package:test_mangement/pages/oneToOne_quiz/summary_one_to_one/summary_one_to_one.dart';
 import 'package:test_mangement/pages/quantitive/quantitive.dart';
 import 'package:test_mangement/pages/summary/summary_page.dart';
 import 'package:test_mangement/pages/verable_questions_page/question_view.dart';
@@ -35,6 +36,6 @@ class MyApp extends StatelessWidget {
             bottomNavigationBarTheme: const BottomNavigationBarThemeData(
               backgroundColor: AppColor.primary,
             )),
-        home: const WelcomePage1());
+        home: WelcomePage1());
   }
 }
