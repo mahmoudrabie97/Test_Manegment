@@ -12,16 +12,15 @@ class WalletPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-    body: Padding(
-      padding: EdgeInsets.symmetric(horizontal: 18.0),
-      child: SingleChildScrollView(
-        child: SafeArea(
-          child: Column(
-            children: [
-              WalletCustomAppbar(),
-              WalletCustomMainContainer(),
-            ],
-          ),
+    body: SafeArea(
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 18.0),
+        child: ListView(
+
+          children: [
+            WalletCustomAppbar(),
+            WalletCustomMainContainer(),
+          ],
         ),
       ),
     ),
