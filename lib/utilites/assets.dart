@@ -53,4 +53,6 @@ class AssetsData {
   static const pers9 = 'assets/svg/pers9.png';
   static const pers10 = 'assets/svg/pers10.png';
   static const creditCard= 'assets/images/credit_card.png';
+  static const visaCard= 'assets/images/visaCard.png';
+  static const hint= 'assets/images/Hint.png';
 }
