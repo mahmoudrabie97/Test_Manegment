@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:test_mangement/pages/payment_method/payment_method_page.dart';
 import 'package:test_mangement/pages/wallet/widgets/wallet_custom_column_ietm.dart';
 import 'package:test_mangement/pages/wallet/widgets/wallet_custom_roe_text_button.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/assets.dart';
+import 'package:test_mangement/utilites/extentionhelper.dart';
 import 'package:test_mangement/utilites/widgets/customtext.dart';
 
 import '../../../generated/l10n.dart';
@@ -26,7 +28,6 @@ class WalletCustomMainContainer extends StatelessWidget {
           children: [
             Image.asset(AssetsData.creditCard),
             Row(
-
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 WalletCustomColumnIetm(
@@ -42,7 +43,7 @@ class WalletCustomMainContainer extends StatelessWidget {
             WalletCustomRowTextButton(),
             Expanded(
               child: ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
+                  physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemCount: 20,
                   itemBuilder: (context, index) {
@@ -85,7 +86,7 @@ class WalletListViewIetm extends StatelessWidget {
               Image.asset(
                 width: 55,
                 height: 55,
-                fit:BoxFit.fill,
+                fit: BoxFit.fill,
                 AssetsData.dollar,
               ),
               const SizedBox(
@@ -109,12 +110,11 @@ class WalletListViewIetm extends StatelessWidget {
                   ),
                 ],
               ),
-             Spacer(),
+              Spacer(),
               SizedBox(
                 width: 110,
                 child: TextButton(
                   style: ButtonStyle(
-
                     backgroundColor: WidgetStatePropertyAll(AppColor.primary),
                   ),
                   onPressed: () {},

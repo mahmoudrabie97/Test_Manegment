@@ -1,7 +1,7 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:test_mangement/pages/my_card/my_card_page.dart';
 import 'package:test_mangement/pages/payment_method/widgets/payment_custom_radio_button.dart';
+import 'package:test_mangement/utilites/extentionhelper.dart';
 
 import '../../../generated/l10n.dart';
 import '../../../utilites/appcolors.dart';
@@ -41,7 +41,9 @@ class PaymentCustomMainContainer extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
               child: CustomButton(
                 buttonText: S.of(context).addition,
-                onPressed: () {},
+                onPressed: () {
+                  context.push(MyCardPage());
+                },
                 borderRadius: 10,
               ),
             ),

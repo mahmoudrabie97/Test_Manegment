@@ -1,13 +1,13 @@
-
-
-
 import 'package:flutter/material.dart';
+import 'package:test_mangement/pages/payment_method/payment_method_page.dart';
+import 'package:test_mangement/utilites/extentionhelper.dart';
 
 import '../../../utilites/appcolors.dart';
 import '../../../utilites/widgets/customtext.dart';
 
 class WalletCustomColumnIetm extends StatelessWidget {
-  const WalletCustomColumnIetm({super.key, required this.text, required this.icon});
+  const WalletCustomColumnIetm(
+      {super.key, required this.text, required this.icon});
 
   final String text;
   final IconData icon;
@@ -15,7 +15,7 @@ class WalletCustomColumnIetm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 30.0,top: 30),
+      padding: const EdgeInsets.only(left: 30.0, top: 30),
       child: Column(
         children: [
           Container(
@@ -34,14 +34,18 @@ class WalletCustomColumnIetm extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
             ),
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                context.push(PaymentMethodPage());
+              },
               icon: Icon(
                 icon,
                 size: 35,
               ),
             ),
           ),
-          const SizedBox(height: 10,),
+          const SizedBox(
+            height: 10,
+          ),
           CustomTextarabic(
             text: text,
             fontWeight: FontWeight.w700,
