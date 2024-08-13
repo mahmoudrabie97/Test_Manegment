@@ -52,7 +52,7 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 70,
+                    height: 90,
                     child: CustomTextFormField(
                       hintText: S.of(context).Identity,
                       perfixicon: Icons.perm_identity_rounded,
@@ -78,7 +78,7 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
                     height: 6,
                   ),
                   SizedBox(
-                    height: 70,
+                    height: 90,
                     child: CustomTextFormField(
                       hintText: S.of(context).Password,
                       perfixicon: Icons.badge,
