@@ -17,6 +17,7 @@ class AppColor {
   static const braon = Color(0xffBC4A26);
   static const purple=Color(0xffB5A7FF);
   static const darkBlue= Color(0xff2A8ACB);
+  static const mediamBlue = Color(0xffE1F0FA);
 
 
 
