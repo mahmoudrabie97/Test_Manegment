@@ -35,17 +35,10 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit, AuthStates>(
-
       builder: (context, state) {
         return Container(
-          width: MediaQuery
-              .of(context)
-              .size
-              .width * .9,
-          height: MediaQuery
-              .of(context)
-              .size
-              .height * .60,
+          width: MediaQuery.of(context).size.width * .9,
+          height: MediaQuery.of(context).size.height * .60,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(15),
@@ -55,9 +48,7 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
             child: ListView(
               children: [
                 const AnimatedTextWidget(),
-                CustomTextarabic(text: S
-                    .of(context)
-                    .Logintoaccount),
+                CustomTextarabic(text: S.of(context).Logintoaccount),
                 const SizedBox(
                   height: 10,
                 ),
@@ -68,9 +59,7 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
                       SizedBox(
                         height: 90,
                         child: CustomTextFormField(
-                          hintText: S
-                              .of(context)
-                              .Identity,
+                          hintText: S.of(context).Identity,
                           perfixicon: Icons.perm_identity_rounded,
                           hinnntcolr: Colors.grey,
                           controller: _emailController,
@@ -96,9 +85,7 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
                       SizedBox(
                         height: 90,
                         child: CustomTextFormField(
-                          hintText: S
-                              .of(context)
-                              .Password,
+                          hintText: S.of(context).Password,
                           perfixicon: Icons.badge,
                           suffixicon: Icons.visibility,
                           suffixpressed: () {},
@@ -128,39 +115,39 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
                       //       )
                       //     :
 
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10, right: 10),
-                        child: CustomButton(
-                          buttonText: S
-                              .of(context)
-                              .Login,
-                          onPressed: () {
-                            Map logindata = {
-                              "nationalId": _emailController.text,
-                              "password": _passwordController.text,
-                            };
-                            if (formkey.currentState!.validate()) {
-                              AuthCubit.get(context).loginUser(
-                                  userdata: logindata, context: context);
-                              // Map userdata = {
-                              //   "email": _emailController.text,
-                              //   "password": _passwordController.text,
-                              // };
+                      AuthCubit.get(context).state is LoginLoadingState
+                          ? Center(
+                              child: CircularProgressIndicator(),
+                            )
+                          : Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 10, right: 10),
+                              child: CustomButton(
+                                buttonText: S.of(context).Login,
+                                onPressed: () {
+                                  Map logindata = {
+                                    "nationalId": _emailController.text,
+                                    "password": _passwordController.text,
+                                  };
+                                  if (formkey.currentState!.validate()) {
+                                    AuthCubit.get(context).loginUser(
+                                        userdata: logindata, context: context);
+                                    // Map userdata = {
+                                    //   "email": _emailController.text,
+                                    //   "password": _passwordController.text,
+                                    // };
+                                  }
 
-                            }
-
-                            // if (formkey.currentState!.validate()) {}
-                          },
-                          buttonColor: AppColor.primary,
-                          borderRadius: 12,
-                        ),
-                      ),
+                                  // if (formkey.currentState!.validate()) {}
+                                },
+                                buttonColor: AppColor.primary,
+                                borderRadius: 12,
+                              ),
+                            ),
                       CheckboxListTile(
                         activeColor: AppColor.primary,
                         title: CustomTextarabic(
-                          text: S
-                              .of(context)
-                              .Rememberme,
+                          text: S.of(context).Rememberme,
                           color: Colors.grey,
                         ),
                         value: checkval,
@@ -179,9 +166,7 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
                       GestureDetector(
                         onTap: () {},
                         child: CustomTextarabic(
-                          text: S
-                              .of(context)
-                              .Forgetpassword,
+                          text: S.of(context).Forgetpassword,
                           fontSize: 18,
                           color: AppColor.primary,
                           fontWeight: FontWeight.w700,
@@ -195,9 +180,7 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           CustomTextarabic(
-                            text: S
-                                .of(context)
-                                .Donothaveacountregister,
+                            text: S.of(context).Donothaveacountregister,
                             color: Colors.grey,
                           ),
                           GestureDetector(
@@ -205,9 +188,7 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
                               context.push(SignUpScreen());
                             },
                             child: CustomTextarabic(
-                              text: S
-                                  .of(context)
-                                  .register,
+                              text: S.of(context).register,
                               fontSize: 16,
                               color: AppColor.primary,
                               fontWeight: FontWeight.w700,
@@ -224,10 +205,9 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
         );
       },
       listener: (BuildContext context, AuthStates state) {
-        if (state is LoginLoadingState)
-          {
-             CircularProgressIndicator();
-          }
+        if (state is LoginLoadingState) {
+          CircularProgressIndicator();
+        }
       },
     );
   }
