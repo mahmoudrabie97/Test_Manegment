@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:test_mangement/pages/oneToOne_quiz/summary_one_to_one/summary_one_to_one.dart';
 import 'package:test_mangement/pages/summary/summary_page.dart';
 
 import 'quiz_item.dart';
 
 class CustomQuestionBody extends StatefulWidget {
-  const CustomQuestionBody({super.key});
-
+  const CustomQuestionBody({super.key, required this.isonetoene});
+  final bool isonetoene;
   @override
   State<CustomQuestionBody> createState() => _CustomQuestionBodyState();
 }
@@ -118,7 +119,9 @@ class _CustomQuestionBodyState extends State<CustomQuestionBody> {
               // ),
             ],
           )
-        : SummaryPage();
+        : widget.isonetoene == true
+            ? SummaryOneToOne()
+            : SummaryPage();
   }
 }
 // return ListView(

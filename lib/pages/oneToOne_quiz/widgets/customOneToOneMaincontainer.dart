@@ -56,7 +56,9 @@ class CustomOneToOneMainContainer extends StatelessWidget {
               CustomButton(
                   buttonText: 'ارسال',
                   onPressed: () {
-                    context.push(QuestionView());
+                    context.push(QuestionView(
+                      isone: true,
+                    ));
                   })
             ],
           ),

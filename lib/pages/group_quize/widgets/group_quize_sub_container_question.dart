@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:test_mangement/pages/verable_questions_page/question_view.dart';
@@ -39,7 +37,9 @@ class GroupQuizeSubContainerQuestion extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 8.0),
                 child: IconButton(
                     onPressed: () {
-                      context.push(QuestionView());
+                      context.push(QuestionView(
+                        isone: false,
+                      ));
                     },
                     icon: const Icon(
                       Icons.arrow_back_ios,

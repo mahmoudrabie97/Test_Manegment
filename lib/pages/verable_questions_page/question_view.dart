@@ -4,13 +4,17 @@ import 'package:test_mangement/pages/verable_questions_page/widgets/custom_quest
 import 'package:test_mangement/utilites/appcolors.dart';
 
 class QuestionView extends StatelessWidget {
-  const QuestionView({super.key});
+  const QuestionView({super.key, required this.isone});
+  final bool isone;
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: AppColor.lightGreyColor,
-      body: SafeArea(child: CustomQuestionBody()),
+      body: SafeArea(
+          child: CustomQuestionBody(
+        isonetoene: isone,
+      )),
     );
   }
 }
