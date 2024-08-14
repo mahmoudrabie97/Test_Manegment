@@ -694,16 +694,6 @@ class S {
     );
   }
 
-  /// `الوقت`
-  String get time {
-    return Intl.message(
-      'الوقت',
-      name: 'time',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `اختر مهارة`
   String get chooseskil {
     return Intl.message(
@@ -1341,6 +1331,106 @@ class S {
     return Intl.message(
       'مجموعة',
       name: 'group',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مجموعات`
+  String get groups {
+    return Intl.message(
+      'مجموعات',
+      name: 'groups',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `انشاء مجموعة`
+  String get createGroup {
+    return Intl.message(
+      'انشاء مجموعة',
+      name: 'createGroup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الفئة`
+  String get category {
+    return Intl.message(
+      'الفئة',
+      name: 'category',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عدد الاسئلة`
+  String get questionsNumber {
+    return Intl.message(
+      'عدد الاسئلة',
+      name: 'questionsNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الوقت`
+  String get time {
+    return Intl.message(
+      'الوقت',
+      name: 'time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عدد العملات`
+  String get coinsNumber {
+    return Intl.message(
+      'عدد العملات',
+      name: 'coinsNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اضافة الاصدقاء`
+  String get addFriends {
+    return Intl.message(
+      'اضافة الاصدقاء',
+      name: 'addFriends',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختر لاعب`
+  String get choosePlayer {
+    return Intl.message(
+      'اختر لاعب',
+      name: 'choosePlayer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختر الكل`
+  String get chooseAll {
+    return Intl.message(
+      'اختر الكل',
+      name: 'chooseAll',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الهوية : 5000`
+  String get id {
+    return Intl.message(
+      'الهوية : 5000',
+      name: 'id',
       desc: '',
       args: [],
     );

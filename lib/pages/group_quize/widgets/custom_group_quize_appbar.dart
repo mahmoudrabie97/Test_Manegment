@@ -1,3 +1,9 @@
+
+
+
+
+
+
 import 'package:flutter/material.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/assets.dart';
@@ -18,14 +24,17 @@ class CustomGroupQuizeAppBar extends StatelessWidget {
           Container(
             width: 80,
             height: 30,
+            decoration: BoxDecoration(
+                color: AppColor.lightGreenColor,
+                borderRadius: BorderRadius.circular(10)),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Image.asset(AssetsData.dollar),
-                  Spacer(),
-                  CustomTextarabic(
+                  const Spacer(),
+                  const CustomTextarabic(
                     text: '1234',
                     color: AppColor.whiteColor,
                     fontSize: 12,
@@ -34,9 +43,6 @@ class CustomGroupQuizeAppBar extends StatelessWidget {
                 ],
               ),
             ),
-            decoration: BoxDecoration(
-                color: AppColor.lightGreenColor,
-                borderRadius: BorderRadius.circular(10)),
           ),
           Spacer(),
           CustomTextarabic(
