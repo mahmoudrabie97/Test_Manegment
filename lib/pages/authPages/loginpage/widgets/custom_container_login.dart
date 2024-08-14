@@ -35,6 +35,7 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit, AuthStates>(
+
       builder: (context, state) {
         return Container(
           width: MediaQuery
@@ -221,7 +222,13 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
             ),
           ),
         );
-      }, listener: (BuildContext context, AuthStates state) {},
+      },
+      listener: (BuildContext context, AuthStates state) {
+        if (state is LoginLoadingState)
+          {
+             CircularProgressIndicator();
+          }
+      },
     );
   }
 }
