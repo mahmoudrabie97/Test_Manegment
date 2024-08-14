@@ -8,7 +8,9 @@ import 'package:test_mangement/models/login_model.dart';
 import 'package:test_mangement/models/register_model.dart';
 import 'package:test_mangement/network/api.dart';
 import 'package:test_mangement/network/endpoints.dart';
+import 'package:test_mangement/pages/authPages/loginpage/login_page.dart';
 import 'package:test_mangement/pages/chhosing_regiter_metod_page/choosing_register_method_page.dart';
+import 'package:test_mangement/utilites/constants.dart';
 import 'package:test_mangement/utilites/extentionhelper.dart';
 import 'package:test_mangement/utilites/widgets/showdialog.dart';
 
@@ -56,7 +58,7 @@ class AuthCubit extends Cubit<AuthStates> {
     required BuildContext context,
   }) {
     Map<String, String> headers = {
-      'Content-Type':' application/json'
+      'Content-Type': ' application/json'
       //'Authorization': 'Bearer ${AppConstant.token}'
     };
     emit(LoginLoadingState());
@@ -76,7 +78,7 @@ class AuthCubit extends Cubit<AuthStates> {
         context.push(
           RootHomePage(),
         );
-        print("lamiaaaaaaaaaaaaaaaaaaaaaa${responseBody}");
+        print("${responseBody}");
         emit(LoginSucsessState());
       } else if (value.statusCode == 400) {
         final responseBody = json.decode(value.body);
@@ -120,12 +122,16 @@ class AuthCubit extends Cubit<AuthStates> {
       if (value!.statusCode == 200) {
         final responseBody = json.decode(value.body);
         print(responseBody);
+        registerModel = RegisterModel.fromJson(responseBody);
+        print(registerModel);
+        AppConstant.userId = registerModel!.data!.id;
         context.push(ChoosingRegisterMethodPage());
         emit(RegisterSucsessState());
       } else if (value.statusCode == 400) {
         final responseBody = json.decode(value.body);
         print(responseBody);
-        // debugPrint(responseBody['Message']);
+
+        debugPrint(responseBody['Message']);
         ShowMyDialog.showMsg(context, responseBody['message']);
         emit(RegisterErrorDataState());
       }
@@ -133,6 +139,47 @@ class AuthCubit extends Cubit<AuthStates> {
       debugPrint('An error occurred: $error');
       // ShowMyDialog.showMsg(context, 'An error occurred: $error');
       emit(RegisterErrorState());
+    });
+  }
+
+  void verifyUser({
+    required Map userdata,
+    required BuildContext context,
+  }) {
+    Map<String, String> headers = {
+      'Content-Type': 'application/json',
+      //  'Authorization': 'Bearer ${AppConstant.token}'
+    };
+    emit(VerifyUseerLoadingState());
+    CallApi.postData(
+      data: userdata,
+      baseUrl: baseRegisterurl,
+      apiUrl: verifyUserAPi,
+      headers: headers,
+      context: context,
+    ).then((value) {
+      if (value!.statusCode == 200) {
+        final responseBody = json.decode(value.body);
+        print(responseBody);
+        // registerModel = RegisterModel.fromJson(responseBody);
+        // print(registerModel);
+
+        context.push(LoginView());
+        ShowMyDialog.showMsg(context, responseBody['data']);
+        emit(VerifyUserSucsessState());
+      } else if (value.statusCode == 400) {
+        final responseBody = json.decode(value.body);
+
+        print(responseBody);
+
+        debugPrint(responseBody['message']);
+        ShowMyDialog.showMsg(context, responseBody['message']);
+        emit(VerifyUserErrorState());
+      }
+    }).catchError((error) {
+      debugPrint('An error occurred: $error');
+      // ShowMyDialog.showMsg(context, 'An error occurred: $error');
+      emit(VerifyUserErrorState());
     });
   }
 }

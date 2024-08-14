@@ -52,7 +52,6 @@ class CodeVerificationPhoneRegisterContainer extends StatelessWidget {
                 height: 14,
               ),
               CustomCodeVerification(defaulttheme: defaulttheme),
-              CustomButton(buttonText: S.of(context).send, onPressed: () {}),
             ],
           ),
         ),

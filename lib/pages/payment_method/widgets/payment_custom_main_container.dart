@@ -7,7 +7,6 @@ import '../../../generated/l10n.dart';
 import '../../../utilites/appcolors.dart';
 import '../../../utilites/widgets/custombutton.dart';
 import '../../../utilites/widgets/customtext.dart';
-import '../payment_method_page.dart';
 
 class PaymentCustomMainContainer extends StatelessWidget {
   const PaymentCustomMainContainer({super.key});
