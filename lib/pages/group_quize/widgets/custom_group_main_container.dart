@@ -3,12 +3,16 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:test_mangement/pages/create_group/create_group_page.dart';
 import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_custom_drop_down_choose.dart';
 import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_custom_drop_down_skill.dart';
 import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container_question.dart';
 import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container_time.dart';
+import 'package:test_mangement/utilites/extentionhelper.dart';
 
+import '../../../generated/l10n.dart';
 import '../../../utilites/appcolors.dart';
+import '../../../utilites/widgets/custombutton.dart';
 import 'group_quize_custom_drop_down_button_level.dart';
 import 'group_quize_custom_drop_down_button_skill.dart';
 import 'group_quize_sub_container_question.dart';
@@ -28,29 +32,37 @@ class CustomGroupQuizeMainContainer extends StatelessWidget {
       ),
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 18.0, vertical: 12),
-        child: SingleChildScrollView(
-          physics: ScrollPhysics(),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  Flexible(child: GroupQuizeCustomDropdownButtonLevel()),
-                  SizedBox(
-                    width: 22,
-                  ),
-                  Flexible(child: GroupQuizeCustomDropdownButtonSkill()),
-                ],
-              ),
-              ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Flexible(child: GroupQuizeCustomDropdownButtonLevel()),
+                SizedBox(
+                  width: 22,
+                ),
+                Flexible(child: GroupQuizeCustomDropdownButtonSkill()),
+              ],
+            ),
+            Expanded(
+              child: ListView.builder(
+                // physics: NeverScrollableScrollPhysics(),
+                // shrinkWrap: true,
                 itemCount: 12,
                 itemBuilder: (context, index) {
                   return GroupListViewIetm();
                 },
               ),
-            ],
-          ),
+            ),
+            CustomButton(
+              buttonText: S.of(context).createGroup
+              ,
+              onPressed: () {
+               context.push(CreateGroupPage());
+              },
+              buttonColor: AppColor.primary,
+              borderRadius: 30,
+            ),
+          ],
         ),
       ),
     );

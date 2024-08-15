@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:test_mangement/pages/add_friends/add_friends_page.dart';
 import 'package:test_mangement/pages/create_group/widgets/create_group_custom_drop_down_category.dart';
+import 'package:test_mangement/utilites/extentionhelper.dart';
 import 'package:test_mangement/utilites/widgets/customtext.dart';
 
 import '../../../generated/l10n.dart';
@@ -112,7 +114,7 @@ class CreateGroupCustomMainContainer extends StatelessWidget {
               CustomButton(
                 buttonText: S.of(context).addFriends,
                 onPressed: () {
-                  // if (formkey.currentState!.validate()) {}
+                context.push(AddFriendsPage());
                 },
                 buttonColor: AppColor.primary,
                 borderRadius: 30,
