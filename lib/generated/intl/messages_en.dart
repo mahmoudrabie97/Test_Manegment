@@ -54,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "TermsofService": MessageLookupByLibrary.simpleMessage("شروط الخدمة"),
         "Welcomback": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك "),
         "Wrong": MessageLookupByLibrary.simpleMessage("خطأ"),
+        "accept": MessageLookupByLibrary.simpleMessage("قبول"),
         "addFriends": MessageLookupByLibrary.simpleMessage("اضافة الاصدقاء"),
         "addition": MessageLookupByLibrary.simpleMessage("اضافة"),
         "against": MessageLookupByLibrary.simpleMessage("1 ضد 1"),
@@ -105,12 +106,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "first": MessageLookupByLibrary.simpleMessage("الأول"),
         "firstStep": MessageLookupByLibrary.simpleMessage("المحاولة الاولى"),
         "four": MessageLookupByLibrary.simpleMessage("الرابع  "),
+        "fourCoins": MessageLookupByLibrary.simpleMessage("40 قطعة نقدية"),
         "friends": MessageLookupByLibrary.simpleMessage("الأصدقاء"),
         "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "group": MessageLookupByLibrary.simpleMessage("مجموعة"),
         "groups": MessageLookupByLibrary.simpleMessage("مجموعات"),
         "gurdation": MessageLookupByLibrary.simpleMessage("ولي الامر"),
         "hadWon": MessageLookupByLibrary.simpleMessage("فاز"),
+        "haveNewRecord":
+            MessageLookupByLibrary.simpleMessage("لديك مكافأة جديدة"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسيه"),
         "id": MessageLookupByLibrary.simpleMessage("الهوية : 5000"),
         "ietm1": MessageLookupByLibrary.simpleMessage("البند 1"),
@@ -130,6 +134,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "nameHolderCard":
             MessageLookupByLibrary.simpleMessage("اسم حامل البطاقة"),
         "next": MessageLookupByLibrary.simpleMessage("القادمه"),
+        "notifications": MessageLookupByLibrary.simpleMessage("الاشعارات"),
         "notificatios": MessageLookupByLibrary.simpleMessage("الإشعارات"),
         "payementMethod": MessageLookupByLibrary.simpleMessage("طرق الدفع"),
         "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
@@ -150,10 +155,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("التسجيل"),
         "registerPoints":
             MessageLookupByLibrary.simpleMessage("لقد سجلت +89 نقطة"),
+        "reject": MessageLookupByLibrary.simpleMessage("رفض"),
         "reward": MessageLookupByLibrary.simpleMessage("المكافأة "),
         "riyals": MessageLookupByLibrary.simpleMessage("3 ريال"),
+        "searchAboutPlayer":
+            MessageLookupByLibrary.simpleMessage("بحث عن لاعب"),
         "second": MessageLookupByLibrary.simpleMessage("الثانى"),
         "send": MessageLookupByLibrary.simpleMessage("إرسال"),
+        "sendFriendRequest": MessageLookupByLibrary.simpleMessage(
+            "أرسلت إيناس عمر إليك طلب صداقة "),
         "sendverivicationcodetoyou": MessageLookupByLibrary.simpleMessage(
             "لقد أرسلنا رمز التحقق إلى هاتفك"),
         "servicesagree":
@@ -166,6 +176,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "soloquize": MessageLookupByLibrary.simpleMessage("اختبار فردي"),
         "sort": MessageLookupByLibrary.simpleMessage("الترتيب"),
         "start": MessageLookupByLibrary.simpleMessage("ابدأ"),
+        "startRace": MessageLookupByLibrary.simpleMessage(
+            "بدأ السباق على لقب البطل الان"),
         "statics": MessageLookupByLibrary.simpleMessage("الإحصائيات"),
         "subjects": MessageLookupByLibrary.simpleMessage("الموضوعات"),
         "subscription": MessageLookupByLibrary.simpleMessage("اشتراك"),
