@@ -48,7 +48,7 @@ class CreateGroupCustomMainContainer extends StatelessWidget {
                 fontWeight: FontWeight.w500,
                 fontSize: 17,
               ),
-              SizedBox(height: 80,),
+              SizedBox(height: 60,),
              CreateGroupCustomDropDownCategory(),
               SizedBox(height: 40,),
               CustomTextFormField(
@@ -110,7 +110,7 @@ class CreateGroupCustomMainContainer extends StatelessWidget {
                   return null;
                 },
               ),
-              SizedBox(height: 90,),
+              SizedBox(height: 60,),
               CustomButton(
                 buttonText: S.of(context).addFriends,
                 onPressed: () {
