@@ -5,6 +5,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:test_mangement/cubit/authcubit/authcubit.dart';
 import 'package:test_mangement/cubit/authcubit/authstates.dart';
 import 'package:test_mangement/generated/l10n.dart';
+import 'package:test_mangement/pages/create_group/create_group_page.dart';
 import 'package:test_mangement/pages/events_page/events_page.dart';
 import 'package:test_mangement/pages/notifications/notifications_page.dart';
 import 'package:test_mangement/pages/oneToOne_quiz/summary_one_to_one/summary_one_to_one.dart';
@@ -45,7 +46,7 @@ class MyApp extends StatelessWidget {
               bottomNavigationBarTheme: const BottomNavigationBarThemeData(
                 backgroundColor: AppColor.primary,
               )),
-          home: NotificationsPage()),
+          home: CreateGroupPage()),
     );
   }
 }

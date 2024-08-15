@@ -17,7 +17,7 @@ class NotificationMedalWithButton extends StatelessWidget {
       padding: const EdgeInsets.only(top: 18.0),
       child: Container(
         width: MediaQuery.of(context).size.width * .9,
-        height: MediaQuery.of(context).size.height * .16,
+        height: MediaQuery.of(context).size.height * .14,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: AppColor.whiteColor,
@@ -31,7 +31,7 @@ class NotificationMedalWithButton extends StatelessWidget {
           ],
         ),
         child: Padding(
-          padding: const EdgeInsets.all(18.0),
+          padding: const EdgeInsets.all(8.0),
           child: Row(
             children: [
               Image.asset(
