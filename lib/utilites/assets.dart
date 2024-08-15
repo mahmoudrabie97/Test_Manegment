@@ -55,4 +55,5 @@ class AssetsData {
   static const creditCard= 'assets/images/credit_card.png';
   static const visaCard= 'assets/images/visaCard.png';
   static const hint= 'assets/images/Hint.png';
+  static const invitation= 'assets/images/invitation.png';
 }

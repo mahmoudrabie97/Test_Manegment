@@ -48,7 +48,6 @@
   "Participatefriendsorotherplayers":"شارك في التحديات مع الأصدقاء أو اللاعبين الآخرين",
   "exploremore":"استكشف المزيد",
   "Explorecategories":"استكشاف الفئات",
-  "start":"ابدأ",
   "randomquiz":"اختبار عشوائي",
   "Askhimverbally":"اساله لفظيه",
   "Quantitativequestions":"أسئلة كمية",
@@ -140,7 +139,16 @@
   "addFriends":"اضافة الاصدقاء",
   "choosePlayer":"اختر لاعب",
   "chooseAll":"اختر الكل",
-  "id":"الهوية : 5000"
+  "id":"الهوية : 5000",
+  "notifications":"الاشعارات",
+  "searchAboutPlayer":"بحث عن لاعب",
+  "sendFriendRequest":"أرسلت إيناس عمر إليك طلب صداقة ",
+  "accept":"قبول",
+  "reject":"رفض",
+  "haveNewRecord":"لديك مكافأة جديدة",
+  "fourCoins":"40 قطعة نقدية",
+  "startRace":"بدأ السباق على لقب البطل الان",
+  "start":"ابدأ"
 
 
 

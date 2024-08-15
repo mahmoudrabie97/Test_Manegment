@@ -524,16 +524,6 @@ class S {
     );
   }
 
-  /// `ابدأ`
-  String get start {
-    return Intl.message(
-      'ابدأ',
-      name: 'start',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `اختبار عشوائي`
   String get randomquiz {
     return Intl.message(
@@ -1431,6 +1421,96 @@ class S {
     return Intl.message(
       'الهوية : 5000',
       name: 'id',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الاشعارات`
+  String get notifications {
+    return Intl.message(
+      'الاشعارات',
+      name: 'notifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `بحث عن لاعب`
+  String get searchAboutPlayer {
+    return Intl.message(
+      'بحث عن لاعب',
+      name: 'searchAboutPlayer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أرسلت إيناس عمر إليك طلب صداقة `
+  String get sendFriendRequest {
+    return Intl.message(
+      'أرسلت إيناس عمر إليك طلب صداقة ',
+      name: 'sendFriendRequest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `قبول`
+  String get accept {
+    return Intl.message(
+      'قبول',
+      name: 'accept',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رفض`
+  String get reject {
+    return Intl.message(
+      'رفض',
+      name: 'reject',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لديك مكافأة جديدة`
+  String get haveNewRecord {
+    return Intl.message(
+      'لديك مكافأة جديدة',
+      name: 'haveNewRecord',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `40 قطعة نقدية`
+  String get fourCoins {
+    return Intl.message(
+      '40 قطعة نقدية',
+      name: 'fourCoins',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `بدأ السباق على لقب البطل الان`
+  String get startRace {
+    return Intl.message(
+      'بدأ السباق على لقب البطل الان',
+      name: 'startRace',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ابدأ`
+  String get start {
+    return Intl.message(
+      'ابدأ',
+      name: 'start',
       desc: '',
       args: [],
     );
