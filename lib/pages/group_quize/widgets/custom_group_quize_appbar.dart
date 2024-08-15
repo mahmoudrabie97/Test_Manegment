@@ -46,14 +46,16 @@ class CustomGroupQuizeAppBar extends StatelessWidget {
           ),
           Spacer(),
           CustomTextarabic(
-            text: S.of(context).soloquize, //change
+            text: S.of(context).group, //change
             fontWeight: FontWeight.w700,
             fontSize: 16,
             color: AppColor.whiteColor,
           ),
           Spacer(),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: Icon(
               Icons.arrow_forward_ios,
               color: AppColor.whiteColor,
