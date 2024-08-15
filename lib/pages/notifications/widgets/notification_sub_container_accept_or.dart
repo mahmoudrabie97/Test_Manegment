@@ -15,7 +15,7 @@ final String text;
     return Padding(
       padding: const EdgeInsets.only(top: 18.0),
       child: Container(
-        width: MediaQuery.of(context).size.width * .9,
+        width: MediaQuery.of(context).size.width * .93,
         height: MediaQuery.of(context).size.height * .16,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
@@ -35,7 +35,7 @@ final String text;
             children: [
               Image.asset(image),
               SizedBox(
-                width: 12,
+                width: 10,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,7 +58,7 @@ final String text;
                         text: S.of(context).accept,
                         color: AppColor.primary,
                       ),
-                      SizedBox(width: 15,),
+                      SizedBox(width: 10,),
                       NotificationsSmallContainerButton(
                         text: S.of(context).reject,
                         color: AppColor.red,
