@@ -25,7 +25,8 @@ class CustomSoloQuizeMainContainer extends StatelessWidget {
     );
     return BlocConsumer<ExamLevelCubit, ExamLevelStates>(
       builder: (context, state) {
-        return ExamLevelCubit.get(context).shillslevellistForderodown.isEmpty
+        return ExamLevelCubit.get(context).shillslevellistForderodown.isEmpty ||
+                ExamLevelCubit.get(context).examslevellistodown.isEmpty
             ? Center(
                 child: CircularProgressIndicator(
                 color: AppColor.whiteColor,
