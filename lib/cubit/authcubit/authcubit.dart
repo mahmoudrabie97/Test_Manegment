@@ -82,8 +82,8 @@ class AuthCubit extends Cubit<AuthStates> {
         emit(LoginSucsessState());
       } else if (value.statusCode == 400) {
         final responseBody = json.decode(value.body);
-       debugPrint(responseBody['message']);
-       ShowMyDialog.showMsg(context, responseBody['message']);
+        debugPrint(responseBody['message']);
+        ShowMyDialog.showMsg(context, responseBody['message']);
 
         print(value.body);
 

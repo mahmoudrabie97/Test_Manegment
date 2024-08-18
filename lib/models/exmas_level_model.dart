@@ -1,17 +1,19 @@
-class SkillLookupChoosenModel {
+
+
+
+class ExamsLevelModel {
   List<Data>? data;
   String? message;
   bool? success;
-  dynamic totalCount;
+  Null? totalCount;
 
-  SkillLookupChoosenModel(
-      {this.data, this.message, this.success, this.totalCount});
+  ExamsLevelModel({this.data, this.message, this.success, this.totalCount});
 
-  SkillLookupChoosenModel.fromJson(Map<String, dynamic> json) {
+  ExamsLevelModel.fromJson(Map<String, dynamic> json) {
     if (json['data'] != null) {
       data = <Data>[];
       json['data'].forEach((v) {
-        data!.add(Data.fromJson(v));
+        data!.add(new Data.fromJson(v));
       });
     }
     message = json['message'];

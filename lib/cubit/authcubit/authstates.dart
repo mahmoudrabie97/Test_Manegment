@@ -23,12 +23,12 @@ class RegisterSucsessState extends AuthStates {}
 class RegisterErrorState extends AuthStates {}
 
 class RegisterErrorDataState extends AuthStates {}
+
 class VerifyUserSucsessState extends AuthStates {}
 
 class VerifyUserErrorState extends AuthStates {}
 
 class VerifyUseerLoadingState extends AuthStates {}
-
 
 class ShowLottileLoadingrState extends AuthStates {}
 

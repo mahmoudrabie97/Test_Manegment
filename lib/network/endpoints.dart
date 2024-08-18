@@ -3,3 +3,5 @@ const String registerapi = "Auth/register";
 
 const String loginApi = "Auth/login";
 const String verifyUserAPi = "Auth/verifyUser";
+const String examLevelApi = 'Exam/levels';
+const String skillLookUpApi = 'Skill/lookup';
