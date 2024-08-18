@@ -19,6 +19,7 @@ class ExamLevelCubit extends Cubit<ExamLevelStates> {
   ExamsLevelModel? examsLevelModel;
   SkillLookupChoosenModel? skillLookupChoosenModel;
   List<String> shillslevellistForderodown = [];
+  List<String> examslevellistodown = [];
 
   void examsLevel({
     required BuildContext context,
@@ -41,10 +42,9 @@ class ExamLevelCubit extends Cubit<ExamLevelStates> {
         examsLevelModel = ExamsLevelModel.fromJson(responseBody);
         print('levellllllll${examsLevelModel!.data?[0]}');
 
-        print("${responseBody}");
-        emit(ExamLevelSucsessState());
-      } else if (value.statusCode == 400) {
-        final responseBody = json.decode(value.body);
+        examslevellistodown = examsLevelModel!.data!.map((item) {
+          return item.label.toString();
+        }).toList();
         debugPrint(responseBody['message']);
         ShowMyDialog.showMsg(context, responseBody['message']);
 
