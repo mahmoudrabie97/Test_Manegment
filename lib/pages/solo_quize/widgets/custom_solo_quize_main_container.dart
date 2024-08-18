@@ -14,19 +14,20 @@ import '../../../utilites/appcolors.dart';
 class CustomSoloQuizeMainContainer extends StatelessWidget {
   const CustomSoloQuizeMainContainer({super.key});
 
-
   @override
   Widget build(BuildContext context) {
-
-    ExamLevelCubit.get(context).examsLevel( context: context,
+    ExamLevelCubit.get(context).examsLevel(
+      context: context,
     );
-    return BlocConsumer<ExamLevelCubit,ExamLevelStates>(
 
-      builder: (context,state){
-
+    ExamLevelCubit.get(context).getSkillLookUp(
+      context: context,
+    );
+    return BlocConsumer<ExamLevelCubit, ExamLevelStates>(
+      builder: (context, state) {
         return Container(
           width: MediaQuery.of(context).size.width * .93,
-          height: MediaQuery.of(context).size.height * .87,
+          height: MediaQuery.of(context).size.height * .86,
           decoration: BoxDecoration(
             color: AppColor.whiteColor,
             borderRadius: BorderRadius.circular(20),
@@ -60,9 +61,7 @@ class CustomSoloQuizeMainContainer extends StatelessWidget {
           ),
         );
       },
-      listener: (context,state){},
-
-
+      listener: (context, state) {},
     );
   }
 }

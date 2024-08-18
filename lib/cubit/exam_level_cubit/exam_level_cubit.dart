@@ -18,6 +18,7 @@ class ExamLevelCubit extends Cubit<ExamLevelStates> {
   static ExamLevelCubit get(context) => BlocProvider.of(context);
   ExamsLevelModel? examsLevelModel;
   SkillLookupChoosenModel? skillLookupChoosenModel;
+  List<String> shillslevellistForderodown = [];
 
   void examsLevel({
     required BuildContext context,
@@ -79,14 +80,17 @@ class ExamLevelCubit extends Cubit<ExamLevelStates> {
       headers: headers,
       context: context,
     ).then((value) async {
-      debugPrint('${value?.statusCode.toString()}');
+      debugPrint('tttt${value?.statusCode.toString()}');
       if (value!.statusCode == 200) {
         debugPrint(value.body);
         final responseBody = json.decode(value.body);
         skillLookupChoosenModel =
             SkillLookupChoosenModel.fromJson(responseBody);
         print('skillll${skillLookupChoosenModel!.data?[0]}');
-
+        shillslevellistForderodown = skillLookupChoosenModel!.data!.map((item) {
+          return item.label.toString();
+        }).toList();
+        print(shillslevellistForderodown[1]);
         print("${responseBody}");
         emit(SkillLookUpSucsessState());
       } else if (value.statusCode == 400) {
