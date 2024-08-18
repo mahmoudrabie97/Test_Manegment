@@ -45,16 +45,21 @@ class ExamLevelCubit extends Cubit<ExamLevelStates> {
         examslevellistodown = examsLevelModel!.data!.map((item) {
           return item.label.toString();
         }).toList();
+
+
+
+        print(value.body);
+
+        emit(ExamLevelSucsessState());
+      } else if (value.statusCode == 400) {
+        final responseBody = json.decode(value.body);
         debugPrint(responseBody['message']);
         ShowMyDialog.showMsg(context, responseBody['message']);
 
         print(value.body);
 
         emit(ExamLevelErrorState());
-      } else if (value.statusCode == 500) {
-        ShowMyDialog.showMsg(context, 'internal server error,');
-        emit(ExamLevelErrorState());
-      } else {
+      }else {
         ShowMyDialog.showMsg(context, 'unknown error,');
         // debugPrint('An error occurred: ${value.body.}');
         emit(ExamLevelErrorState());

@@ -32,9 +32,7 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
     }
 
 
-    return ExamLevelCubit.get(context).examslevellistodown.isEmpty
-        ? CircularProgressIndicator()
-        :
+    return
       Container(
       width: double.infinity,
       height: MediaQuery.of(context).size.height * .07,
@@ -44,6 +42,7 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
       ),
       child: DropdownButton<String>(
         isExpanded: true,
+        hint: Text('اختر المهاره'),
         value: ExamLevelCubit.get(context).shillslevellistForderodown.isEmpty
             ? "اختر المهاره"
             : dropdownValue,
