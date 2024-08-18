@@ -8,9 +8,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
+import 'package:test_mangement/utilites/widgets/customtext.dart';
 
-
-const List<String> list = <String>['واحد', 'اثنين'];
+final List<String> _dropdownItems = ['عنصر 1', 'عنصر2', 'عنصر 3'];
 
 
 
@@ -31,7 +31,7 @@ class DropdownButtonExample extends StatefulWidget {
 }
 
 class _DropdownButtonExampleState extends State<DropdownButtonExample> {
-  String dropdownValue = list.first;
+  String? dropdownValue ;
 
   @override
   Widget build(BuildContext context) {
@@ -45,12 +45,12 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
       ),
       child: DropdownButton<String>(
         isExpanded: true,
-        value:  dropdownValue,
+        value: dropdownValue,
 
-
+        hint: const Center(child: CustomTextarabic(text: 'فئة',)),
         elevation: 16,
-        style:  TextStyle(color: Colors.grey),
-        underline: Container(
+        style:  const TextStyle(color: Colors.grey),
+        underline: const SizedBox(
           width: double.infinity,
           height: 0,
 
@@ -62,7 +62,7 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
             dropdownValue = value!;
           });
         },
-        items: list.map<DropdownMenuItem<String>>((String value) {
+        items: _dropdownItems.map<DropdownMenuItem<String>>((String value) {
           return DropdownMenuItem<String>(
             value: value,
             child: Padding(
@@ -75,3 +75,50 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
     );
   }
 }
+
+
+
+
+// import 'package:flutter/material.dart';
+//
+// class DropdownWithTitle extends StatefulWidget {
+//   @override
+//   _DropdownWithTitleState createState() => _DropdownWithTitleState();
+// }
+//
+// class _DropdownWithTitleState extends State<DropdownWithTitle> {
+//   String? _selectedValue;
+//   final List<String> _dropdownItems = ['Item 1', 'Item 2', 'Item 3'];
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//       mainAxisSize: MainAxisSize.min,
+//       children: [
+//         Padding(
+//           padding: const EdgeInsets.all(8.0),
+//           child: Text(
+//             'Select an Item',
+//             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+//           ),
+//         ),
+//         SizedBox(height: 20), // Space between title and dropdown
+//         DropdownButton<String>(
+//           value: _selectedValue,
+//           hint: Text('Choose an option'),
+//           items: _dropdownItems.map((String value) {
+//             return DropdownMenuItem<String>(
+//               value: value,
+//               child: Text(value),
+//             );
+//           }).toList(),
+//           onChanged: (String? newValue) {
+//             setState(() {
+//               _selectedValue = newValue;
+//             });
+//           },
+//         ),
+//       ],
+//     );
+//   }
+// }

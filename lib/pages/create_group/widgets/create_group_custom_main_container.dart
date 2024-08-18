@@ -49,7 +49,8 @@ class CreateGroupCustomMainContainer extends StatelessWidget {
                 fontSize: 17,
               ),
               SizedBox(height: 60,),
-             CreateGroupCustomDropDownCategory(),
+              CreateGroupCustomDropDownCategory(),
+
               SizedBox(height: 40,),
               CustomTextFormField(
                 hintText: S.of(context).questionsNumber,

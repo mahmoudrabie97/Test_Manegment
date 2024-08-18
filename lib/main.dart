@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:test_mangement/cubit/authcubit/authcubit.dart';
 import 'package:test_mangement/cubit/authcubit/authstates.dart';
+import 'package:test_mangement/cubit/exam_level_cubit/exam_level_cubit.dart';
 import 'package:test_mangement/generated/l10n.dart';
 import 'package:test_mangement/pages/create_group/create_group_page.dart';
 import 'package:test_mangement/pages/events_page/events_page.dart';
@@ -29,7 +30,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [BlocProvider(create: (BuildContext context) => AuthCubit())],
+      providers: [
+        BlocProvider(create: (BuildContext context) => AuthCubit()),
+        BlocProvider(create: (BuildContext context) => ExamLevelCubit())
+      ],
       child: MaterialApp(
           locale: Locale('ar'),
           localizationsDelegates: const [
@@ -46,7 +50,7 @@ class MyApp extends StatelessWidget {
               bottomNavigationBarTheme: const BottomNavigationBarThemeData(
                 backgroundColor: AppColor.primary,
               )),
-          home: CreateGroupPage()),
+          home: WelcomePage1()),
     );
   }
 }
