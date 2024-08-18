@@ -18,12 +18,12 @@ class CustomSoloQuizeMainContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-
+    ExamLevelCubit.get(context).examsLevel( context: context,
+    );
     return BlocConsumer<ExamLevelCubit,ExamLevelStates>(
 
       builder: (context,state){
-        ExamLevelCubit.get(context).examsLevel( context: context,
-        );
+
         return Container(
           width: MediaQuery.of(context).size.width * .93,
           height: MediaQuery.of(context).size.height * .87,
