@@ -42,7 +42,7 @@ class ExamLevelCubit extends Cubit<ExamLevelStates> {
       debugPrint(value.body);
       final responseBody = json.decode(value.body);
       examsLevelModel = ExamsLevelModel.fromJson(responseBody);
-       print('levellllllll${examsLevelModel!.data?[0]}');
+       print('levellllllll${examsLevelModel!.data?[0].label}');
 
       print("${responseBody}");
       emit(ExamLevelSucsessState());
