@@ -3,11 +3,6 @@ import 'package:test_mangement/cubit/exam_level_cubit/exam_level_cubit.dart';
 import 'package:test_mangement/models/exmas_level_model.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 
-List<String> list = <String>[
-'kk',
-  'اثنين'
-];
-
 class SoloQuizeCustomDropdownButtonLevel extends StatelessWidget {
   const SoloQuizeCustomDropdownButtonLevel({super.key});
 
@@ -25,11 +20,22 @@ class DropdownButtonExample extends StatefulWidget {
 }
 
 class _DropdownButtonExampleState extends State<DropdownButtonExample> {
-  String dropdownValue = list.first;
+
+  String dropdownValue = 'اختر المهاره';
+
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    List<String> list = ExamLevelCubit.get(context).examslevellistodown;
+    if (!list.contains(dropdownValue)) {
+      dropdownValue = list.first;
+    }
+
+
+    return ExamLevelCubit.get(context).examslevellistodown.isEmpty
+        ? CircularProgressIndicator()
+        :
+      Container(
       width: double.infinity,
       height: MediaQuery.of(context).size.height * .07,
       decoration: BoxDecoration(
@@ -38,7 +44,9 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
       ),
       child: DropdownButton<String>(
         isExpanded: true,
-        value: dropdownValue,
+        value: ExamLevelCubit.get(context).shillslevellistForderodown.isEmpty
+            ? "اختر المهاره"
+            : dropdownValue,
         elevation: 16,
         style: TextStyle(color: Colors.grey),
         underline: Container(
