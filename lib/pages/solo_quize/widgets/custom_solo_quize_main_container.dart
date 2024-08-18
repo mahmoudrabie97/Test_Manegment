@@ -26,7 +26,7 @@ class CustomSoloQuizeMainContainer extends StatelessWidget {
 
         return Container(
           width: MediaQuery.of(context).size.width * .93,
-          height: MediaQuery.of(context).size.height * .87,
+          height: MediaQuery.of(context).size.height * .86,
           decoration: BoxDecoration(
             color: AppColor.whiteColor,
             borderRadius: BorderRadius.circular(20),
