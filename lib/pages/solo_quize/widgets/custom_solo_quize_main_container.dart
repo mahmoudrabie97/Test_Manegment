@@ -25,41 +25,48 @@ class CustomSoloQuizeMainContainer extends StatelessWidget {
     );
     return BlocConsumer<ExamLevelCubit, ExamLevelStates>(
       builder: (context, state) {
-        return Container(
-          width: MediaQuery.of(context).size.width * .93,
-          height: MediaQuery.of(context).size.height * .86,
-          decoration: BoxDecoration(
-            color: AppColor.whiteColor,
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 18.0, vertical: 12),
-            child: SingleChildScrollView(
-              physics: ScrollPhysics(),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Flexible(child: SoloQuizeCustomDropdownButtonLevel()),
-                      SizedBox(
-                        width: 22,
-                      ),
-                      Flexible(child: SoloQuizeCustomDropdownButtonSkill()),
-                    ],
+        return ExamLevelCubit.get(context).shillslevellistForderodown.isEmpty
+            ? Center(
+                child: CircularProgressIndicator(
+                color: AppColor.whiteColor,
+              ))
+            : Container(
+                width: MediaQuery.of(context).size.width * .93,
+                height: MediaQuery.of(context).size.height * .86,
+                decoration: BoxDecoration(
+                  color: AppColor.whiteColor,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 18.0, vertical: 12),
+                  child: SingleChildScrollView(
+                    physics: ScrollPhysics(),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Flexible(
+                                child: SoloQuizeCustomDropdownButtonLevel()),
+                            SizedBox(
+                              width: 22,
+                            ),
+                            Flexible(
+                                child: SoloQuizeCustomDropdownButtonSkill()),
+                          ],
+                        ),
+                        ListView.builder(
+                          physics: NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          itemCount: 12,
+                          itemBuilder: (context, index) {
+                            return ListViewIetm();
+                          },
+                        ),
+                      ],
+                    ),
                   ),
-                  ListView.builder(
-                    physics: NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    itemCount: 12,
-                    itemBuilder: (context, index) {
-                      return ListViewIetm();
-                    },
-                  ),
-                ],
-              ),
-            ),
-          ),
-        );
+                ),
+              );
       },
       listener: (context, state) {},
     );

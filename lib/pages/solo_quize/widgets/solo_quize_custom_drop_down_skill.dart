@@ -29,43 +29,40 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
       dropdownValue = list.first;
     }
 
-    return ExamLevelCubit.get(context).shillslevellistForderodown.isEmpty
-        ? CircularProgressIndicator()
-        : Container(
-            width: double.infinity,
-            height: MediaQuery.of(context).size.height * .07,
-            decoration: BoxDecoration(
-              border: Border.all(width: 1, color: AppColor.darkGrey),
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: DropdownButton<String>(
-              isExpanded: true,
-              value:
-                  ExamLevelCubit.get(context).shillslevellistForderodown.isEmpty
-                      ? "اختر المهاره"
-                      : dropdownValue,
-              elevation: 16,
-              style: TextStyle(color: Colors.grey),
-              underline: Container(
-                width: double.infinity,
-                height: 0,
-              ),
-              dropdownColor: Colors.white,
-              onChanged: (String? value) {
-                setState(() {
-                  dropdownValue = value!;
-                });
-              },
-              items: list.map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                    child: Text(value),
-                  ),
-                );
-              }).toList(),
+    return Container(
+      width: double.infinity,
+      height: MediaQuery.of(context).size.height * .07,
+      decoration: BoxDecoration(
+        border: Border.all(width: 1, color: AppColor.darkGrey),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: DropdownButton<String>(
+        isExpanded: true,
+        value: ExamLevelCubit.get(context).shillslevellistForderodown.isEmpty
+            ? "اختر المهاره"
+            : dropdownValue,
+        elevation: 16,
+        style: TextStyle(color: Colors.grey),
+        underline: Container(
+          width: double.infinity,
+          height: 0,
+        ),
+        dropdownColor: Colors.white,
+        onChanged: (String? value) {
+          setState(() {
+            dropdownValue = value!;
+          });
+        },
+        items: list.map<DropdownMenuItem<String>>((String value) {
+          return DropdownMenuItem<String>(
+            value: value,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18.0),
+              child: Text(value),
             ),
           );
+        }).toList(),
+      ),
+    );
   }
 }
