@@ -74,7 +74,7 @@ class AuthCubit extends Cubit<AuthStates> {
         debugPrint(value.body);
         final responseBody = json.decode(value.body);
         loginModel = LoginModel.fromJson(responseBody);
-
+        AppConstant.token=loginModel?.data?.accessToken;
         context.push(
           RootHomePage(),
         );
