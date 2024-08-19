@@ -39,30 +39,30 @@ class AuthCubit extends Cubit<AuthStates> {
     emit(LoginSucsessState());
   }
 
-  //bool showAnimation = false;
-  //int animationDuration = 2;
-  //
-  // void changeSecurePassword() {
-  //   if (isSecurep) {
-  //     sufficxicp = Icons.visibility_off;
-  //     isSecurep = false;
-  //   } else {
-  //     sufficxicp = Icons.remove_red_eye_outlined;
-  //     isSecurep = true;
-  //   }
-  //   emit(ChangesecurepasswordState());
-  // }
-  //
-  // void changeSecurePasswordconfig() {
-  //   if (isSecurepc) {
-  //     sufficxicpc = Icons.visibility_off;
-  //     isSecurepc = false;
-  //   } else {
-  //     sufficxicpc = Icons.remove_red_eye_outlined;
-  //     isSecurepc = true;
-  //   }
-  //   emit(ChangesecurepasswordconfigState());
-  // }
+  bool showAnimation = false;
+  int animationDuration = 2;
+
+  void changeSecurePassword() {
+    if (isSecurep) {
+      sufficxicp = Icons.visibility_off;
+      isSecurep = false;
+    } else {
+      sufficxicp = Icons.remove_red_eye_outlined;
+      isSecurep = true;
+    }
+    emit(ChangesecurepasswordState());
+  }
+
+  void changeSecurePasswordconfig() {
+    if (isSecurepc) {
+      sufficxicpc = Icons.visibility_off;
+      isSecurepc = false;
+    } else {
+      sufficxicpc = Icons.remove_red_eye_outlined;
+      isSecurepc = true;
+    }
+    emit(ChangesecurepasswordconfigState());
+  }
 
   void loginUser({
     required Map userdata,

@@ -85,10 +85,15 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
                       SizedBox(
                         height: 90,
                         child: CustomTextFormField(
+                          suffixicon: AuthCubit.get(context).sufficxicp,
+                          suffixpressed: () {
+                            AuthCubit.get(context).changeSecurePassword();
+                          },
                           hintText: S.of(context).Password,
                           perfixicon: Icons.badge,
-                          suffixicon: Icons.visibility,
-                          suffixpressed: () {},
+
+                          obscureText: AuthCubit.get(context).isSecurep,
+
                           hinnntcolr: Colors.grey,
                           // suffixicon: AuthCubit.get(context).sufficxicp,
                           //   suffixpressed: () {
