@@ -38,9 +38,7 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
       ),
       child: DropdownButton<String>(
         isExpanded: true,
-        value: ExamLevelCubit.get(context).shillslevellistForderodown.isEmpty
-            ? "اختر المهاره"
-            : dropdownValue,
+        value: dropdownValue,
         elevation: 16,
         style: TextStyle(color: Colors.grey),
         underline: Container(

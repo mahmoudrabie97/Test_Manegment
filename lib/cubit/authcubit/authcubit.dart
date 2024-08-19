@@ -10,6 +10,7 @@ import 'package:test_mangement/network/api.dart';
 import 'package:test_mangement/network/endpoints.dart';
 import 'package:test_mangement/pages/authPages/loginpage/login_page.dart';
 import 'package:test_mangement/pages/chhosing_regiter_metod_page/choosing_register_method_page.dart';
+import 'package:test_mangement/pages/group_quize/widgets/group_quize_custom_drop_down_button_level.dart';
 import 'package:test_mangement/utilites/constants.dart';
 import 'package:test_mangement/utilites/extentionhelper.dart';
 import 'package:test_mangement/utilites/widgets/showdialog.dart';
@@ -28,6 +29,8 @@ class AuthCubit extends Cubit<AuthStates> {
   RegisterModel? registerModel;
   LoginModel? loginModel;
 
+  List<String> list = <String>['ذكر', 'انثى'];
+  String? dropdownValue;
   //bool showAnimation = false;
   //int animationDuration = 2;
   //
@@ -182,5 +185,10 @@ class AuthCubit extends Cubit<AuthStates> {
       // ShowMyDialog.showMsg(context, 'An error occurred: $error');
       emit(VerifyUserErrorState());
     });
+  }
+
+  void changedropdownvalur({required String? newval}) {
+    dropdownValue = newval;
+    emit(ChangeDropdownVal());
   }
 }

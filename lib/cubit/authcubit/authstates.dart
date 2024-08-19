@@ -33,3 +33,5 @@ class VerifyUseerLoadingState extends AuthStates {}
 class ShowLottileLoadingrState extends AuthStates {}
 
 class ShowLottileSucsessState extends AuthStates {}
+
+class ChangeDropdownVal extends AuthStates {}
