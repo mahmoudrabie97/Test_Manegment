@@ -42,25 +42,53 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
             padding: const EdgeInsets.only(right: 18),
             child: Row(
               children: [
-                const Expanded(
-                  child: Padding(
-                    padding: EdgeInsets.only(right: 9),
-                    child: Icon(
-                      Icons.female_rounded,
-                      size: 25,
+                if (AuthCubit.get(context).dropdownValue ==
+                    AuthCubit.get(context).list.first)
+                  const Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.only(right: 9),
+                      child: Icon(
+                        Icons.male,
+                        size: 25,
+                      ),
                     ),
                   ),
-                ),
+                if (AuthCubit.get(context).dropdownValue ==
+                    AuthCubit.get(context).list.last)
+                  const Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.only(right: 9),
+                      child: Icon(
+                        Icons.female,
+                        size: 25,
+                      ),
+                    ),
+                  ),
                 DropdownButton<String>(
+                  iconSize: 18,
+                  itemHeight: 50,
+                  // menuMaxHeight: 20,
+                  //  padding: EdgeInsets.only(right: 10),
+                  isDense: true,
+
+                  ///disabledHint: Text('j'),
+                  //isExpanded: true,
                   alignment: Alignment.bottomLeft,
                   value: AuthCubit.get(context).dropdownValue,
-                  hint: const CustomTextarabic(
-                    text: "اختر المهاره",
-                    fontSize: 8,
+                  hint: const Center(
+                    child: CustomTextarabic(
+                      text: "النوع",
+                      fontSize: 14,
+                      color: Colors.grey,
+                    ),
                   ),
+
                   icon: const Padding(
-                    padding: EdgeInsets.only(right: 250.0),
-                    child: Icon(Icons.keyboard_arrow_down),
+                    padding: EdgeInsets.only(right: 225.0),
+                    child: Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Icon(Icons.keyboard_arrow_down),
+                    ),
                   ),
                   elevation: 16,
                   style: const TextStyle(color: Colors.grey),

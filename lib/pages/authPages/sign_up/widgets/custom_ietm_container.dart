@@ -179,7 +179,10 @@ class CustomIetmContainer extends StatelessWidget {
                               "email": _emailController.text,
                               "password": _passwordController.text,
                               "phoneNumber": _phoneController.text,
-                              "gender": 0,
+                              "gender": AuthCubit.get(context).dropdownValue ==
+                                      AuthCubit.get(context).list.first
+                                  ? 1
+                                  : 2,
                               "roleId": 1
                             };
                             if (formkey.currentState!.validate()) {

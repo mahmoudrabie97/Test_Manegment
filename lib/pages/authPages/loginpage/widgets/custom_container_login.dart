@@ -150,12 +150,14 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
                           text: S.of(context).Rememberme,
                           color: Colors.grey,
                         ),
-                        value: checkval,
-                        onChanged: (newValue) {
-                          setState(() {
-                            checkval = newValue;
-                          });
-                        },
+        value: AuthCubit.get(context).isChecked,
+        onChanged: (value) {
+          AuthCubit.get(context).checkBox(value);
+        print('rembe${AuthCubit.get(context).isChecked}');
+
+        print(value);
+        },
+
                         controlAffinity: ListTileControlAffinity
                             .leading, //  <-- leading Checkbox
                       ),

@@ -15,6 +15,7 @@ import 'package:test_mangement/utilites/constants.dart';
 import 'package:test_mangement/utilites/extentionhelper.dart';
 import 'package:test_mangement/utilites/widgets/showdialog.dart';
 
+import '../../network/local_network.dart';
 import '../../root_page.dart';
 
 class AuthCubit extends Cubit<AuthStates> {
@@ -28,9 +29,16 @@ class AuthCubit extends Cubit<AuthStates> {
   bool isSecurepc = true;
   RegisterModel? registerModel;
   LoginModel? loginModel;
+  bool isChecked = false;
 
   List<String> list = <String>['ذكر', 'انثى'];
   String? dropdownValue;
+
+  void checkBox(bool? val) {
+    isChecked = val!;
+    emit(LoginSucsessState());
+  }
+
   //bool showAnimation = false;
   //int animationDuration = 2;
   //
@@ -78,6 +86,10 @@ class AuthCubit extends Cubit<AuthStates> {
         final responseBody = json.decode(value.body);
         loginModel = LoginModel.fromJson(responseBody);
         AppConstant.token = loginModel!.data!.accessToken;
+        if (isChecked) {
+          CachNetwork.setDate(
+              key: 'token', value: loginModel?.data?.accessToken);
+        }
 
         context.push(
           RootHomePage(),
