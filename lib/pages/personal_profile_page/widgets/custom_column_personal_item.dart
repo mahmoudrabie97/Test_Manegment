@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:test_mangement/cubit/authcubit/authcubit.dart';
 import 'package:test_mangement/generated/l10n.dart';
+import 'package:test_mangement/pages/authPages/loginpage/login_page.dart';
 import 'package:test_mangement/pages/personal_profile_page/widgets/custom_small_white_container.dart';
 import 'package:test_mangement/pages/quantitive/quantitive.dart';
 import 'package:test_mangement/pages/wallet/wallet_page.dart';
 import 'package:test_mangement/utilites/assets.dart';
 import 'package:test_mangement/utilites/extentionhelper.dart';
+
+import '../../../network/local_network.dart';
 
 class CustomColumnPersonalitems extends StatelessWidget {
   const CustomColumnPersonalitems({
@@ -148,9 +152,18 @@ class CustomColumnPersonalitems extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Center(
-            child: CustomWhiteSmallContainerPersonal(
-              icondata: AssetsData.pers11,
-              text: S.of(context).logOut,
+            child: InkWell(
+              onTap: () {
+                CachNetwork.deleteCacheItem(key:'token' );
+                Navigator.of(context).pushAndRemoveUntil(
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => LoginView()),
+                    (Route<dynamic> route) => false);
+              },
+              child: CustomWhiteSmallContainerPersonal(
+                icondata: AssetsData.pers11,
+                text: S.of(context).logOut,
+              ),
             ),
           ),
         ),
