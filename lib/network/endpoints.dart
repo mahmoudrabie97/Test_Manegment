@@ -6,3 +6,6 @@ const String verifyUserAPi = "Auth/verifyUser";
 const String examLevelApi = 'Exam/levels';
 const String skillLookUpApi = 'Skill/lookup';
 const String examsoloApi = 'Exam/solo';
+const String examQuestion='Exam/questions/1024';
+const String userProfile='User/profile';
+const String userBlance='User/balance';

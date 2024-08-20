@@ -5,7 +5,10 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:test_mangement/cubit/authcubit/authcubit.dart';
 import 'package:test_mangement/cubit/authcubit/authstates.dart';
 import 'package:test_mangement/cubit/exam_level_cubit/exam_level_cubit.dart';
+import 'package:test_mangement/cubit/exam_question_cubit/exam_question_cubit.dart';
 import 'package:test_mangement/cubit/examcubit/exam_solo_cubit/exam_solo_cubit.dart';
+import 'package:test_mangement/cubit/user_blance_cubit/user_blance_cubit.dart';
+import 'package:test_mangement/cubit/user_profile_cubit/user_profile_cubit.dart';
 import 'package:test_mangement/generated/l10n.dart';
 import 'package:test_mangement/pages/create_group/create_group_page.dart';
 import 'package:test_mangement/pages/events_page/events_page.dart';
@@ -46,6 +49,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (BuildContext context) => AuthCubit()),
         BlocProvider(create: (BuildContext context) => ExamLevelCubit()),
         BlocProvider(create: (BuildContext context) => ExamSoloCubit()),
+        BlocProvider(create: (BuildContext context) => ExamQuestionCubit()),
+        BlocProvider(create: (BuildContext context) => UserProfileCubit()),
+        BlocProvider(create: (BuildContext context) => UserBlanceCubit()),
       ],
       child: MaterialApp(
           locale: Locale('ar'),
