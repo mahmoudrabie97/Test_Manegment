@@ -5,4 +5,4 @@ const String loginApi = "Auth/login";
 const String verifyUserAPi = "Auth/verifyUser";
 const String examLevelApi = 'Exam/levels';
 const String skillLookUpApi = 'Skill/lookup';
-const String apiexamsolo = 'Exam/solo';
+const String examsoloApi = 'Exam/solo';
