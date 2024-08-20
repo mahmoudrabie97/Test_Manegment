@@ -30,7 +30,7 @@ class ExamLevelCubit extends Cubit<ExamLevelStates> {
     };
     emit(ExamLevelLoadingState());
     CallApi.getData(
-      baseUrl: baseRegisterurl,
+      baseUrl: baseurl,
       apiUrl: examLevelApi,
       headers: headers,
       context: context,
@@ -46,8 +46,6 @@ class ExamLevelCubit extends Cubit<ExamLevelStates> {
           return item.label.toString();
         }).toList();
 
-
-
         print(value.body);
 
         emit(ExamLevelSucsessState());
@@ -59,7 +57,7 @@ class ExamLevelCubit extends Cubit<ExamLevelStates> {
         print(value.body);
 
         emit(ExamLevelErrorState());
-      }else {
+      } else {
         ShowMyDialog.showMsg(context, 'unknown error,');
         // debugPrint('An error occurred: ${value.body.}');
         emit(ExamLevelErrorState());
@@ -80,7 +78,7 @@ class ExamLevelCubit extends Cubit<ExamLevelStates> {
     };
     emit(ExamLevelLoadingState());
     CallApi.getData(
-      baseUrl: baseRegisterurl,
+      baseUrl: baseurl,
       apiUrl: skillLookUpApi,
       headers: headers,
       context: context,

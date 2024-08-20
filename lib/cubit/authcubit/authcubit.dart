@@ -75,7 +75,7 @@ class AuthCubit extends Cubit<AuthStates> {
     emit(LoginLoadingState());
     CallApi.postData(
       data: userdata,
-      baseUrl: baseRegisterurl,
+      baseUrl: baseurl,
       apiUrl: loginApi,
       headers: headers,
       context: context,
@@ -130,7 +130,7 @@ class AuthCubit extends Cubit<AuthStates> {
     emit(RegisterLoadingState());
     CallApi.postData(
       data: userdata,
-      baseUrl: baseRegisterurl,
+      baseUrl: baseurl,
       apiUrl: registerapi,
       headers: headers,
       context: context,
@@ -169,7 +169,7 @@ class AuthCubit extends Cubit<AuthStates> {
     emit(VerifyUseerLoadingState());
     CallApi.postData(
       data: userdata,
-      baseUrl: baseRegisterurl,
+      baseUrl: baseurl,
       apiUrl: verifyUserAPi,
       headers: headers,
       context: context,

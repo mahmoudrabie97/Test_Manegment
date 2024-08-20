@@ -127,7 +127,7 @@ class CustomIetmContainer extends StatelessWidget {
                       return null;
                     },
                   ),
-                  CustomDropdownButton(),
+                  const CustomDropdownButton(),
                   CustomTextFormField(
                     hintText: "رقم الهويه",
                     perfixicon: Icons.lock_outline,
@@ -162,12 +162,12 @@ class CustomIetmContainer extends StatelessWidget {
                       return null;
                     },
                   ),
-                  UnderLineText(),
-                  SizedBox(
+                  const UnderLineText(),
+                  const SizedBox(
                     height: 10,
                   ),
                   AuthCubit.get(context).state is RegisterLoadingState
-                      ? Center(
+                      ? const Center(
                           child: CircularProgressIndicator(),
                         )
                       : CustomButton(
@@ -193,7 +193,7 @@ class CustomIetmContainer extends StatelessWidget {
                           txtColor: AppColor.whiteColor,
                           buttonColor: AppColor.primary,
                         ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   CustomTextarabic(
