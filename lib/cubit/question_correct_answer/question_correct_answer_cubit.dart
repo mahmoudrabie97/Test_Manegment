@@ -2,37 +2,36 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:test_mangement/cubit/question_correct_answer/question_correct_answer_states.dart';
 
 
 
 import 'package:test_mangement/cubit/user_blance_cubit/user_blance_state.dart';
-
+import 'package:test_mangement/models/user_balance_model.dart';
 
 import 'package:test_mangement/network/api.dart';
 import 'package:test_mangement/network/endpoints.dart';
 import 'package:test_mangement/utilites/constants.dart';
 import 'package:test_mangement/utilites/widgets/showdialog.dart';
 
-import '../../models/question_correct_answer_model.dart';
 
+  class QuestionCorrectAnswerCubit extends Cubit<QuestionCorrectAnswerStates> {
+    QuestionCorrectAnswerCubit() : super(QuestionCorrectAnswerSInitialState());
 
-  class UserBlanceCubit extends Cubit<UserBalanceStates> {
-    UserBlanceCubit() : super(UserBalanceSInitialState());
+  static QuestionCorrectAnswerCubit get(context) => BlocProvider.of(context);
+  UserBalanceModel? userBalanceModel;
 
-  static UserBlanceCubit get(context) => BlocProvider.of(context);
-    QuestionCorrectAnswerModel? questionCorrectAnswerModel;
-
-  void getUserBlance({
+  void getQuestionCorrectAnswer({
     required BuildContext context,
   }) {
     Map<String, String> headers = {
       'Content-Type': ' application/json',
       'Authorization': 'Bearer ${AppConstant.token}'
     };
-    emit(UserBalanceSLoadingState());
+    emit(QuestionCorrectAnswerSLoadingState());
     CallApi.getData(
       baseUrl: baseurl,
-      apiUrl: questionCorrectAnswer,
+      apiUrl: userBlance,
       headers: headers,
       context: context,
     ).then((value) async {
@@ -41,10 +40,10 @@ import '../../models/question_correct_answer_model.dart';
         debugPrint(value.body);
         final responseBody = json.decode(value.body);
 
-        questionCorrectAnswerModel = QuestionCorrectAnswerModel.fromJson(responseBody);
-        print("questionCorrectAnswerModel;${responseBody}");
-        print('questionCorrectAnswerModel${questionCorrectAnswerModel?.data}');
-        emit(UserBalanceSSucsessState());
+        userBalanceModel = UserBalanceModel.fromJson(responseBody);
+        print("userBalanceModel;${responseBody}");
+        print('userBalanceModel${userBalanceModel?.data}');
+        emit(QuestionCorrectAnswerSSucsessState());
       } else if (value.statusCode == 400) {
         final responseBody = json.decode(value.body);
         debugPrint(responseBody['message']);
@@ -52,19 +51,19 @@ import '../../models/question_correct_answer_model.dart';
 
         print(value.body);
 
-        emit(UserBalanceSErrorState());
+        emit(QuestionCorrectAnswerSErrorState());
       } else if (value.statusCode == 500) {
         ShowMyDialog.showMsg(context, 'internal server error,');
-        emit(UserBalanceSErrorState());
+        emit(QuestionCorrectAnswerSErrorState());
       } else {
         ShowMyDialog.showMsg(context, 'unknown error,');
         // debugPrint('An error occurred: ${value.body.}');
-        emit(UserBalanceSErrorState());
+        emit(QuestionCorrectAnswerSErrorState());
       }
     }).catchError((error) {
       debugPrint('An error occurred: $error');
       // ShowMyDialog.showMsg(context, 'An error occurred: $error');
-      emit(UserBalanceSErrorState());
+      emit(QuestionCorrectAnswerSErrorState());
     });
   }
 }
