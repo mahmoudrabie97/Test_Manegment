@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:test_mangement/cubit/user_blance_cubit/user_blance_cubit.dart';
-import 'package:test_mangement/cubit/user_blance_cubit/user_blance_state.dart';
+import 'package:test_mangement/cubit/user_blance_cubit/exam_user_has_blance_cubit.dart';
+import 'package:test_mangement/cubit/user_blance_cubit/exam_user_has_blance_state.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/assets.dart';
 import 'package:test_mangement/utilites/custommethods.dart';
@@ -30,8 +30,8 @@ class CustomMainContainerEditProfle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
-    UserBlanceCubit.get(context).getUserBlance(context: context);
-    return BlocConsumer<UserBlanceCubit,UserBalanceStates>(
+    ExamUserHasBlanceCubit.get(context).getExamUserHasBlance(context: context, id: 1);
+    return BlocConsumer<ExamUserHasBlanceCubit,ExamUserHasBalanceStates>(
 
 
         builder: (BuildContext context,  state) {
@@ -224,6 +224,6 @@ class CustomMainContainerEditProfle extends StatelessWidget {
           );
         }
 
-    , listener: (BuildContext context, UserBalanceStates state) {  },);
+    , listener: (BuildContext context, ExamUserHasBalanceStates state) {  },);
   }
 }
