@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container_question.dart';
 import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container_time.dart';
+import 'package:test_mangement/pages/training_quiz/custom_trainning_subcontainer_timer.dart';
+import 'package:test_mangement/pages/training_quiz/traininng_quiz_container_questions.dart';
 
 import '../../../utilites/appcolors.dart';
 
@@ -49,8 +51,8 @@ class ListViewIetm extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        SoloQuizeSubContainerTime(),
-        SoloQuizeSubContainerQuestion(),
+        SoloTrainningSubContainerTime(),
+        TrainningQuizeSubContainerQuestion(),
         SizedBox(
           height: 15,
         ),

@@ -6,14 +6,10 @@ import 'package:test_mangement/utilites/widgets/customtext.dart';
 
 import '../../../generated/l10n.dart';
 
-class SoloQuizeSubContainerTime extends StatelessWidget {
-  const SoloQuizeSubContainerTime({
+class SoloTrainningSubContainerTime extends StatelessWidget {
+  const SoloTrainningSubContainerTime({
     super.key,
-    required this.examSoloModel,
-    required this.index,
   });
-  final ExamSoloModel? examSoloModel;
-  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +33,7 @@ class SoloQuizeSubContainerTime extends StatelessWidget {
               width: 10,
             ),
             CustomTextarabic(
-              text: examSoloModel!.data![index].rewards.toString(),
+              text: "6",
               fontWeight: FontWeight.w700,
               fontSize: 14,
             ),
@@ -55,7 +51,7 @@ class SoloQuizeSubContainerTime extends StatelessWidget {
             ),
             Spacer(),
             CustomTextarabic(
-              text: examSoloModel!.data![index].examTimeInMinutes.toString(),
+              text: "60",
               fontWeight: FontWeight.w700,
               fontSize: 14,
             ),

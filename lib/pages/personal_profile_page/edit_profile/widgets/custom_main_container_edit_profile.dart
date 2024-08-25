@@ -30,7 +30,7 @@ class CustomMainContainerEditProfle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
-    ExamUserHasBlanceCubit.get(context).getExamUserHasBlance(context: context);
+    ExamUserHasBlanceCubit.get(context).getExamUserHasBlance(context: context, id: 1);
     return BlocConsumer<ExamUserHasBlanceCubit,ExamUserHasBalanceStates>(
 
 
