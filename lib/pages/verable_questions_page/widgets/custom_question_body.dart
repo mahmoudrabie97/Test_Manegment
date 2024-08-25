@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test_mangement/cubit/exam_question_cubit/exam_question_cubit.dart';
+import 'package:test_mangement/cubit/exam_question_cubit/exam_question_state.dart';
 import 'package:test_mangement/pages/oneToOne_quiz/summary_one_to_one/summary_one_to_one.dart';
 import 'package:test_mangement/pages/summary/summary_page.dart';
 
@@ -80,16 +82,21 @@ class _CustomQuestionBodyState extends State<CustomQuestionBody> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        //SizedBox(height: MediaQuery.of(context).size.height * .1,),
-
-        Quiz(
-          queslist: questionsList,
-          questionindex: questionindex,
-          questionupate: questionsUpdate,
-        )
-      ],
+    return BlocConsumer<ExamQuestionCubit, ExamQuestionStates>(
+      listener: (context, state) {
+        // TODO: implement listener
+      },
+      builder: (context, state) {
+        return ListView(
+          children: [
+            Quiz(
+              queslist: questionsList,
+              questionindex: questionindex,
+              questionupate: questionsUpdate,
+            )
+          ],
+        );
+      },
     );
   }
 }

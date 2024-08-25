@@ -231,30 +231,6 @@ class _QuizState extends State<Quiz> {
         )
       ],
     );
-    // return Container(
-    //   decoration: const BoxDecoration(
-    //     color: AppColor.whiteColor,
-    //     borderRadius: BorderRadius.all(
-    //       Radius.circular(16),
-    //     ),
-    //   ),
-    //   child: Column(
-    //     children: [
-    //       Text(
-    //         'Question 13/20',
-    //         style: Styles.style24.copyWith(color: AppColor.primary),
-    //       ),
-    //       const Text(
-    //         'Which Former Britishcolony was ', Which Former Britishcolony was Given Back to China in 1997?
-    //         style: Styles.style17,
-    //       ),
-    //       const Text(
-    //         'Given Back to China in 1997? ',
-    //         style: Styles.style17,
-    //       )
-    //     ],
-    //   ),
-    // );
   }
 
   @override

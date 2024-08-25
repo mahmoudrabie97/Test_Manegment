@@ -6,7 +6,7 @@ import 'package:test_mangement/cubit/question_correct_answer/question_correct_an
 
 
 
-import 'package:test_mangement/cubit/user_blance_cubit/user_blance_state.dart';
+import 'package:test_mangement/cubit/user_blance_cubit/exam_user_has_blance_state.dart';
 import 'package:test_mangement/models/user_balance_model.dart';
 
 import 'package:test_mangement/network/api.dart';
