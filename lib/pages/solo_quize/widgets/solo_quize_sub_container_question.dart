@@ -11,6 +11,7 @@ import '../../../generated/l10n.dart';
 class SoloQuizeSubContainerQuestion extends StatelessWidget {
   const SoloQuizeSubContainerQuestion({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return Container(

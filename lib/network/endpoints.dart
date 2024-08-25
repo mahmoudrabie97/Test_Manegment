@@ -8,5 +8,5 @@ const String skillLookUpApi = 'Skill/lookup';
 const String examsoloApi = 'Exam/solo';
 const String examQuestion='Exam/questions/1024';
 const String userProfile='User/profile';
-const String userBlance='User/balance';
+const String userBlance='Exam/user-has-enough-balance?examId=1024';
 const String questionCorrectAnswer='Question/CorrectAnswer?questionId=3';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:test_mangement/cubit/user_blance_cubit/user_blance_cubit.dart';
-import 'package:test_mangement/cubit/user_blance_cubit/user_blance_state.dart';
+import 'package:test_mangement/cubit/user_blance_cubit/exam_user_has_blance_cubit.dart';
+import 'package:test_mangement/cubit/user_blance_cubit/exam_user_has_blance_state.dart';
 
 import '../../../generated/l10n.dart';
 import '../../../utilites/appcolors.dart';
