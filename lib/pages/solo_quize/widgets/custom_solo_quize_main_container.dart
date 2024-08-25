@@ -5,7 +5,9 @@ import 'package:test_mangement/cubit/exam_level_cubit/exam_level_cubit.dart';
 import 'package:test_mangement/cubit/exam_level_cubit/exam_level_states.dart';
 import 'package:test_mangement/cubit/examcubit/exam_solo_cubit/exam_solo_cubit.dart';
 import 'package:test_mangement/cubit/examcubit/exam_solo_cubit/exam_solo_state.dart';
+import 'package:test_mangement/models/exam_solo_model.dart';
 import 'package:test_mangement/models/exmas_level_model.dart';
+import 'package:test_mangement/network/endpoints.dart';
 import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_custom_drop_down_choose.dart';
 import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_custom_drop_down_skill.dart';
 import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container_question.dart';
@@ -25,11 +27,13 @@ class CustomSoloQuizeMainContainer extends StatelessWidget {
     ExamLevelCubit.get(context).getSkillLookUp(
       context: context,
     );
+    ExamSoloCubit.get(context).getExamSolo(context: context);
+
     return BlocConsumer<ExamLevelCubit, ExamLevelStates>(
       builder: (context, state) {
         return ExamLevelCubit.get(context).shillslevellistForderodown.isEmpty ||
                 ExamLevelCubit.get(context).examslevellistodown.isEmpty
-            ? Center(
+            ? const Center(
                 child: CircularProgressIndicator(
                 color: AppColor.whiteColor,
               ))
@@ -41,12 +45,13 @@ class CustomSoloQuizeMainContainer extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 18.0, vertical: 12),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 18.0, vertical: 12),
                   child: SingleChildScrollView(
-                    physics: ScrollPhysics(),
+                    physics: const ScrollPhysics(),
                     child: Column(
                       children: [
-                        Row(
+                        const Row(
                           children: [
                             Flexible(
                                 child: SoloQuizeCustomDropdownButtonLevel()),
@@ -58,11 +63,18 @@ class CustomSoloQuizeMainContainer extends StatelessWidget {
                           ],
                         ),
                         ListView.builder(
-                          physics: NeverScrollableScrollPhysics(),
+                          physics: const NeverScrollableScrollPhysics(),
                           shrinkWrap: true,
-                          itemCount: 12,
+                          itemCount: ExamSoloCubit.get(context)
+                              .examsoloModel!
+                              .data!
+                              .length,
                           itemBuilder: (context, index) {
-                            return ListViewIetm();
+                            return ListViewIetm(
+                              examSoloModel:
+                                  ExamSoloCubit.get(context).examsoloModel,
+                              index: index,
+                            );
                           },
                         ),
                       ],
@@ -79,21 +91,31 @@ class CustomSoloQuizeMainContainer extends StatelessWidget {
 class ListViewIetm extends StatelessWidget {
   const ListViewIetm({
     super.key,
+    required this.examSoloModel,
+    required this.index,
   });
 
+  final ExamSoloModel? examSoloModel;
+  final int index;
   @override
   Widget build(BuildContext context) {
-    ExamSoloCubit.get(context).getExamSolo(context: context);
+    //ExamSoloCubit.get(context).getExamSolo(context: context);
     return BlocConsumer<ExamSoloCubit, ExamSoloStates>(
       listener: (context, state) {
         // TODO: implement listener
       },
       builder: (context, state) {
-        return const Column(
+        return Column(
           children: [
-            SoloQuizeSubContainerTime(),
-            SoloQuizeSubContainerQuestion(),
-            SizedBox(
+            SoloQuizeSubContainerTime(
+              examSoloModel: examSoloModel,
+              index: index,
+            ),
+            SoloQuizeSubContainerQuestion(
+              index: index,
+              examsoloModel: examSoloModel,
+            ),
+            const SizedBox(
               height: 15,
             ),
           ],

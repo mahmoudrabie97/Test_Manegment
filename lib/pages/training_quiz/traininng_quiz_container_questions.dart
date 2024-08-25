@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:test_mangement/models/exam_solo_model.dart';
 import 'package:test_mangement/pages/verable_questions_page/question_view.dart';
@@ -9,14 +8,10 @@ import 'package:test_mangement/utilites/widgets/customtext.dart';
 
 import '../../../generated/l10n.dart';
 
-class SoloQuizeSubContainerQuestion extends StatelessWidget {
-  const SoloQuizeSubContainerQuestion({
+class TrainningQuizeSubContainerQuestion extends StatelessWidget {
+  const TrainningQuizeSubContainerQuestion({
     super.key,
-    required this.examsoloModel,
-    required this.index,
   });
-  final ExamSoloModel? examsoloModel;
-  final int index;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -55,12 +50,9 @@ class SoloQuizeSubContainerQuestion extends StatelessWidget {
             ),
             Spacer(),
             CustomTextarabic(
-              text: examsoloModel!.data![index].examTimeInMinutes.toString(),
+              text: "10",
               fontWeight: FontWeight.w700,
               fontSize: 16,
-            ),
-            SizedBox(
-              width: 10,
             ),
             CustomTextarabic(
               text: S.of(context).questions,
