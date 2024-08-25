@@ -18,61 +18,54 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ExamQuestionCubit.get(context).getExamQuestions(context: context);
-    return BlocConsumer<ExamQuestionCubit,ExamQuestionStates>(
-
-      builder:(context,state){
-        return Scaffold(
-          body: SafeArea(
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  const CustomRowInfo(),
-                  CustomHomePageSubContainer(
-                    color: AppColor.pinkLight,
-                    customWidget: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        const Spacer(),
-                        Image.asset(AssetsData.star),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * .06,
-                          child: CustomColumnText(
-                            textOne: S.of(context).Pointsearned,
-                            textTwo: '1234 نقطة',
-                          ),
-                        ),
-                        const Spacer(),
-                        Image.asset(AssetsData.dollar),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * .06,
-                          child: CustomColumnText(
-                            textOne: S.of(context).Currencybalance,
-                            textTwo: '1234',
-                          ),
-                        ),
-                        const Spacer(),
-                        Image.asset(AssetsData.succes),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * .06,
-                          child: CustomColumnText(
-                            textOne: S.of(context).level,
-                            textTwo: S.of(context).four,
-                          ),
-                        ),
-                        const Spacer(),
-                      ],
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const CustomRowInfo(),
+              CustomHomePageSubContainer(
+                color: AppColor.pinkLight,
+                customWidget: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    const Spacer(),
+                    Image.asset(AssetsData.star),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * .06,
+                      child: CustomColumnText(
+                        textOne: S.of(context).Pointsearned,
+                        textTwo: '1234 نقطة',
+                      ),
                     ),
-                  ),
-                  const CustomChallangeContainer(),
-                  const CustomHomePageMainContainer(),
-                ],
+                    const Spacer(),
+                    Image.asset(AssetsData.dollar),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * .06,
+                      child: CustomColumnText(
+                        textOne: S.of(context).Currencybalance,
+                        textTwo: '1234',
+                      ),
+                    ),
+                    const Spacer(),
+                    Image.asset(AssetsData.succes),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * .06,
+                      child: CustomColumnText(
+                        textOne: S.of(context).level,
+                        textTwo: S.of(context).four,
+                      ),
+                    ),
+                    const Spacer(),
+                  ],
+                ),
               ),
-            ),
+              const CustomChallangeContainer(),
+              const CustomHomePageMainContainer(),
+            ],
           ),
-        );
-      }, listener: ( context,  state) {  },
-
+        ),
+      ),
     );
   }
 }

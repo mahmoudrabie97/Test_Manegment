@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_mangement/cubit/exam_question_cubit/exam_question_cubit.dart';
 import 'package:test_mangement/pages/oneToOne_quiz/summary_one_to_one/summary_one_to_one.dart';
 import 'package:test_mangement/pages/summary/summary_page.dart';
 
@@ -72,112 +73,23 @@ class _CustomQuestionBodyState extends State<CustomQuestionBody> {
     },
   ];
   @override
+  void initState() {
+    ExamQuestionCubit.get(context).getExamQuestions(context: context);
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return questionindex < questionsList.length - 1
-        ? ListView(
-            children: [
-              //SizedBox(height: MediaQuery.of(context).size.height * .1,),
+    return ListView(
+      children: [
+        //SizedBox(height: MediaQuery.of(context).size.height * .1,),
 
-              Quiz(
-                queslist: questionsList,
-                questionindex: questionindex,
-                questionupate: questionsUpdate,
-              )
-
-              // CustomStackAnswer(
-              //   textWord: 'Russia',
-              //   textLetter: 'A',
-              // ),
-              // CustomStackAnswer(
-              //   textWord: 'America',
-              //   textLetter: 'B',
-              // ),
-              // CustomStackAnswer(
-              //   textWord: 'Australia',
-              //   textLetter: 'C',
-              // ),
-              // CustomStackAnswer(
-              //   textWord: 'Hong Kong',
-              //   textLetter: 'D',
-              // ),
-              // Padding(
-              //   padding: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
-              //   child: CustomButton(
-              //     buttonText: 'Next',
-              //     onPressed: () {
-              //       showModalBottomSheet<void>(
-              //         context: context,
-              //         builder: (BuildContext context) {
-              //           return const CustomShowBottomSheetIetm();
-              //         },
-              //       );
-              //     },
-              //     buttonColor: AppColor.primary,
-              //     borderRadius: 22,
-              //   ),
-
-              // ),
-            ],
-          )
-        : widget.isonetoene == true
-            ? SummaryOneToOne()
-            : SummaryPage();
+        Quiz(
+          queslist: questionsList,
+          questionindex: questionindex,
+          questionupate: questionsUpdate,
+        )
+      ],
+    );
   }
 }
-// return ListView(
-//       children: [
-//         Stack(
-//           clipBehavior: Clip.none,
-//           children: [
-//             CustomMainContainerQuestion(height: height),
-//             //SizedBox(height: MediaQuery.of(context).size.height * .1,),
-//             Positioned(
-//               left: 15,
-//               right: 15,
-//               top: 120,
-//               child: SizedBox(
-//                 child: Quiz(
-//                   queslist: questionsList,
-//                   questionindex: questionindex,
-//                   questionupate: questionsUpdate,
-//                 ),
-//               ),
-//             ),
-//           ],
-//         ),
-
-//         // CustomStackAnswer(
-//         //   textWord: 'Russia',
-//         //   textLetter: 'A',
-//         // ),
-//         // CustomStackAnswer(
-//         //   textWord: 'America',
-//         //   textLetter: 'B',
-//         // ),
-//         // CustomStackAnswer(
-//         //   textWord: 'Australia',
-//         //   textLetter: 'C',
-//         // ),
-//         // CustomStackAnswer(
-//         //   textWord: 'Hong Kong',
-//         //   textLetter: 'D',
-//         // ),
-//         // Padding(
-//         //   padding: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
-//         //   child: CustomButton(
-//         //     buttonText: 'Next',
-//         //     onPressed: () {
-//         //       showModalBottomSheet<void>(
-//         //         context: context,
-//         //         builder: (BuildContext context) {
-//         //           return const CustomShowBottomSheetIetm();
-//         //         },
-//         //       );
-//         //     },
-//         //     buttonColor: AppColor.primary,
-//         //     borderRadius: 22,
-//         //   ),
-
-//         // ),
-//       ],
-//     );

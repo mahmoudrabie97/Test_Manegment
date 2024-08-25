@@ -105,21 +105,25 @@ class ListViewIetm extends StatelessWidget {
         // TODO: implement listener
       },
       builder: (context, state) {
-        return Column(
-          children: [
-            SoloQuizeSubContainerTime(
-              examSoloModel: examSoloModel,
-              index: index,
-            ),
-            SoloQuizeSubContainerQuestion(
-              index: index,
-              examsoloModel: examSoloModel,
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-          ],
-        );
+        return ExamSoloCubit.get(context).state is ExamSoloLoadingState
+            ? Center(
+                child: CircularProgressIndicator(),
+              )
+            : Column(
+                children: [
+                  SoloQuizeSubContainerTime(
+                    examSoloModel: examSoloModel,
+                    index: index,
+                  ),
+                  SoloQuizeSubContainerQuestion(
+                    index: index,
+                    examsoloModel: examSoloModel,
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                ],
+              );
       },
     );
   }

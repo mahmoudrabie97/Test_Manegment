@@ -39,8 +39,7 @@ class ExamQuestionCubit extends Cubit<ExamQuestionStates> {
         final responseBody = json.decode(value.body);
 
         examQuestionModel = ExamQuestionModel.fromJson(responseBody);
-        print("lamiaaaaaaagama;${responseBody}");
-        print('examQuestionModel${examQuestionModel}');
+
         emit(ExamQuestionSucsessState());
       } else if (value.statusCode == 400) {
         final responseBody = json.decode(value.body);
