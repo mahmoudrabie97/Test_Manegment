@@ -7,6 +7,7 @@ import 'package:test_mangement/cubit/question_correct_answer/question_correct_an
 
 
 import 'package:test_mangement/cubit/user_blance_cubit/exam_user_has_blance_state.dart';
+import 'package:test_mangement/models/question_correct_answer_model.dart';
 import 'package:test_mangement/models/user_balance_model.dart';
 
 import 'package:test_mangement/network/api.dart';
@@ -19,7 +20,7 @@ import 'package:test_mangement/utilites/widgets/showdialog.dart';
     QuestionCorrectAnswerCubit() : super(QuestionCorrectAnswerSInitialState());
 
   static QuestionCorrectAnswerCubit get(context) => BlocProvider.of(context);
-  UserBalanceModel? userBalanceModel;
+  QuestionCorrectAnswerModel? correctAnswerModel;
 
   void getQuestionCorrectAnswer({
     required BuildContext context,
@@ -31,7 +32,7 @@ import 'package:test_mangement/utilites/widgets/showdialog.dart';
     emit(QuestionCorrectAnswerSLoadingState());
     CallApi.getData(
       baseUrl: baseurl,
-      apiUrl: userBlance,
+      apiUrl: questionCorrectAnswer,
       headers: headers,
       context: context,
     ).then((value) async {
@@ -40,9 +41,9 @@ import 'package:test_mangement/utilites/widgets/showdialog.dart';
         debugPrint(value.body);
         final responseBody = json.decode(value.body);
 
-        userBalanceModel = UserBalanceModel.fromJson(responseBody);
+        correctAnswerModel = QuestionCorrectAnswerModel.fromJson(responseBody);
         print("userBalanceModel;${responseBody}");
-        print('userBalanceModel${userBalanceModel?.data}');
+        print('userBalanceModel${correctAnswerModel?.data}');
         emit(QuestionCorrectAnswerSSucsessState());
       } else if (value.statusCode == 400) {
         final responseBody = json.decode(value.body);
