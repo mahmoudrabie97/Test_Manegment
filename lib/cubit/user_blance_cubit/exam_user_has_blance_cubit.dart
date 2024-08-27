@@ -46,7 +46,7 @@ class ExamUserHasBlanceCubit extends Cubit<ExamUserHasBalanceStates> {
           QuestionView(
             isone: false,
             examid: id,
-            examtype: 0,
+            examtype: 1,
           ),
         );
         emit(ExamUserHasBalanceSSucsessState());

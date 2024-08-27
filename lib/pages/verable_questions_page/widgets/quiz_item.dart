@@ -2,6 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:test_mangement/cubit/question_submit_answer/question_submit_answer_cubit.dart';
+import 'package:test_mangement/cubit/question_submit_answer/question_submit_answer_states.dart';
 import 'package:test_mangement/models/exam_question_model.dart';
 import 'package:test_mangement/pages/result_page/result_page.dart';
 import 'package:test_mangement/pages/summary/summary_page.dart';
@@ -30,7 +33,7 @@ class Quiz extends StatefulWidget {
 
 class _QuizState extends State<Quiz> {
   Timer? _timer;
-  int timeRemaining = 7;
+  int timeRemaining = 10;
   Color containercolor = Colors.white;
 
   @override
@@ -62,7 +65,7 @@ class _QuizState extends State<Quiz> {
     if (widget.questionindex! < widget.queslist!.length - 1) {
       setState(() {
         widget.questionindex = widget.questionindex! + 1;
-        timeRemaining = 7;
+        timeRemaining = 10;
         startTimer();
       });
     } else {
@@ -76,193 +79,219 @@ class _QuizState extends State<Quiz> {
     int l = widget.queslist!.length;
     int u = l - c;
     var height = MediaQuery.of(context).size.height;
-    return Column(
-      children: [
-        Stack(
-          clipBehavior: Clip.none,
+    return BlocConsumer<SubmitAnswerCubit, ExamSubmitAnswerStates>(
+      listener: (context, state) {
+        // TODO: implement listener
+      },
+      builder: (context, state) {
+        return Column(
           children: [
-            CustomMainContainerQuestion(height: height),
-            Positioned(
-              top: 160,
-              right: 15,
-              left: 15,
-              child: Container(
-                height:
-                    widget.queslist![widget.questionindex!].imageOrVideoFile !=
+            Stack(
+              clipBehavior: Clip.none,
+              children: [
+                CustomMainContainerQuestion(height: height),
+                Positioned(
+                  top: 160,
+                  right: 15,
+                  left: 15,
+                  child: Container(
+                    height: widget.queslist![widget.questionindex!]
+                                    .imageOrVideoFile !=
                                 null ||
                             widget.queslist![widget.questionindex!]
                                     .imageOrVideoFile !=
                                 ''
                         ? 240
                         : 120,
-                decoration: const BoxDecoration(
-                  color: AppColor.whiteColor,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(16),
-                  ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(0.0),
-                        child: Row(
-                          children: [
-                            Container(
-                              height: 8,
-                              width: 40,
-                              decoration: BoxDecoration(
-                                color: Colors.green,
-                                borderRadius: BorderRadius.circular(2),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            CustomTextarabic(
-                              text: u.toString(),
-                              fontWeight: FontWeight.bold,
-                            ),
-                            Text('  ,  '),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            CustomTextarabic(
-                              text: l.toString(),
-                              fontWeight: FontWeight.bold,
-                            ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Container(
-                              height: 8,
-                              width: 40,
-                              decoration: BoxDecoration(
-                                color: Colors.blue,
-                                borderRadius: BorderRadius.circular(2),
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 50,
-                            ),
-
-                            //Text("Quiz : $c/$l."),
-                          ],
-                        ),
+                    decoration: const BoxDecoration(
+                      color: AppColor.whiteColor,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(16),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: QuestionsWidge(
-                            questiontext:
-                                widget.queslist![widget.questionindex!].title ??
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(0.0),
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 8,
+                                  width: 40,
+                                  decoration: BoxDecoration(
+                                    color: Colors.green,
+                                    borderRadius: BorderRadius.circular(2),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                CustomTextarabic(
+                                  text: u.toString(),
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                Text('  ,  '),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                CustomTextarabic(
+                                  text: l.toString(),
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Container(
+                                  height: 8,
+                                  width: 40,
+                                  decoration: BoxDecoration(
+                                    color: Colors.blue,
+                                    borderRadius: BorderRadius.circular(2),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 50,
+                                ),
+
+                                //Text("Quiz : $c/$l."),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: QuestionsWidge(
+                                questiontext: widget
+                                        .queslist![widget.questionindex!]
+                                        .title ??
                                     '',
-                            questionnumber: widget.questionindex! + 1,
-                            imageorvideofile:
-                                "https://t3.ftcdn.net/jpg/02/04/52/72/360_F_204527293_o9ut8AIm2PaXQg22sSqLMH354X8weheJ.jpg"),
-                      )
-                    ],
+                                questionnumber: widget.questionindex! + 1,
+                                imageorvideofile: widget
+                                    .queslist![widget.questionindex!]
+                                    .imageOrVideoFile),
+                          )
+                        ],
+                      ),
+                    ),
                   ),
                 ),
-              ),
+                Positioned(
+                  top: 130,
+                  right: 50,
+                  left: 30,
+                  child: CircleAvatar(
+                      radius: 30,
+                      backgroundColor: AppColor.primary,
+                      child: CustomTextarabic(
+                        text: '$timeRemaining',
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      )),
+                )
+              ],
             ),
-            Positioned(
-              top: 130,
-              right: 50,
-              left: 30,
-              child: CircleAvatar(
-                  radius: 30,
-                  backgroundColor: AppColor.primary,
-                  child: CustomTextarabic(
-                    text: '$timeRemaining',
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  )),
+            const SizedBox(
+              height: 200,
+            ),
+            ...(widget.queslist![widget.questionindex!].answers
+                    as List<Answers>)
+                .asMap()
+                .entries
+                .map(
+              (entry) {
+                final index = entry.key;
+                final answer = entry.value;
+                return AnswerWidget(
+                  containercolor:
+                      _selectedAnswerIndices[widget.questionindex!] == index
+                          ? Colors.green
+                          : containercolor,
+                  selecthandler: () {
+                    setState(() {
+                      Map answedata = {
+                        "studentExamQuestionId":
+                            widget.queslist![widget.questionindex!].questionId,
+                        "answerId": answer.id
+                      };
+                      _selectedAnswerIndices[widget.questionindex!] = index;
+
+                      SubmitAnswerCubit.get(context)
+                          .submitAnswer(context: context, answerdad: answedata)
+                          .then((val) {
+                        print(
+                            'NNNNNNNNNNNN${widget.queslist![widget.questionindex!].imageOrVideoFile}');
+                        _timer!.cancel();
+                        navigateToNextQuestion();
+                      });
+                      //  print('answerrrrrrrr${answer.id}');
+                      // print(
+                      //   'questttion${widget.queslist![widget.questionindex!].questionId}');
+                    });
+
+                    timeRemaining = 10;
+                  },
+                  answers: answer.name.toString(),
+                );
+              },
+            ).toList(),
+            //Spacer(),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      if (widget.questionindex! < widget.queslist!.length) {
+                        navigateToNextQuestion();
+                      }
+
+                      if (widget.questionindex! < widget.queslist!.length - 1) {
+                        setState(() {
+                          // widget.questionindex = widget.questionindex! + 1;
+                          timeRemaining = 10;
+                          // startTimer();
+                        });
+                      }
+                    },
+                    child: const CircleAvatar(
+                      backgroundColor: Colors.blue,
+                      child: Icon(
+                        Icons.arrow_back_ios_new_outlined,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Colors.white,
+                    child: Text(c.toString()),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      if (widget.questionindex! > 0) {
+                        setState(() {
+                          widget.questionindex = widget.questionindex! - 1;
+
+                          timeRemaining = 10;
+                        });
+                      } else {}
+                    },
+                    child: const CircleAvatar(
+                      backgroundColor: Colors.green,
+                      child: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             )
           ],
-        ),
-        const SizedBox(
-          height: 200,
-        ),
-        ...(widget.queslist![widget.questionindex!].answers as List<Answers>)
-            .asMap()
-            .entries
-            .map(
-          (entry) {
-            final index = entry.key;
-            final answer = entry.value;
-            return AnswerWidget(
-              containercolor:
-                  _selectedAnswerIndices[widget.questionindex!] == index
-                      ? Colors.green
-                      : containercolor,
-              selecthandler: () {
-                setState(() {
-                  _selectedAnswerIndices[widget.questionindex!] = index;
-                  print(answer.id);
-                });
-
-                timeRemaining = 7;
-              },
-              answers: answer.name.toString(),
-            );
-          },
-        ).toList(),
-        //Spacer(),
-        Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              InkWell(
-                onTap: () {
-                  if (widget.questionindex! < widget.queslist!.length) {
-                    navigateToNextQuestion();
-                  }
-
-                  if (widget.questionindex! < widget.queslist!.length - 1) {
-                    setState(() {
-                      // widget.questionindex = widget.questionindex! + 1;
-                      timeRemaining = 7;
-                      // startTimer();
-                    });
-                  }
-                },
-                child: const CircleAvatar(
-                  backgroundColor: Colors.blue,
-                  child: Icon(
-                    Icons.arrow_back_ios_new_outlined,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              CircleAvatar(
-                backgroundColor: Colors.white,
-                child: Text(c.toString()),
-              ),
-              InkWell(
-                onTap: () {
-                  if (widget.questionindex! > 0) {
-                    setState(() {
-                      widget.questionindex = widget.questionindex! - 1;
-
-                      timeRemaining = 7;
-                    });
-                  } else {}
-                },
-                child: const CircleAvatar(
-                  backgroundColor: Colors.green,
-                  child: Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        )
-      ],
+        );
+      },
     );
   }
 

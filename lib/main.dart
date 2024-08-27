@@ -7,7 +7,7 @@ import 'package:test_mangement/cubit/authcubit/authcubit.dart';
 import 'package:test_mangement/cubit/exam_level_cubit/exam_level_cubit.dart';
 import 'package:test_mangement/cubit/exam_question_cubit/exam_question_cubit.dart';
 import 'package:test_mangement/cubit/examcubit/exam_solo_cubit/exam_solo_cubit.dart';
-import 'package:test_mangement/cubit/question_correct_answer/question_correct_answer_cubit.dart';
+import 'package:test_mangement/cubit/question_submit_answer/question_submit_answer_cubit.dart';
 import 'package:test_mangement/cubit/user_blance_cubit/exam_user_has_blance_cubit.dart';
 import 'package:test_mangement/cubit/user_profile_cubit/user_profile_cubit.dart';
 import 'package:test_mangement/generated/l10n.dart';
@@ -44,8 +44,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (BuildContext context) => ExamSoloCubit()),
         BlocProvider(create: (BuildContext context) => ExamQuestionCubit()),
         BlocProvider(create: (BuildContext context) => UserProfileCubit()),
-        BlocProvider(create: (BuildContext context) => ExamUserHasBlanceCubit()),
-        BlocProvider(create: (BuildContext context) => QuestionCorrectAnswerCubit()),
+        BlocProvider(
+            create: (BuildContext context) => ExamUserHasBlanceCubit()),
+        BlocProvider(create: (BuildContext context) => SubmitAnswerCubit()),
       ],
       child: MaterialApp(
           locale: Locale('ar'),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_mangement/utilites/assets.dart';
 import 'package:test_mangement/utilites/widgets/customtext.dart';
 
 class QuestionsWidge extends StatelessWidget {
@@ -15,6 +16,7 @@ class QuestionsWidge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //  print('iiiiiiiiii$imageorvideofile');
     return Padding(
       padding: const EdgeInsets.all(4.0),
       child: Column(
@@ -27,14 +29,13 @@ class QuestionsWidge extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          if (imageorvideofile != null)
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: Image.network(
-                imageorvideofile ?? '',
-                width: 200,
-              ),
-            ),
+          imageorvideofile == null
+              ? Text('')
+              : SizedBox(
+                  height: 120,
+                  width: 200,
+                  child: Image.asset(AssetsData.onBoarding),
+                )
         ],
       ),
     );
