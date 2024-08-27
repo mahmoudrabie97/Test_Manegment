@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:test_mangement/models/exam_question_model.dart';
 import 'package:test_mangement/pages/result_page/result_page.dart';
 import 'package:test_mangement/pages/summary/summary_page.dart';
 import 'package:test_mangement/pages/verable_questions_page/widgets/answers_widget.dart';
@@ -19,7 +20,7 @@ class Quiz extends StatefulWidget {
     this.questionindex,
     required this.questionupate,
   });
-  final List<Map<String, Object>> queslist;
+  final List<Data>? queslist;
   int? questionindex;
   final Function questionupate;
 
@@ -30,14 +31,20 @@ class Quiz extends StatefulWidget {
 class _QuizState extends State<Quiz> {
   Timer? _timer;
   int timeRemaining = 7;
+  Color containercolor = Colors.white;
 
   @override
   void initState() {
     super.initState();
     startTimer();
+    _selectedAnswerIndices = List.generate(
+      widget.queslist!.length,
+      (_) => null,
+    );
   }
 
   void startTimer() {
+    _timer?.cancel(); //
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       setState(() {
         timeRemaining--;
@@ -50,8 +57,9 @@ class _QuizState extends State<Quiz> {
     });
   }
 
+  List<int?> _selectedAnswerIndices = [];
   void navigateToNextQuestion() {
-    if (widget.questionindex! < widget.queslist.length - 1) {
+    if (widget.questionindex! < widget.queslist!.length - 1) {
       setState(() {
         widget.questionindex = widget.questionindex! + 1;
         timeRemaining = 7;
@@ -65,7 +73,7 @@ class _QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
     int c = widget.questionindex! + 1;
-    int l = widget.queslist.length;
+    int l = widget.queslist!.length;
     int u = l - c;
     var height = MediaQuery.of(context).size.height;
     return Column(
@@ -75,23 +83,30 @@ class _QuizState extends State<Quiz> {
           children: [
             CustomMainContainerQuestion(height: height),
             Positioned(
-              top: 150,
+              top: 160,
               right: 15,
               left: 15,
               child: Container(
-                height: 160,
+                height:
+                    widget.queslist![widget.questionindex!].imageOrVideoFile !=
+                                null ||
+                            widget.queslist![widget.questionindex!]
+                                    .imageOrVideoFile !=
+                                ''
+                        ? 240
+                        : 120,
                 decoration: const BoxDecoration(
                   color: AppColor.whiteColor,
                   borderRadius: BorderRadius.all(
                     Radius.circular(16),
                   ),
                 ),
-                child: Column(
-                  children: [
-                    Container(
-                      //  color: Colors.white,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(0.0),
                         child: Row(
                           children: [
                             Container(
@@ -136,20 +151,25 @@ class _QuizState extends State<Quiz> {
                           ],
                         ),
                       ),
-                    ),
-                    QuestionsWidge(
-                        questiontext: widget.queslist[widget.questionindex!]
-                                ['questiontext']
-                            .toString(),
-                        questionnumber: widget.questionindex! + 1),
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: QuestionsWidge(
+                            questiontext:
+                                widget.queslist![widget.questionindex!].title ??
+                                    '',
+                            questionnumber: widget.questionindex! + 1,
+                            imageorvideofile:
+                                "https://t3.ftcdn.net/jpg/02/04/52/72/360_F_204527293_o9ut8AIm2PaXQg22sSqLMH354X8weheJ.jpg"),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
             Positioned(
               top: 130,
-              right: 20,
-              left: 20,
+              right: 50,
+              left: 30,
               child: CircleAvatar(
                   radius: 30,
                   backgroundColor: AppColor.primary,
@@ -163,23 +183,33 @@ class _QuizState extends State<Quiz> {
           ],
         ),
         const SizedBox(
-          height: 120,
+          height: 200,
         ),
-        ...(widget.queslist[widget.questionindex!]['answers']
-                as List<Map<String, Object>>)
+        ...(widget.queslist![widget.questionindex!].answers as List<Answers>)
+            .asMap()
+            .entries
             .map(
-          (answer) {
+          (entry) {
+            final index = entry.key;
+            final answer = entry.value;
             return AnswerWidget(
+              containercolor:
+                  _selectedAnswerIndices[widget.questionindex!] == index
+                      ? Colors.green
+                      : containercolor,
               selecthandler: () {
-                widget.questionupate(
-                  int.parse(answer['score'].toString()),
-                );
+                setState(() {
+                  _selectedAnswerIndices[widget.questionindex!] = index;
+                  print(answer.id);
+                });
+
                 timeRemaining = 7;
               },
-              answers: answer['text'].toString(),
+              answers: answer.name.toString(),
             );
           },
-        ),
+        ).toList(),
+        //Spacer(),
         Padding(
           padding: const EdgeInsets.all(20.0),
           child: Row(
@@ -187,14 +217,15 @@ class _QuizState extends State<Quiz> {
             children: [
               InkWell(
                 onTap: () {
-                  if (widget.questionindex! < widget.queslist.length) {
+                  if (widget.questionindex! < widget.queslist!.length) {
                     navigateToNextQuestion();
                   }
 
-                  if (widget.questionindex! < widget.queslist.length - 1) {
+                  if (widget.questionindex! < widget.queslist!.length - 1) {
                     setState(() {
-                      widget.questionindex = widget.questionindex! + 1;
+                      // widget.questionindex = widget.questionindex! + 1;
                       timeRemaining = 7;
+                      // startTimer();
                     });
                   }
                 },
@@ -215,6 +246,8 @@ class _QuizState extends State<Quiz> {
                   if (widget.questionindex! > 0) {
                     setState(() {
                       widget.questionindex = widget.questionindex! - 1;
+
+                      timeRemaining = 7;
                     });
                   } else {}
                 },

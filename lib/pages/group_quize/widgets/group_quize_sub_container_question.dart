@@ -37,9 +37,10 @@ class GroupQuizeSubContainerQuestion extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 8.0),
                 child: IconButton(
                     onPressed: () {
-                      context.push(QuestionView(
-                        isone: false,
-                      ));
+                      // context.push(QuestionView(
+                      // isone: false,
+
+                      //));
                     },
                     icon: const Icon(
                       Icons.arrow_back_ios,

@@ -4,15 +4,16 @@ import '../../../utilites/appcolors.dart';
 import '../../../utilites/styles.dart';
 
 class CustomStackAnswer extends StatelessWidget {
-  CustomStackAnswer({Key? key, this.textWord = '',  this.textLetter = ''}) : super(key: key);
-  final String textWord ;
-  final String textLetter ;
+  CustomStackAnswer({Key? key, this.textWord = '', this.textLetter = ''})
+      : super(key: key);
+  final String textWord;
+  final String textLetter;
 
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     return Padding(
-      padding: const EdgeInsets.only(left: 10,right: 10,bottom: 15),
+      padding: const EdgeInsets.only(left: 10, right: 10, bottom: 15),
       child: Stack(
         clipBehavior: Clip.none,
         children: [
@@ -27,13 +28,11 @@ class CustomStackAnswer extends StatelessWidget {
             ),
             child: Center(
                 child: Text(
-                  textWord,
-                  style: Styles.style17,
-                )),
+              textWord,
+              style: Styles.style17,
+            )),
           ),
           Positioned(
-
-
             left: 0,
             bottom: 26,
             child: Container(
@@ -46,7 +45,11 @@ class CustomStackAnswer extends StatelessWidget {
                   topLeft: Radius.circular(5),
                 ),
               ),
-              child: Center(child: Text(textLetter,style: Styles.style20,)),
+              child: Center(
+                  child: Text(
+                textLetter,
+                style: Styles.style20,
+              )),
             ),
           ),
         ],

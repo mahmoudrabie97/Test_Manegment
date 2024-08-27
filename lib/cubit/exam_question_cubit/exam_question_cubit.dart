@@ -19,7 +19,53 @@ class ExamQuestionCubit extends Cubit<ExamQuestionStates> {
   static ExamQuestionCubit get(context) => BlocProvider.of(context);
   ExamQuestionModel? examQuestionModel;
 
-  void getExamQuestions({
+  // void getExamQuestions({
+  //   required BuildContext context,
+  // }) {
+  //   Map<String, String> headers = {
+  //     'Content-Type': ' application/json',
+  //     'Authorization': 'Bearer ${AppConstant.token}'
+  //   };
+  //   emit(ExamQuestionLoadingState());
+  //   CallApi.getData(
+  //     baseUrl: baseurl,
+  //     apiUrl: examQuestionApi,
+  //     headers: headers,
+  //     context: context,
+  //   ).then((value) async {
+  //     debugPrint('tttt${value?.statusCode.toString()}');
+  //     if (value!.statusCode == 200) {
+  //       debugPrint(value.body);
+  //       final responseBody = json.decode(value.body);
+
+  //       examQuestionModel = ExamQuestionModel.fromJson(responseBody);
+
+  //       emit(ExamQuestionSucsessState());
+  //     } else if (value.statusCode == 400) {
+  //       final responseBody = json.decode(value.body);
+  //       debugPrint(responseBody['message']);
+  //       ShowMyDialog.showMsg(context, responseBody['message']);
+
+  //       print(value.body);
+
+  //       emit(ExamQuestionErrorState());
+  //     } else if (value.statusCode == 500) {
+  //       ShowMyDialog.showMsg(context, 'internal server error,');
+  //       emit(ExamQuestionErrorState());
+  //     } else {
+  //       ShowMyDialog.showMsg(context, 'unknown error,');
+  //       // debugPrint('An error occurred: ${value.body.}');
+  //       emit(ExamQuestionErrorState());
+  //     }
+  //   }).catchError((error) {
+  //     debugPrint('An error occurred: $error');
+  //     // ShowMyDialog.showMsg(context, 'An error occurred: $error');
+  //     emit(ExamQuestionErrorState());
+  //   });
+  // }
+
+  void startExam({
+    required Map examData,
     required BuildContext context,
   }) {
     Map<String, String> headers = {
@@ -27,9 +73,11 @@ class ExamQuestionCubit extends Cubit<ExamQuestionStates> {
       'Authorization': 'Bearer ${AppConstant.token}'
     };
     emit(ExamQuestionLoadingState());
-    CallApi.getData(
+
+    CallApi.postData(
+      data: examData,
       baseUrl: baseurl,
-      apiUrl: examQuestion,
+      apiUrl: examQuestionApi,
       headers: headers,
       context: context,
     ).then((value) async {

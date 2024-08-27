@@ -3,10 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-
-
 import 'package:test_mangement/cubit/user_blance_cubit/exam_user_has_blance_state.dart';
-
 
 import 'package:test_mangement/network/api.dart';
 import 'package:test_mangement/network/endpoints.dart';
@@ -18,16 +15,13 @@ import '../../models/exam_user_has_enough_balance.dart';
 import '../../models/question_correct_answer_model.dart';
 import '../../pages/verable_questions_page/question_view.dart';
 
-
-  class ExamUserHasBlanceCubit extends Cubit<ExamUserHasBalanceStates> {
-    ExamUserHasBlanceCubit() : super(EamUserHasBalanceSInitialState());
+class ExamUserHasBlanceCubit extends Cubit<ExamUserHasBalanceStates> {
+  ExamUserHasBlanceCubit() : super(EamUserHasBalanceSInitialState());
 
   static ExamUserHasBlanceCubit get(context) => BlocProvider.of(context);
-    ExamUserHasEnoughBalanceModel? examUserHasEnoughBalanceModel;
+  ExamUserHasEnoughBalanceModel? examUserHasEnoughBalanceModel;
 
-  void getExamUserHasBlance({
-    required BuildContext context, required int id
-  }) {
+  void getExamUserHasBlance({required BuildContext context, required int id}) {
     Map<String, String> headers = {
       'Content-Type': ' application/json',
       'Authorization': 'Bearer ${AppConstant.token}'
@@ -44,14 +38,16 @@ import '../../pages/verable_questions_page/question_view.dart';
         debugPrint(value.body);
         final responseBody = json.decode(value.body);
 
-
-        examUserHasEnoughBalanceModel = ExamUserHasEnoughBalanceModel.fromJson(responseBody);
-        print("examUserHasEnoughBalanceModel;${responseBody}");
-        print('examUserHasEnoughBalanceModel${examUserHasEnoughBalanceModel?.data}');
+        examUserHasEnoughBalanceModel =
+            ExamUserHasEnoughBalanceModel.fromJson(responseBody);
+        //  print("examUserHasEnoughBalanceModel;${responseBody}");
+        // print('examUserHasEnoughBalanceModel${examUserHasEnoughBalanceModel?.data}');
         context.push(
-            QuestionView(
-              isone: false,
-            ),
+          QuestionView(
+            isone: false,
+            examid: id,
+            examtype: 0,
+          ),
         );
         emit(ExamUserHasBalanceSSucsessState());
       } else if (value.statusCode == 400) {
