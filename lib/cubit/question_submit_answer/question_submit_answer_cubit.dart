@@ -35,9 +35,9 @@ class SubmitAnswerCubit extends Cubit<ExamSubmitAnswerStates> {
     ).then((value) async {
       debugPrint('doneeeeee${value?.statusCode.toString()}');
       if (value!.statusCode == 200) {
-        debugPrint(value.body);
+        // debugPrint(value.body);
         final responseBody = json.decode(value.body);
-        ShowMyDialog.showMsg(context, responseBody['data']);
+        // ShowMyDialog.showMsg(context, responseBody['data']);
 
         // correctAnswerModel = QuestionCorrectAnswerModel.fromJson(responseBody);
         // print("userBalanceModel;${responseBody}");

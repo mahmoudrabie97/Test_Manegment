@@ -162,14 +162,18 @@ class _QuizState extends State<Quiz> {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: QuestionsWidge(
-                                questiontext: widget
-                                        .queslist![widget.questionindex!]
-                                        .title ??
-                                    '',
-                                questionnumber: widget.questionindex! + 1,
-                                imageorvideofile: widget
-                                    .queslist![widget.questionindex!]
-                                    .imageOrVideoFile),
+                              questiontext: widget
+                                      .queslist![widget.questionindex!].title ??
+                                  '',
+                              questionnumber: widget.questionindex! + 1,
+                              imageorvideofile: widget
+                                  .queslist![widget.questionindex!]
+                                  .imageOrVideoFile,
+                              questiontype: widget
+                                      .queslist![widget.questionindex!]
+                                      .questionType ??
+                                  0,
+                            ),
                           )
                         ],
                       ),
@@ -222,15 +226,15 @@ class _QuizState extends State<Quiz> {
                           .then((val) {
                         print(
                             'NNNNNNNNNNNN${widget.queslist![widget.questionindex!].imageOrVideoFile}');
-                        _timer!.cancel();
-                        navigateToNextQuestion();
+                        // _timer!.cancel();
+                        // navigateToNextQuestion();
                       });
                       //  print('answerrrrrrrr${answer.id}');
                       // print(
                       //   'questttion${widget.queslist![widget.questionindex!].questionId}');
                     });
 
-                    timeRemaining = 10;
+                    //  timeRemaining = 10;
                   },
                   answers: answer.name.toString(),
                 );

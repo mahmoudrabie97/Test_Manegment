@@ -15,73 +15,95 @@ import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container
 
 import '../../../utilites/appcolors.dart';
 
-class CustomSoloQuizeMainContainer extends StatelessWidget {
+class CustomSoloQuizeMainContainer extends StatefulWidget {
   const CustomSoloQuizeMainContainer({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    ExamLevelCubit.get(context).examsLevel(
-      context: context,
-    );
+  State<CustomSoloQuizeMainContainer> createState() =>
+      _CustomSoloQuizeMainContainerState();
+}
 
+class _CustomSoloQuizeMainContainerState
+    extends State<CustomSoloQuizeMainContainer> {
+  @override
+  void initState() {
     ExamLevelCubit.get(context).getSkillLookUp(
       context: context,
     );
     ExamSoloCubit.get(context).getExamSolo(context: context);
+    ExamLevelCubit.get(context).examsLevel(
+      context: context,
+    );
+    // TODO: implement initState
+    super.initState();
+  }
 
+  @override
+  Widget build(BuildContext context) {
     return BlocConsumer<ExamLevelCubit, ExamLevelStates>(
       builder: (context, state) {
-        return ExamLevelCubit.get(context).shillslevellistForderodown.isEmpty ||
-                ExamLevelCubit.get(context).examslevellistodown.isEmpty
-            ? const Center(
-                child: CircularProgressIndicator(
-                color: AppColor.whiteColor,
-              ))
-            : Container(
-                width: MediaQuery.of(context).size.width * .93,
-                height: MediaQuery.of(context).size.height * .86,
-                decoration: BoxDecoration(
-                  color: AppColor.whiteColor,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 18.0, vertical: 12),
-                  child: SingleChildScrollView(
-                    physics: const ScrollPhysics(),
-                    child: Column(
-                      children: [
-                        const Row(
+        return Container(
+          width: MediaQuery.of(context).size.width * .93,
+          height: MediaQuery.of(context).size.height * .86,
+          decoration: BoxDecoration(
+            color: AppColor.whiteColor,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: BlocConsumer<ExamSoloCubit, ExamSoloStates>(
+            listener: (context, state) {
+              // TODO: implement listener
+            },
+            builder: (context, state) {
+              return ExamSoloCubit.get(context).state is ExamSoloLoadingState ||
+                      ExamLevelCubit.get(context)
+                          .shillslevellistForderodown
+                          .isEmpty ||
+                      ExamLevelCubit.get(context).examslevellistodown.isEmpty
+                  ? Center(
+                      child: CircularProgressIndicator(),
+                    )
+                  : Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 18.0, vertical: 12),
+                      child: SingleChildScrollView(
+                        physics: const ScrollPhysics(),
+                        child: Column(
                           children: [
-                            Flexible(
-                                child: SoloQuizeCustomDropdownButtonLevel()),
-                            SizedBox(
-                              width: 22,
+                            const Row(
+                              children: [
+                                Flexible(
+                                    child:
+                                        SoloQuizeCustomDropdownButtonLevel()),
+                                SizedBox(
+                                  width: 22,
+                                ),
+                                Flexible(
+                                    child:
+                                        SoloQuizeCustomDropdownButtonSkill()),
+                              ],
                             ),
-                            Flexible(
-                                child: SoloQuizeCustomDropdownButtonSkill()),
+                            ListView.builder(
+                              physics: const NeverScrollableScrollPhysics(),
+                              shrinkWrap: true,
+                              itemCount: ExamSoloCubit.get(context)
+                                  .examsoloModel!
+                                  .data!
+                                  .length,
+                              itemBuilder: (context, index) {
+                                return ListViewIetm(
+                                  examSoloModel:
+                                      ExamSoloCubit.get(context).examsoloModel,
+                                  index: index,
+                                );
+                              },
+                            ),
                           ],
                         ),
-                        ListView.builder(
-                          physics: const NeverScrollableScrollPhysics(),
-                          shrinkWrap: true,
-                          itemCount: ExamSoloCubit.get(context)
-                              .examsoloModel!
-                              .data!
-                              .length,
-                          itemBuilder: (context, index) {
-                            return ListViewIetm(
-                              examSoloModel:
-                                  ExamSoloCubit.get(context).examsoloModel,
-                              index: index,
-                            );
-                          },
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              );
+                      ),
+                    );
+            },
+          ),
+        );
       },
       listener: (context, state) {},
     );
