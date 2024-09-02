@@ -1515,6 +1515,16 @@ class S {
       args: [],
     );
   }
+
+  /// `سؤال `
+  String get question {
+    return Intl.message(
+      'سؤال ',
+      name: 'question',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

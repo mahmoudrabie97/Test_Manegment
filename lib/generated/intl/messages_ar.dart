@@ -105,6 +105,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "pushNow": MessageLookupByLibrary.simpleMessage("ادفع الآن"),
         "quantitive": MessageLookupByLibrary.simpleMessage("كمي"),
+        "question": MessageLookupByLibrary.simpleMessage("سؤال "),
         "questionsNumber": MessageLookupByLibrary.simpleMessage("عدد الاسئلة"),
         "quizeSummary": MessageLookupByLibrary.simpleMessage("ملخص الاختبار"),
         "rank": MessageLookupByLibrary.simpleMessage("الرتبة"),
