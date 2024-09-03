@@ -64,22 +64,23 @@ class TrainningQuizeSubContainerQuestion extends StatelessWidget {
             ),
             Spacer(),
             CustomTextarabic(
-              text: examsoloModel!.data![index].examTimeInMinutes.toString(),
+              text:  S.of(context).time,
               fontWeight: FontWeight.w700,
               fontSize: 16,
+              color: AppColor.darkGrey,
             ),
             SizedBox(
-              width: 10,
+              width: 20,
             ),
             CustomTextarabic(
-              text: S.of(context).questions,
+              text: '30:00د',
               fontWeight: FontWeight.w700,
               fontSize: 16,
             ),
             SizedBox(
               width: 10,
             ),
-            Image.asset(AssetsData.accept),
+            Image.asset(AssetsData.deadline),
           ],
         ),
       ),

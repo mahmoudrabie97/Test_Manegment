@@ -47,7 +47,9 @@ class CustomTrainningQuizeAppBar extends StatelessWidget {
           ),
           const Spacer(),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: const Icon(
               Icons.arrow_forward_ios,
               color: AppColor.whiteColor,

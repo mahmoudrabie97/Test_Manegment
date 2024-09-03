@@ -30,39 +30,27 @@ class TrainningQuizeSubContainerTime extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
+          // mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Image.asset(AssetsData.dollar),
+            Image.asset(AssetsData.accept),
             SizedBox(
-              width: 10,
+              width: 14,
             ),
             CustomTextarabic(
               text: examSoloModel!.data![index].rewards.toString(),
               fontWeight: FontWeight.w700,
               fontSize: 14,
             ),
-            Spacer(),
-            CustomTextarabic(
-              text: S.of(context).reward,
-              fontWeight: FontWeight.w700,
-              fontSize: 16,
-            ),
-            Spacer(),
-            CustomTextarabic(
-              text: S.of(context).time,
-              fontWeight: FontWeight.w700,
-              fontSize: 16,
-            ),
-            Spacer(),
-            CustomTextarabic(
-              text: examSoloModel!.data![index].examTimeInMinutes.toString(),
-              fontWeight: FontWeight.w700,
-              fontSize: 14,
-            ),
-            const SizedBox(
+            SizedBox(
               width: 10,
             ),
-            Image.asset(AssetsData.deadline),
+            CustomTextarabic(
+              text: S.of(context).question,
+              fontWeight: FontWeight.w700,
+              fontSize: 16,
+            ),
+
+
           ],
         ),
       ),
