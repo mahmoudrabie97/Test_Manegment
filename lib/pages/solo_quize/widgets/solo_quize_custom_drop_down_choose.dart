@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_mangement/cubit/exam_level_cubit/exam_level_cubit.dart';
-import 'package:test_mangement/models/exmas_level_model.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
+import 'package:test_mangement/utilites/widgets/customtext.dart';
 
 class SoloQuizeCustomDropdownButtonLevel extends StatelessWidget {
   const SoloQuizeCustomDropdownButtonLevel({super.key});
@@ -20,20 +20,13 @@ class DropdownButtonExample extends StatefulWidget {
 }
 
 class _DropdownButtonExampleState extends State<DropdownButtonExample> {
-
-  String dropdownValue = 'اختر المهاره';
-
+  String dropdownValue = 'اختر المستوي';
 
   @override
   Widget build(BuildContext context) {
     List<String> list = ExamLevelCubit.get(context).examslevellistodown;
-    if (!list.contains(dropdownValue)) {
-      dropdownValue = list.first;
-    }
 
-
-    return
-      Container(
+    return Container(
       width: double.infinity,
       height: MediaQuery.of(context).size.height * .07,
       decoration: BoxDecoration(
@@ -42,9 +35,15 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
       ),
       child: DropdownButton<String>(
         isExpanded: true,
-        hint: Text('اختر المهاره'),
-        value: ExamLevelCubit.get(context).shillslevellistForderodown.isEmpty
-            ? "اختر المهاره"
+        hint: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: CustomTextarabic(
+            text: 'اختر المستوي',
+            fontSize: 13,
+          ),
+        ),
+        value: dropdownValue == 'اختر المستوي' && list.isNotEmpty
+            ? null
             : dropdownValue,
         elevation: 16,
         style: TextStyle(color: Colors.grey),
@@ -56,7 +55,7 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
         onChanged: (String? value) {
           // This is called when the user selects an item.
           setState(() {
-            dropdownValue = value!;
+            dropdownValue = value ?? 'اختر المستوي';
           });
         },
         items: list.map<DropdownMenuItem<String>>((String value) {
