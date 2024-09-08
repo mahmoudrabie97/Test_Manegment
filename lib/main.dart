@@ -19,6 +19,7 @@ import 'package:test_mangement/simpleblocobserver.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/constants.dart';
 
+import 'cubit/user_players_cubit/user_players_cubit.dart';
 import 'network/local_network.dart';
 
 Future<void> main() async {
@@ -47,6 +48,8 @@ class MyApp extends StatelessWidget {
         BlocProvider(
             create: (BuildContext context) => ExamUserHasBlanceCubit()),
         BlocProvider(create: (BuildContext context) => SubmitAnswerCubit()),
+        BlocProvider(create: (BuildContext context) => UserPlayersCubit()),
+
       ],
       child: MaterialApp(
           locale: Locale('ar'),
