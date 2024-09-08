@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:test_mangement/cubit/user_players_cubit/user_players_cubit.dart';
+import 'package:test_mangement/models/user_players_model.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/assets.dart';
 import 'package:test_mangement/utilites/widgets/customtext.dart';
 
 class CustomOneToOneListViewIetm extends StatefulWidget {
-  const CustomOneToOneListViewIetm({super.key});
+  final  UserPlayersModel? userPlayersModel;
+
+  final int index;
+  const CustomOneToOneListViewIetm({super.key, required this.userPlayersModel, required this.index,});
+
 
   @override
   State<CustomOneToOneListViewIetm> createState() =>
@@ -14,6 +20,11 @@ class CustomOneToOneListViewIetm extends StatefulWidget {
 class _CustomOneToOneListViewIetmState
     extends State<CustomOneToOneListViewIetm> {
   bool? checkedValue = false;
+
+
+
+  _CustomOneToOneListViewIetmState();
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -26,42 +37,42 @@ class _CustomOneToOneListViewIetmState
           borderRadius: BorderRadius.circular(16),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(0.0),
+          padding:  EdgeInsets.all(0.0),
           child: Row(
             children: [
-              Expanded(
-                child: SizedBox(
-                  width: 30,
-                  child: CheckboxListTile(
-                    value: checkedValue,
-                    onChanged: (newValue) {
-                      setState(() {
-                        checkedValue = newValue;
-                      });
-                    },
-                    controlAffinity: ListTileControlAffinity
-                        .leading, //  <-- leading Checkbox
-                  ),
-                ),
-              ),
+              // Expanded(
+              //   child: SizedBox(
+              //     width: 30,
+              //     child: CheckboxListTile(
+              //       value: checkedValue,
+              //       onChanged: (newValue) {
+              //         setState(() {
+              //           checkedValue = newValue;
+              //         });
+              //       },
+              //       controlAffinity: ListTileControlAffinity
+              //           .leading, //  <-- leading Checkbox
+              //     ),
+              //   ),
+              // ),
               Image.asset(AssetsData.person),
               SizedBox(
                 width: 15,
               ),
-              const Column(
+               Column(
                 children: [
                   SizedBox(
                     height: 8,
                   ),
                   CustomTextarabic(
-                    text: 'محمود محمد',
+                    text:'${widget.userPlayersModel!.data?[widget.index].name}',
                     fontWeight: FontWeight.bold,
                   ),
                   SizedBox(
                     height: 6,
                   ),
                   CustomTextarabic(
-                    text: 'الهويه : 5000 ',
+                    text: 'الهويه ${widget.userPlayersModel!.data?[widget.index].userId}',
                     color: Colors.blue,
                   ),
                 ],
