@@ -50,6 +50,7 @@ class InvitationCubit extends Cubit<InvitionStates> {
         debugPrint(value.body);
         final responseBody = json.decode(value.body);
         invatationModel = InvatationModel.fromJson(responseBody);
+        ShowMyDialog.showMsg(context, responseBody['message']);
 
         print("iiiiiiiiiiiiiiiiiilo${responseBody}");
         emit(InvitionSucsessState());
