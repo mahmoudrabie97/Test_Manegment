@@ -31,7 +31,7 @@ class AddFriendsCustomContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<UserPlayersCubit,UserPlayersStates>(
+    return BlocConsumer<UserPlayersCubit, UserPlayersStates>(
       builder: (BuildContext context, state) {
         return Container(
           width: MediaQuery.of(context).size.width * .93,
@@ -71,29 +71,40 @@ class AddFriendsCustomContainer extends StatelessWidget {
                     height: 40,
                   ),
                   // AddFriendsCustomSubContainerGreen(),
-                  Expanded(
-                    child: ListView.builder(
-                        itemCount: UserPlayersCubit.get(context).userPlayersModel?.data?.length,
-                        itemBuilder: (context, index) {
-                          return AddFriendsListViewIetm(userPlayersModel: UserPlayersCubit.get(context).userPlayersModel, index: index,);
-                        }),
-                  ),
-                  CustomButton(
-                    buttonText: S.of(context).createGroup,
-                    onPressed: () {
-                      // if (formkey.currentState!.validate()) {}
-                    },
-                    buttonColor: AppColor.primary,
-                    borderRadius: 30,
-                  ),
+                  UserPlayersCubit.get(context).state is UserPlayersLoadingState
+                      ? const Center(
+                          child: CircularProgressIndicator(),
+                        )
+                      : Expanded(
+                          child: ListView.builder(
+                              itemCount: UserPlayersCubit.get(context)
+                                  .userPlayersModel
+                                  ?.data
+                                  ?.length,
+                              itemBuilder: (context, index) {
+                                return AddFriendsListViewIetm(
+                                  userPlayersModel:
+                                      UserPlayersCubit.get(context)
+                                          .userPlayersModel,
+                                  index: index,
+                                );
+                              }),
+                        ),
+                  // CustomButton(
+                  //   buttonText: S.of(context).createGroup,
+                  //   onPressed: () {
+                  //     // if (formkey.currentState!.validate()) {}
+                  //   },
+                  //   buttonColor: AppColor.primary,
+                  //   borderRadius: 30,
+                  // ),
                 ],
               ),
             ),
           ),
         );
       },
-      listener: (BuildContext context, Object? state) {  },
-
+      listener: (BuildContext context, Object? state) {},
     );
   }
 }

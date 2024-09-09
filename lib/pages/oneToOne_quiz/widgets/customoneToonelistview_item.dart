@@ -6,11 +6,14 @@ import 'package:test_mangement/utilites/assets.dart';
 import 'package:test_mangement/utilites/widgets/customtext.dart';
 
 class CustomOneToOneListViewIetm extends StatefulWidget {
-  final  UserPlayersModel? userPlayersModel;
+  final UserPlayersModel? userPlayersModel;
 
   final int index;
-  const CustomOneToOneListViewIetm({super.key, required this.userPlayersModel, required this.index,});
-
+  const CustomOneToOneListViewIetm({
+    super.key,
+    required this.userPlayersModel,
+    required this.index,
+  });
 
   @override
   State<CustomOneToOneListViewIetm> createState() =>
@@ -20,8 +23,6 @@ class CustomOneToOneListViewIetm extends StatefulWidget {
 class _CustomOneToOneListViewIetmState
     extends State<CustomOneToOneListViewIetm> {
   bool? checkedValue = false;
-
-
 
   _CustomOneToOneListViewIetmState();
 
@@ -37,7 +38,7 @@ class _CustomOneToOneListViewIetmState
           borderRadius: BorderRadius.circular(16),
         ),
         child: Padding(
-          padding:  EdgeInsets.all(0.0),
+          padding: EdgeInsets.all(0.0),
           child: Row(
             children: [
               // Expanded(
@@ -55,24 +56,30 @@ class _CustomOneToOneListViewIetmState
               //     ),
               //   ),
               // ),
-              Image.asset(AssetsData.person),
+              Image.asset(widget.userPlayersModel!.data![widget.index].gender ==
+                          1 ||
+                      widget.userPlayersModel!.data![widget.index].gender == 0
+                  ? AssetsData.boy
+                  : AssetsData.person),
               SizedBox(
                 width: 15,
               ),
-               Column(
+              Column(
                 children: [
                   SizedBox(
                     height: 8,
                   ),
                   CustomTextarabic(
-                    text:'${widget.userPlayersModel!.data?[widget.index].name}',
+                    text:
+                        '${widget.userPlayersModel!.data?[widget.index].name}',
                     fontWeight: FontWeight.bold,
                   ),
                   SizedBox(
                     height: 6,
                   ),
                   CustomTextarabic(
-                    text: 'الهويه ${widget.userPlayersModel!.data?[widget.index].userId}',
+                    text:
+                        'الهويه ${widget.userPlayersModel!.data?[widget.index].nationalId}',
                     color: Colors.blue,
                   ),
                 ],
@@ -80,11 +87,11 @@ class _CustomOneToOneListViewIetmState
               SizedBox(
                 width: 20,
               ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.reply_sharp),
-                color: Colors.blue,
-              )
+              // IconButton(
+              //   onPressed: () {},
+              //   icon: Icon(Icons.reply_sharp),
+              //   color: Colors.blue,
+              // )
             ],
           ),
         ),

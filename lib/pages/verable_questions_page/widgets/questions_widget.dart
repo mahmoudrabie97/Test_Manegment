@@ -54,7 +54,7 @@ class QuestionsWidge extends StatelessWidget {
               : SizedBox(
                   height: 120,
                   width: 200,
-                  child: Image.asset(AssetsData.onBoarding),
+                  child: Image.network(imageorvideofile ?? ''),
                 ),
         ],
       ),

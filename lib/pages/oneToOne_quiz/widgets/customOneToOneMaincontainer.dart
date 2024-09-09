@@ -26,7 +26,7 @@ class CustomOneToOneMainContainer extends StatelessWidget {
         listener: (BuildContext context, UserPlayersStates state) {},
         builder: (BuildContext context, UserPlayersStates state) {
           return Padding(
-            padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
+            padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
             child: Container(
               width: double.infinity,
               height: MediaQuery.of(context).size.height * .87,
@@ -35,7 +35,7 @@ class CustomOneToOneMainContainer extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 child: Column(
                   children: [
                     CustomTextFormField(
@@ -54,29 +54,35 @@ class CustomOneToOneMainContainer extends StatelessWidget {
                         return null;
                       },
                     ),
-                    Expanded(
-                      child: ListView.builder(
-                        itemCount: UserPlayersCubit.get(context)
-                                .userPlayersModel
-                                ?.data
-                                ?.length ??
-                            0,
-                        itemBuilder: (BuildContext context, int index) {
-                          return CustomOneToOneListViewIetm(
-                            userPlayersModel:
-                                UserPlayersCubit.get(context).userPlayersModel,
-                            index: index,
-                          );
-                        },
-                      ),
-                    ),
-                    SizedBox(
+                    UserPlayersCubit.get(context).state
+                            is UserPlayersLoadingState
+                        ? const Center(
+                            child: CircularProgressIndicator(),
+                          )
+                        : Expanded(
+                            child: ListView.builder(
+                              itemCount: UserPlayersCubit.get(context)
+                                      .userPlayersModel
+                                      ?.data
+                                      ?.length ??
+                                  0,
+                              itemBuilder: (BuildContext context, int index) {
+                                return CustomOneToOneListViewIetm(
+                                  userPlayersModel:
+                                      UserPlayersCubit.get(context)
+                                          .userPlayersModel,
+                                  index: index,
+                                );
+                              },
+                            ),
+                          ),
+                    const SizedBox(
                       height: 10,
                     ),
                     CustomButton(
                         buttonText: 'ارسال',
                         onPressed: () {
-                          context.push(AddFriendsPage());
+                          context.push(const AddFriendsPage());
 
                           //  context.push(QuestionView(
                           //  isone: true,

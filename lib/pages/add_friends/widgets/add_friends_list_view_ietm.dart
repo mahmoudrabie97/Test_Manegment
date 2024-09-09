@@ -12,43 +12,38 @@ import '../../../utilites/widgets/customtext.dart';
 import 'add_friends_custom_check_box.dart';
 
 class AddFriendsListViewIetm extends StatelessWidget {
-  AddFriendsListViewIetm(
+  const AddFriendsListViewIetm(
       {super.key, required this.userPlayersModel, required this.index});
 
-  UserPlayersModel? userPlayersModel;
-  int index;
+  final UserPlayersModel? userPlayersModel;
+  final int index;
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<InvitationCubit, InvitionStates>(
-      builder: (BuildContext context, InvitionStates state) {
-        return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 8),
-          child: Container(
-            width: MediaQuery
-                .of(context)
-                .size
-                .width * .8,
-            height: MediaQuery
-                .of(context)
-                .size
-                .height * .1,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: AppColor.whiteColor,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.2),
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                    offset: Offset(0, 3),
-                  ),
-                ]),
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Row(
-                  children: [
-                  Image.asset(AssetsData.person),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 8),
+      child: Container(
+        width: MediaQuery.of(context).size.width * .8,
+        height: MediaQuery.of(context).size.height * .1,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: AppColor.whiteColor,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.2),
+                spreadRadius: 5,
+                blurRadius: 7,
+                offset: const Offset(0, 3),
+              ),
+            ]),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Row(
+            children: [
+              Image.asset(userPlayersModel!.data![index].gender == 1 ||
+                      userPlayersModel!.data![index].gender == 0
+                  ? AssetsData.boy
+                  : AssetsData.person),
               Column(
                 children: [
                   CustomTextarabic(
@@ -65,30 +60,24 @@ class AddFriendsListViewIetm extends StatelessWidget {
                 ],
               ),
               Spacer(),
-              IconButton(
-                  onPressed: () {
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: InkWell(
+                  onTap: () {
                     InvitationCubit.get(context).getInvitation(
                         context: context,
-                        id: UserPlayersCubit
-                            .get(context)
-                            .userPlayersModel
-                        !
+                        id: UserPlayersCubit.get(context)
+                            .userPlayersModel!
                             .data?[index]
                             .userId);
-                  }, icon: Icon(Icons.add) ,
-
-
-
-
-
+                  },
+                  child: Image.asset('assets/images/addfriend.png'),
+                ),
               ),
             ],
           ),
-        ),)
-        ,
-        );
-      },
-      listener: (BuildContext context, InvitionStates state) {},
+        ),
+      ),
     );
   }
 }
