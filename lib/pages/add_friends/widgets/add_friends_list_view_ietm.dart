@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 import '../../../generated/l10n.dart';
@@ -14,10 +12,10 @@ class AddFriendsListViewIetm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 8),
+      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 8),
       child: Container(
-        width: MediaQuery.of(context).size.width*.8,
-        height: MediaQuery.of(context).size.height*.1,
+        width: MediaQuery.of(context).size.width * .8,
+        height: MediaQuery.of(context).size.height * .1,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             color: AppColor.whiteColor,
@@ -28,8 +26,7 @@ class AddFriendsListViewIetm extends StatelessWidget {
                 blurRadius: 7,
                 offset: Offset(0, 3),
               ),
-            ]
-        ),
+            ]),
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Row(
@@ -43,16 +40,15 @@ class AddFriendsListViewIetm extends StatelessWidget {
                     fontSize: 16,
                   ),
                   CustomTextarabic(
-                    text:S.of(context).id,
+                    text: S.of(context).id,
                     fontWeight: FontWeight.w500,
                     fontSize: 12,
                     color: AppColor.lightGreenColor,
                   ),
                 ],
-
               ),
               Spacer(),
-              AddFriendsCustomCheckBox(),
+              IconButton(onPressed: () {}, icon: Icon(Icons.add))
             ],
           ),
         ),

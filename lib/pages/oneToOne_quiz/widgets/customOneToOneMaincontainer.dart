@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:test_mangement/pages/add_friends/add_friends_page.dart';
 import 'package:test_mangement/pages/oneToOne_quiz/widgets/customoneToonelistview_item.dart';
 import 'package:test_mangement/pages/verable_questions_page/question_view.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
@@ -25,19 +26,16 @@ class CustomOneToOneMainContainer extends StatelessWidget {
         listener: (BuildContext context, UserPlayersStates state) {},
         builder: (BuildContext context, UserPlayersStates state) {
           return Padding(
-            padding:  EdgeInsets.only(left: 10, right: 10, bottom: 10),
+            padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
             child: Container(
               width: double.infinity,
-              height: MediaQuery
-                  .of(context)
-                  .size
-                  .height * .87,
+              height: MediaQuery.of(context).size.height * .87,
               decoration: BoxDecoration(
                 color: AppColor.grey300,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Padding(
-                padding:  EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Column(
                   children: [
                     CustomTextFormField(
@@ -58,14 +56,17 @@ class CustomOneToOneMainContainer extends StatelessWidget {
                     ),
                     Expanded(
                       child: ListView.builder(
-                        itemCount:UserPlayersCubit.get(context)
-                            .userPlayersModel?.data?.length??
+                        itemCount: UserPlayersCubit.get(context)
+                                .userPlayersModel
+                                ?.data
+                                ?.length ??
                             0,
                         itemBuilder: (BuildContext context, int index) {
                           return CustomOneToOneListViewIetm(
-                            userPlayersModel: UserPlayersCubit
-                                .get(context)
-                                .userPlayersModel, index:index,);
+                            userPlayersModel:
+                                UserPlayersCubit.get(context).userPlayersModel,
+                            index: index,
+                          );
                         },
                       ),
                     ),
@@ -75,6 +76,8 @@ class CustomOneToOneMainContainer extends StatelessWidget {
                     CustomButton(
                         buttonText: 'ارسال',
                         onPressed: () {
+                          context.push(AddFriendsPage());
+
                           //  context.push(QuestionView(
                           //  isone: true,
                           //));
