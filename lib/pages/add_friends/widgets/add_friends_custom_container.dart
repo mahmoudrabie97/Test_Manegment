@@ -31,63 +31,69 @@ class AddFriendsCustomContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width * .93,
-      height: MediaQuery.of(context).size.height * .87,
-      decoration: BoxDecoration(
-        color: AppColor.whiteColor,
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 25),
-        child: Form(
-          key: formkey,
-          child: Column(
-            children: [
-              CustomTextFormField(
-                hintText: S.of(context).choosePlayer,
-                fillColor: AppColor.greyColor,
-                suffixicon: Icons.search,
-                hinnntcolr: AppColor.greyColor,
-                controller: _questionNumberController,
-                keyboardType: TextInputType.emailAddress,
-                focusnode: field2,
-                onsubmitted: (value) {
-                  FocusScope.of(context).requestFocus(field3);
-                },
-                validator: (value) {
-                  if (value!.isEmpty) {
-                    return 'please enter your identity';
-                  }
-                  // else if (!isEmailValid(value)) {
-                  //   return 'Invalid email format';
-                  // }
-                  return null;
-                },
-              ),
-              SizedBox(
-                height: 40,
-              ),
-              // AddFriendsCustomSubContainerGreen(),
-              Expanded(
-                child: ListView.builder(
-                    itemCount: 23,
-                    itemBuilder: (context, index) {
-                      return AddFriendsListViewIetm();
-                    }),
-              ),
-              CustomButton(
-                buttonText: S.of(context).createGroup,
-                onPressed: () {
-                  // if (formkey.currentState!.validate()) {}
-                },
-                buttonColor: AppColor.primary,
-                borderRadius: 30,
-              ),
-            ],
+    return BlocConsumer<UserPlayersCubit,UserPlayersStates>(
+      builder: (BuildContext context, state) {
+        return Container(
+          width: MediaQuery.of(context).size.width * .93,
+          height: MediaQuery.of(context).size.height * .87,
+          decoration: BoxDecoration(
+            color: AppColor.whiteColor,
+            borderRadius: BorderRadius.circular(20),
           ),
-        ),
-      ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 25),
+            child: Form(
+              key: formkey,
+              child: Column(
+                children: [
+                  CustomTextFormField(
+                    hintText: S.of(context).choosePlayer,
+                    fillColor: AppColor.greyColor,
+                    suffixicon: Icons.search,
+                    hinnntcolr: AppColor.greyColor,
+                    controller: _questionNumberController,
+                    keyboardType: TextInputType.emailAddress,
+                    focusnode: field2,
+                    onsubmitted: (value) {
+                      FocusScope.of(context).requestFocus(field3);
+                    },
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        return 'please enter your identity';
+                      }
+                      // else if (!isEmailValid(value)) {
+                      //   return 'Invalid email format';
+                      // }
+                      return null;
+                    },
+                  ),
+                  SizedBox(
+                    height: 40,
+                  ),
+                  // AddFriendsCustomSubContainerGreen(),
+                  Expanded(
+                    child: ListView.builder(
+                        itemCount: UserPlayersCubit.get(context).userPlayersModel?.data?.length,
+                        itemBuilder: (context, index) {
+                          return AddFriendsListViewIetm(userPlayersModel: UserPlayersCubit.get(context).userPlayersModel, index: index,);
+                        }),
+                  ),
+                  CustomButton(
+                    buttonText: S.of(context).createGroup,
+                    onPressed: () {
+                      // if (formkey.currentState!.validate()) {}
+                    },
+                    buttonColor: AppColor.primary,
+                    borderRadius: 30,
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
+      listener: (BuildContext context, Object? state) {  },
+
     );
   }
 }
