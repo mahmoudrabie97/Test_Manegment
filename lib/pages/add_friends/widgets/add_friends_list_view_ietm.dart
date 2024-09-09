@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_mangement/models/user_players_model.dart';
 
 import '../../../generated/l10n.dart';
 import '../../../utilites/appcolors.dart';
@@ -7,7 +8,11 @@ import '../../../utilites/widgets/customtext.dart';
 import 'add_friends_custom_check_box.dart';
 
 class AddFriendsListViewIetm extends StatelessWidget {
-  const AddFriendsListViewIetm({super.key});
+  AddFriendsListViewIetm(
+      {super.key, required this.userPlayersModel, required this.index});
+
+  UserPlayersModel? userPlayersModel;
+  int index;
 
   @override
   Widget build(BuildContext context) {
@@ -35,12 +40,12 @@ class AddFriendsListViewIetm extends StatelessWidget {
               Column(
                 children: [
                   CustomTextarabic(
-                    text: 'ايناس عمر ',
+                    text: '${userPlayersModel!.data?[index].name}',
                     fontWeight: FontWeight.w500,
                     fontSize: 16,
                   ),
                   CustomTextarabic(
-                    text: S.of(context).id,
+                    text: '${userPlayersModel!.data?[index].userId}',
                     fontWeight: FontWeight.w500,
                     fontSize: 12,
                     color: AppColor.lightGreenColor,
