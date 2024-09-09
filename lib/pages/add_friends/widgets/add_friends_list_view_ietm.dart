@@ -25,8 +25,14 @@ class AddFriendsListViewIetm extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 8),
           child: Container(
-            width: MediaQuery.of(context).size.width * .8,
-            height: MediaQuery.of(context).size.height * .1,
+            width: MediaQuery
+                .of(context)
+                .size
+                .width * .8,
+            height: MediaQuery
+                .of(context)
+                .size
+                .height * .1,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: AppColor.whiteColor,
@@ -41,38 +47,45 @@ class AddFriendsListViewIetm extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: Row(
-                children: [
+                  children: [
                   Image.asset(AssetsData.person),
-                  Column(
-                    children: [
-                      CustomTextarabic(
-                        text: '${userPlayersModel!.data?[index].name}',
-                        fontWeight: FontWeight.w500,
-                        fontSize: 16,
-                      ),
-                      CustomTextarabic(
-                        text: '${userPlayersModel!.data?[index].userId}',
-                        fontWeight: FontWeight.w500,
-                        fontSize: 12,
-                        color: AppColor.lightGreenColor,
-                      ),
-                    ],
+              Column(
+                children: [
+                  CustomTextarabic(
+                    text: '${userPlayersModel!.data?[index].name}',
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16,
                   ),
-                  Spacer(),
-                  IconButton(
-                      onPressed: () {
-                        InvitationCubit.get(context).getInvitation(
-                            context: context,
-                            id: UserPlayersCubit.get(context)
-                                .userPlayersModel
-                                !.data?[index]
-                                .userId);
-                      },
-                      icon: Icon(Icons.add))
+                  CustomTextarabic(
+                    text: '${userPlayersModel!.data?[index].userId}',
+                    fontWeight: FontWeight.w500,
+                    fontSize: 12,
+                    color: AppColor.lightGreenColor,
+                  ),
                 ],
               ),
-            ),
+              Spacer(),
+              IconButton(
+                  onPressed: () {
+                    InvitationCubit.get(context).getInvitation(
+                        context: context,
+                        id: UserPlayersCubit
+                            .get(context)
+                            .userPlayersModel
+                        !
+                            .data?[index]
+                            .userId);
+                  }, icon: Icon(Icons.add) ,
+
+
+
+
+
+              ),
+            ],
           ),
+        ),)
+        ,
         );
       },
       listener: (BuildContext context, InvitionStates state) {},
