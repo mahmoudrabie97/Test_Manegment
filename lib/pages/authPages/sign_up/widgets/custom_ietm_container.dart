@@ -3,8 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test_mangement/cubit/authcubit/authcubit.dart';
 import 'package:test_mangement/cubit/authcubit/authstates.dart';
 import 'package:test_mangement/pages/authPages/sign_up/widgets/under_line_text.dart';
-import 'package:test_mangement/pages/chhosing_regiter_metod_page/choosing_register_method_page.dart';
-import 'package:test_mangement/utilites/extentionhelper.dart';
 
 import '../../../../generated/l10n.dart';
 import '../../../../utilites/appcolors.dart';
@@ -132,7 +130,7 @@ class CustomIetmContainer extends StatelessWidget {
                     hintText: "رقم الهويه",
                     perfixicon: Icons.lock_outline,
                     hinnntcolr: Colors.grey,
-                    controller: _passwordController,
+                    controller: _identityController,
                     keyboardType: TextInputType.text,
                     focusnode: field4,
                     onsubmitted: (value) {
@@ -146,10 +144,11 @@ class CustomIetmContainer extends StatelessWidget {
                     },
                   ),
                   CustomTextFormField(
+                    obscureText: true,
                     hintText: S.of(context).Password,
                     perfixicon: Icons.lock_outline,
                     hinnntcolr: Colors.grey,
-                    controller: _identityController,
+                    controller: _passwordController,
                     keyboardType: TextInputType.text,
                     focusnode: field5,
                     onsubmitted: (value) {
@@ -183,7 +182,13 @@ class CustomIetmContainer extends StatelessWidget {
                                       AuthCubit.get(context).list.first
                                   ? 1
                                   : 2,
-                              "roleId": 1
+                              "roleId":
+                                  2 //   المفروض تتغير بناءا علي اذا كان هو طالب ولا متدرب ولا اي
+                              // superadmin 1
+                              // studient 2
+                              //parent 3
+                              // trainer 4
+                              // entry 5
                             };
                             if (formkey.currentState!.validate()) {
                               AuthCubit.get(context).registerUser(

@@ -6,7 +6,6 @@ import 'package:test_mangement/utilites/widgets/customtext.dart';
 
 import '../../../generated/l10n.dart';
 import '../../../utilites/appcolors.dart';
-import '../../authPages/loginpage/login_page.dart';
 import 'custom_sub_container.dart';
 
 class WelcomOneCustomMainContainer extends StatelessWidget {
@@ -69,7 +68,7 @@ class WelcomOneCustomMainContainer extends StatelessWidget {
                           image: AssetsData.teacher,
                         ),
                         CustomSubContainer(
-                          containerText: S.of(context).School, //ضيف الاسم الصح
+                          containerText: "متدرب", //ضيف الاسم الصح
                           color: AppColor.braon,
                           image: AssetsData.young,
                         ),

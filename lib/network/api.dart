@@ -73,5 +73,55 @@ class CallApi {
     return null;
   }
 
+  static Future<http.Response?> putData({
+    required Map data,
+    required String baseUrl,
+    required String apiUrl,
+    required Map<String, String> headers,
+    required BuildContext context,
+  }) async {
+    try {
+      msg = '';
+      var fullUrl = baseUrl + apiUrl;
+
+      // Convert any Set objects in the data map to List
+      Map<String, dynamic> encodableData = {};
+      data.forEach((key, value) {
+        if (value is Set) {
+          encodableData[key] = value.toList();
+        } else {
+          encodableData[key] = value;
+        }
+      });
+
+      var jsonData = jsonEncode(encodableData);
+
+      return await http.put(
+        Uri.parse(fullUrl),
+        body: jsonData,
+        headers: headers,
+      );
+    } on IOException catch (e) {
+      debugPrint('Socket Error: $e');
+      msg = 'Socket Error: $e';
+    } on Error catch (e) {
+      debugPrint('General Error: $e');
+      msg = 'General Error: $e';
+    } on TimeoutException catch (e) {
+      debugPrint('Timeout Error: $e');
+      msg = 'Timeout Error: $e';
+    } on FormatException catch (e) {
+      debugPrint('Format Error: $e');
+      msg = 'Format Error: $e';
+    }
+
+    if (msg != '') {
+      ShowMyDialog.showMsg(context, msg);
+    }
+
+    // Add a default return statement with a value of null or throw an exception
+    return null;
+  }
+
   static _setHeaders() => {'Content-Type': 'application/x-www-form-urlencoded'};
 }

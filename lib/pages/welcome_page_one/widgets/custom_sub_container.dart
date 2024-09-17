@@ -33,11 +33,11 @@ class CustomSubContainer extends StatelessWidget {
           ),
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
               Image.asset(image),
-              SizedBox(
+              const SizedBox(
                 height: 6,
               ),
               CustomTextarabic(

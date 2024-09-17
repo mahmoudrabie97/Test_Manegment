@@ -15,7 +15,7 @@ class AddFriendsListViewIetm extends StatelessWidget {
   const AddFriendsListViewIetm(
       {super.key, required this.userPlayersModel, required this.index});
 
-  final UserPlayersModel? userPlayersModel;
+  final Data? userPlayersModel;
   final int index;
 
   @override
@@ -40,19 +40,19 @@ class AddFriendsListViewIetm extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: Row(
             children: [
-              Image.asset(userPlayersModel!.data![index].gender == 1 ||
-                      userPlayersModel!.data![index].gender == 0
-                  ? AssetsData.boy
-                  : AssetsData.person),
+              Image.asset(
+                  userPlayersModel!.gender == 1 || userPlayersModel!.gender == 0
+                      ? AssetsData.boy
+                      : AssetsData.person),
               Column(
                 children: [
                   CustomTextarabic(
-                    text: '${userPlayersModel!.data?[index].name}',
+                    text: '${userPlayersModel!.name}',
                     fontWeight: FontWeight.w500,
                     fontSize: 16,
                   ),
                   CustomTextarabic(
-                    text: '${userPlayersModel!.data?[index].userId}',
+                    text: '${userPlayersModel!.userId}',
                     fontWeight: FontWeight.w500,
                     fontSize: 12,
                     color: AppColor.lightGreenColor,
@@ -65,11 +65,7 @@ class AddFriendsListViewIetm extends StatelessWidget {
                 child: InkWell(
                   onTap: () {
                     InvitationCubit.get(context).getInvitation(
-                        context: context,
-                        id: UserPlayersCubit.get(context)
-                            .userPlayersModel!
-                            .data?[index]
-                            .userId);
+                        context: context, id: userPlayersModel!.userId ?? 0);
                   },
                   child: Image.asset('assets/images/addfriend.png'),
                 ),

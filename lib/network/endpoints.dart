@@ -10,5 +10,11 @@ const String examQuestionApi = 'Exam/start-exam';
 const String userProfile = 'User/profile';
 const String userBlance = 'Exam/check-user-balance?';
 const String sumitAnswerApi = 'Exam/submit-answer';
-const String userPlayersApi='User/players';
-const String invitationApi='Invitation';
+const String suggestfriendApi = 'User/suggestedFriends';
+const String availableplayersApi = 'User/availablePlayers';
+
+const String invitationallApi = 'Invitation/all';
+
+const String invitationApi = 'Invitation';
+const String invitationacceptApi = 'Invitation/accept?';
+const String invitationdeaclineApi = 'Invitation/decline?';

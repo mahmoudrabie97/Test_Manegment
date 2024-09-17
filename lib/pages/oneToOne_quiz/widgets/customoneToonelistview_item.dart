@@ -6,12 +6,12 @@ import 'package:test_mangement/utilites/assets.dart';
 import 'package:test_mangement/utilites/widgets/customtext.dart';
 
 class CustomOneToOneListViewIetm extends StatefulWidget {
-  final UserPlayersModel? userPlayersModel;
+  final Data? availableplayer;
 
   final int index;
   const CustomOneToOneListViewIetm({
     super.key,
-    required this.userPlayersModel,
+    required this.availableplayer,
     required this.index,
   });
 
@@ -56,9 +56,8 @@ class _CustomOneToOneListViewIetmState
               //     ),
               //   ),
               // ),
-              Image.asset(widget.userPlayersModel!.data![widget.index].gender ==
-                          1 ||
-                      widget.userPlayersModel!.data![widget.index].gender == 0
+              Image.asset(widget.availableplayer!.gender == 1 ||
+                      widget.availableplayer!.gender == 0
                   ? AssetsData.boy
                   : AssetsData.person),
               SizedBox(
@@ -70,16 +69,14 @@ class _CustomOneToOneListViewIetmState
                     height: 8,
                   ),
                   CustomTextarabic(
-                    text:
-                        '${widget.userPlayersModel!.data?[widget.index].name}',
+                    text: '${widget.availableplayer!.name}',
                     fontWeight: FontWeight.bold,
                   ),
                   SizedBox(
                     height: 6,
                   ),
                   CustomTextarabic(
-                    text:
-                        'الهويه ${widget.userPlayersModel!.data?[widget.index].nationalId}',
+                    text: 'الهويه ${widget.availableplayer!.nationalId}',
                     color: Colors.blue,
                   ),
                 ],
