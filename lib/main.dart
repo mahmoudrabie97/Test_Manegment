@@ -51,7 +51,6 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (BuildContext context) => SubmitAnswerCubit()),
         BlocProvider(create: (BuildContext context) => UserPlayersCubit()),
         BlocProvider(create: (BuildContext context) => InvitationCubit()),
-
       ],
       child: MaterialApp(
           locale: Locale('ar'),

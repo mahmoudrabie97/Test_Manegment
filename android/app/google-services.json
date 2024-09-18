@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "115165610344",
+    "project_id": "testmanagementnotify",
+    "storage_bucket": "testmanagementnotify.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115165610344:android:66dc57247b95730d1f96dd",
+        "android_client_info": {
+          "package_name": "com.codeforce.TestManagement"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhlNxb8GlQV5IEDR5_HGeRh4nHm2RYcOI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115165610344:android:9ffcc99f6ba1ab341f96dd",
+        "android_client_info": {
+          "package_name": "test.notification"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhlNxb8GlQV5IEDR5_HGeRh4nHm2RYcOI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
