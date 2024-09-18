@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -11,22 +12,34 @@ import 'package:test_mangement/cubit/invitation_cubit/invitation_cubit.dart';
 import 'package:test_mangement/cubit/question_submit_answer/question_submit_answer_cubit.dart';
 import 'package:test_mangement/cubit/user_blance_cubit/exam_user_has_blance_cubit.dart';
 import 'package:test_mangement/cubit/user_profile_cubit/user_profile_cubit.dart';
+import 'package:test_mangement/firebase_options.dart';
 import 'package:test_mangement/generated/l10n.dart';
 
 import 'package:test_mangement/pages/welcome_page_one/welcome_one.dart';
 
 import 'package:test_mangement/root_page.dart';
+import 'package:test_mangement/services/local_notification.dart';
+import 'package:test_mangement/services/push_notification_service.dart';
 import 'package:test_mangement/simpleblocobserver.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/constants.dart';
 
 import 'cubit/user_players_cubit/user_players_cubit.dart';
+
 import 'network/local_network.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = SimpleBlocObserver();
   await CachNetwork.cachinitilization();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  await Future.wait([
+    LocalNotification.init(),
+    PushNotificationService.init(),
+  ]);
+
   AppConstant.token = CachNetwork.getcacheData(key: 'token');
   print('mainnnnn${AppConstant.token}');
 
