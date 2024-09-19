@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test_mangement/generated/l10n.dart';
 import 'package:test_mangement/pages/home_page/widgets/custom_container_bottom_sheet.dart';
 import 'package:test_mangement/pages/oneToOne_quiz/one_to_one_page.dart';
+import 'package:test_mangement/pages/one_to_one_quize/one_to_one_quize_page.dart';
 import 'package:test_mangement/pages/solo_quize/solo_quize_page.dart';
 import 'package:test_mangement/pages/training_quiz/trainning_quiz.dart';
 import 'package:test_mangement/pages/verable_questions_page/question_view.dart';
@@ -59,7 +60,7 @@ class CustomerBottomSheetItem extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                context.push(OneToOnePage());
+                context.push(OneToOneQuizePage());
               },
               child: CustomerBottomSheetContainer(
                 containercolor: Color(0xffFFA4F2),
