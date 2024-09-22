@@ -7,6 +7,7 @@ import 'package:test_mangement/cubit/user_blance_cubit/exam_user_has_blance_stat
 
 import 'package:test_mangement/network/api.dart';
 import 'package:test_mangement/network/endpoints.dart';
+import 'package:test_mangement/pages/oneToOne_quiz/one_to_one_page.dart';
 import 'package:test_mangement/utilites/constants.dart';
 import 'package:test_mangement/utilites/extentionhelper.dart';
 import 'package:test_mangement/utilites/widgets/showdialog.dart';
@@ -48,6 +49,53 @@ class ExamUserHasBlanceCubit extends Cubit<ExamUserHasBalanceStates> {
             examtype: 1,
           ),
         );
+        emit(ExamUserHasBalanceSSucsessState());
+      } else if (value.statusCode == 400) {
+        final responseBody = json.decode(value.body);
+        debugPrint(responseBody['message']);
+        ShowMyDialog.showMsg(context, responseBody['message']);
+
+        print(value.body);
+
+        emit(ExamUserHasBalanceSErrorState());
+      } else if (value.statusCode == 500) {
+        ShowMyDialog.showMsg(context, 'internal server error,');
+        emit(ExamUserHasBalanceSErrorState());
+      } else {
+        ShowMyDialog.showMsg(context, 'unknown error,');
+        // debugPrint('An error occurred: ${value.body.}');
+        emit(ExamUserHasBalanceSErrorState());
+      }
+    }).catchError((error) {
+      debugPrint('An error occurred: $error');
+      // ShowMyDialog.showMsg(context, 'An error occurred: $error');
+      emit(ExamUserHasBalanceSErrorState());
+    });
+  }
+
+  void getExamUserHasBlanceForOneToOne(
+      {required BuildContext context, required int id}) {
+    Map<String, String> headers = {
+      'Content-Type': ' application/json',
+      'Authorization': 'Bearer ${AppConstant.token}'
+    };
+    emit(ExamUserHasBalanceSLoadingState());
+    CallApi.getData(
+      baseUrl: baseurl,
+      apiUrl: '${userBlance}examId=$id',
+      headers: headers,
+      context: context,
+    ).then((value) async {
+      debugPrint('doneeeeee${value?.statusCode.toString()}');
+      if (value!.statusCode == 200) {
+        debugPrint(value.body);
+        final responseBody = json.decode(value.body);
+
+        examUserHasEnoughBalanceModel =
+            ExamUserHasEnoughBalanceModel.fromJson(responseBody);
+        //  print("examUserHasEnoughBalanceModel;${responseBody}");
+        // print('examUserHasEnoughBalanceModel${examUserHasEnoughBalanceModel?.data}');
+        context.push(OneToOnePage());
         emit(ExamUserHasBalanceSSucsessState());
       } else if (value.statusCode == 400) {
         final responseBody = json.decode(value.body);

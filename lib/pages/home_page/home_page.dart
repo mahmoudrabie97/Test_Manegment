@@ -4,7 +4,6 @@ import 'package:test_mangement/pages/home_page/widgets/custom_column_text.dart';
 import 'package:test_mangement/pages/home_page/widgets/custom_home_page_main_container.dart';
 import 'package:test_mangement/pages/home_page/widgets/custom_row_info.dart';
 import 'package:test_mangement/pages/home_page/widgets/home_page_sub_container.dart';
-import 'package:test_mangement/services/local_notification.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/assets.dart';
 
