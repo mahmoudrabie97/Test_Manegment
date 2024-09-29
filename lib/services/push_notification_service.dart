@@ -2,7 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:test_mangement/main.dart';
-import 'package:test_mangement/pages/invitation_notification_page/invitation_notification_page.dart';
+import 'package:test_mangement/pages/invitation_notification_challenge_page/invitation_notification_page.dart';
 import 'package:test_mangement/services/local_notification.dart';
 import 'package:test_mangement/utilites/extentionhelper.dart';
 
@@ -30,7 +30,7 @@ class PushNotificationService {
     // String? title = message.notification?.title;
     // String? body = message.notification?.body;
     navigatorKey.currentState!.push(MaterialPageRoute(builder: (conttext) {
-      return const InvitationNotificationPAge();
+      return const InvitationNotificationChallengePage();
     }));
   }
 
@@ -46,7 +46,7 @@ class PushNotificationService {
       //  String? body = message.notification?.body;
 // if( title.contain("Challenge"))
       navigatorKey.currentState!.push(MaterialPageRoute(builder: (conttext) {
-        return const InvitationNotificationPAge();
+        return const InvitationNotificationChallengePage();
       }));
     });
   }
@@ -55,7 +55,7 @@ class PushNotificationService {
     FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
       print("Notification clicked: ${message.notification!.title}");
       navigatorKey.currentState!.push(MaterialPageRoute(builder: (context) {
-        return const InvitationNotificationPAge();
+        return const InvitationNotificationChallengePage();
       }));
     });
   }

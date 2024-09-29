@@ -25,7 +25,6 @@ import 'package:test_mangement/simpleblocobserver.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/constants.dart';
 
-
 import 'cubit/user_players_cubit/user_players_cubit.dart';
 
 import 'network/local_network.dart';
@@ -70,7 +69,8 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (BuildContext context) => UserPlayersCubit()),
         BlocProvider(create: (BuildContext context) => InvitationCubit()),
         //InvitationAcceptCubit
-         BlocProvider(create: (BuildContext context) => CompetitorInvitationCubit()),
+        BlocProvider(
+            create: (BuildContext context) => CompetitorInvitationCubit()),
       ],
       child: MaterialApp(
           navigatorKey: navigatorKey,
@@ -90,8 +90,8 @@ class MyApp extends StatelessWidget {
                 backgroundColor: AppColor.primary,
               )),
           home: AppConstant.token == null || AppConstant.token == ''
-              ? WelcomePage1()
-              : RootHomePage()),
+              ? const WelcomePage1()
+              : const RootHomePage()),
     );
   }
 }

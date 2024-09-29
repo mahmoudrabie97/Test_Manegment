@@ -23,5 +23,7 @@ const String competitorInvitationApi = 'CompetitorInvitation';
 const String acceptInvitationApi = 'CompetitorInvitation/accept';
 const String declineInvitationApi = 'CompetitorInvitation/decline';
 
+const String getcompetitorInvitationApi = 'CompetitorInvitation/all';
+
 
 //CompetitorInvitation/accept?id=4

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test_mangement/generated/l10n.dart';
 import 'package:test_mangement/pages/accept_invitation_page.dart';
 import 'package:test_mangement/pages/home_page/home_page.dart';
+import 'package:test_mangement/pages/invitation_notification_challenge_page/invitation_notification_page.dart';
 import 'package:test_mangement/pages/personal_profile_page/personal_profile_page.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 
@@ -15,15 +16,10 @@ class RootHomePage extends StatefulWidget {
 class _RootHomePageState extends State<RootHomePage> {
   int currentindex = 0;
   final List<Widget> pages = <Widget>[
-    HomePage(),
-    const Scaffold(
-      body: Center(
-        child: Text('home'),
-      ),
-    ),
-    const AcceptInvitationPage(
-    ),
-    PersonalProfilePage(),
+    const HomePage(),
+    InvitationNotificationChallengePage(),
+    const AcceptInvitationPage(),
+    const PersonalProfilePage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -52,8 +48,8 @@ class _RootHomePageState extends State<RootHomePage> {
         BottomNavigationBarItem(
             icon: const Icon(Icons.home_filled), label: S.of(context).home),
         BottomNavigationBarItem(
-            icon: const Icon(Icons.question_mark),
-            label: S.of(context).questions),
+            icon: const Icon(Icons.sensor_occupied_rounded),
+            label: " دعوات  التحديات"),
         BottomNavigationBarItem(
             icon: const Icon(Icons.category_rounded),
             label: S.of(context).categories),
