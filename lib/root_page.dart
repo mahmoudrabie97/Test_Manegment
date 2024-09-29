@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_mangement/generated/l10n.dart';
+import 'package:test_mangement/pages/accept_invitation_page.dart';
 import 'package:test_mangement/pages/home_page/home_page.dart';
 import 'package:test_mangement/pages/personal_profile_page/personal_profile_page.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
@@ -20,10 +21,7 @@ class _RootHomePageState extends State<RootHomePage> {
         child: Text('home'),
       ),
     ),
-    const Scaffold(
-      body: Center(
-        child: Text('home'),
-      ),
+    const AcceptInvitationPage(
     ),
     PersonalProfilePage(),
   ];
