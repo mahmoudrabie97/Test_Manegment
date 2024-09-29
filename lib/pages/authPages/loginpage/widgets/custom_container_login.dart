@@ -1,3 +1,4 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test_mangement/cubit/authcubit/authcubit.dart';
@@ -7,6 +8,7 @@ import 'package:test_mangement/pages/authPages/loginpage/widgets/animated_text_w
 import 'package:test_mangement/pages/authPages/sign_up/sign_up_screen.dart';
 import 'package:test_mangement/root_page.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
+import 'package:test_mangement/utilites/constants.dart';
 import 'package:test_mangement/utilites/custommethods.dart';
 import 'package:test_mangement/utilites/extentionhelper.dart';
 import 'package:test_mangement/utilites/widgets/custombutton.dart';
@@ -129,14 +131,23 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
                                   const EdgeInsets.only(left: 10, right: 10),
                               child: CustomButton(
                                 buttonText: S.of(context).Login,
-                                onPressed: () {
+                                onPressed: () async {
                                   Map logindata = {
                                     "nationalId": _emailController.text,
                                     "password": _passwordController.text,
                                   };
+                                  String? tokenNotification =
+                                      await FirebaseMessaging.instance
+                                          .getToken();
+                                  Map tokendata = {
+                                    "deviceToken": tokenNotification
+                                  };
                                   if (formkey.currentState!.validate()) {
                                     AuthCubit.get(context).loginUser(
-                                        userdata: logindata, context: context);
+                                        userdata: logindata,
+                                        context: context,
+                                        notificationdata: tokendata);
+
                                     // Map userdata = {
                                     //   "email": _emailController.text,
                                     //   "password": _passwordController.text,
@@ -155,13 +166,13 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
                           text: S.of(context).Rememberme,
                           color: Colors.grey,
                         ),
-        value: AuthCubit.get(context).isChecked,
-        onChanged: (value) {
-          AuthCubit.get(context).checkBox(value);
-        print('rembe${AuthCubit.get(context).isChecked}');
+                        value: AuthCubit.get(context).isChecked,
+                        onChanged: (value) {
+                          AuthCubit.get(context).checkBox(value);
+                          print('rembe${AuthCubit.get(context).isChecked}');
 
-        print(value);
-        },
+                          print(value);
+                        },
 
                         controlAffinity: ListTileControlAffinity
                             .leading, //  <-- leading Checkbox

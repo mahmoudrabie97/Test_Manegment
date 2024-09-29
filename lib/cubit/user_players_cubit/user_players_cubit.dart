@@ -113,6 +113,7 @@ class UserPlayersCubit extends Cubit<UserPlayersStates> {
   int pageindexavailbleplayer = 1; // مؤشر الصفحة
   int pageSizeavailableplayer = 10;
   bool isLoadingMoreavailableplayer = false;
+  Data? selectedPlayer; // هذا اللاعب هو اللاعب المختار
 
   void getsuggestFriend({
     required BuildContext context,
@@ -172,13 +173,13 @@ class UserPlayersCubit extends Cubit<UserPlayersStates> {
       // إذا كان في وضع تحميل المزيد
       if (isLoadingMoreavailableplayer)
         return; // إذا كان هناك تحميل جاري، لا تفعل أي شيء
-      isLoadingMore = true; // تعيين حالة التحميل
+      isLoadingMoreavailableplayer = true; // تعيين حالة التحميل
       emit(AvailablePlayerLoadingPaginationState());
     } else {
       // إذا كان تحميل بيانات جديدة
       emit(AvailablePlayerLoadingState());
-      avalipleplayerlist = []; // إعادة تعيين القائمة عند تحميل جديد
       pageindexavailbleplayer = 1; // إعادة تعيين الصفحة إلى الأولى
+      avalipleplayerlist.clear(); // إعادة تعيين القائمة عند تحميل جديد
     }
 
     Map<String, String> headers = {
@@ -188,7 +189,8 @@ class UserPlayersCubit extends Cubit<UserPlayersStates> {
 
     CallApi.getData(
       baseUrl: baseurl,
-      apiUrl: '$availableplayersApi?PageIndex=$pageindex&PageSize=$pageSize',
+      apiUrl:
+          '$availableplayersApi?PageIndex=$pageindexavailbleplayer&PageSize=$pageSizeavailableplayer', // استخدم pageindexavailbleplayer
       headers: headers,
       context: context,
     ).then((value) async {
@@ -198,9 +200,11 @@ class UserPlayersCubit extends Cubit<UserPlayersStates> {
             UserPlayersModel.fromJson(responseBody);
 
         if (fromLoadingMoreavailablepalyer) {
-          userPlayersList.addAll(availableplayer.data ?? []);
+          avalipleplayerlist
+              .addAll(availableplayer.data ?? []); // إضافة البيانات الجديدة
         } else {
-          avalipleplayerlist = availableplayer.data ?? [];
+          avalipleplayerlist =
+              availableplayer.data ?? []; // تحميل البيانات الجديدة
         }
 
         pageindexavailbleplayer++; // تحديث مؤشر الصفحة
@@ -383,5 +387,10 @@ class UserPlayersCubit extends Cubit<UserPlayersStates> {
       // ShowMyDialog.showMsg(context, 'An error occurred: $error');
       emit(DeadlineInvitationsErrorState());
     });
+  }
+
+  void selectPlayer(Data player) {
+    selectedPlayer = player;
+    emit(PlayerSelectedState()); // إنشاء State جديد
   }
 }

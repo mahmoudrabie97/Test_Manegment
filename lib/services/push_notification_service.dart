@@ -20,6 +20,7 @@ class PushNotificationService {
   static Future<void> handleBackgroundMessage(RemoteMessage message) async {
     await Firebase.initializeApp();
     print(message.notification!.title);
+    print("Notification data: ${message.data}");
   }
 
   static void handleforgroundnotification() {
@@ -27,6 +28,7 @@ class PushNotificationService {
       //show local notification
       LocalNotification.basicNotification(
           message.notification!.title, message.notification!.body);
+      print("Notification data: ${message.data}");
     });
   }
 }

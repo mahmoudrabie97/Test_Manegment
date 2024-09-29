@@ -66,6 +66,7 @@ class AuthCubit extends Cubit<AuthStates> {
 
   void loginUser({
     required Map userdata,
+    required Map notificationdata,
     required BuildContext context,
   }) {
     Map<String, String> headers = {
@@ -95,6 +96,7 @@ class AuthCubit extends Cubit<AuthStates> {
           RootHomePage(),
         );
         print("${responseBody}");
+        setdevicetoken(userdata: notificationdata, context: context);
         emit(LoginSucsessState());
       } else if (value.statusCode == 400) {
         final responseBody = json.decode(value.body);
@@ -196,6 +198,48 @@ class AuthCubit extends Cubit<AuthStates> {
       debugPrint('An error occurred: $error');
       // ShowMyDialog.showMsg(context, 'An error occurred: $error');
       emit(VerifyUserErrorState());
+    });
+  }
+
+  void setdevicetoken({
+    required Map userdata,
+    required BuildContext context,
+  }) {
+    Map<String, String> headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ${AppConstant.token}'
+    };
+    emit(SetTokenLoadingState());
+    CallApi.putData(
+      data: userdata,
+      baseUrl: baseurl,
+      apiUrl: setdevicetokeApi,
+      headers: headers,
+      context: context,
+    ).then((value) {
+      print("senddddddd${value!.statusCode}");
+      if (value!.statusCode == 200) {
+        final responseBody = json.decode(value.body);
+        print("sendddddddddddddd$responseBody");
+        // registerModel = RegisterModel.fromJson(responseBody);
+        // print(registerModel);
+
+        //  ShowMyDialog.showMsg(context, responseBody['data']);
+      } else if (value.statusCode == 400) {
+        final responseBody = json.decode(value.body);
+
+        print(responseBody);
+
+        // debugPrint(responseBody['message']);
+        //ShowMyDialog.showMsg(context, responseBody['message']);
+        emit(SetTokenErrorState());
+      } else {
+        print("nooooooooo");
+      }
+    }).catchError((error) {
+      debugPrint('An error occurred: $error');
+      // ShowMyDialog.showMsg(context, 'An error occurred: $error');
+      emit(SetTokenErrorState());
     });
   }
 

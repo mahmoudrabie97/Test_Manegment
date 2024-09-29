@@ -37,3 +37,5 @@ class AvailablePlayerSucsessState extends UserPlayersStates {}
 class AvailablePlayerErrorState extends UserPlayersStates {}
 
 class AvailablePlayerLoadingPaginationState extends UserPlayersStates {}
+
+class PlayerSelectedState extends UserPlayersStates {}

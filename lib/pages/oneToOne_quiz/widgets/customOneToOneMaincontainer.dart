@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:test_mangement/cubit/invitation_cubit/invitation_cubit.dart';
 import 'package:test_mangement/pages/add_friends/add_friends_page.dart';
 import 'package:test_mangement/pages/oneToOne_quiz/widgets/customoneToonelistview_item.dart';
 import 'package:test_mangement/pages/verable_questions_page/question_view.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/extentionhelper.dart';
 import 'package:test_mangement/utilites/widgets/custombutton.dart';
+import 'package:test_mangement/utilites/widgets/customtext.dart';
 import 'package:test_mangement/utilites/widgets/customtextformfield.dart';
+import 'package:test_mangement/utilites/widgets/showdialog.dart';
 
 import '../../../cubit/user_players_cubit/user_players_cubit.dart';
 import '../../../cubit/user_players_cubit/user_players_states.dart';
 
 class CustomOneToOneMainContainer extends StatefulWidget {
-  CustomOneToOneMainContainer({super.key});
+  const CustomOneToOneMainContainer({super.key, required this.examid});
+  final int examid;
 
   @override
   State<CustomOneToOneMainContainer> createState() =>
@@ -63,11 +67,19 @@ class _CustomOneToOneMainContainerState
                       keyboardType: TextInputType.visiblePassword,
                       validator: (value) {
                         if (value!.isEmpty) {
-                          return 'please enter your password';
+                          return 'please enter the player name';
                         }
                         return null;
                       },
                     ),
+                    TextButton(
+                        onPressed: () {
+                          context.push(const AddFriendsPage());
+                        },
+                        child: CustomTextarabic(
+                          text: "اضافه المزيد من الاصدقاء ",
+                          color: Colors.blue,
+                        )),
                     NotificationListener<ScrollNotification>(
                       onNotification: (notification) {
                         if (notification.metrics.pixels ==
@@ -90,11 +102,26 @@ class _CustomOneToOneMainContainerState
                                     .avalipleplayerlist
                                     .length,
                                 itemBuilder: (BuildContext context, int index) {
-                                  return CustomOneToOneListViewIetm(
-                                    availableplayer:
-                                        UserPlayersCubit.get(context)
-                                            .avalipleplayerlist[index],
-                                    index: index,
+                                  final player = UserPlayersCubit.get(context)
+                                      .avalipleplayerlist[index];
+                                  final isSelected =
+                                      UserPlayersCubit.get(context)
+                                              .selectedPlayer ==
+                                          player;
+                                  return InkWell(
+                                    onTap: () {
+                                      UserPlayersCubit.get(context)
+                                          .selectPlayer(player); // تحديد اللاعب
+                                      print(
+                                          "sucsessssssssssssss${UserPlayersCubit.get(context).selectedPlayer!.name}");
+                                    },
+                                    child: CustomOneToOneListViewIetm(
+                                      availableplayer:
+                                          UserPlayersCubit.get(context)
+                                              .avalipleplayerlist[index],
+                                      index: index,
+                                      isSelected: isSelected,
+                                    ),
                                   );
                                 },
                               ),
@@ -117,11 +144,13 @@ class _CustomOneToOneMainContainerState
                     CustomButton(
                         buttonText: 'ارسال',
                         onPressed: () {
-                          context.push(const AddFriendsPage());
-
-                          //  context.push(QuestionView(
-                          //  isone: true,
-                          //));
+                          // ShowMyDialog.showMsg(context, "hi");
+                          InvitationCubit.get(context).competitorInvitation(
+                              context: context,
+                              competitorid: UserPlayersCubit.get(context)
+                                  .selectedPlayer!
+                                  .userId,
+                              examID: widget.examid);
                         })
                   ],
                 ),

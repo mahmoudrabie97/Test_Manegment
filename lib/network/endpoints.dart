@@ -18,3 +18,5 @@ const String invitationallApi = 'Invitation/all';
 const String invitationApi = 'Invitation';
 const String invitationacceptApi = 'Invitation/accept?';
 const String invitationdeaclineApi = 'Invitation/decline?';
+const String setdevicetokeApi = 'User/setDeviceToken';
+const String competitorInvitationApi = 'CompetitorInvitation';

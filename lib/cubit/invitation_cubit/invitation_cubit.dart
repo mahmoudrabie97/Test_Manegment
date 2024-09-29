@@ -27,7 +27,7 @@ class InvitationCubit extends Cubit<InvitionStates> {
 
   InvatationModel? invatationModel;
 
-  void getInvitation({
+  void sendInvitation({
     required BuildContext context,
     required int? id,
   }) {
@@ -59,8 +59,6 @@ class InvitationCubit extends Cubit<InvitionStates> {
         debugPrint(responseBody['message']);
         ShowMyDialog.showMsg(context, responseBody['message']);
 
-
-
         emit(InvitionErrorState());
       } else if (value.statusCode == 500) {
         ShowMyDialog.showMsg(context, 'internal server error,');
@@ -74,6 +72,53 @@ class InvitationCubit extends Cubit<InvitionStates> {
       debugPrint('An error occurred: $error');
       // ShowMyDialog.showMsg(context, 'An error occurred: $error');
       emit(InvitionErrorState());
+    });
+  }
+
+  void competitorInvitation({
+    required BuildContext context,
+    required int? competitorid,
+    required int? examID,
+  }) {
+    Map<String, String> headers = {
+      'Content-Type': ' application/json',
+      'Authorization': 'Bearer ${AppConstant.token}'
+    };
+    emit(CompetitorInvitationLoadingState());
+    CallApi.postData(
+            baseUrl: baseurl,
+            apiUrl: competitorInvitationApi,
+            headers: headers,
+            context: context,
+            data: {"competitorId": competitorid, "examId": examID})
+        .then((value) async {
+      debugPrint('iiiiiiiiiii${value?.statusCode.toString()}');
+      if (value!.statusCode == 200) {
+        debugPrint(value.body);
+        final responseBody = json.decode(value.body);
+        invatationModel = InvatationModel.fromJson(responseBody);
+        ShowMyDialog.showMsg(context, responseBody['message']);
+
+        print("iiiiiiiiiiiiiiiiiilo${responseBody}");
+        emit(CompetitorInvitationSucsessState());
+      } else if (value.statusCode == 400) {
+        final responseBody = json.decode(value.body);
+        debugPrint(responseBody['message']);
+        ShowMyDialog.showMsg(context, responseBody['message']);
+
+        emit(CompetitorInvitationErrorState());
+      } else if (value.statusCode == 500) {
+        ShowMyDialog.showMsg(context, 'internal server error,');
+        emit(InvitionErrorState());
+      } else {
+        ShowMyDialog.showMsg(context, 'unknown error,');
+        // debugPrint('An error occurred: ${value.body.}');
+        emit(InvitionErrorState());
+      }
+    }).catchError((error) {
+      debugPrint('An error occurred: $error');
+      // ShowMyDialog.showMsg(context, 'An error occurred: $error');
+      emit(CompetitorInvitationErrorState());
     });
   }
 }

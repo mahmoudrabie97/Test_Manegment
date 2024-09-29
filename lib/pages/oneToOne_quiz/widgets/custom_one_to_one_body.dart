@@ -3,7 +3,8 @@ import 'package:test_mangement/pages/oneToOne_quiz/widgets/customOneToOneMaincon
 import 'package:test_mangement/utilites/widgets/custom_appbar_profile.dart';
 
 class CustomOneToOneBody extends StatelessWidget {
-  const CustomOneToOneBody({super.key});
+  const CustomOneToOneBody({super.key, required this.examid});
+  final int examid;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,9 @@ class CustomOneToOneBody extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        CustomOneToOneMainContainer(),
+        CustomOneToOneMainContainer(
+          examid: examid,
+        ),
       ],
     );
   }

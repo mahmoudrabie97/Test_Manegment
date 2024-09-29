@@ -95,7 +95,9 @@ class ExamUserHasBlanceCubit extends Cubit<ExamUserHasBalanceStates> {
             ExamUserHasEnoughBalanceModel.fromJson(responseBody);
         //  print("examUserHasEnoughBalanceModel;${responseBody}");
         // print('examUserHasEnoughBalanceModel${examUserHasEnoughBalanceModel?.data}');
-        context.push(OneToOnePage());
+        context.push(OneToOnePage(
+          examid: id,
+        ));
         emit(ExamUserHasBalanceSSucsessState());
       } else if (value.statusCode == 400) {
         final responseBody = json.decode(value.body);

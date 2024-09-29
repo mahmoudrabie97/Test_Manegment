@@ -35,3 +35,9 @@ class ShowLottileLoadingrState extends AuthStates {}
 class ShowLottileSucsessState extends AuthStates {}
 
 class ChangeDropdownVal extends AuthStates {}
+
+class SettokenSuccessState extends AuthStates {}
+
+class SetTokenErrorState extends AuthStates {}
+
+class SetTokenLoadingState extends AuthStates {}

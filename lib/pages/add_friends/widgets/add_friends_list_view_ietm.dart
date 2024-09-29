@@ -64,7 +64,7 @@ class AddFriendsListViewIetm extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: InkWell(
                   onTap: () {
-                    InvitationCubit.get(context).getInvitation(
+                    InvitationCubit.get(context).sendInvitation(
                         context: context, id: userPlayersModel!.userId ?? 0);
                   },
                   child: Image.asset('assets/images/addfriend.png'),
