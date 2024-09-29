@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:test_mangement/cubit/authcubit/authcubit.dart';
+import 'package:test_mangement/cubit/competitor_invitation/copetitor_invitation_cubit.dart';
 
 import 'package:test_mangement/cubit/exam_level_cubit/exam_level_cubit.dart';
 import 'package:test_mangement/cubit/exam_question_cubit/exam_question_cubit.dart';
@@ -23,6 +24,7 @@ import 'package:test_mangement/services/push_notification_service.dart';
 import 'package:test_mangement/simpleblocobserver.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/constants.dart';
+
 
 import 'cubit/user_players_cubit/user_players_cubit.dart';
 
@@ -67,6 +69,8 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (BuildContext context) => SubmitAnswerCubit()),
         BlocProvider(create: (BuildContext context) => UserPlayersCubit()),
         BlocProvider(create: (BuildContext context) => InvitationCubit()),
+        //InvitationAcceptCubit
+         BlocProvider(create: (BuildContext context) => CompetitorInvitationCubit()),
       ],
       child: MaterialApp(
           navigatorKey: navigatorKey,
