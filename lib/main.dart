@@ -28,6 +28,9 @@ import 'cubit/user_players_cubit/user_players_cubit.dart';
 
 import 'network/local_network.dart';
 
+final GlobalKey<NavigatorState> navigatorKey =
+    GlobalKey<NavigatorState>(); // إنشاء GlobalKey
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = SimpleBlocObserver();
@@ -66,6 +69,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (BuildContext context) => InvitationCubit()),
       ],
       child: MaterialApp(
+          navigatorKey: navigatorKey,
           locale: Locale('ar'),
           localizationsDelegates: const [
             S.delegate,
