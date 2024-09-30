@@ -17,7 +17,7 @@ class _RootHomePageState extends State<RootHomePage> {
   int currentindex = 0;
   final List<Widget> pages = <Widget>[
     const HomePage(),
-    InvitationNotificationChallengePage(),
+    const InvitationNotificationChallengePage(),
     const AcceptInvitationPage(),
     const PersonalProfilePage(),
   ];
