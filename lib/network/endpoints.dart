@@ -20,8 +20,9 @@ const String invitationacceptApi = 'Invitation/accept?';
 const String invitationdeaclineApi = 'Invitation/decline?';
 const String setdevicetokeApi = 'User/setDeviceToken';
 const String competitorInvitationApi = 'CompetitorInvitation';
-const String acceptInvitationApi = 'CompetitorInvitation/accept';
-const String declineInvitationApi = 'CompetitorInvitation/decline';
+const String acceptInvitationApi = 'CompetitorInvitation/accept?';
+const String declineInvitationApi = 'CompetitorInvitation/decline?';
+const String cancelInvitationApi = 'CompetitorInvitation/cancel?';
 
 const String getcompetitorInvitationApi = 'CompetitorInvitation/all';
 

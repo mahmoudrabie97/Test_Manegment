@@ -12,6 +12,7 @@ import 'package:test_mangement/utilites/constants.dart';
 import 'package:test_mangement/utilites/widgets/showdialog.dart';
 
 import '../../models/accept_invitation_body.dart';
+import '../../models/cancel_invitation_model.dart';
 import '../../models/decline_invitation_model.dart';
 
 import 'copetitor_invitation_states.dart';
@@ -24,6 +25,7 @@ class CompetitorInvitationCubit extends Cubit<CompetitorInvitationStates> {
   AcceptInvitationModel? acceptInvitationModel;
   DeclineInvitationModel? declineInvitationModel;
   GetCompatopleinvitationModl? getCompatopleinvitationModl;
+  CancelInvitationModel? cancelInvitationModel;
 
   void getAllinvitation({
     required BuildContext context,
@@ -161,4 +163,52 @@ class CompetitorInvitationCubit extends Cubit<CompetitorInvitationStates> {
       emit(InvitationDeclineErrorState());
     });
   }
+
+
+  void cancelInvitation({
+    required BuildContext context,
+    required int? id,
+  }) {
+    Map<String, String> headers = {
+      'Content-Type': ' application/json',
+      'Authorization': 'Bearer ${AppConstant.token}'
+    };
+    emit(InvitationCancelLoadingState());
+    CallApi.putData(
+      baseUrl: baseurl,
+      apiUrl: '${cancelInvitationApi}id=$id',
+      headers: headers,
+      context: context,
+      data: {},
+    ).then((value) async {
+      debugPrint('ccccccccccccccccccc${value?.statusCode.toString()}');
+      if (value!.statusCode == 200) {
+        debugPrint(value.body);
+        final responseBody = json.decode(value.body);
+        cancelInvitationModel = CancelInvitationModel.fromJson(responseBody);
+        ShowMyDialog.showMsg(context, responseBody['message']);
+
+        print("cccccccccccccccccccc${responseBody}");
+        emit(InvitationCancelSucsessState());
+      } else if (value.statusCode == 400) {
+        final responseBody = json.decode(value.body);
+        debugPrint(responseBody['message']);
+        ShowMyDialog.showMsg(context, responseBody['message']);
+
+        emit(InvitationCancelErrorState());
+      } else if (value.statusCode == 500) {
+        ShowMyDialog.showMsg(context, 'internal server error,');
+        emit(InvitationCancelErrorState());
+      } else {
+        ShowMyDialog.showMsg(context, 'unknown error,');
+        // debugPrint('An error occurred: ${value.body.}');
+        emit(InvitationAcceptErrorState());
+      }
+    }).catchError((error) {
+      debugPrint('An error occurred: $error');
+      // ShowMyDialog.showMsg(context, 'An error occurred: $error');
+      emit(InvitationCancelErrorState());
+    });
+  }
+
 }

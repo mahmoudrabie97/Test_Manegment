@@ -19,3 +19,13 @@ class GetInvitationsLoadingState extends CompetitorInvitationStates {}
 class GetInvitationSucsessState extends CompetitorInvitationStates {}
 
 class GetInvitationsErrorState extends CompetitorInvitationStates {}
+
+
+
+class InvitationCancelLoadingState extends CompetitorInvitationStates {}
+
+class InvitationCancelSucsessState extends CompetitorInvitationStates {}
+
+class InvitationCancelErrorState extends CompetitorInvitationStates {}
+
+

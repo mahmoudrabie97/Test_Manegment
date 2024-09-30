@@ -10,7 +10,7 @@ class AcceptInvitationPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // CompetitorInvitationCubit.get(context).declineInvitation(context: context, id: 30);
+  // CompetitorInvitationCubit.get(context).cancelInvitation(context: context, id: 31);
     return BlocConsumer<CompetitorInvitationCubit,CompetitorInvitationStates>(
       builder: (BuildContext context, CompetitorInvitationStates state) {
         return   Scaffold(
