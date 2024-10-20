@@ -1525,6 +1525,166 @@ class S {
       args: [],
     );
   }
+
+  /// `تحدي النفس`
+  String get chanllageYourSelf {
+    return Intl.message(
+      'تحدي النفس',
+      name: 'chanllageYourSelf',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختبار متنوع`
+  String get differentQuize {
+    return Intl.message(
+      'اختبار متنوع',
+      name: 'differentQuize',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختبار كمي`
+  String get quantitiveQuize {
+    return Intl.message(
+      'اختبار كمي',
+      name: 'quantitiveQuize',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختبار لفظي`
+  String get verabalQuize {
+    return Intl.message(
+      'اختبار لفظي',
+      name: 'verabalQuize',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختبار مهارة الهندسة `
+  String get engineerSkillTest {
+    return Intl.message(
+      'اختبار مهارة الهندسة ',
+      name: 'engineerSkillTest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` دقيقة`
+  String get minute {
+    return Intl.message(
+      ' دقيقة',
+      name: 'minute',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عملة`
+  String get coin {
+    return Intl.message(
+      'عملة',
+      name: 'coin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مستوى صعب `
+  String get difficultLevel {
+    return Intl.message(
+      'مستوى صعب ',
+      name: 'difficultLevel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختبار متنوع`
+  String get differentTest {
+    return Intl.message(
+      'اختبار متنوع',
+      name: 'differentTest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختبار مهارة النحو `
+  String get grammerSkillTest {
+    return Intl.message(
+      'اختبار مهارة النحو ',
+      name: 'grammerSkillTest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختبار مهارة البلاغة `
+  String get reohSillTest {
+    return Intl.message(
+      'اختبار مهارة البلاغة ',
+      name: 'reohSillTest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مستوى متوسط `
+  String get midLevel {
+    return Intl.message(
+      'مستوى متوسط ',
+      name: 'midLevel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مستوى سهل `
+  String get easyLevel {
+    return Intl.message(
+      'مستوى سهل ',
+      name: 'easyLevel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختبار مهارة الجبر `
+  String get algebraSkillLevel {
+    return Intl.message(
+      'اختبار مهارة الجبر ',
+      name: 'algebraSkillLevel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `سهل`
+  String get easy {
+    return Intl.message(
+      'سهل',
+      name: 'easy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `صعب`
+  String get difficult {
+    return Intl.message(
+      'صعب',
+      name: 'difficult',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
