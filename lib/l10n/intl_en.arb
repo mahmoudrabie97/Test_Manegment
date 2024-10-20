@@ -149,7 +149,24 @@
   "fourCoins":"40 قطعة نقدية",
   "startRace":"بدأ السباق على لقب البطل الان",
   "start":"ابدأ",
-  "question":"سؤال "
+  "question":"سؤال ",
+  "chanllageYourSelf":"تحدي النفس",
+  "differentQuize":"اختبار متنوع",
+  "quantitiveQuize":"اختبار كمي",
+  "verabalQuize":"اختبار لفظي",
+  "engineerSkillTest":"اختبار مهارة الهندسة ",
+  "minute":" دقيقة",
+  "coin":"عملة",
+  "difficultLevel":"مستوى صعب ",
+  "differentTest":"اختبار متنوع",
+  "grammerSkillTest":"اختبار مهارة النحو ",
+  "reohSillTest":"اختبار مهارة البلاغة ",
+  "midLevel":"مستوى متوسط ",
+  "easyLevel":"مستوى سهل ",
+  "algebraSkillLevel":"اختبار مهارة الجبر ",
+  "easy":"سهل",
+  "difficult":"صعب"
+
 
 
 

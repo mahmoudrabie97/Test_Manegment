@@ -13,39 +13,8 @@ class CustomsoloQuizeAppBar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
+
         children: [
-          Container(
-            width: 80,
-            height: 30,
-            decoration: BoxDecoration(
-                color: AppColor.lightGreenColor,
-                borderRadius: BorderRadius.circular(10)),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Image.asset(AssetsData.dollar),
-                  Spacer(),
-                  const CustomTextarabic(
-                    text: '1234',
-                    color: AppColor.whiteColor,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Spacer(),
-          CustomTextarabic(
-            text: S.of(context).soloquize, //change
-            fontWeight: FontWeight.w700,
-            fontSize: 16,
-            color: AppColor.whiteColor,
-          ),
-          Spacer(),
           IconButton(
             onPressed: () {},
             icon: Icon(
@@ -53,7 +22,44 @@ class CustomsoloQuizeAppBar extends StatelessWidget {
               color: AppColor.whiteColor,
             ),
           ),
+          Image.asset(AssetsData.notificationNum),
+          SoloCustomContainerAppbar(),
+
+
         ],
+      ),
+    );
+  }
+}
+
+class SoloCustomContainerAppbar extends StatelessWidget {
+  const SoloCustomContainerAppbar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 80,
+      height: 30,
+      decoration: BoxDecoration(
+        color: Color(0xffFF9B57),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child:  Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 9.0),
+        child: Row(
+          children: [
+            Text(
+              '6067',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 12,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            Spacer(),
+            Image.asset(AssetsData.dollar),
+          ],
+        ),
       ),
     );
   }

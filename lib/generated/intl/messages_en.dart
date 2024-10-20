@@ -60,6 +60,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "against": MessageLookupByLibrary.simpleMessage("1 ضد 1"),
         "agreeandfollow": MessageLookupByLibrary.simpleMessage("قبول ومتابعة"),
         "agreement": MessageLookupByLibrary.simpleMessage("اتفاقية"),
+        "algebraSkillLevel":
+            MessageLookupByLibrary.simpleMessage("اختبار مهارة الجبر "),
         "aroundApplication":
             MessageLookupByLibrary.simpleMessage("حول التطبيق"),
         "badges": MessageLookupByLibrary.simpleMessage(" شاراتي"),
@@ -69,6 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cardNumber": MessageLookupByLibrary.simpleMessage("رقم البطاقة"),
         "categories": MessageLookupByLibrary.simpleMessage("الفئات"),
         "category": MessageLookupByLibrary.simpleMessage("الفئة"),
+        "chanllageYourSelf": MessageLookupByLibrary.simpleMessage("تحدي النفس"),
         "chooseAll": MessageLookupByLibrary.simpleMessage("اختر الكل"),
         "choosePaymentMethod":
             MessageLookupByLibrary.simpleMessage("اختر طريقة دفع"),
@@ -77,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "chooserole": MessageLookupByLibrary.simpleMessage("اختر دورك"),
         "chooseskil": MessageLookupByLibrary.simpleMessage("اختر مهارة"),
         "city": MessageLookupByLibrary.simpleMessage("المدينة"),
+        "coin": MessageLookupByLibrary.simpleMessage("عملة"),
         "coinsNumber": MessageLookupByLibrary.simpleMessage("عدد العملات"),
         "coinsPlay": MessageLookupByLibrary.simpleMessage("متجر العملات"),
         "congratuditions": MessageLookupByLibrary.simpleMessage("تهانينا !"),
@@ -88,13 +92,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "creditCard": MessageLookupByLibrary.simpleMessage("بطاقة ائتمانية "),
         "descriptionApplication":
             MessageLookupByLibrary.simpleMessage("وصف التطبيق"),
+        "differentQuize": MessageLookupByLibrary.simpleMessage("اختبار متنوع"),
+        "differentTest": MessageLookupByLibrary.simpleMessage("اختبار متنوع"),
+        "difficult": MessageLookupByLibrary.simpleMessage("صعب"),
+        "difficultLevel": MessageLookupByLibrary.simpleMessage("مستوى صعب "),
         "doneCorrect": MessageLookupByLibrary.simpleMessage("صحيح"),
         "donothaveaccountareedylogin": MessageLookupByLibrary.simpleMessage(
             "هل لديك حساب بالفعل؟ تسجيل الدخول"),
         "doregister": MessageLookupByLibrary.simpleMessage("قم بالتسجيل"),
         "earnedRecoerds":
             MessageLookupByLibrary.simpleMessage("المكافآت المكتسبة"),
+        "easy": MessageLookupByLibrary.simpleMessage("سهل"),
+        "easyLevel": MessageLookupByLibrary.simpleMessage("مستوى سهل "),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
+        "engineerSkillTest":
+            MessageLookupByLibrary.simpleMessage("اختبار مهارة الهندسة "),
         "ensurepassword":
             MessageLookupByLibrary.simpleMessage("تاكيد كلمة المرور"),
         "event1": MessageLookupByLibrary.simpleMessage("حدث 1"),
@@ -109,6 +121,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "fourCoins": MessageLookupByLibrary.simpleMessage("40 قطعة نقدية"),
         "friends": MessageLookupByLibrary.simpleMessage("الأصدقاء"),
         "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+        "grammerSkillTest":
+            MessageLookupByLibrary.simpleMessage("اختبار مهارة النحو "),
         "group": MessageLookupByLibrary.simpleMessage("مجموعة"),
         "groups": MessageLookupByLibrary.simpleMessage("مجموعات"),
         "gurdation": MessageLookupByLibrary.simpleMessage("ولي الامر"),
@@ -129,6 +143,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("آخر تحديث بتاريخ 12/5/2022"),
         "level": MessageLookupByLibrary.simpleMessage("المستوي"),
         "logOut": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+        "midLevel": MessageLookupByLibrary.simpleMessage("مستوى متوسط "),
+        "minute": MessageLookupByLibrary.simpleMessage(" دقيقة"),
         "myCard": MessageLookupByLibrary.simpleMessage("بطاقتي"),
         "myWallet": MessageLookupByLibrary.simpleMessage("محفظتي"),
         "nameHolderCard":
@@ -143,6 +159,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "pushNow": MessageLookupByLibrary.simpleMessage("ادفع الآن"),
         "quantitive": MessageLookupByLibrary.simpleMessage("كمي"),
+        "quantitiveQuize": MessageLookupByLibrary.simpleMessage("اختبار كمي"),
         "ques34": MessageLookupByLibrary.simpleMessage("34 سؤال"),
         "question": MessageLookupByLibrary.simpleMessage("سؤال "),
         "questions": MessageLookupByLibrary.simpleMessage("الاساله"),
@@ -157,6 +174,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "registerPoints":
             MessageLookupByLibrary.simpleMessage("لقد سجلت +89 نقطة"),
         "reject": MessageLookupByLibrary.simpleMessage("رفض"),
+        "reohSillTest":
+            MessageLookupByLibrary.simpleMessage("اختبار مهارة البلاغة "),
         "reward": MessageLookupByLibrary.simpleMessage("المكافأة "),
         "riyals": MessageLookupByLibrary.simpleMessage("3 ريال"),
         "searchAboutPlayer":
@@ -202,6 +221,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("مجموع اختبارات المهارات"),
         "train": MessageLookupByLibrary.simpleMessage("تدريب"),
         "transformation": MessageLookupByLibrary.simpleMessage("تحويل"),
+        "verabalQuize": MessageLookupByLibrary.simpleMessage("اختبار لفظي"),
         "verbal": MessageLookupByLibrary.simpleMessage("لفظي"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحبا"),
         "welcomeback": MessageLookupByLibrary.simpleMessage("مرحبًا بعودتك ")
