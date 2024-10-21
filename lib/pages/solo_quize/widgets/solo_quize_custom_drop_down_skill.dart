@@ -24,14 +24,16 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
 
   @override
   Widget build(BuildContext context) {
-    List<String> list = ExamLevelCubit.get(context).shillslevellistForderodown;
+    List<String> list = [
+      'سهل ','صعب'
+    ];
 
     return Container(
       width: double.infinity,
-      height: MediaQuery.of(context).size.height * .07,
+      height: MediaQuery.of(context).size.height * .06,
       decoration: BoxDecoration(
-        border: Border.all(width: 1, color: AppColor.darkGrey),
-        borderRadius: BorderRadius.circular(20),
+        border: Border.all(width: 2, color: Color(0xff3498DBA6)),
+        borderRadius: BorderRadius.circular(25),
       ),
       child: DropdownButton<String>(
         isExpanded: true,

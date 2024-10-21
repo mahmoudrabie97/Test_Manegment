@@ -5,8 +5,8 @@ import 'package:test_mangement/cubit/examcubit/exam_solo_cubit/exam_solo_cubit.d
 import 'package:test_mangement/cubit/examcubit/exam_solo_cubit/exam_solo_state.dart';
 import 'package:test_mangement/models/exam_solo_model.dart';
 
-import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container_question.dart';
-import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container_time.dart';
+
+
 import 'package:test_mangement/pages/training_quiz/custom_trainning_subcontainer_timer.dart';
 import 'package:test_mangement/pages/training_quiz/traininng_quiz_container_questions.dart';
 

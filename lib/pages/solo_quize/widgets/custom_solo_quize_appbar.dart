@@ -13,19 +13,27 @@ class CustomsoloQuizeAppBar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
       child: Row(
-
         children: [
           IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.arrow_forward_ios,
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: const Icon(
+              Icons.arrow_back_ios,
               color: AppColor.whiteColor,
             ),
           ),
+          const Spacer(),
+          CustomTextarabic(
+            text: S.of(context).chanllageYourSelf,
+            color: AppColor.whiteColor,
+            fontSize: 16,
+            fontWeight: FontWeight.w700,
+          ),
+          const Spacer(),
           Image.asset(AssetsData.notificationNum),
-          SoloCustomContainerAppbar(),
-
-
+          const SizedBox(width: 4,),
+          const SoloCustomContainerAppbar(),
         ],
       ),
     );
@@ -41,14 +49,21 @@ class SoloCustomContainerAppbar extends StatelessWidget {
       width: 80,
       height: 30,
       decoration: BoxDecoration(
-        color: Color(0xffFF9B57),
+        color: AppColor.orange,
         borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.4),
+
+            offset: Offset(1, 2), // changes position of shadow
+          ),
+        ],
       ),
-      child:  Padding(
+      child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 9.0),
         child: Row(
           children: [
-            Text(
+            const Text(
               '6067',
               style: TextStyle(
                 color: Colors.white,
@@ -56,7 +71,7 @@ class SoloCustomContainerAppbar extends StatelessWidget {
                 fontWeight: FontWeight.w700,
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Image.asset(AssetsData.dollar),
           ],
         ),

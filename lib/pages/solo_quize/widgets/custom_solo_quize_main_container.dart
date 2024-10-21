@@ -1,152 +1,133 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:test_mangement/cubit/exam_level_cubit/exam_level_cubit.dart';
-import 'package:test_mangement/cubit/exam_level_cubit/exam_level_states.dart';
-import 'package:test_mangement/cubit/examcubit/exam_solo_cubit/exam_solo_cubit.dart';
-import 'package:test_mangement/cubit/examcubit/exam_solo_cubit/exam_solo_state.dart';
-import 'package:test_mangement/models/exam_solo_model.dart';
-import 'package:test_mangement/models/exmas_level_model.dart';
-import 'package:test_mangement/network/endpoints.dart';
-import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_custom_drop_down_choose.dart';
 import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_custom_drop_down_skill.dart';
-import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container_question.dart';
-import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container_time.dart';
+import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container.dart';
+import 'package:test_mangement/utilites/widgets/customtext.dart';
 
+import '../../../generated/l10n.dart';
 import '../../../utilites/appcolors.dart';
 
-class CustomSoloQuizeMainContainer extends StatefulWidget {
+class CustomSoloQuizeMainContainer extends StatelessWidget {
   const CustomSoloQuizeMainContainer({super.key});
 
   @override
-  State<CustomSoloQuizeMainContainer> createState() =>
-      _CustomSoloQuizeMainContainerState();
-}
-
-class _CustomSoloQuizeMainContainerState
-    extends State<CustomSoloQuizeMainContainer> {
-  @override
-  void initState() {
-    ExamLevelCubit.get(context).getSkillLookUp(
-      context: context,
-    );
-    ExamSoloCubit.get(context).getExamSolo(context: context);
-    ExamLevelCubit.get(context).examsLevel(
-      context: context,
-    );
-    // TODO: implement initState
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return BlocConsumer<ExamLevelCubit, ExamLevelStates>(
-      builder: (context, state) {
-        return Container(
-          width: MediaQuery.of(context).size.width * .93,
-          height: MediaQuery.of(context).size.height * .86,
-          decoration: BoxDecoration(
-            color: AppColor.whiteColor,
-            borderRadius: BorderRadius.circular(20),
+    return Container(
+      width: MediaQuery
+          .of(context)
+          .size
+          .width * .93,
+      height: MediaQuery
+          .of(context)
+          .size
+          .height * .86,
+      decoration: BoxDecoration(
+        color: AppColor.whiteColor,
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child:  Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 18.0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SoloQuizeRowWords(),
+              const SoloQuizeSlider(),
+              const SoloQuizeCustomDropdownButtonSkill(),
+              const SizedBox(height: 16,),
+              SoloQuizeSubContainer(
+                levelText: S.of(context).midLevel,
+                testText: S.of(context).quantitiveQuize,
+                mainColor: AppColor.primary,
+                mainTest: S.of(context).engineerSkillTest,
+                subColor:AppColor.lightBlue,
+              ),
+              const SizedBox(height: 8,),
+              SoloQuizeSubContainer(
+                levelText: S.of(context).difficultLevel,
+                testText: S.of(context).differentTest,
+                mainColor: AppColor.braon,
+                mainTest: S.of(context).reohSillTest,
+                subColor:AppColor.lightBraon,
+              ),
+              const SizedBox(height: 8,),
+              SoloQuizeSubContainer(
+                levelText: S.of(context).easyLevel,
+                testText: S.of(context).verabalQuize,
+                mainColor: AppColor.greenColor,
+                mainTest: S.of(context).engineerSkillTest,
+                subColor:AppColor.lightGreenColor,
+              ),
+              const SizedBox(height: 8,),
+              SoloQuizeSubContainer(
+                levelText: S.of(context).midLevel,
+                testText: S.of(context).quantitiveQuize,
+                mainColor: AppColor.primary,
+                mainTest: S.of(context).algebraSkillLevel,
+                subColor:AppColor.lightBlue,
+              ),
+            ],
           ),
-          child: BlocConsumer<ExamSoloCubit, ExamSoloStates>(
-            listener: (context, state) {
-              // TODO: implement listener
-            },
-            builder: (context, state) {
-              return ExamSoloCubit.get(context).state is ExamSoloLoadingState ||
-                      ExamLevelCubit.get(context)
-                          .shillslevellistForderodown
-                          .isEmpty ||
-                      ExamLevelCubit.get(context).examslevellistodown.isEmpty
-                  ? Center(
-                      child: CircularProgressIndicator(),
-                    )
-                  : Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 18.0, vertical: 12),
-                      child: SingleChildScrollView(
-                        physics: const ScrollPhysics(),
-                        child: Column(
-                          children: [
-                            const Row(
-                              children: [
-                                Flexible(
-                                    child:
-                                        SoloQuizeCustomDropdownButtonLevel()),
-                                SizedBox(
-                                  width: 22,
-                                ),
-                                Flexible(
-                                    child:
-                                        SoloQuizeCustomDropdownButtonSkill()),
-                              ],
-                            ),
-                            ListView.builder(
-                              physics: const NeverScrollableScrollPhysics(),
-                              shrinkWrap: true,
-                              itemCount: ExamSoloCubit.get(context)
-                                  .examsoloModel!
-                                  .data!
-                                  .length,
-                              itemBuilder: (context, index) {
-                                return ListViewIetm(
-                                  examSoloModel:
-                                      ExamSoloCubit.get(context).examsoloModel,
-                                  index: index,
-                                );
-                              },
-                            ),
-                          ],
-                        ),
-                      ),
-                    );
-            },
-          ),
-        );
-      },
-      listener: (context, state) {},
+        ),
+      ),
     );
   }
 }
 
-class ListViewIetm extends StatelessWidget {
-  const ListViewIetm({
-    super.key,
-    required this.examSoloModel,
-    required this.index,
-  });
+class SoloQuizeSlider extends StatefulWidget {
+  const SoloQuizeSlider({super.key});
 
-  final ExamSoloModel? examSoloModel;
-  final int index;
+  @override
+  State<SoloQuizeSlider> createState() => _SoloQuizeSliderState();
+}
+
+class _SoloQuizeSliderState extends State<SoloQuizeSlider> {
+  double _currentSliderValue = 20;
+
   @override
   Widget build(BuildContext context) {
-    //ExamSoloCubit.get(context).getExamSolo(context: context);
-    return BlocConsumer<ExamSoloCubit, ExamSoloStates>(
-      listener: (context, state) {
-        // TODO: implement listener
-      },
-      builder: (context, state) {
-        return ExamSoloCubit.get(context).state is ExamSoloLoadingState
-            ? Center(
-                child: CircularProgressIndicator(),
-              )
-            : Column(
-                children: [
-                  SoloQuizeSubContainerTime(
-                    examSoloModel: examSoloModel,
-                    index: index,
-                  ),
-                  SoloQuizeSubContainerQuestion(
-                    index: index,
-                    examsoloModel: examSoloModel,
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                ],
-              );
-      },
+    return Padding(
+      padding: const EdgeInsets.only(top: 4.0,bottom: 18),
+      child: Slider(
+        activeColor: AppColor.orange,
+        value: _currentSliderValue,
+        max: 100,
+        divisions: 5,
+        label: _currentSliderValue.round().toString(),
+        onChanged: (double value) {
+          setState(() {
+            _currentSliderValue = value;
+          });
+        },
+      ),
+    );
+  }
+}
+
+class SoloQuizeRowWords extends StatelessWidget {
+  const SoloQuizeRowWords({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        CustomTextarabic(
+          text: S
+              .of(context)
+              .difficult,
+          fontSize: 10,
+          fontWeight: FontWeight.w700,
+          color: AppColor.primary,
+        ),
+        Spacer(),
+        CustomTextarabic(
+          text: S
+              .of(context)
+              .easy,
+          fontSize: 10,
+          fontWeight: FontWeight.w700,
+          color: AppColor.primary,
+        ),
+      ],
     );
   }
 }
