@@ -11,8 +11,8 @@ import 'package:test_mangement/network/endpoints.dart';
 import 'package:test_mangement/pages/oneToOne_quiz/widgets/onetoonequizsubcontainer.dart';
 import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_custom_drop_down_choose.dart';
 import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_custom_drop_down_skill.dart';
-import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container_question.dart';
-import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container_time.dart';
+
+import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container.dart';
 
 import '../../../utilites/appcolors.dart';
 
@@ -134,10 +134,10 @@ class ListViewOnetoOneIetm extends StatelessWidget {
               )
             : Column(
                 children: [
-                  SoloQuizeSubContainerTime(
-                    examSoloModel: examSoloModel,
-                    index: index,
-                  ),
+                  // SoloQuizeSubContainerTime(
+                  //   examSoloModel: examSoloModel,
+                  //   index: index,
+                  // ),
                   OneToOneQuizeSubContainerQuestion(
                     index: index,
                     examsoloModel: examSoloModel,

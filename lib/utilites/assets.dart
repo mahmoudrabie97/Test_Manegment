@@ -6,7 +6,7 @@ class AssetsData {
   static const accept = 'assets/images/accept 1.png';
   static const win = 'assets/images/win1.png';
   static const report = 'assets/images/blood-report.png';
-  static const question = 'assets/images/question 1.png';
+
   static const cansel1 = 'assets/images/cancel 1.png';
   static const person = 'assets/images/person.png';
   static const about = 'assets/images/about 1.png';
@@ -57,4 +57,8 @@ class AssetsData {
   static const hint= 'assets/images/Hint.png';
   static const invitation= 'assets/images/invitation.png';
   static const notificationNum='assets/images/notificationNum.png';
+  static const alarm='assets/images/alarm.png';
+  static const question='assets/images/question.png';
+  static const test='assets/images/test.png';
+  static const level='assets/images/level.png';
 }

@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:test_mangement/pages/create_group/create_group_page.dart';
 import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_custom_drop_down_choose.dart';
 import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_custom_drop_down_skill.dart';
-import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container_question.dart';
-import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container_time.dart';
+
+import 'package:test_mangement/pages/solo_quize/widgets/solo_quize_sub_container.dart';
 import 'package:test_mangement/utilites/extentionhelper.dart';
 
 import '../../../generated/l10n.dart';
