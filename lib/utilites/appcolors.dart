@@ -10,18 +10,14 @@ class AppColor {
   static const darkGrey = Color(0xff727C8E);
   static const pink = Color(0xffFEB7B7);
   static const lightBlue = Color(0xff5AB3EE);
-  static const grey300=Color(0xFFE0E0E0);
+  static const grey300 = Color(0xFFE0E0E0);
   static const color = Colors.grey;
-  static const red=Color(0xffDB3434);
-  static const pinkLight = Color(0xffFFA4F2);
+  static const red = Color(0xffDB3434);
+  static const pinkLight = Color(0xffFF6DAA);
   static const braon = Color(0xffBC4A26);
-  static const purple=Color(0xffB5A7FF);
-  static const darkBlue= Color(0xff2A8ACB);
+  static const purple = Color(0xffB5A7FF);
+  static const darkBlue = Color(0xff2A8ACB);
   static const mediamBlue = Color(0xffE1F0FA);
-  static const orange=Color(0xffFF9B57);
+  static const orange = Color(0xffFF9B57);
   static const lightBraon = Color(0xffDB3434);
-
-
-
-
 }

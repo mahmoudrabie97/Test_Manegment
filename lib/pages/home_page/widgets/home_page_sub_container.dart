@@ -13,7 +13,7 @@ class CustomHomePageSubContainer extends StatelessWidget {
       padding: const EdgeInsets.only(top: 8.0),
       child: Container(
         width: MediaQuery.of(context).size.width * .92,
-        height: MediaQuery.of(context).size.height * .11,
+        height: MediaQuery.of(context).size.height * .13,
         child: customWidget,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),

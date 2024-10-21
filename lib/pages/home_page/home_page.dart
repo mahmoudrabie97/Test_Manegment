@@ -6,6 +6,7 @@ import 'package:test_mangement/pages/home_page/widgets/custom_row_info.dart';
 import 'package:test_mangement/pages/home_page/widgets/home_page_sub_container.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/assets.dart';
+import 'package:test_mangement/utilites/widgets/customtext.dart';
 
 import '../../generated/l10n.dart';
 
@@ -18,42 +19,73 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const CustomRowInfo(),
               CustomHomePageSubContainer(
-                color: AppColor.pinkLight,
-                customWidget: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    const Spacer(),
-                    Image.asset(AssetsData.star),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * .06,
-                      child: CustomColumnText(
-                        textOne: S.of(context).Pointsearned,
-                        textTwo: '1234 نقطة',
+                color: Color(0xffFF6DAA),
+                customWidget: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+
+                        // crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            AssetsData.star,
+                            width: 40,
+                            fit: BoxFit.cover,
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          const SizedBox(
+                            child: CustomTextarabic(
+                              text: '1234 نقطة',
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                    const Spacer(),
-                    Image.asset(AssetsData.dollar),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * .06,
-                      child: CustomColumnText(
-                        textOne: S.of(context).Currencybalance,
-                        textTwo: '1234',
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+
+                        //crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            AssetsData.login,
+                            width: 50,
+                            fit: BoxFit.cover,
+                          ),
+                          const CustomTextarabic(
+                            text: 'المستوي الرابع',
+                            color: Colors.white,
+                          ),
+                        ],
                       ),
-                    ),
-                    const Spacer(),
-                    Image.asset(AssetsData.succes),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * .06,
-                      child: CustomColumnText(
-                        textOne: S.of(context).level,
-                        textTwo: S.of(context).four,
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        // crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            AssetsData.frameAccept,
+                            width: 40,
+                            fit: BoxFit.cover,
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          const CustomTextarabic(
+                            text: "التقدم",
+                            color: Colors.white,
+                          ),
+                        ],
                       ),
-                    ),
-                    const Spacer(),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               const CustomChallangeContainer(),
