@@ -1,52 +1,91 @@
 import 'package:flutter/material.dart';
+import 'package:test_mangement/models/challenge_ui_model.dart';
 import 'package:test_mangement/utilites/widgets/customtext.dart';
 
-import '../../../generated/l10n.dart';
 import '../../../utilites/appcolors.dart';
-import '../../../utilites/assets.dart';
-import '../../../utilites/styles.dart';
-import 'custom_small_white_container.dart';
 import 'home_page_custom_text_button.dart';
 
 class CustomChallangeContainer extends StatelessWidget {
-  const CustomChallangeContainer({Key? key}) : super(key: key);
-
+  const CustomChallangeContainer(
+      {super.key, required this.challengeUiModel, required this.index});
+  final ChallengeUiModel challengeUiModel;
+  final int index;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+      padding:
+          const EdgeInsets.only(top: 8.0, bottom: 8.0, left: 10, right: 10),
       child: Container(
-        width: MediaQuery.of(context).size.width * .92,
-        height: MediaQuery.of(context).size.height * .2,
+        width: MediaQuery.of(context).size.width * .94,
+        height: MediaQuery.of(context).size.height * .3,
+        decoration: BoxDecoration(
+          color: const Color(0xff59B1EB),
+          borderRadius: BorderRadius.circular(20),
+        ),
         child: Column(
           children: [
-            CustomTextarabic(
-              text: S.of(context).Participatefriendsorotherplayers,
-              color: AppColor.whiteColor,
-              fontSize: 14,
-              fontWeight: FontWeight.w700,
+            Expanded(
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          CustomTextarabic(
+                            text: challengeUiModel.title,
+                            color: AppColor.whiteColor,
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 10),
+                              child: CustomTextarabic(
+                                text: challengeUiModel.sutitle,
+                                color: AppColor.whiteColor,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: CircleAvatar(
+                      radius: 90,
+                      backgroundColor: Colors.white.withOpacity(.1),
+                      child: Image.asset(
+                        challengeUiModel.image,
+                        width: 250,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-            Row(
+            const Row(
               children: [
-                Spacer(),
-                CustomSmallWhiteContainer(
-                  text: '60',
-                ),
-                CustomSmallWhiteContainer(
-                  text: '66',
-                ),
-                CustomSmallWhiteContainer(
-                  text: '1',
-                ),
-                Spacer(),
+                // Spacer(),
+                // CustomSmallWhiteContainer(
+                //   text: '60',
+                // ),
+                // CustomSmallWhiteContainer(
+                //   text: '66',
+                // ),
+                // CustomSmallWhiteContainer(
+                //   text: '1',
+                // ),
+                // Spacer(),
               ],
             ),
-            HomePageCustomTextButton(),
+            const HomePageCustomTextButton(),
           ],
-        ),
-        decoration: BoxDecoration(
-          color: Colors.white30,
-          borderRadius: BorderRadius.circular(20),
         ),
       ),
     );

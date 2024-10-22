@@ -62,4 +62,5 @@ class AssetsData {
   static const test = 'assets/images/test.png';
   static const level = 'assets/images/level.png';
   static const newStar = 'assets/svg/newstar.png';
+  static const whatsapp = 'assets/svg/whatsapp.png';
 }

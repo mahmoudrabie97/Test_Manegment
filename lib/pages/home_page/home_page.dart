@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_mangement/models/challenge_ui_model.dart';
 import 'package:test_mangement/pages/home_page/widgets/custom_challange_container.dart';
 import 'package:test_mangement/pages/home_page/widgets/custom_column_text.dart';
 import 'package:test_mangement/pages/home_page/widgets/custom_home_page_main_container.dart';
@@ -23,7 +24,7 @@ class HomePage extends StatelessWidget {
             children: [
               const CustomRowInfo(),
               CustomHomePageSubContainer(
-                color: Color(0xffFF6DAA),
+                color: const Color(0xffFF6DAA),
                 customWidget: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
@@ -88,7 +89,27 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              const CustomChallangeContainer(),
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: SizedBox(
+                  height: 240,
+                  child: ListView.separated(
+                    itemCount: 2,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return CustomChallangeContainer(
+                        challengeUiModel: challengelist[index],
+                        index: index,
+                      );
+                    },
+                    separatorBuilder: (BuildContext context, int index) {
+                      return const SizedBox(
+                        width: 8,
+                      );
+                    },
+                  ),
+                ),
+              ),
               const CustomHomePageMainContainer(),
             ],
           ),
