@@ -131,6 +131,7 @@ class SoloQuizeSubContainer extends StatelessWidget {
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: IconButton(
+                    padding: EdgeInsets.only(bottom: 1.5),
                       onPressed: () {},
                       icon: Icon(
                         size: 15,
