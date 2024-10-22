@@ -5,6 +5,7 @@ import 'package:test_mangement/pages/home_page/widgets/custom_column_text.dart';
 import 'package:test_mangement/pages/home_page/widgets/custom_home_page_main_container.dart';
 import 'package:test_mangement/pages/home_page/widgets/custom_row_info.dart';
 import 'package:test_mangement/pages/home_page/widgets/home_page_sub_container.dart';
+import 'package:test_mangement/pages/solo_quize/solo_quize_page.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/assets.dart';
 import 'package:test_mangement/utilites/widgets/customtext.dart';
@@ -109,6 +110,20 @@ class HomePage extends StatelessWidget {
                     },
                   ),
                 ),
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SoloQuizeChooseContainer(
+                      color: AppColor.pink,
+                      image: AssetsData.manyQuestions,
+                      text: "قدرات"),
+                  SoloQuizeChooseContainer(
+                    color: AppColor.greenColor,
+                    image: AssetsData.sport,
+                    text: "تحصيلي",
+                  ),
+                ],
               ),
               const CustomHomePageMainContainer(),
             ],

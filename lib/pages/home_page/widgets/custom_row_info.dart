@@ -1,12 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:test_mangement/pages/friendrequestpage/add_friends_page.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/assets.dart';
 import 'package:test_mangement/utilites/extentionhelper.dart';
 import 'package:test_mangement/utilites/widgets/customtext.dart';
-
-import '../../../generated/l10n.dart';
 
 class CustomRowInfo extends StatelessWidget {
   const CustomRowInfo({super.key});
@@ -18,41 +15,73 @@ class CustomRowInfo extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Column(
+          Row(
             children: [
-              CustomTextarabic(
-                text: S.of(context).welcomeback,
-                fontSize: 13,
-                fontWeight: FontWeight.w700,
-                color: AppColor.whiteColor,
-              ),
-              Text('ايناس عمر ',
-                  style: TextStyle(
-                    fontSize: 26,
-                    fontWeight: FontWeight.w700,
-                    color: AppColor.whiteColor,
-                  )),
-              Row(
+              CircleAvatar(
+                  backgroundColor: const Color(0xffFF6DAA),
+                  radius: 35,
+                  child: Image.asset(AssetsData.student)),
+              const Column(
                 children: [
                   CustomTextarabic(
-                    text: 'طلبات الصداقه',
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  IconButton(
-                    iconSize: 30,
-                    onPressed: () {
-                      context.push(Requestfriendpage());
-                    },
-                    icon: Icon(Icons.person),
+                    text: 'صباح الخير',
                     color: Colors.white,
                   ),
+                  Text(' محمود ربيع ',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700,
+                        color: AppColor.whiteColor,
+                      )),
                 ],
               ),
             ],
           ),
-          Spacer(),
-          Image.asset(AssetsData.person),
+          const Spacer(),
+          Column(
+            children: [
+              Row(
+                children: [
+                  IconButton(
+                    iconSize: 33,
+                    onPressed: () {},
+                    icon: const Icon(Icons.notifications),
+                    color: Colors.amber,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Color(0xffFF9B57)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Image.asset(AssetsData.dollar),
+                          const CustomTextarabic(
+                            text: '6045',
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+              // Row(
+              //   children: [
+              //     IconButton(
+              //       iconSize: 30,
+              //       onPressed: () {
+              //         context.push(const Requestfriendpage());
+              //       },
+              //       icon: const Icon(Icons.person),
+              //       color: Colors.white,
+              //     ),
+              //   ],
+              // ),
+            ],
+          ),
         ],
       ),
     );
