@@ -11,6 +11,7 @@ import 'package:test_mangement/cubit/exam_question_cubit/exam_question_cubit.dar
 import 'package:test_mangement/cubit/examcubit/exam_solo_cubit/exam_solo_cubit.dart';
 import 'package:test_mangement/cubit/invitation_cubit/invitation_cubit.dart';
 import 'package:test_mangement/cubit/question_submit_answer/question_submit_answer_cubit.dart';
+import 'package:test_mangement/cubit/solo_quize_cubit/solo_quize_cubit.dart';
 import 'package:test_mangement/cubit/user_blance_cubit/exam_user_has_blance_cubit.dart';
 import 'package:test_mangement/cubit/user_profile_cubit/user_profile_cubit.dart';
 import 'package:test_mangement/firebase_options.dart';
@@ -71,6 +72,8 @@ class MyApp extends StatelessWidget {
         //InvitationAcceptCubit
         BlocProvider(
             create: (BuildContext context) => CompetitorInvitationCubit()),
+        BlocProvider(
+            create: (BuildContext context) => SoloQuizeCubit()),
       ],
       child: MaterialApp(
           navigatorKey: navigatorKey,

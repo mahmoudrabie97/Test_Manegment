@@ -6,6 +6,7 @@ import 'package:test_mangement/cubit/authcubit/authstates.dart';
 import 'package:test_mangement/generated/l10n.dart';
 import 'package:test_mangement/pages/authPages/loginpage/widgets/animated_text_widget.dart';
 import 'package:test_mangement/pages/authPages/sign_up/sign_up_screen.dart';
+import 'package:test_mangement/pages/forget_password/forget_passord_page.dart';
 import 'package:test_mangement/root_page.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/constants.dart';
@@ -182,7 +183,9 @@ class _CustomContainerLoginState extends State<CustomContainerLogin> {
                         height: 8,
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          context.push(ForgetPassordPage());
+                        },
                         child: CustomTextarabic(
                           text: S.of(context).Forgetpassword,
                           fontSize: 18,
