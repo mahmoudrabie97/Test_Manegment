@@ -109,6 +109,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("اختبار مهارة الهندسة "),
         "ensurepassword":
             MessageLookupByLibrary.simpleMessage("تاكيد كلمة المرور"),
+        "enterYourEmail": MessageLookupByLibrary.simpleMessage(
+            "ادخل البريد الالكتروني الخاص بك "),
         "event1": MessageLookupByLibrary.simpleMessage("حدث 1"),
         "events": MessageLookupByLibrary.simpleMessage("الاحداث"),
         "expirationDate":
