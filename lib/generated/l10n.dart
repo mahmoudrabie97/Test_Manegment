@@ -1685,6 +1685,16 @@ class S {
       args: [],
     );
   }
+
+  /// `ادخل البريد الالكتروني الخاص بك `
+  String get enterYourEmail {
+    return Intl.message(
+      'ادخل البريد الالكتروني الخاص بك ',
+      name: 'enterYourEmail',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

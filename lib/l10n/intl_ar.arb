@@ -123,5 +123,6 @@
     "easyLevel":"مستوى سهل ",
     "algebraSkillLevel":"اختبار مهارة الجبر ",
     "easy":"سهل",
-    "difficult":"صعب"
+    "difficult":"صعب",
+    "enterYourEmail":"ادخل البريد الالكتروني الخاص بك "
 }
