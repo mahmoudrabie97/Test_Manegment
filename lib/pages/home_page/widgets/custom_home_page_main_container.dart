@@ -4,8 +4,10 @@ import 'package:test_mangement/pages/home_page/widgets/custom_bottom_sheet_item.
 import 'package:test_mangement/pages/home_page/widgets/custom_event_item.dart';
 import 'package:test_mangement/pages/home_page/widgets/custom_small_container_challenge.dart';
 import 'package:test_mangement/pages/home_page/widgets/customevent_row.dart';
+import 'package:test_mangement/pages/solo_quize/solo_quize_page.dart';
 import 'package:test_mangement/utilites/appcolors.dart';
 import 'package:test_mangement/utilites/assets.dart';
+import 'package:test_mangement/utilites/extentionhelper.dart';
 
 class CustomHomePageMainContainer extends StatelessWidget {
   const CustomHomePageMainContainer({super.key});
@@ -21,7 +23,7 @@ class CustomHomePageMainContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
       child: Column(
         children: [
           Container(
@@ -47,13 +49,18 @@ class CustomHomePageMainContainer extends StatelessWidget {
                         itemCount: 1,
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {
-                          return const Row(
+                          return Row(
                             children: [
-                              CustomSmallContainerchallenge(
-                                containercolor: Color(0xff88E68B),
-                                tiltle: 'ابدأ الان',
-                                subtitle: 'تحدي النفس',
-                                image: AssetsData.student,
+                              InkWell(
+                                onTap: () {
+                                  context.push(SoloQuizePage());
+                                },
+                                child: CustomSmallContainerchallenge(
+                                  containercolor: Color(0xff88E68B),
+                                  tiltle: 'ابدأ الان',
+                                  subtitle: 'تحدي النفس',
+                                  image: AssetsData.student,
+                                ),
                               ),
                               CustomSmallContainerchallenge(
                                   containercolor: AppColor.pink,

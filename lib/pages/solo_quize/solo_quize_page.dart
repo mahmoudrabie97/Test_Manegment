@@ -91,7 +91,7 @@ class SoloQuizeChooseContainer extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: 100,
-        height: 30,
+        height: 40,
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.only(
@@ -109,8 +109,8 @@ class SoloQuizeChooseContainer extends StatelessWidget {
               ),
               CustomTextarabic(
                 text: text,
-                fontWeight: FontWeight.w500,
-                fontSize: 10,
+                fontWeight: FontWeight.bold,
+                fontSize: 12,
                 color: AppColor.whiteColor,
               ),
             ],
