@@ -194,10 +194,10 @@ class S {
     );
   }
 
-  /// `ليس لديك حساب؟ قم بالتسجيل`
+  /// `ليس لديك حساب؟`
   String get Donothaveacountregister {
     return Intl.message(
-      'ليس لديك حساب؟ قم بالتسجيل',
+      'ليس لديك حساب؟',
       name: 'Donothaveacountregister',
       desc: '',
       args: [],

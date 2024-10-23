@@ -8,6 +8,7 @@ import '../../../generated/l10n.dart';
 import '../../../utilites/appcolors.dart';
 import '../../../utilites/widgets/custombutton.dart';
 import '../../../utilites/widgets/customtext.dart';
+import '../forget_password_by_email.dart';
 
 class ForgetPasswordMainContainer extends StatelessWidget {
   const ForgetPasswordMainContainer({super.key});
@@ -53,6 +54,7 @@ class ForgetPasswordMainContainer extends StatelessWidget {
               CustomButton(
                 buttonText: S.of(context).byemail,
                 onPressed: () {
+                  context.push(ForgetPasswordByEmail());
                 },
                 buttonColor: AppColor.primary,
                 borderRadius: 20,

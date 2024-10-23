@@ -26,7 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Currencybalance": MessageLookupByLibrary.simpleMessage("رصيد العملات"),
         "Current": MessageLookupByLibrary.simpleMessage("الحالي"),
         "Donothaveacountregister":
-            MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟ قم بالتسجيل"),
+            MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "Explorecategories":
             MessageLookupByLibrary.simpleMessage("استكشاف الفئات"),
         "Finished": MessageLookupByLibrary.simpleMessage("انتهت"),

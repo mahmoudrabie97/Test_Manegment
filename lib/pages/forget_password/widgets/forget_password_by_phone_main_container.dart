@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
+import 'package:test_mangement/cubit/authcubit/authcubit.dart';
+import 'package:test_mangement/pages/forget_password/forget_password_by_email.dart';
+import 'package:test_mangement/utilites/extentionhelper.dart';
 
 import '../../../generated/l10n.dart';
 import '../../../utilites/appcolors.dart';
+import '../../../utilites/constants.dart';
 import '../../../utilites/widgets/custombutton.dart';
 import '../../../utilites/widgets/customtext.dart';
+import '../../authPages/sign_up/sign_up_screen.dart';
 import '../../code_verification_for_phone/widgets/custom_code_verification.dart';
 
 class ForgetPasswordByPhoneMainContainer extends StatelessWidget {
@@ -60,6 +65,7 @@ class ForgetPasswordByPhoneMainContainer extends StatelessWidget {
               CustomButton(
                 buttonText: S.of(context).byemail,
                 onPressed: () {
+                  context.push(ForgetPasswordByEmail());
                 },
                 buttonColor: AppColor.greyColor,
                 borderRadius: 20,
@@ -77,7 +83,35 @@ class ForgetPasswordByPhoneMainContainer extends StatelessWidget {
                 fontWeight: FontWeight.w500,
                 // color: Color(0xff001833),
               ),
+
               CustomCodeVerification(defaulttheme: defaulttheme),
+              Row(
+                //crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustomTextarabic(
+                    text: S.of(context).donotRecieveCode,
+                    color: Colors.grey,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      context.push(const SignUpScreen());
+                    },
+                    child: CustomTextarabic(
+                      text: S.of(context).resend,
+                      fontSize: 16,
+                      color: AppColor.primary,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 30,),
+              CustomButton(
+                  buttonText: S.of(context).send,
+                  onPressed: () {
+
+                  }),
 
             ],
           ),
