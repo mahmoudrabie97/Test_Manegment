@@ -62,4 +62,5 @@ class AssetsData {
   static const test = 'assets/images/test.png';
   static const level = 'assets/images/level.png';
   static const scroll = 'assets/images/Scholarcap scroll.png';
+  static const school='assets/images/school.png';
 }
