@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:test_mangement/pages/authPages/sign_up/sign_up_screen.dart';
+import 'package:test_mangement/pages/forget_password/reset_password_page.dart';
 import 'package:test_mangement/utilites/extentionhelper.dart';
 
 import '../../../generated/l10n.dart';
@@ -68,7 +69,10 @@ class ForgetPasswordByEmailMainContainer extends StatelessWidget {
               const SizedBox(
                 height: 60,
               ),
-              CustomButton(buttonText: S.of(context).send, onPressed: () {}),
+              CustomButton(buttonText: S.of(context).send, onPressed: () {
+                context.push(ResetPasswordPage());
+
+              }),
               const SizedBox(
                 height: 25,
               ),

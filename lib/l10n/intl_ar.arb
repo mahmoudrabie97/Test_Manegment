@@ -128,5 +128,11 @@
     "verificationCode":"رمز التحقق",
     "sendCodeDone":"لقد أرسلنا رمز التحقق إلى هاتفك",
     "donotRecieveCode":"لم تستلم الرمز؟",
-    "resend":"اعادة ارسال "
+    "resend":"اعادة ارسال ",
+    "resetPassword":"اعادة تعيين كلمة السر ",
+    "enterNewPassword":"ادخل كلمة السر الجديدة",
+    "ensure":"تأكيد",
+    "password":"كلمة المرور",
+    "ensurePassword":"تأكيد كلمة المرور"
+
 }

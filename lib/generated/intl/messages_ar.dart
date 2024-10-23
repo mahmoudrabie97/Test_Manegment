@@ -84,8 +84,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
         "engineerSkillTest":
             MessageLookupByLibrary.simpleMessage("اختبار مهارة الهندسة "),
+        "ensure": MessageLookupByLibrary.simpleMessage("تأكيد"),
+        "ensurePassword":
+            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
         "ensurepassword":
             MessageLookupByLibrary.simpleMessage("تاكيد كلمة المرور"),
+        "enterNewPassword":
+            MessageLookupByLibrary.simpleMessage("ادخل كلمة السر الجديدة"),
         "enterYourEmail": MessageLookupByLibrary.simpleMessage(
             "ادخل البريد الالكتروني الخاص بك "),
         "expirationDate":
@@ -120,6 +125,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("اسم حامل البطاقة"),
         "notifications": MessageLookupByLibrary.simpleMessage("الاشعارات"),
         "notificatios": MessageLookupByLibrary.simpleMessage("الإشعارات"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "payementMethod": MessageLookupByLibrary.simpleMessage("طرق الدفع"),
         "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
@@ -140,6 +146,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "reohSillTest":
             MessageLookupByLibrary.simpleMessage("اختبار مهارة البلاغة "),
         "resend": MessageLookupByLibrary.simpleMessage("اعادة ارسال "),
+        "resetPassword":
+            MessageLookupByLibrary.simpleMessage("اعادة تعيين كلمة السر "),
         "riyals": MessageLookupByLibrary.simpleMessage("3 ريال"),
         "searchAboutPlayer":
             MessageLookupByLibrary.simpleMessage("بحث عن لاعب"),
