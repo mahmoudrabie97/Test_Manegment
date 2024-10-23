@@ -52,7 +52,7 @@ class AssetsData {
   static const pers8 = 'assets/svg/pers8.png';
   static const pers9 = 'assets/svg/pers9.png';
   static const pers10 = 'assets/svg/pers10.png';
-
+  static const creditCard = 'assets/images/credit_card.png';
   static const visaCard = 'assets/images/visaCard.png';
   static const hint = 'assets/images/Hint.png';
   static const invitation = 'assets/images/invitation.png';
@@ -61,8 +61,5 @@ class AssetsData {
   static const question = 'assets/images/question.png';
   static const test = 'assets/images/test.png';
   static const level = 'assets/images/level.png';
-  static const newStar = 'assets/svg/newstar.png';
-  static const whatsapp = 'assets/svg/whatsapp.png';
-  static const creditCard = 'assets/images/credit_card.png';
   static const scroll = 'assets/images/Scholarcap scroll.png';
 }

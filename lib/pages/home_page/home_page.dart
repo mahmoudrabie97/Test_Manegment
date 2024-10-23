@@ -48,6 +48,7 @@ class HomePage extends StatelessWidget {
                             child: CustomTextarabic(
                               text: '1234 نقطة',
                               color: Colors.white,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ],
@@ -65,6 +66,7 @@ class HomePage extends StatelessWidget {
                           const CustomTextarabic(
                             text: 'المستوي الرابع',
                             color: Colors.white,
+                            fontWeight: FontWeight.bold,
                           ),
                         ],
                       ),
@@ -83,6 +85,7 @@ class HomePage extends StatelessWidget {
                           const CustomTextarabic(
                             text: "التقدم",
                             color: Colors.white,
+                            fontWeight: FontWeight.bold,
                           ),
                         ],
                       ),
