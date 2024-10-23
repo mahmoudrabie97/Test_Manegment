@@ -1735,6 +1735,56 @@ class S {
       args: [],
     );
   }
+
+  /// `اعادة تعيين كلمة السر `
+  String get resetPassword {
+    return Intl.message(
+      'اعادة تعيين كلمة السر ',
+      name: 'resetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ادخل كلمة السر الجديدة`
+  String get enterNewPassword {
+    return Intl.message(
+      'ادخل كلمة السر الجديدة',
+      name: 'enterNewPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تأكيد`
+  String get ensure {
+    return Intl.message(
+      'تأكيد',
+      name: 'ensure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `كلمة المرور`
+  String get password {
+    return Intl.message(
+      'كلمة المرور',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تأكيد كلمة المرور`
+  String get ensurePassword {
+    return Intl.message(
+      'تأكيد كلمة المرور',
+      name: 'ensurePassword',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
