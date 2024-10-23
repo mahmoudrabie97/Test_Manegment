@@ -41,16 +41,7 @@ class CustomCodeVerification extends StatelessWidget {
                 },
               ),
             ),
-            CustomButton(
-                buttonText: S.of(context).send,
-                onPressed: () {
-                  Map userdata = {
-                    "userId": AppConstant.userId,
-                    "code": valcompleted,
-                  };
-                  AuthCubit.get(context)
-                      .verifyUser(userdata: userdata, context: context);
-                }),
+
           ],
         );
       },

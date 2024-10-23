@@ -23,7 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Donothaveacountregister":
-            MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟ قم بالتسجيل"),
+            MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "Forgetpassword":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة السر؟"),
         "Identity": MessageLookupByLibrary.simpleMessage("الهوية"),
@@ -73,6 +73,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "difficult": MessageLookupByLibrary.simpleMessage("صعب"),
         "difficultLevel": MessageLookupByLibrary.simpleMessage("مستوى صعب "),
         "doneCorrect": MessageLookupByLibrary.simpleMessage("صحيح"),
+        "donotRecieveCode":
+            MessageLookupByLibrary.simpleMessage("لم تستلم الرمز؟"),
         "donothaveaccountareedylogin": MessageLookupByLibrary.simpleMessage(
             "هل لديك حساب بالفعل؟ تسجيل الدخول"),
         "earnedRecoerds":
@@ -137,10 +139,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "reject": MessageLookupByLibrary.simpleMessage("رفض"),
         "reohSillTest":
             MessageLookupByLibrary.simpleMessage("اختبار مهارة البلاغة "),
+        "resend": MessageLookupByLibrary.simpleMessage("اعادة ارسال "),
         "riyals": MessageLookupByLibrary.simpleMessage("3 ريال"),
         "searchAboutPlayer":
             MessageLookupByLibrary.simpleMessage("بحث عن لاعب"),
         "second": MessageLookupByLibrary.simpleMessage("الثانى"),
+        "sendCodeDone": MessageLookupByLibrary.simpleMessage(
+            "لقد أرسلنا رمز التحقق إلى هاتفك"),
         "sendFriendRequest": MessageLookupByLibrary.simpleMessage(
             "أرسلت إيناس عمر إليك طلب صداقة "),
         "servicesagree":
@@ -175,6 +180,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "transformation": MessageLookupByLibrary.simpleMessage("تحويل"),
         "verabalQuize": MessageLookupByLibrary.simpleMessage("اختبار لفظي"),
         "verbal": MessageLookupByLibrary.simpleMessage("لفظي"),
+        "verificationCode": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحبا")
       };
 }

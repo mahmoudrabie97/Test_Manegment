@@ -194,10 +194,10 @@ class S {
     );
   }
 
-  /// `ليس لديك حساب؟ قم بالتسجيل`
+  /// `ليس لديك حساب؟`
   String get Donothaveacountregister {
     return Intl.message(
-      'ليس لديك حساب؟ قم بالتسجيل',
+      'ليس لديك حساب؟',
       name: 'Donothaveacountregister',
       desc: '',
       args: [],
@@ -1691,6 +1691,46 @@ class S {
     return Intl.message(
       'ادخل البريد الالكتروني الخاص بك ',
       name: 'enterYourEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رمز التحقق`
+  String get verificationCode {
+    return Intl.message(
+      'رمز التحقق',
+      name: 'verificationCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لقد أرسلنا رمز التحقق إلى هاتفك`
+  String get sendCodeDone {
+    return Intl.message(
+      'لقد أرسلنا رمز التحقق إلى هاتفك',
+      name: 'sendCodeDone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لم تستلم الرمز؟`
+  String get donotRecieveCode {
+    return Intl.message(
+      'لم تستلم الرمز؟',
+      name: 'donotRecieveCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اعادة ارسال `
+  String get resend {
+    return Intl.message(
+      'اعادة ارسال ',
+      name: 'resend',
       desc: '',
       args: [],
     );

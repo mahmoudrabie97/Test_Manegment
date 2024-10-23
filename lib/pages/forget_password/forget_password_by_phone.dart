@@ -1,0 +1,40 @@
+
+
+import 'package:flutter/material.dart';
+import 'package:test_mangement/pages/forget_password/widgets/forget_password_by_phone_main_container.dart';
+
+import '../../utilites/appcolors.dart';
+import '../../utilites/assets.dart';
+
+class ForgetPasswordByPhone extends StatelessWidget {
+  const ForgetPasswordByPhone({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: const Icon(
+                  Icons.arrow_forward_ios,
+                  color: AppColor.whiteColor,
+                ),
+              ),
+              Center(
+                child: Image.asset(AssetsData.graduation),
+              ),
+               ForgetPasswordByPhoneMainContainer(),
+
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
